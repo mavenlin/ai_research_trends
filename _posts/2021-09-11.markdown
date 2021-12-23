@@ -1,0 +1,524 @@
+## Summary for 2021-09-11, created on 2021-12-18
+
+
+<details><summary><b>Pairwise Supervised Contrastive Learning of Sentence Representations</b>
+<a href="https://arxiv.org/abs/2109.05424">arxiv:2109.05424</a>
+&#x1F4C8; 45 <br>
+<p>Dejiao Zhang, Shang-Wen Li, Wei Xiao, Henghui Zhu, Ramesh Nallapati, Andrew O. Arnold, Bing Xiang</p></summary>
+<p>
+
+**Abstract:** Many recent successes in sentence representation learning have been achieved by simply fine-tuning on the Natural Language Inference (NLI) datasets with triplet loss or siamese loss. Nevertheless, they share a common weakness: sentences in a contradiction pair are not necessarily from different semantic categories. Therefore, optimizing the semantic entailment and contradiction reasoning objective alone is inadequate to capture the high-level semantic structure. The drawback is compounded by the fact that the vanilla siamese or triplet losses only learn from individual sentence pairs or triplets, which often suffer from bad local optima. In this paper, we propose PairSupCon, an instance discrimination based approach aiming to bridge semantic entailment and contradiction understanding with high-level categorical concept encoding. We evaluate PairSupCon on various downstream tasks that involve understanding sentence semantics at different granularities. We outperform the previous state-of-the-art method with $10\%$--$13\%$ averaged improvement on eight clustering tasks, and $5\%$--$6\%$ averaged improvement on seven semantic textual similarity (STS) tasks.
+
+</p>
+</details>
+
+<details><summary><b>MLReal: Bridging the gap between training on synthetic data and real data applications in machine learning</b>
+<a href="https://arxiv.org/abs/2109.05294">arxiv:2109.05294</a>
+&#x1F4C8; 9 <br>
+<p>Tariq Alkhalifah, Hanchen Wang, Oleg Ovcharenko</p></summary>
+<p>
+
+**Abstract:** Among the biggest challenges we face in utilizing neural networks trained on waveform data (i.e., seismic, electromagnetic, or ultrasound) is its application to real data. The requirement for accurate labels forces us to develop solutions using synthetic data, where labels are readily available. However, synthetic data often do not capture the reality of the field/real experiment, and we end up with poor performance of the trained neural network (NN) at the inference stage. We describe a novel approach to enhance supervised training on synthetic data with real data features (domain adaptation). Specifically, for tasks in which the absolute values of the vertical axis (time or depth) of the input data are not crucial, like classification, or can be corrected afterward, like velocity model building using a well-log, we suggest a series of linear operations on the input so the training and application data have similar distributions. This is accomplished by applying two operations on the input data to the NN model: 1) The crosscorrelation of the input data (i.e., shot gather, seismic image, etc.) with a fixed reference trace from the same dataset. 2) The convolution of the resulting data with the mean (or a random sample) of the autocorrelated data from another domain. In the training stage, the input data are from the synthetic domain and the auto-correlated data are from the real domain, and random samples from real data are drawn at every training epoch. In the inference/application stage, the input data are from the real subset domain and the mean of the autocorrelated sections are from the synthetic data subset domain. Example applications on passive seismic data for microseismic event source location determination and active seismic data for predicting low frequencies are used to demonstrate the power of this approach in improving the applicability of trained models to real data.
+
+</p>
+</details>
+
+<details><summary><b>Bayesian Topic Regression for Causal Inference</b>
+<a href="https://arxiv.org/abs/2109.05317">arxiv:2109.05317</a>
+&#x1F4C8; 8 <br>
+<p>Maximilian Ahrens, Julian Ashwin, Jan-Peter Calliess, Vu Nguyen</p></summary>
+<p>
+
+**Abstract:** Causal inference using observational text data is becoming increasingly popular in many research areas. This paper presents the Bayesian Topic Regression (BTR) model that uses both text and numerical information to model an outcome variable. It allows estimation of both discrete and continuous treatment effects. Furthermore, it allows for the inclusion of additional numerical confounding factors next to text data. To this end, we combine a supervised Bayesian topic model with a Bayesian regression framework and perform supervised representation learning for the text features jointly with the regression parameter training, respecting the Frisch-Waugh-Lovell theorem. Our paper makes two main contributions. First, we provide a regression framework that allows causal inference in settings when both text and numerical confounders are of relevance. We show with synthetic and semi-synthetic datasets that our joint approach recovers ground truth with lower bias than any benchmark model, when text and numerical features are correlated. Second, experiments on two real-world datasets demonstrate that a joint and supervised learning strategy also yields superior prediction results compared to strategies that estimate regression weights for text and non-text features separately, being even competitive with more complex deep neural networks.
+
+</p>
+</details>
+
+<details><summary><b>COSMic: A Coherence-Aware Generation Metric for Image Descriptions</b>
+<a href="https://arxiv.org/abs/2109.05281">arxiv:2109.05281</a>
+&#x1F4C8; 8 <br>
+<p>Mert İnan, Piyush Sharma, Baber Khalid, Radu Soricut, Matthew Stone, Malihe Alikhani</p></summary>
+<p>
+
+**Abstract:** Developers of text generation models rely on automated evaluation metrics as a stand-in for slow and expensive manual evaluations. However, image captioning metrics have struggled to give accurate learned estimates of the semantic and pragmatic success of output text. We address this weakness by introducing the first discourse-aware learned generation metric for evaluating image descriptions. Our approach is inspired by computational theories of discourse for capturing information goals using coherence. We present a dataset of image$\unicode{x2013}$description pairs annotated with coherence relations. We then train a coherence-aware metric on a subset of the Conceptual Captions dataset and measure its effectiveness$\unicode{x2014}$its ability to predict human ratings of output captions$\unicode{x2014}$on a test set composed of out-of-domain images. We demonstrate a higher Kendall Correlation Coefficient for our proposed metric with the human judgments for the results of a number of state-of-the-art coherence-aware caption generation models when compared to several other metrics including recently proposed learned metrics such as BLEURT and BERTScore.
+
+</p>
+</details>
+
+<details><summary><b>Zero-Shot Text-to-Speech for Text-Based Insertion in Audio Narration</b>
+<a href="https://arxiv.org/abs/2109.05426">arxiv:2109.05426</a>
+&#x1F4C8; 7 <br>
+<p>Chuanxin Tang, Chong Luo, Zhiyuan Zhao, Dacheng Yin, Yucheng Zhao, Wenjun Zeng</p></summary>
+<p>
+
+**Abstract:** Given a piece of speech and its transcript text, text-based speech editing aims to generate speech that can be seamlessly inserted into the given speech by editing the transcript. Existing methods adopt a two-stage approach: synthesize the input text using a generic text-to-speech (TTS) engine and then transform the voice to the desired voice using voice conversion (VC). A major problem of this framework is that VC is a challenging problem which usually needs a moderate amount of parallel training data to work satisfactorily. In this paper, we propose a one-stage context-aware framework to generate natural and coherent target speech without any training data of the target speaker. In particular, we manage to perform accurate zero-shot duration prediction for the inserted text. The predicted duration is used to regulate both text embedding and speech embedding. Then, based on the aligned cross-modality input, we directly generate the mel-spectrogram of the edited speech with a transformer-based decoder. Subjective listening tests show that despite the lack of training data for the speaker, our method has achieved satisfactory results. It outperforms a recent zero-shot TTS engine by a large margin.
+
+</p>
+</details>
+
+<details><summary><b>On the Initial Behavior Monitoring Issues in Federated Learning</b>
+<a href="https://arxiv.org/abs/2109.05385">arxiv:2109.05385</a>
+&#x1F4C8; 7 <br>
+<p>Ranwa Al Mallah, Godwin Badu-Marfo, Bilal Farooq</p></summary>
+<p>
+
+**Abstract:** In Federated Learning (FL), a group of workers participate to build a global model under the coordination of one node, the chief. Regarding the cybersecurity of FL, some attacks aim at injecting the fabricated local model updates into the system. Some defenses are based on malicious worker detection and behavioral pattern analysis. In this context, without timely and dynamic monitoring methods, the chief cannot detect and remove the malicious or unreliable workers from the system. Our work emphasize the urgency to prepare the federated learning process for monitoring and eventually behavioral pattern analysis. We study the information inside the learning process in the early stages of training, propose a monitoring process and evaluate the monitoring period required. The aim is to analyse at what time is it appropriate to start the detection algorithm in order to remove the malicious or unreliable workers from the system and optimise the defense mechanism deployment. We tested our strategy on a behavioral pattern analysis defense applied to the FL process of different benchmark systems for text and image classification. Our results show that the monitoring process lowers false positives and false negatives and consequently increases system efficiency by enabling the distributed learning system to achieve better performance in the early stage of training.
+
+</p>
+</details>
+
+<details><summary><b>Empirical Analysis of Training Strategies of Transformer-based Japanese Chit-chat Systems</b>
+<a href="https://arxiv.org/abs/2109.05217">arxiv:2109.05217</a>
+&#x1F4C8; 7 <br>
+<p>Hiroaki Sugiyama, Masahiro Mizukami, Tsunehiro Arimoto, Hiromi Narimatsu, Yuya Chiba, Hideharu Nakajima, Toyomi Meguro</p></summary>
+<p>
+
+**Abstract:** In recent years, several high-performance conversational systems have been proposed based on the Transformer encoder-decoder model. Although previous studies analyzed the effects of the model parameters and the decoding method on subjective dialogue evaluations with overall metrics, they did not analyze how the differences of fine-tuning datasets affect on user's detailed impression. In addition, the Transformer-based approach has only been verified for English, not for such languages with large inter-language distances as Japanese. In this study, we develop large-scale Transformer-based Japanese dialogue models and Japanese chit-chat datasets to examine the effectiveness of the Transformer-based approach for building chit-chat dialogue systems. We evaluated and analyzed the impressions of human dialogues in different fine-tuning datasets, model parameters, and the use of additional information.
+
+</p>
+</details>
+
+<details><summary><b>Universal Simultaneous Machine Translation with Mixture-of-Experts Wait-k Policy</b>
+<a href="https://arxiv.org/abs/2109.05238">arxiv:2109.05238</a>
+&#x1F4C8; 5 <br>
+<p>Shaolei Zhang, Yang Feng</p></summary>
+<p>
+
+**Abstract:** Simultaneous machine translation (SiMT) generates translation before reading the entire source sentence and hence it has to trade off between translation quality and latency. To fulfill the requirements of different translation quality and latency in practical applications, the previous methods usually need to train multiple SiMT models for different latency levels, resulting in large computational costs. In this paper, we propose a universal SiMT model with Mixture-of-Experts Wait-k Policy to achieve the best translation quality under arbitrary latency with only one trained model. Specifically, our method employs multi-head attention to accomplish the mixture of experts where each head is treated as a wait-k expert with its own waiting words number, and given a test latency and source inputs, the weights of the experts are accordingly adjusted to produce the best translation. Experiments on three datasets show that our method outperforms all the strong baselines under different latency, including the state-of-the-art adaptive policy.
+
+</p>
+</details>
+
+<details><summary><b>AstronomicAL: An interactive dashboard for visualisation, integration and classification of data using Active Learning</b>
+<a href="https://arxiv.org/abs/2109.05207">arxiv:2109.05207</a>
+&#x1F4C8; 5 <br>
+<p>Grant Stevens, Sotiria Fotopoulou, Malcolm N. Bremer, Oliver Ray</p></summary>
+<p>
+
+**Abstract:** AstronomicAL is a human-in-the-loop interactive labelling and training dashboard that allows users to create reliable datasets and robust classifiers using active learning. This technique prioritises data that offer high information gain, leading to improved performance using substantially less data. The system allows users to visualise and integrate data from different sources and deal with incorrect or missing labels and imbalanced class sizes. AstronomicAL enables experts to visualise domain-specific plots and key information relating both to broader context and details of a point of interest drawn from a variety of data sources, ensuring reliable labels. In addition, AstronomicAL provides functionality to explore all aspects of the training process, including custom models and query strategies. This makes the software a tool for experimenting with both domain-specific classifications and more general-purpose machine learning strategies. We illustrate using the system with an astronomical dataset due to the field's immediate need; however, AstronomicAL has been designed for datasets from any discipline. Finally, by exporting a simple configuration file, entire layouts, models, and assigned labels can be shared with the community. This allows for complete transparency and ensures that the process of reproducing results is effortless
+
+</p>
+</details>
+
+<details><summary><b>Spike2Vec: An Efficient and Scalable Embedding Approach for COVID-19 Spike Sequences</b>
+<a href="https://arxiv.org/abs/2109.05019">arxiv:2109.05019</a>
+&#x1F4C8; 5 <br>
+<p>Sarwan Ali, Murray Patterson</p></summary>
+<p>
+
+**Abstract:** With the rapid global spread of COVID-19, more and more data related to this virus is becoming available, including genomic sequence data. The total number of genomic sequences that are publicly available on platforms such as GISAID is currently several million, and is increasing with every day. The availability of such \emph{Big Data} creates a new opportunity for researchers to study this virus in detail. This is particularly important with all of the dynamics of the COVID-19 variants which emerge and circulate. This rich data source will give us insights on the best ways to perform genomic surveillance for this and future pandemic threats, with the ultimate goal of mitigating or eliminating such threats. Analyzing and processing the several million genomic sequences is a challenging task. Although traditional methods for sequence classification are proven to be effective, they are not designed to deal with these specific types of genomic sequences. Moreover, most of the existing methods also face the issue of scalability. Previous studies which were tailored to coronavirus genomic data proposed to use spike sequences (corresponding to a subsequence of the genome), rather than using the complete genomic sequence, to perform different machine learning (ML) tasks such as classification and clustering. However, those methods suffer from scalability issues. In this paper, we propose an approach called Spike2Vec, an efficient and scalable feature vector representation for each spike sequence that can be used for downstream ML tasks. Through experiments, we show that Spike2Vec is not only scalable on several million spike sequences, but also outperforms the baseline models in terms of prediction accuracy, F1 score, etc.
+
+</p>
+</details>
+
+<details><summary><b>Application of Video-to-Video Translation Networks to Computational Fluid Dynamics</b>
+<a href="https://arxiv.org/abs/2109.10679">arxiv:2109.10679</a>
+&#x1F4C8; 4 <br>
+<p>Hiromitsu Kigure</p></summary>
+<p>
+
+**Abstract:** In recent years, the evolution of artificial intelligence, especially deep learning, has been remarkable, and its application to various fields has been growing rapidly. In this paper, I report the results of the application of generative adversarial networks (GANs), specifically video-to-video translation networks, to computational fluid dynamics (CFD) simulations. The purpose of this research is to reduce the computational cost of CFD simulations with GANs. The architecture of GANs in this research is a combination of the image-to-image translation networks (the so-called "pix2pix") and Long Short-Term Memory (LSTM). It is shown that the results of high-cost and high-accuracy simulations (with high-resolution computational grids) can be estimated from those of low-cost and low-accuracy simulations (with low-resolution grids). In particular, the time evolution of density distributions in the cases of a high-resolution grid is reproduced from that in the cases of a low-resolution grid through GANs, and the density inhomogeneity estimated from the image generated by GANs recovers the ground truth with good accuracy. Qualitative and quantitative comparisons of the results of the proposed method with those of several super-resolution algorithms are also presented.
+
+</p>
+</details>
+
+<details><summary><b>An Insect-Inspired Randomly, Weighted Neural Network with Random Fourier Features For Neuro-Symbolic Relational Learning</b>
+<a href="https://arxiv.org/abs/2109.06663">arxiv:2109.06663</a>
+&#x1F4C8; 4 <br>
+<p>Jinyung Hong, Theodore P. Pavlic</p></summary>
+<p>
+
+**Abstract:** Insects, such as fruit flies and honey bees, can solve simple associative learning tasks and learn abstract concepts such as "sameness" and "difference", which is viewed as a higher-order cognitive function and typically thought to depend on top-down neocortical processing. Empirical research with fruit flies strongly supports that a randomized representational architecture is used in olfactory processing in insect brains. Based on these results, we propose a Randomly Weighted Feature Network (RWFN) that incorporates randomly drawn, untrained weights in an encoder that uses an adapted linear model as a decoder. The randomized projections between input neurons and higher-order processing centers in the input brain is mimicked in RWFN by a single-hidden-layer neural network that specially structures latent representations in the hidden layer using random Fourier features that better represent complex relationships between inputs using kernel approximation. Because of this special representation, RWFNs can effectively learn the degree of relationship among inputs by training only a linear decoder model. We compare the performance of RWFNs to LTNs for Semantic Image Interpretation (SII) tasks that have been used as a representative example of how LTNs utilize reasoning over first-order logic to surpass the performance of solely data-driven methods. We demonstrate that compared to LTNs, RWFNs can achieve better or similar performance for both object classification and detection of the part-of relations between objects in SII tasks while using much far fewer learnable parameters (1:62 ratio) and a faster learning process (1:2 ratio of running speed). Furthermore, we show that because the randomized weights do not depend on the data, several decoders can share a single randomized encoder, giving RWFNs a unique economy of spatial scale for simultaneous classification tasks.
+
+</p>
+</details>
+
+<details><summary><b>Not All Negatives are Equal: Label-Aware Contrastive Loss for Fine-grained Text Classification</b>
+<a href="https://arxiv.org/abs/2109.05427">arxiv:2109.05427</a>
+&#x1F4C8; 4 <br>
+<p>Varsha Suresh, Desmond C. Ong</p></summary>
+<p>
+
+**Abstract:** Fine-grained classification involves dealing with datasets with larger number of classes with subtle differences between them. Guiding the model to focus on differentiating dimensions between these commonly confusable classes is key to improving performance on fine-grained tasks. In this work, we analyse the contrastive fine-tuning of pre-trained language models on two fine-grained text classification tasks, emotion classification and sentiment analysis. We adaptively embed class relationships into a contrastive objective function to help differently weigh the positives and negatives, and in particular, weighting closely confusable negatives more than less similar negative examples. We find that Label-aware Contrastive Loss outperforms previous contrastive methods, in the presence of larger number and/or more confusable classes, and helps models to produce output distributions that are more differentiated.
+
+</p>
+</details>
+
+<details><summary><b>BGT-Net: Bidirectional GRU Transformer Network for Scene Graph Generation</b>
+<a href="https://arxiv.org/abs/2109.05346">arxiv:2109.05346</a>
+&#x1F4C8; 4 <br>
+<p>Naina Dhingra, Florian Ritter, Andreas Kunz</p></summary>
+<p>
+
+**Abstract:** Scene graphs are nodes and edges consisting of objects and object-object relationships, respectively. Scene graph generation (SGG) aims to identify the objects and their relationships. We propose a bidirectional GRU (BiGRU) transformer network (BGT-Net) for the scene graph generation for images. This model implements novel object-object communication to enhance the object information using a BiGRU layer. Thus, the information of all objects in the image is available for the other objects, which can be leveraged later in the object prediction step. This object information is used in a transformer encoder to predict the object class as well as to create object-specific edge information via the use of another transformer encoder. To handle the dataset bias induced by the long-tailed relationship distribution, softening with a log-softmax function and adding a bias adaptation term to regulate the bias for every relation prediction individually showed to be an effective approach. We conducted an elaborate study on experiments and ablations using open-source datasets, i.e., Visual Genome, Open-Images, and Visual Relationship Detection datasets, demonstrating the effectiveness of the proposed model over state of the art.
+
+</p>
+</details>
+
+<details><summary><b>RVMDE: Radar Validated Monocular Depth Estimation for Robotics</b>
+<a href="https://arxiv.org/abs/2109.05265">arxiv:2109.05265</a>
+&#x1F4C8; 4 <br>
+<p>Muhamamd Ishfaq Hussain, Muhammad Aasim Rafique, Moongu Jeon</p></summary>
+<p>
+
+**Abstract:** Stereoscopy exposits a natural perception of distance in a scene, and its manifestation in 3D world understanding is an intuitive phenomenon. However, an innate rigid calibration of binocular vision sensors is crucial for accurate depth estimation. Alternatively, a monocular camera alleviates the limitation at the expense of accuracy in estimating depth, and the challenge exacerbates in harsh environmental conditions. Moreover, an optical sensor often fails to acquire vital signals in harsh environments, and radar is used instead, which gives coarse but more accurate signals. This work explores the utility of coarse signals from radar when fused with fine-grained data from a monocular camera for depth estimation in harsh environmental conditions. A variant of feature pyramid network (FPN) extensively operates on fine-grained image features at multiple scales with a fewer number of parameters. FPN feature maps are fused with sparse radar features extracted with a Convolutional neural network. The concatenated hierarchical features are used to predict the depth with ordinal regression. We performed experiments on the nuScenes dataset, and the proposed architecture stays on top in quantitative evaluations with reduced parameters and faster inference. The depth estimation results suggest that the proposed techniques can be used as an alternative to stereo depth estimation in critical applications in robotics and self-driving cars. The source code will be available in the following: \url{https://github.com/MI-Hussain/RVMDE}.
+
+</p>
+</details>
+
+<details><summary><b>Modeling Concentrated Cross-Attention for Neural Machine Translation with Gaussian Mixture Model</b>
+<a href="https://arxiv.org/abs/2109.05244">arxiv:2109.05244</a>
+&#x1F4C8; 4 <br>
+<p>Shaolei Zhang, Yang Feng</p></summary>
+<p>
+
+**Abstract:** Cross-attention is an important component of neural machine translation (NMT), which is always realized by dot-product attention in previous methods. However, dot-product attention only considers the pair-wise correlation between words, resulting in dispersion when dealing with long sentences and neglect of source neighboring relationships. Inspired by linguistics, the above issues are caused by ignoring a type of cross-attention, called concentrated attention, which focuses on several central words and then spreads around them. In this work, we apply Gaussian Mixture Model (GMM) to model the concentrated attention in cross-attention. Experiments and analyses we conducted on three datasets show that the proposed method outperforms the baseline and has significant improvement on alignment quality, N-gram accuracy, and long sentence translation.
+
+</p>
+</details>
+
+<details><summary><b>AdaK-NER: An Adaptive Top-K Approach for Named Entity Recognition with Incomplete Annotations</b>
+<a href="https://arxiv.org/abs/2109.05233">arxiv:2109.05233</a>
+&#x1F4C8; 4 <br>
+<p>Hongtao Ruan, Liying Zheng, Peixian Hu, Liang Xu, Jing Xiao</p></summary>
+<p>
+
+**Abstract:** State-of-the-art Named Entity Recognition(NER) models rely heavily on large amountsof fully annotated training data. However, ac-cessible data are often incompletely annotatedsince the annotators usually lack comprehen-sive knowledge in the target domain. Normallythe unannotated tokens are regarded as non-entities by default, while we underline thatthese tokens could either be non-entities orpart of any entity. Here, we study NER mod-eling with incomplete annotated data whereonly a fraction of the named entities are la-beled, and the unlabeled tokens are equiva-lently multi-labeled by every possible label.Taking multi-labeled tokens into account, thenumerous possible paths can distract the train-ing model from the gold path (ground truthlabel sequence), and thus hinders the learn-ing ability. In this paper, we propose AdaK-NER, named the adaptive top-Kapproach, tohelp the model focus on a smaller feasible re-gion where the gold path is more likely to belocated. We demonstrate the superiority ofour approach through extensive experimentson both English and Chinese datasets, aver-agely improving 2% in F-score on the CoNLL-2003 and over 10% on two Chinese datasetscompared with the prior state-of-the-art works.
+
+</p>
+</details>
+
+<details><summary><b>Conditional Generation of Synthetic Geospatial Images from Pixel-level and Feature-level Inputs</b>
+<a href="https://arxiv.org/abs/2109.05201">arxiv:2109.05201</a>
+&#x1F4C8; 4 <br>
+<p>Xuerong Xiao, Swetava Ganguli, Vipul Pandey</p></summary>
+<p>
+
+**Abstract:** Training robust supervised deep learning models for many geospatial applications of computer vision is difficult due to dearth of class-balanced and diverse training data. Conversely, obtaining enough training data for many applications is financially prohibitive or may be infeasible, especially when the application involves modeling rare or extreme events. Synthetically generating data (and labels) using a generative model that can sample from a target distribution and exploit the multi-scale nature of images can be an inexpensive solution to address scarcity of labeled data. Towards this goal, we present a deep conditional generative model, called VAE-Info-cGAN, that combines a Variational Autoencoder (VAE) with a conditional Information Maximizing Generative Adversarial Network (InfoGAN), for synthesizing semantically rich images simultaneously conditioned on a pixel-level condition (PLC) and a macroscopic feature-level condition (FLC). Dimensionally, the PLC can only vary in the channel dimension from the synthesized image and is meant to be a task-specific input. The FLC is modeled as an attribute vector in the latent space of the generated image which controls the contributions of various characteristic attributes germane to the target distribution. Experiments on a GPS trajectories dataset show that the proposed model can accurately generate various forms of spatiotemporal aggregates across different geographic locations while conditioned only on a raster representation of the road network. The primary intended application of the VAE-Info-cGAN is synthetic data (and label) generation for targeted data augmentation for computer vision-based modeling of problems relevant to geospatial analysis and remote sensing.
+
+</p>
+</details>
+
+<details><summary><b>Clinical Trial Information Extraction with BERT</b>
+<a href="https://arxiv.org/abs/2110.10027">arxiv:2110.10027</a>
+&#x1F4C8; 3 <br>
+<p>Xiong Liu, Greg L. Hersch, Iya Khalil, Murthy Devarakonda</p></summary>
+<p>
+
+**Abstract:** Natural language processing (NLP) of clinical trial documents can be useful in new trial design. Here we identify entity types relevant to clinical trial design and propose a framework called CT-BERT for information extraction from clinical trial text. We trained named entity recognition (NER) models to extract eligibility criteria entities by fine-tuning a set of pre-trained BERT models. We then compared the performance of CT-BERT with recent baseline methods including attention-based BiLSTM and Criteria2Query. The results demonstrate the superiority of CT-BERT in clinical trial NLP.
+
+</p>
+</details>
+
+<details><summary><b>Sequential Modelling with Applications to Music Recommendation, Fact-Checking, and Speed Reading</b>
+<a href="https://arxiv.org/abs/2109.06736">arxiv:2109.06736</a>
+&#x1F4C8; 3 <br>
+<p>Christian Hansen</p></summary>
+<p>
+
+**Abstract:** Sequential modelling entails making sense of sequential data, which naturally occurs in a wide array of domains. One example is systems that interact with users, log user actions and behaviour, and make recommendations of items of potential interest to users on the basis of their previous interactions. In such cases, the sequential order of user interactions is often indicative of what the user is interested in next. Similarly, for systems that automatically infer the semantics of text, capturing the sequential order of words in a sentence is essential, as even a slight re-ordering could significantly alter its original meaning. This thesis makes methodological contributions and new investigations of sequential modelling for the specific application areas of systems that recommend music tracks to listeners and systems that process text semantics in order to automatically fact-check claims, or "speed read" text for efficient further classification. (Rest of abstract omitted due to arXiv abstract limit)
+
+</p>
+</details>
+
+<details><summary><b>Team NeuroPoly: Description of the Pipelines for the MICCAI 2021 MS New Lesions Segmentation Challenge</b>
+<a href="https://arxiv.org/abs/2109.05409">arxiv:2109.05409</a>
+&#x1F4C8; 3 <br>
+<p>Uzay Macar, Enamundram Naga Karthik, Charley Gros, Andréanne Lemay, Julien Cohen-Adad</p></summary>
+<p>
+
+**Abstract:** This paper gives a detailed description of the pipelines used for the 2nd edition of the MICCAI 2021 Challenge on Multiple Sclerosis Lesion Segmentation. An overview of the data preprocessing steps applied is provided along with a brief description of the pipelines used, in terms of the architecture and the hyperparameters. Our code for this work can be found at: https://github.com/ivadomed/ms-challenge-2021.
+
+</p>
+</details>
+
+<details><summary><b>Guiding Topic Flows in the Generative Chatbot by Enhancing the ConceptNet with the Conversation Corpora</b>
+<a href="https://arxiv.org/abs/2109.05406">arxiv:2109.05406</a>
+&#x1F4C8; 3 <br>
+<p>Pengda Si, Yao Qiu, Jinchao Zhang, Yujiu Yang</p></summary>
+<p>
+
+**Abstract:** Human conversations consist of reasonable and natural topic flows, which are observed as the shifts of the mentioned concepts across utterances. Previous chatbots that incorporate the external commonsense knowledge graph prove that modeling the concept shifts can effectively alleviate the dull and uninformative response dilemma. However, there still exists a gap between the concept relations in the natural conversation and those in the external commonsense knowledge graph, which is an issue to solve. Specifically, the concept relations in the external commonsense knowledge graph are not intuitively built from the conversational scenario but the world knowledge, which makes them insufficient for the chatbot construction. To bridge the above gap, we propose the method to supply more concept relations extracted from the conversational corpora and reconstruct an enhanced concept graph for the chatbot construction. In addition, we present a novel, powerful, and fast graph encoding architecture named the Edge-Transformer to replace the traditional GNN architecture. Experimental results on the Reddit conversation dataset indicate our proposed method significantly outperforms strong baseline systems and achieves new SOTA results. Further analysis individually proves the effectiveness of the enhanced concept graph and the Edge-Transformer architecture.
+
+</p>
+</details>
+
+<details><summary><b>Sickle Cell Disease Severity Prediction from Percoll Gradient Images using Graph Convolutional Networks</b>
+<a href="https://arxiv.org/abs/2109.05372">arxiv:2109.05372</a>
+&#x1F4C8; 3 <br>
+<p>Ario Sadafi, Asya Makhro, Leonid Livshits, Nassir Navab, Anna Bogdanova, Shadi Albarqouni, Carsten Marr</p></summary>
+<p>
+
+**Abstract:** Sickle cell disease (SCD) is a severe genetic hemoglobin disorder that results in premature destruction of red blood cells. Assessment of the severity of the disease is a challenging task in clinical routine since the causes of broad variance in SCD manifestation despite the common genetic cause remain unclear. Identification of the biomarkers that would predict the severity grade is of importance for prognosis and assessment of responsiveness of patients to therapy. Detection of the changes in red blood cell (RBC) density through separation of Percoll density gradient could be such marker as it allows to resolve intercellular differences and follow the most damaged dense cells prone to destruction and vaso-occlusion. Quantification of the images obtained from the distribution of RBCs in Percoll gradient and interpretation of the obtained is an important prerequisite for establishment of this approach. Here, we propose a novel approach combining a graph convolutional network, a convolutional neural network, fast Fourier transform, and recursive feature elimination to predict the severity of SCD directly from a Percoll image. Two important but expensive laboratory blood test parameters measurements are used for training the graph convolutional network. To make the model independent from such tests during prediction, the two parameters are estimated by a neural network from the Percoll image directly. On a cohort of 216 subjects, we achieve a prediction performance that is only slightly below an approach where the groundtruth laboratory measurements are used. Our proposed method is the first computational approach for the difficult task of SCD severity prediction. The two-step approach relies solely on inexpensive and simple blood analysis tools and can have a significant impact on the patients' survival in underdeveloped countries where access to medical instruments and doctors is limited
+
+</p>
+</details>
+
+<details><summary><b>Border-SegGCN: Improving Semantic Segmentation by Refining the Border Outline using Graph Convolutional Network</b>
+<a href="https://arxiv.org/abs/2109.05353">arxiv:2109.05353</a>
+&#x1F4C8; 3 <br>
+<p>Naina Dhingra, George Chogovadze, Andreas Kunz</p></summary>
+<p>
+
+**Abstract:** We present Border-SegGCN, a novel architecture to improve semantic segmentation by refining the border outline using graph convolutional networks (GCN). The semantic segmentation network such as Unet or DeepLabV3+ is used as a base network to have pre-segmented output. This output is converted into a graphical structure and fed into the GCN to improve the border pixel prediction of the pre-segmented output. We explored and studied the factors such as border thickness, number of edges for a node, and the number of features to be fed into the GCN by performing experiments. We demonstrate the effectiveness of the Border-SegGCN on the CamVid and Carla dataset, achieving a test set performance of 81.96% without any post-processing on CamVid dataset. It is higher than the reported state of the art mIoU achieved on CamVid dataset by 0.404%
+
+</p>
+</details>
+
+<details><summary><b>DeepPyram: Enabling Pyramid View and Deformable Pyramid Reception for Semantic Segmentation in Cataract Surgery Videos</b>
+<a href="https://arxiv.org/abs/2109.05352">arxiv:2109.05352</a>
+&#x1F4C8; 3 <br>
+<p>Negin Ghamsarian, Mario Taschwer, klaus Schoeffmann</p></summary>
+<p>
+
+**Abstract:** Semantic segmentation in cataract surgery has a wide range of applications contributing to surgical outcome enhancement and clinical risk reduction. However, the varying issues in segmenting the different relevant instances make the designation of a unique network quite challenging. This paper proposes a semantic segmentation network termed as DeepPyram that can achieve superior performance in segmenting relevant objects in cataract surgery videos with varying issues. This superiority mainly originates from three modules: (i) Pyramid View Fusion, which provides a varying-angle global view of the surrounding region centering at each pixel position in the input convolutional feature map; (ii) Deformable Pyramid Reception, which enables a wide deformable receptive field that can adapt to geometric transformations in the object of interest; and (iii) Pyramid Loss that adaptively supervises multi-scale semantic feature maps. These modules can effectively boost semantic segmentation performance, especially in the case of transparency, deformability, scalability, and blunt edges in objects. The proposed approach is evaluated using four datasets of cataract surgery for objects with different contextual features and compared with thirteen state-of-the-art segmentation networks. The experimental results confirm that DeepPyram outperforms the rival approaches without imposing additional trainable parameters. Our comprehensive ablation study further proves the effectiveness of the proposed modules.
+
+</p>
+</details>
+
+<details><summary><b>Towards a Rigorous Evaluation of Time-series Anomaly Detection</b>
+<a href="https://arxiv.org/abs/2109.05257">arxiv:2109.05257</a>
+&#x1F4C8; 3 <br>
+<p>Siwon Kim, Kukjin Choi, Hyun-Soo Choi, Byunghan Lee, Sungroh Yoon</p></summary>
+<p>
+
+**Abstract:** In recent years, proposed studies on time-series anomaly detection (TAD) report high F1 scores on benchmark TAD datasets, giving the impression of clear improvements. However, most studies apply a peculiar evaluation protocol called point adjustment (PA) before scoring. In this paper, we theoretically and experimentally reveal that the PA protocol has a great possibility of overestimating the detection performance; that is, even a random anomaly score can easily turn into a state-of-the-art TAD method. Therefore, the comparison of TAD methods with F1 scores after the PA protocol can lead to misguided rankings. Furthermore, we question the potential of existing TAD methods by showing that an untrained model obtains comparable detection performance to the existing methods even without PA. Based on our findings, we propose a new baseline and an evaluation protocol. We expect that our study will help a rigorous evaluation of TAD and lead to further improvement in future researches.
+
+</p>
+</details>
+
+<details><summary><b>Prior Omission of Dissimilar Source Domain(s) for Cost-Effective Few-Shot Learning</b>
+<a href="https://arxiv.org/abs/2109.05234">arxiv:2109.05234</a>
+&#x1F4C8; 3 <br>
+<p>Zezhong Wang, Hongru Wang, Kwan Wai Chung, Jia Zhu, Gabriel Pui Cheong Fung, Kam-Fai Wong</p></summary>
+<p>
+
+**Abstract:** Few-shot slot tagging is an emerging research topic in the field of Natural Language Understanding (NLU). With sufficient annotated data from source domains, the key challenge is how to train and adapt the model to another target domain which only has few labels. Conventional few-shot approaches use all the data from the source domains without considering inter-domain relations and implicitly assume each sample in the domain contributes equally. However, our experiments show that the data distribution bias among different domains will significantly affect the adaption performance. Moreover, transferring knowledge from dissimilar domains will even introduce some extra noises so that affect the performance of models. To tackle this problem, we propose an effective similarity-based method to select data from the source domains. In addition, we propose a Shared-Private Network (SP-Net) for the few-shot slot tagging task. The words from the same class would have some shared features. We extract those shared features from the limited annotated data on the target domain and merge them together as the label embedding to help us predict other unlabelled data on the target domain. The experiment shows that our method outperforms the state-of-the-art approaches with fewer source data. The result also proves that some training data from dissimilar sources are redundant and even negative for the adaption.
+
+</p>
+</details>
+
+<details><summary><b>Pyramid Hybrid Pooling Quantization for Efficient Fine-Grained Image Retrieval</b>
+<a href="https://arxiv.org/abs/2109.05206">arxiv:2109.05206</a>
+&#x1F4C8; 3 <br>
+<p>Ziyun Zeng, Jinpeng Wang, Bin Chen, Tao Dai, Shu-Tao Xia</p></summary>
+<p>
+
+**Abstract:** Deep hashing approaches, including deep quantization and deep binary hashing, have become a common solution to large-scale image retrieval due to high computation and storage efficiency. Most existing hashing methods can not produce satisfactory results for fine-grained retrieval, because they usually adopt the outputs of the last CNN layer to generate binary codes, which is less effective to capture subtle but discriminative visual details. To improve fine-grained image hashing, we propose Pyramid Hybrid Pooling Quantization (PHPQ). Specifically, we propose a Pyramid Hybrid Pooling (PHP) module to capture and preserve fine-grained semantic information from multi-level features. Besides, we propose a learnable quantization module with a partial attention mechanism, which helps to optimize the most relevant codewords and improves the quantization. Comprehensive experiments demonstrate that PHPQ outperforms state-of-the-art methods.
+
+</p>
+</details>
+
+<details><summary><b>Contrastive Quantization with Code Memory for Unsupervised Image Retrieval</b>
+<a href="https://arxiv.org/abs/2109.05205">arxiv:2109.05205</a>
+&#x1F4C8; 3 <br>
+<p>Jinpeng Wang, Ziyun Zeng, Bin Chen, Tao Dai, Shu-Tao Xia</p></summary>
+<p>
+
+**Abstract:** The high efficiency in computation and storage makes hashing (including binary hashing and quantization) a common strategy in large-scale retrieval systems. To alleviate the reliance on expensive annotations, unsupervised deep hashing becomes an important research problem. This paper provides a novel solution to unsupervised deep quantization, namely Contrastive Quantization with Code Memory (MeCoQ). Different from existing reconstruction-based strategies, we learn unsupervised binary descriptors by contrastive learning, which can better capture discriminative visual semantics. Besides, we uncover that codeword diversity regularization is critical to prevent contrastive learning-based quantization from model degeneration. Moreover, we introduce a novel quantization code memory module that boosts contrastive learning with lower feature drift than conventional feature memories. Extensive experiments on benchmark datasets show that MeCoQ outperforms state-of-the-art methods.
+
+</p>
+</details>
+
+<details><summary><b>Follow the Curve: Robotic-Ultrasound Navigation with Learning Based Localization of Spinous Processes for Scoliosis Assessment</b>
+<a href="https://arxiv.org/abs/2109.05196">arxiv:2109.05196</a>
+&#x1F4C8; 3 <br>
+<p>Maria Victorova, Michael Ka-Shing Lee, David Navarro-Alarcon, Yongping Zheng</p></summary>
+<p>
+
+**Abstract:** The scoliosis progression in adolescents requires close monitoring to timely take treatment measures. Ultrasound imaging is a radiation-free and low-cost alternative in scoliosis assessment to X-rays, which are typically used in clinical practice. However, ultrasound images are prone to speckle noises, making it challenging for sonographers to detect bony features and follow the spine's curvature. This paper introduces a robotic-ultrasound approach for spinal curvature tracking and automatic navigation. A fully connected network with deconvolutional heads is developed to locate the spinous process efficiently with real-time ultrasound images. We use this machine learning-based method to guide the motion of the robot-held ultrasound probe and follow the spinal curvature while capturing ultrasound images and correspondent position. We developed a new force-driven controller that automatically adjusts the probe's pose relative to the skin surface to ensure a good acoustic coupling between the probe and skin. After the scanning, the acquired data is used to reconstruct the coronal spinal image, where the deformity of the scoliosis spine can be assessed and measured. To evaluate the performance of our methodology, we conducted an experimental study with human subjects where the deviations from the image center during the robotized procedure are compared to that obtained from manual scanning. The angles of spinal deformity measured on spinal reconstruction images were similar for both methods, implying that they equally reflect human anatomy.
+
+</p>
+</details>
+
+<details><summary><b>Eliciting Knowledge from Language Models for Event Extraction</b>
+<a href="https://arxiv.org/abs/2109.05190">arxiv:2109.05190</a>
+&#x1F4C8; 3 <br>
+<p>Jiaju Lin, Jin Jian, Qin Chen</p></summary>
+<p>
+
+**Abstract:** Eliciting knowledge contained in language models via prompt-based learning has shown great potential in many natural language processing tasks, such as text classification and generation. Whereas, the applications for more complex tasks such as event extraction are less studied, since the design of prompt is not straightforward due to the complicated types and arguments. In this paper, we explore to elicit the knowledge from pre-trained language models for event trigger detection and argument extraction. Specifically, we present various joint trigger/argument prompt methods, which can elicit more complementary knowledge by modeling the interactions between different triggers or arguments. The experimental results on the benchmark dataset, namely ACE2005, show the great advantages of our proposed approach. In particular, our approach is superior to the recent advanced methods in the few-shot scenario where only a few samples are used for training.
+
+</p>
+</details>
+
+<details><summary><b>In-filter Computing For Designing Ultra-light Acoustic Pattern Recognizers</b>
+<a href="https://arxiv.org/abs/2109.06171">arxiv:2109.06171</a>
+&#x1F4C8; 2 <br>
+<p>Abhishek Ramdas Nair, Shantanu Chakrabartty, Chetan Singh Thakur</p></summary>
+<p>
+
+**Abstract:** We present a novel in-filter computing framework that can be used for designing ultra-light acoustic classifiers for use in smart internet-of-things (IoTs). Unlike a conventional acoustic pattern recognizer, where the feature extraction and classification are designed independently, the proposed architecture integrates the convolution and nonlinear filtering operations directly into the kernels of a Support Vector Machine (SVM). The result of this integration is a template-based SVM whose memory and computational footprint (training and inference) is light enough to be implemented on an FPGA-based IoT platform. While the proposed in-filter computing framework is general enough, in this paper, we demonstrate this concept using a Cascade of Asymmetric Resonator with Inner Hair Cells (CAR-IHC) based acoustic feature extraction algorithm. The complete system has been optimized using time-multiplexing and parallel-pipeline techniques for a Xilinx Spartan 7 series Field Programmable Gate Array (FPGA). We show that the system can achieve robust classification performance on benchmark sound recognition tasks using only ~ 1.5k Look-Up Tables (LUTs) and ~ 2.8k Flip-Flops (FFs), a significant improvement over other approaches.
+
+</p>
+</details>
+
+<details><summary><b>Learning Selective Communication for Multi-Agent Path Finding</b>
+<a href="https://arxiv.org/abs/2109.05413">arxiv:2109.05413</a>
+&#x1F4C8; 2 <br>
+<p>Ziyuan Ma, Yudong Luo, Jia Pan</p></summary>
+<p>
+
+**Abstract:** Learning communication via deep reinforcement learning (RL) or imitation learning (IL) has recently been shown to be an effective way to solve Multi-Agent Path Finding (MAPF). However, existing communication based MAPF solvers focus on broadcast communication, where an agent broadcasts its message to all other or predefined agents. It is not only impractical but also leads to redundant information that could even impair the multi-agent cooperation. A succinct communication scheme should learn which information is relevant and influential to each agent's decision making process. To address this problem, we consider a request-reply scenario and propose Decision Causal Communication (DCC), a simple yet efficient model to enable agents to select neighbors to conduct communication during both training and execution. Specifically, a neighbor is determined as relevant and influential only when the presence of this neighbor causes the decision adjustment on the central agent. This judgment is learned only based on agent's local observation and thus suitable for decentralized execution to handle large scale problems. Empirical evaluation in obstacle-rich environment indicates the high success rate with low communication overhead of our method.
+
+</p>
+</details>
+
+<details><summary><b>On the Fundamental Limits of Matrix Completion: Leveraging Hierarchical Similarity Graphs</b>
+<a href="https://arxiv.org/abs/2109.05408">arxiv:2109.05408</a>
+&#x1F4C8; 2 <br>
+<p>Junhyung Ahn, Adel Elmahdy, Soheil Mohajer, Changho Suh</p></summary>
+<p>
+
+**Abstract:** We study the matrix completion problem that leverages hierarchical similarity graphs as side information in the context of recommender systems. Under a hierarchical stochastic block model that well respects practically-relevant social graphs and a low-rank rating matrix model, we characterize the exact information-theoretic limit on the number of observed matrix entries (i.e., optimal sample complexity) by proving sharp upper and lower bounds on the sample complexity. In the achievability proof, we demonstrate that probability of error of the maximum likelihood estimator vanishes for sufficiently large number of users and items, if all sufficient conditions are satisfied. On the other hand, the converse (impossibility) proof is based on the genie-aided maximum likelihood estimator. Under each necessary condition, we present examples of a genie-aided estimator to prove that the probability of error does not vanish for sufficiently large number of users and items. One important consequence of this result is that exploiting the hierarchical structure of social graphs yields a substantial gain in sample complexity relative to the one that simply identifies different groups without resorting to the relational structure across them. More specifically, we analyze the optimal sample complexity and identify different regimes whose characteristics rely on quality metrics of side information of the hierarchical similarity graph. Finally, we present simulation results to corroborate our theoretical findings and show that the characterized information-theoretic limit can be asymptotically achieved.
+
+</p>
+</details>
+
+<details><summary><b>Differentially Private Variable Selection via the Knockoff Filter</b>
+<a href="https://arxiv.org/abs/2109.05402">arxiv:2109.05402</a>
+&#x1F4C8; 2 <br>
+<p>Mehrdad Pournaderi, Yu Xiang</p></summary>
+<p>
+
+**Abstract:** The knockoff filter, recently developed by Barber and Candes, is an effective procedure to perform variable selection with a controlled false discovery rate (FDR). We propose a private version of the knockoff filter by incorporating Gaussian and Laplace mechanisms, and show that variable selection with controlled FDR can be achieved. Simulations demonstrate that our setting has reasonable statistical power.
+
+</p>
+</details>
+
+<details><summary><b>Gradients and Subgradients of Buffered Failure Probability</b>
+<a href="https://arxiv.org/abs/2109.05391">arxiv:2109.05391</a>
+&#x1F4C8; 2 <br>
+<p>Johannes O. Royset, Ji-Eun Byun</p></summary>
+<p>
+
+**Abstract:** Gradients and subgradients are central to optimization and sensitivity analysis of buffered failure probabilities. We furnish a characterization of subgradients based on subdifferential calculus in the case of finite probability distributions and, under additional assumptions, also a gradient expression for general distributions. Several examples illustrate the application of the results, especially in the context of optimality conditions.
+
+</p>
+</details>
+
+<details><summary><b>Omnipredictors</b>
+<a href="https://arxiv.org/abs/2109.05389">arxiv:2109.05389</a>
+&#x1F4C8; 2 <br>
+<p>Parikshit Gopalan, Adam Tauman Kalai, Omer Reingold, Vatsal Sharan, Udi Wieder</p></summary>
+<p>
+
+**Abstract:** Loss minimization is a dominant paradigm in machine learning, where a predictor is trained to minimize some loss function that depends on an uncertain event (e.g., "will it rain tomorrow?''). Different loss functions imply different learning algorithms and, at times, very different predictors. While widespread and appealing, a clear drawback of this approach is that the loss function may not be known at the time of learning, requiring the algorithm to use a best-guess loss function. We suggest a rigorous new paradigm for loss minimization in machine learning where the loss function can be ignored at the time of learning and only be taken into account when deciding an action.
+  We introduce the notion of an (${\mathcal{L}},\mathcal{C}$)-omnipredictor, which could be used to optimize any loss in a family ${\mathcal{L}}$. Once the loss function is set, the outputs of the predictor can be post-processed (a simple univariate data-independent transformation of individual predictions) to do well compared with any hypothesis from the class $\mathcal{C}$. The post processing is essentially what one would perform if the outputs of the predictor were true probabilities of the uncertain events. In a sense, omnipredictors extract all the predictive power from the class $\mathcal{C}$, irrespective of the loss function in $\mathcal{L}$.
+  We show that such "loss-oblivious'' learning is feasible through a connection to multicalibration, a notion introduced in the context of algorithmic fairness. In addition, we show how multicalibration can be viewed as a solution concept for agnostic boosting, shedding new light on past results. Finally, we transfer our insights back to the context of algorithmic fairness by providing omnipredictors for multi-group loss minimization.
+
+</p>
+</details>
+
+<details><summary><b>Dual-view Snapshot Compressive Imaging via Optical Flow Aided Recurrent Neural Network</b>
+<a href="https://arxiv.org/abs/2109.05287">arxiv:2109.05287</a>
+&#x1F4C8; 2 <br>
+<p>Ruiying Lu, Bo Chen, Guanliang Liu, Ziheng Cheng, Mu Qiao, Xin Yuan</p></summary>
+<p>
+
+**Abstract:** Dual-view snapshot compressive imaging (SCI) aims to capture videos from two field-of-views (FoVs) using a 2D sensor (detector) in a single snapshot, achieving joint FoV and temporal compressive sensing, and thus enjoying the advantages of low-bandwidth, low-power, and low-cost. However, it is challenging for existing model-based decoding algorithms to reconstruct each individual scene, which usually require exhaustive parameter tuning with extremely long running time for large scale data. In this paper, we propose an optical flow-aided recurrent neural network for dual video SCI systems, which provides high-quality decoding in seconds. Firstly, we develop a diversity amplification method to enlarge the differences between scenes of two FoVs, and design a deep convolutional neural network with dual branches to separate different scenes from the single measurement. Secondly, we integrate the bidirectional optical flow extracted from adjacent frames with the recurrent neural network to jointly reconstruct each video in a sequential manner. Extensive results on both simulation and real data demonstrate the superior performance of our proposed model in a short inference time. The code and data are available at https://github.com/RuiyingLu/OFaNet-for-Dual-view-SCI.
+
+</p>
+</details>
+
+<details><summary><b>Benchmarking Processor Performance by Multi-Threaded Machine Learning Algorithms</b>
+<a href="https://arxiv.org/abs/2109.05276">arxiv:2109.05276</a>
+&#x1F4C8; 2 <br>
+<p>Muhammad Fahad Saleem</p></summary>
+<p>
+
+**Abstract:** Machine learning algorithms have enabled computers to predict things by learning from previous data. The data storage and processing power are increasing rapidly, thus increasing machine learning and Artificial intelligence applications. Much of the work is done to improve the accuracy of the models built in the past, with little research done to determine the computational costs of machine learning acquisitions. In this paper, I will proceed with this later research work and will make a performance comparison of multi-threaded machine learning clustering algorithms. I will be working on Linear Regression, Random Forest, and K-Nearest Neighbors to determine the performance characteristics of the algorithms as well as the computation costs to the obtained results. I will be benchmarking system hardware performance by running these multi-threaded algorithms to train and test the models on a dataset to note the differences in performance matrices of the algorithms. In the end, I will state the best performing algorithms concerning the performance efficiency of these algorithms on my system.
+
+</p>
+</details>
+
+<details><summary><b>Space Meets Time: Local Spacetime Neural Network For Traffic Flow Forecasting</b>
+<a href="https://arxiv.org/abs/2109.05225">arxiv:2109.05225</a>
+&#x1F4C8; 2 <br>
+<p>Song Yang, Jiamou Liu, Kaiqi Zhao</p></summary>
+<p>
+
+**Abstract:** Traffic flow forecasting is a crucial task in urban computing. The challenge arises as traffic flows often exhibit intrinsic and latent spatio-temporal correlations that cannot be identified by extracting the spatial and temporal patterns of traffic data separately. We argue that such correlations are universal and play a pivotal role in traffic flow. We put forward spacetime interval learning as a paradigm to explicitly capture these correlations through a unified analysis of both spatial and temporal features. Unlike the state-of-the-art methods, which are restricted to a particular road network, we model the universal spatio-temporal correlations that are transferable from cities to cities. To this end, we propose a new spacetime interval learning framework that constructs a local-spacetime context of a traffic sensor comprising the data from its neighbors within close time points. Based on this idea, we introduce spacetime neural network (STNN), which employs novel spacetime convolution and attention mechanism to learn the universal spatio-temporal correlations. The proposed STNN captures local traffic patterns, which does not depend on a specific network structure. As a result, a trained STNN model can be applied on any unseen traffic networks. We evaluate the proposed STNN on two public real-world traffic datasets and a simulated dataset on dynamic networks. The experiment results show that STNN not only improves prediction accuracy by 15% over state-of-the-art methods, but is also effective in handling the case when the traffic network undergoes dynamic changes as well as the superior generalization capability.
+
+</p>
+</details>
+
+<details><summary><b>Fundamental limits of over-the-air optimization: Are analog schemes optimal?</b>
+<a href="https://arxiv.org/abs/2109.05222">arxiv:2109.05222</a>
+&#x1F4C8; 2 <br>
+<p>Shubham K Jha, Prathamesh Mayekar, Himanshu Tyagi</p></summary>
+<p>
+
+**Abstract:** We consider over-the-air convex optimization on a $d-$dimensional space where coded gradients are sent over an additive Gaussian noise channel with variance $σ^2$. The codewords satisfy an average power constraint $P$, resulting in the signal-to-noise ratio (SNR) of $P/σ^2$. We derive bounds for the convergence rates for over-the-air optimization. Our first result is a lower bound for the convergence rate showing that any code must slowdown the convergence rate by a factor of roughly $\sqrt{d/\log(1+\mathtt{SNR})}$. Next, we consider a popular class of schemes called $analog$ $coding$, where a linear function of the gradient is sent. We show that a simple scaled transmission analog coding scheme results in a slowdown in convergence rate by a factor of $\sqrt{d(1+1/\mathtt{SNR})}$. This matches the previous lower bound up to constant factors for low SNR, making the scaled transmission scheme optimal at low SNR. However, we show that this slowdown is necessary for any analog coding scheme. In particular, a slowdown in convergence by a factor of $\sqrt{d}$ for analog coding remains even when SNR tends to infinity. Remarkably, we present a simple quantize-and-modulate scheme that uses $Amplitude$ $Shift$ $Keying$ and almost attains the optimal convergence rate at all SNRs.
+
+</p>
+</details>
+
+<details><summary><b>A Survey on Multi-modal Summarization</b>
+<a href="https://arxiv.org/abs/2109.05199">arxiv:2109.05199</a>
+&#x1F4C8; 2 <br>
+<p>Anubhav Jangra, Adam Jatowt, Sriparna Saha, Mohammad Hasanuzzaman</p></summary>
+<p>
+
+**Abstract:** The new era of technology has brought us to the point where it is convenient for people to share their opinions over an abundance of platforms. These platforms have a provision for the users to express themselves in multiple forms of representations, including text, images, videos, and audio. This, however, makes it difficult for users to obtain all the key information about a topic, making the task of automatic multi-modal summarization (MMS) essential. In this paper, we present a comprehensive survey of the existing research in the area of MMS.
+
+</p>
+</details>
+
+<details><summary><b>Completeness of Unbounded Best-First Game Algorithms</b>
+<a href="https://arxiv.org/abs/2109.09468">arxiv:2109.09468</a>
+&#x1F4C8; 1 <br>
+<p>Quentin Cohen-Solal</p></summary>
+<p>
+
+**Abstract:** In this article, we prove the completeness of the following game search algorithms: unbounded best-first minimax with completion and descent with completion, i.e. we show that, with enough time, they find the best game strategy. We then generalize these two algorithms in the context of perfect information multiplayer games. We show that these generalizations are also complete: they find one of the equilibrium points.
+
+</p>
+</details>
+
+<details><summary><b>Quantitative reconstruction of defects in multi-layered bonded composites using fully convolutional network-based ultrasonic inversion</b>
+<a href="https://arxiv.org/abs/2109.07284">arxiv:2109.07284</a>
+&#x1F4C8; 1 <br>
+<p>Jing Rao, Fangshu Yang, Huadong Mo, Stefan Kollmannsberger, Ernst Rank</p></summary>
+<p>
+
+**Abstract:** Ultrasonic methods have great potential applications to detect and characterize defects in multi-layered bonded composites. However, it remains challenging to quantitatively reconstruct defects, such as disbonds and kissing bonds, that influence the integrity of adhesive bonds and seriously reduce the strength of assemblies. In this work, an ultrasonic method based on the supervised fully convolutional network (FCN) is proposed to quantitatively reconstruct defects hidden in multi-layered bonded composites. In the training process of this method, an FCN establishes a non-linear mapping from measured ultrasonic data to the corresponding velocity models of multi-layered bonded composites. In the predicting process, the trained network obtained from the training process is used to directly reconstruct the velocity models from the new measured ultrasonic data of adhesively bonded composites. The presented FCN-based inversion method can automatically extract useful features in multi-layered composites. Although this method is computationally expensive in the training process, the prediction itself in the online phase takes only seconds. The numerical results show that the FCN-based ultrasonic inversion method is capable to accurately reconstruct ultrasonic velocity models of the high contrast defects, which has great potential for online detection of adhesively bonded composites.
+
+</p>
+</details>
+
+<details><summary><b>HyP-ABC: A Novel Automated Hyper-Parameter Tuning Algorithm Using Evolutionary Optimization</b>
+<a href="https://arxiv.org/abs/2109.05319">arxiv:2109.05319</a>
+&#x1F4C8; 1 <br>
+<p>Leila Zahedi, Farid Ghareh Mohammadi, M. Hadi Amini</p></summary>
+<p>
+
+**Abstract:** Machine learning techniques lend themselves as promising decision-making and analytic tools in a wide range of applications. Different ML algorithms have various hyper-parameters. In order to tailor an ML model towards a specific application, a large number of hyper-parameters should be tuned. Tuning the hyper-parameters directly affects the performance (accuracy and run-time). However, for large-scale search spaces, efficiently exploring the ample number of combinations of hyper-parameters is computationally challenging. Existing automated hyper-parameter tuning techniques suffer from high time complexity. In this paper, we propose HyP-ABC, an automatic innovative hybrid hyper-parameter optimization algorithm using the modified artificial bee colony approach, to measure the classification accuracy of three ML algorithms, namely random forest, extreme gradient boosting, and support vector machine. Compared to the state-of-the-art techniques, HyP-ABC is more efficient and has a limited number of parameters to be tuned, making it worthwhile for real-world hyper-parameter optimization problems. We further compare our proposed HyP-ABC algorithm with state-of-the-art techniques. In order to ensure the robustness of the proposed method, the algorithm takes a wide range of feasible hyper-parameter values, and is tested using a real-world educational dataset.
+
+</p>
+</details>
+
+<details><summary><b>Existence conditions for hidden feedback loops in online recommender systems</b>
+<a href="https://arxiv.org/abs/2109.05278">arxiv:2109.05278</a>
+&#x1F4C8; 1 <br>
+<p>Anton S. Khritankov, Anton A. Pilkevich</p></summary>
+<p>
+
+**Abstract:** We explore a hidden feedback loops effect in online recommender systems. Feedback loops result in degradation of online multi-armed bandit (MAB) recommendations to a small subset and loss of coverage and novelty. We study how uncertainty and noise in user interests influence the existence of feedback loops. First, we show that an unbiased additive random noise in user interests does not prevent a feedback loop. Second, we demonstrate that a non-zero probability of resetting user interests is sufficient to limit the feedback loop and estimate the size of the effect. Our experiments confirm the theoretical findings in a simulated environment for four bandit algorithms.
+
+</p>
+</details>
+
+<details><summary><b>A secondary immune response based on co-evolutive populations of agents for anomaly detection and characterization</b>
+<a href="https://arxiv.org/abs/2109.05376">arxiv:2109.05376</a>
+&#x1F4C8; 0 <br>
+<p>Pedro Pinacho-Davidson, Matías Lermanda, Ricardo Contreras, María A. Pinninghoff</p></summary>
+<p>
+
+**Abstract:** The detection of anomalies in unknown environments is a problem that has been approached from different perspectives with variable results. Artificial Immune Systems (AIS) present particularly advantageous characteristics for the detection of such anomalies. This research is based on an existing detector model, named Artificial Bioindicators System (ABS) which identifies and solves its main weaknesses. An ABS based anomaly classifier model is presented, incorporating elements of the AIS. In this way, a new model (R-ABS) is developed which includes the advantageous capabilities of an ABS plus the reactive capabilities of an AIS to overcome its weaknesses and disadvantages. The RABS model was tested using the well-known DARPA'98 dataset, plus a dataset built to carry out a greater number of experiments. The performance of the RABS model was compared to the performance of the ABS model based on classical sensitivity and specificity metrics, plus a response time metric to illustrate the rapid response of R-ABS relative to ABS. The results showed a better performance of R-ABS, especially in terms of detection time.
+
+</p>
+</details>
+
+
+[Next Page](2021/2021-09/2021-09-10.md)
