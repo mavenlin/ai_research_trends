@@ -1,11 +1,11 @@
 Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2022.07.17]({{ '/2022/07/17/2022.07.17.html' | relative_url }})
 {% raw %}
-## Summary for 2022-07-16, created on 2022-07-23
+## Summary for 2022-07-16, created on 2022-07-26
 
 
 <details><summary><b>Personalized PCA: Decoupling Shared and Unique Features</b>
 <a href="https://arxiv.org/abs/2207.08041">arxiv:2207.08041</a>
-&#x1F4C8; 7 <br>
+&#x1F4C8; 11 <br>
 <p>Naichen Shi, Raed Al Kontar</p></summary>
 <p>
 
@@ -16,11 +16,35 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 
 <details><summary><b>NeFSAC: Neurally Filtered Minimal Samples</b>
 <a href="https://arxiv.org/abs/2207.07872">arxiv:2207.07872</a>
-&#x1F4C8; 7 <br>
+&#x1F4C8; 9 <br>
 <p>Luca Cavalli, Marc Pollefeys, Daniel Barath</p></summary>
 <p>
 
 **Abstract:** Since RANSAC, a great deal of research has been devoted to improving both its accuracy and run-time. Still, only a few methods aim at recognizing invalid minimal samples early, before the often expensive model estimation and quality calculation are done. To this end, we propose NeFSAC, an efficient algorithm for neural filtering of motion-inconsistent and poorly-conditioned minimal samples. We train NeFSAC to predict the probability of a minimal sample leading to an accurate relative pose, only based on the pixel coordinates of the image correspondences. Our neural filtering model learns typical motion patterns of samples which lead to unstable poses, and regularities in the possible motions to favour well-conditioned and likely-correct samples. The novel lightweight architecture implements the main invariants of minimal samples for pose estimation, and a novel training scheme addresses the problem of extreme class imbalance. NeFSAC can be plugged into any existing RANSAC-based pipeline. We integrate it into USAC and show that it consistently provides strong speed-ups even under extreme train-test domain gaps - for example, the model trained for the autonomous driving scenario works on PhotoTourism too. We tested NeFSAC on more than 100k image pairs from three publicly available real-world datasets and found that it leads to one order of magnitude speed-up, while often finding more accurate results than USAC alone. The source code is available at https://github.com/cavalli1234/NeFSAC.
+
+</p>
+</details>
+
+<details><summary><b>Quantum Noise-Induced Reservoir Computing</b>
+<a href="https://arxiv.org/abs/2207.07924">arxiv:2207.07924</a>
+&#x1F4C8; 8 <br>
+<p>Tomoyuki Kubota, Yudai Suzuki, Shumpei Kobayashi, Quoc Hoan Tran, Naoki Yamamoto, Kohei Nakajima</p></summary>
+<p>
+
+**Abstract:** Quantum computing has been moving from a theoretical phase to practical one, presenting daunting challenges in implementing physical qubits, which are subjected to noises from the surrounding environment. These quantum noises are ubiquitous in quantum devices and generate adverse effects in the quantum computational model, leading to extensive research on their correction and mitigation techniques. But do these quantum noises always provide disadvantages? We tackle this issue by proposing a framework called quantum noise-induced reservoir computing and show that some abstract quantum noise models can induce useful information processing capabilities for temporal input data. We demonstrate this ability in several typical benchmarks and investigate the information processing capacity to clarify the framework's processing mechanism and memory profile. We verified our perspective by implementing the framework in a number of IBM quantum processors and obtained similar characteristic memory profiles with model analyses. As a surprising result, information processing capacity increased with quantum devices' higher noise levels and error rates. Our study opens up a novel path for diverting useful information from quantum computer noises into a more sophisticated information processor.
+
+</p>
+</details>
+
+<details><summary><b>An Experimental Evaluation of Machine Learning Training on a Real Processing-in-Memory System</b>
+<a href="https://arxiv.org/abs/2207.07886">arxiv:2207.07886</a>
+&#x1F4C8; 7 <br>
+<p>Juan Gómez-Luna, Yuxin Guo, Sylvan Brocard, Julien Legriel, Remy Cimadomo, Geraldo F. Oliveira, Gagandeep Singh, Onur Mutlu</p></summary>
+<p>
+
+**Abstract:** Training machine learning (ML) algorithms is a computationally intensive process, which is frequently memory-bound due to repeatedly accessing large training datasets. As a result, processor-centric systems (e.g., CPU, GPU) suffer from costly data movement between memory units and processing units, which consumes large amounts of energy and execution cycles. Memory-centric computing systems, i.e., with processing-in-memory (PIM) capabilities, can alleviate this data movement bottleneck.
+  Our goal is to understand the potential of modern general-purpose PIM architectures to accelerate ML training. To do so, we (1) implement several representative classic ML algorithms (namely, linear regression, logistic regression, decision tree, K-Means clustering) on a real-world general-purpose PIM architecture, (2) rigorously evaluate and characterize them in terms of accuracy, performance and scaling, and (3) compare to their counterpart implementations on CPU and GPU. Our evaluation on a real memory-centric computing system with more than 2500 PIM cores shows that general-purpose PIM architectures can greatly accelerate memory-bound ML workloads, when the necessary operations and datatypes are natively supported by PIM hardware. For example, our PIM implementation of decision tree is $27\times$ faster than a state-of-the-art CPU version on an 8-core Intel Xeon, and $1.34\times$ faster than a state-of-the-art GPU version on an NVIDIA A100. Our K-Means clustering on PIM is $2.8\times$ and $3.2\times$ than state-of-the-art CPU and GPU versions, respectively.
+  To our knowledge, our work is the first one to evaluate ML training on a real-world PIM architecture. We conclude with key observations, takeaways, and recommendations that can inspire users of ML workloads, programmers of PIM architectures, and hardware designers & architects of future memory-centric computing systems.
 
 </p>
 </details>
@@ -36,37 +60,57 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
+<details><summary><b>Visually-aware Acoustic Event Detection using Heterogeneous Graphs</b>
+<a href="https://arxiv.org/abs/2207.07935">arxiv:2207.07935</a>
+&#x1F4C8; 6 <br>
+<p>Amir Shirian, Krishna Somandepalli, Victor Sanchez, Tanaya Guha</p></summary>
+<p>
+
+**Abstract:** Perception of auditory events is inherently multimodal relying on both audio and visual cues. A large number of existing multimodal approaches process each modality using modality-specific models and then fuse the embeddings to encode the joint information. In contrast, we employ heterogeneous graphs to explicitly capture the spatial and temporal relationships between the modalities and represent detailed information about the underlying signal. Using heterogeneous graph approaches to address the task of visually-aware acoustic event classification, which serves as a compact, efficient and scalable way to represent data in the form of graphs. Through heterogeneous graphs, we show efficiently modelling of intra- and inter-modality relationships both at spatial and temporal scales. Our model can easily be adapted to different scales of events through relevant hyperparameters. Experiments on AudioSet, a large benchmark, shows that our model achieves state-of-the-art performance.
+
+</p>
+</details>
+
+<details><summary><b>CNN-based Euler's Elastica Inpainting with Deep Energy and Deep Image Prior</b>
+<a href="https://arxiv.org/abs/2207.07921">arxiv:2207.07921</a>
+&#x1F4C8; 6 <br>
+<p>Karl Schrader, Tobias Alt, Joachim Weickert, Michael Ertel</p></summary>
+<p>
+
+**Abstract:** Euler's elastica constitute an appealing variational image inpainting model. It minimises an energy that involves the total variation as well as the level line curvature. These components are transparent and make it attractive for shape completion tasks. However, its gradient flow is a singular, anisotropic, and nonlinear PDE of fourth order, which is numerically challenging: It is difficult to find efficient algorithms that offer sharp edges and good rotation invariance. As a remedy, we design the first neural algorithm that simulates inpainting with Euler's Elastica. We use the deep energy concept which employs the variational energy as neural network loss. Furthermore, we pair it with a deep image prior where the network architecture itself acts as a prior. This yields better inpaintings by steering the optimisation trajectory closer to the desired solution. Our results are qualitatively on par with state-of-the-art algorithms on elastica-based shape completion. They combine good rotation invariance with sharp edges. Moreover, we benefit from the high efficiency and effortless parallelisation within a neural framework. Our neural elastica approach only requires 3x3 central difference stencils. It is thus much simpler than other well-performing algorithms for elastica inpainting. Last but not least, it is unsupervised as it requires no ground truth training data.
+
+</p>
+</details>
+
+<details><summary><b>TransGrasp: Grasp Pose Estimation of a Category of Objects by Transferring Grasps from Only One Labeled Instance</b>
+<a href="https://arxiv.org/abs/2207.07861">arxiv:2207.07861</a>
+&#x1F4C8; 6 <br>
+<p>Hongtao Wen, Jianhang Yan, Wanli Peng, Yi Sun</p></summary>
+<p>
+
+**Abstract:** Grasp pose estimation is an important issue for robots to interact with the real world. However, most of existing methods require exact 3D object models available beforehand or a large amount of grasp annotations for training. To avoid these problems, we propose TransGrasp, a category-level grasp pose estimation method that predicts grasp poses of a category of objects by labeling only one object instance. Specifically, we perform grasp pose transfer across a category of objects based on their shape correspondences and propose a grasp pose refinement module to further fine-tune grasp pose of grippers so as to ensure successful grasps. Experiments demonstrate the effectiveness of our method on achieving high-quality grasps with the transferred grasp poses. Our code is available at https://github.com/yanjh97/TransGrasp.
+
+</p>
+</details>
+
+<details><summary><b>EEG2Vec: Learning Affective EEG Representations via Variational Autoencoders</b>
+<a href="https://arxiv.org/abs/2207.08002">arxiv:2207.08002</a>
+&#x1F4C8; 5 <br>
+<p>David Bethge, Philipp Hallgarten, Tobias Grosse-Puppendahl, Mohamed Kari, Lewis L. Chuang, Ozan Özdenizci, Albrecht Schmidt</p></summary>
+<p>
+
+**Abstract:** There is a growing need for sparse representational formats of human affective states that can be utilized in scenarios with limited computational memory resources. We explore whether representing neural data, in response to emotional stimuli, in a latent vector space can serve to both predict emotional states as well as generate synthetic EEG data that are participant- and/or emotion-specific. We propose a conditional variational autoencoder based framework, EEG2Vec, to learn generative-discriminative representations from EEG data. Experimental results on affective EEG recording datasets demonstrate that our model is suitable for unsupervised EEG modeling, classification of three distinct emotion categories (positive, neutral, negative) based on the latent representation achieves a robust performance of 68.49%, and generated synthetic EEG sequences resemble real EEG data inputs to particularly reconstruct low-frequency signal components. Our work advances areas where affective EEG representations can be useful in e.g., generating artificial (labeled) training data or alleviating manual feature extraction, and provide efficiency for memory constrained edge computing applications.
+
+</p>
+</details>
+
 <details><summary><b>SatMAE: Pre-training Transformers for Temporal and Multi-Spectral Satellite Imagery</b>
 <a href="https://arxiv.org/abs/2207.08051">arxiv:2207.08051</a>
-&#x1F4C8; 5 <br>
+&#x1F4C8; 4 <br>
 <p>Yezhen Cong, Samar Khanna, Chenlin Meng, Patrick Liu, Erik Rozi, Yutong He, Marshall Burke, David B. Lobell, Stefano Ermon</p></summary>
 <p>
 
 **Abstract:** Unsupervised pre-training methods for large vision models have shown to enhance performance on downstream supervised tasks. Developing similar techniques for satellite imagery presents significant opportunities as unlabelled data is plentiful and the inherent temporal and multi-spectral structure provides avenues to further improve existing pre-training strategies. In this paper, we present SatMAE, a pre-training framework for temporal or multi-spectral satellite imagery based on Masked Autoencoder (MAE). To leverage temporal information, we include a temporal embedding along with independently masking image patches across time. In addition, we demonstrate that encoding multi-spectral data as groups of bands with distinct spectral positional encodings is beneficial. Our approach yields strong improvements over previous state-of-the-art techniques, both in terms of supervised learning performance on benchmark datasets (up to $\uparrow$ 7\%), and transfer learning performance on downstream remote sensing tasks, including land cover classification (up to $\uparrow$ 14\%) and semantic segmentation.
-
-</p>
-</details>
-
-<details><summary><b>An Experimental Evaluation of Machine Learning Training on a Real Processing-in-Memory System</b>
-<a href="https://arxiv.org/abs/2207.07886">arxiv:2207.07886</a>
-&#x1F4C8; 5 <br>
-<p>Juan Gómez-Luna, Yuxin Guo, Sylvan Brocard, Julien Legriel, Remy Cimadomo, Geraldo F. Oliveira, Gagandeep Singh, Onur Mutlu</p></summary>
-<p>
-
-**Abstract:** Training machine learning (ML) algorithms is a computationally intensive process, which is frequently memory-bound due to repeatedly accessing large training datasets. As a result, processor-centric systems (e.g., CPU, GPU) suffer from costly data movement between memory units and processing units, which consumes large amounts of energy and execution cycles. Memory-centric computing systems, i.e., with processing-in-memory (PIM) capabilities, can alleviate this data movement bottleneck.
-  Our goal is to understand the potential of modern general-purpose PIM architectures to accelerate ML training. To do so, we (1) implement several representative classic ML algorithms (namely, linear regression, logistic regression, decision tree, K-Means clustering) on a real-world general-purpose PIM architecture, (2) rigorously evaluate and characterize them in terms of accuracy, performance and scaling, and (3) compare to their counterpart implementations on CPU and GPU. Our evaluation on a real memory-centric computing system with more than 2500 PIM cores shows that general-purpose PIM architectures can greatly accelerate memory-bound ML workloads, when the necessary operations and datatypes are natively supported by PIM hardware. For example, our PIM implementation of decision tree is $27\times$ faster than a state-of-the-art CPU version on an 8-core Intel Xeon, and $1.34\times$ faster than a state-of-the-art GPU version on an NVIDIA A100. Our K-Means clustering on PIM is $2.8\times$ and $3.2\times$ than state-of-the-art CPU and GPU versions, respectively.
-  To our knowledge, our work is the first one to evaluate ML training on a real-world PIM architecture. We conclude with key observations, takeaways, and recommendations that can inspire users of ML workloads, programmers of PIM architectures, and hardware designers & architects of future memory-centric computing systems.
-
-</p>
-</details>
-
-<details><summary><b>On the Importance of Hyperparameters and Data Augmentation for Self-Supervised Learning</b>
-<a href="https://arxiv.org/abs/2207.07875">arxiv:2207.07875</a>
-&#x1F4C8; 5 <br>
-<p>Diane Wagner, Fabio Ferreira, Danny Stoll, Robin Tibor Schirrmeister, Samuel Müller, Frank Hutter</p></summary>
-<p>
-
-**Abstract:** Self-Supervised Learning (SSL) has become a very active area of Deep Learning research where it is heavily used as a pre-training method for classification and other tasks. However, the rapid pace of advancements in this area comes at a price: training pipelines vary significantly across papers, which presents a potentially crucial confounding factor. Here, we show that, indeed, the choice of hyperparameters and data augmentation strategies can have a dramatic impact on performance. To shed light on these neglected factors and help maximize the power of SSL, we hyperparameterize these components and optimize them with Bayesian optimization, showing improvements across multiple datasets for the SimSiam SSL approach. Realizing the importance of data augmentations for SSL, we also introduce a new automated data augmentation algorithm, GroupAugment, which considers groups of augmentations and optimizes the sampling across groups. In contrast to algorithms designed for supervised learning, GroupAugment achieved consistently high linear evaluation accuracy across all datasets we considered. Overall, our results indicate the importance and likely underestimated role of data augmentation for SSL.
 
 </p>
 </details>
@@ -82,24 +126,13 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Visually-aware Acoustic Event Detection using Heterogeneous Graphs</b>
-<a href="https://arxiv.org/abs/2207.07935">arxiv:2207.07935</a>
+<details><summary><b>On the Importance of Hyperparameters and Data Augmentation for Self-Supervised Learning</b>
+<a href="https://arxiv.org/abs/2207.07875">arxiv:2207.07875</a>
 &#x1F4C8; 4 <br>
-<p>Amir Shirian, Krishna Somandepalli, Victor Sanchez, Tanaya Guha</p></summary>
+<p>Diane Wagner, Fabio Ferreira, Danny Stoll, Robin Tibor Schirrmeister, Samuel Müller, Frank Hutter</p></summary>
 <p>
 
-**Abstract:** Perception of auditory events is inherently multimodal relying on both audio and visual cues. A large number of existing multimodal approaches process each modality using modality-specific models and then fuse the embeddings to encode the joint information. In contrast, we employ heterogeneous graphs to explicitly capture the spatial and temporal relationships between the modalities and represent detailed information about the underlying signal. Using heterogeneous graph approaches to address the task of visually-aware acoustic event classification, which serves as a compact, efficient and scalable way to represent data in the form of graphs. Through heterogeneous graphs, we show efficiently modelling of intra- and inter-modality relationships both at spatial and temporal scales. Our model can easily be adapted to different scales of events through relevant hyperparameters. Experiments on AudioSet, a large benchmark, shows that our model achieves state-of-the-art performance.
-
-</p>
-</details>
-
-<details><summary><b>Quantum Noise-Induced Reservoir Computing</b>
-<a href="https://arxiv.org/abs/2207.07924">arxiv:2207.07924</a>
-&#x1F4C8; 4 <br>
-<p>Tomoyuki Kubota, Yudai Suzuki, Shumpei Kobayashi, Quoc Hoan Tran, Naoki Yamamoto, Kohei Nakajima</p></summary>
-<p>
-
-**Abstract:** Quantum computing has been moving from a theoretical phase to practical one, presenting daunting challenges in implementing physical qubits, which are subjected to noises from the surrounding environment. These quantum noises are ubiquitous in quantum devices and generate adverse effects in the quantum computational model, leading to extensive research on their correction and mitigation techniques. But do these quantum noises always provide disadvantages? We tackle this issue by proposing a framework called quantum noise-induced reservoir computing and show that some abstract quantum noise models can induce useful information processing capabilities for temporal input data. We demonstrate this ability in several typical benchmarks and investigate the information processing capacity to clarify the framework's processing mechanism and memory profile. We verified our perspective by implementing the framework in a number of IBM quantum processors and obtained similar characteristic memory profiles with model analyses. As a surprising result, information processing capacity increased with quantum devices' higher noise levels and error rates. Our study opens up a novel path for diverting useful information from quantum computer noises into a more sophisticated information processor.
+**Abstract:** Self-Supervised Learning (SSL) has become a very active area of Deep Learning research where it is heavily used as a pre-training method for classification and other tasks. However, the rapid pace of advancements in this area comes at a price: training pipelines vary significantly across papers, which presents a potentially crucial confounding factor. Here, we show that, indeed, the choice of hyperparameters and data augmentation strategies can have a dramatic impact on performance. To shed light on these neglected factors and help maximize the power of SSL, we hyperparameterize these components and optimize them with Bayesian optimization, showing improvements across multiple datasets for the SimSiam SSL approach. Realizing the importance of data augmentations for SSL, we also introduce a new automated data augmentation algorithm, GroupAugment, which considers groups of augmentations and optimizes the sampling across groups. In contrast to algorithms designed for supervised learning, GroupAugment achieved consistently high linear evaluation accuracy across all datasets we considered. Overall, our results indicate the importance and likely underestimated role of data augmentation for SSL.
 
 </p>
 </details>
@@ -115,27 +148,35 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Meta-Referential Games to Learn Compositional Learning Behaviours</b>
-<a href="https://arxiv.org/abs/2207.08012">arxiv:2207.08012</a>
+<details><summary><b>Progressive Deblurring of Diffusion Models for Coarse-to-Fine Image Synthesis</b>
+<a href="https://arxiv.org/abs/2207.11192">arxiv:2207.11192</a>
 &#x1F4C8; 3 <br>
-<p>Kevin Denamganaï, Sondess Missaoui, James Alfred Walker</p></summary>
+<p>Sangyun Lee, Hyungjin Chung, Jaehyeon Kim, Jong Chul Ye</p></summary>
 <p>
 
-**Abstract:** Human beings use compositionality to generalise from past experiences to actual or fictive, novel experiences. To do so, we separate our experiences into fundamental atomic components. These atomic components can then be recombined in novel ways to support our ability to imagine and engage with novel experiences. We frame this as the ability to learn to generalise compositionally. And, we will refer to behaviours making use of this ability as compositional learning behaviours (CLBs).
-  A central problem to learning CLBs is the resolution of a binding problem (BP) (by learning to, firstly, segregate the supportive stimulus components from the observation of multiple stimuli, and then, combine them in a single episodic experience). While it is another feat of intelligence that human beings perform with ease, it is not the case for state-of-the-art artificial agents.
-  Thus, in order to build artificial agents able to collaborate with human beings, we propose to develop a novel benchmark to investigate agents' abilities to exhibit CLBs by solving a domain-agnostic version of the BP. We take inspiration from the language emergence and grounding framework of referential games and propose a meta-learning extension of referential games, entitled Meta-Referential Games, and use this framework to build our benchmark, that we name Symbolic Behaviour Benchmark (S2B).
-  While it has the potential to test for more symbolic behaviours, rather than solely CLBs, in the present paper, though, we solely focus on the single-agent language grounding task that tests for CLBs. We provide baseline results for it, using state-of-the-art RL agents, and show that our proposed benchmark is a compelling challenge that we hope will spur the research community towards developing more capable artificial agents.
+**Abstract:** Recently, diffusion models have shown remarkable results in image synthesis by gradually removing noise and amplifying signals. Although the simple generative process surprisingly works well, is this the best way to generate image data? For instance, despite the fact that human perception is more sensitive to the low frequencies of an image, diffusion models themselves do not consider any relative importance of each frequency component. Therefore, to incorporate the inductive bias for image data, we propose a novel generative process that synthesizes images in a coarse-to-fine manner. First, we generalize the standard diffusion models by enabling diffusion in a rotated coordinate system with different velocities for each component of the vector. We further propose a blur diffusion as a special case, where each frequency component of an image is diffused at different speeds. Specifically, the proposed blur diffusion consists of a forward process that blurs an image and adds noise gradually, after which a corresponding reverse process deblurs an image and removes noise progressively. Experiments show that the proposed model outperforms the previous method in FID on LSUN bedroom and church datasets. Code is available at https://github.com/sangyun884/blur-diffusion.
 
 </p>
 </details>
 
-<details><summary><b>EEG2Vec: Learning Affective EEG Representations via Variational Autoencoders</b>
-<a href="https://arxiv.org/abs/2207.08002">arxiv:2207.08002</a>
+<details><summary><b>Single MR Image Super-Resolution using Generative Adversarial Network</b>
+<a href="https://arxiv.org/abs/2207.08036">arxiv:2207.08036</a>
 &#x1F4C8; 3 <br>
-<p>David Bethge, Philipp Hallgarten, Tobias Grosse-Puppendahl, Mohamed Kari, Lewis L. Chuang, Ozan Özdenizci, Albrecht Schmidt</p></summary>
+<p>Shawkh Ibne Rashid, Elham Shakibapour, Mehran Ebrahimi</p></summary>
 <p>
 
-**Abstract:** There is a growing need for sparse representational formats of human affective states that can be utilized in scenarios with limited computational memory resources. We explore whether representing neural data, in response to emotional stimuli, in a latent vector space can serve to both predict emotional states as well as generate synthetic EEG data that are participant- and/or emotion-specific. We propose a conditional variational autoencoder based framework, EEG2Vec, to learn generative-discriminative representations from EEG data. Experimental results on affective EEG recording datasets demonstrate that our model is suitable for unsupervised EEG modeling, classification of three distinct emotion categories (positive, neutral, negative) based on the latent representation achieves a robust performance of 68.49%, and generated synthetic EEG sequences resemble real EEG data inputs to particularly reconstruct low-frequency signal components. Our work advances areas where affective EEG representations can be useful in e.g., generating artificial (labeled) training data or alleviating manual feature extraction, and provide efficiency for memory constrained edge computing applications.
+**Abstract:** Spatial resolution of medical images can be improved using super-resolution methods. Real Enhanced Super Resolution Generative Adversarial Network (Real-ESRGAN) is one of the recent effective approaches utilized to produce higher resolution images, given input images of lower resolution. In this paper, we apply this method to enhance the spatial resolution of 2D MR images. In our proposed approach, we slightly modify the structure of the Real-ESRGAN to train 2D Magnetic Resonance images (MRI) taken from the Brain Tumor Segmentation Challenge (BraTS) 2018 dataset. The obtained results are validated qualitatively and quantitatively by computing SSIM (Structural Similarity Index Measure), NRMSE (Normalized Root Mean Square Error), MAE (Mean Absolute Error), and VIF (Visual Information Fidelity) values.
+
+</p>
+</details>
+
+<details><summary><b>SSMTL++: Revisiting Self-Supervised Multi-Task Learning for Video Anomaly Detection</b>
+<a href="https://arxiv.org/abs/2207.08003">arxiv:2207.08003</a>
+&#x1F4C8; 3 <br>
+<p>Antonio Barbalau, Radu Tudor Ionescu, Mariana-Iuliana Georgescu, Jacob Dueholm, Bharathkumar Ramachandra, Kamal Nasrollahi, Fahad Shahbaz Khan, Thomas B. Moeslund, Mubarak Shah</p></summary>
+<p>
+
+**Abstract:** A self-supervised multi-task learning (SSMTL) framework for video anomaly detection was recently introduced in literature. Due to its highly accurate results, the method attracted the attention of many researchers. In this work, we revisit the self-supervised multi-task learning framework, proposing several updates to the original method. First, we study various detection methods, e.g. based on detecting high-motion regions using optical flow or background subtraction, since we believe the currently used pre-trained YOLOv3 is suboptimal, e.g. objects in motion or objects from unknown classes are never detected. Second, we modernize the 3D convolutional backbone by introducing multi-head self-attention modules, inspired by the recent success of vision transformers. As such, we alternatively introduce both 2D and 3D convolutional vision transformer (CvT) blocks. Third, in our attempt to further improve the model, we study additional self-supervised learning tasks, such as predicting segmentation maps through knowledge distillation, solving jigsaw puzzles, estimating body pose through knowledge distillation, predicting masked regions (inpainting), and adversarial learning with pseudo-anomalies. We conduct experiments to assess the performance impact of the introduced changes. Upon finding more promising configurations of the framework, dubbed SSMTL++v1 and SSMTL++v2, we extend our preliminary experiments to more data sets, demonstrating that our performance gains are consistent across all data sets. In most cases, our results on Avenue, ShanghaiTech and UBnormal raise the state-of-the-art performance to a new level.
 
 </p>
 </details>
@@ -153,13 +194,24 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>TransGrasp: Grasp Pose Estimation of a Category of Objects by Transferring Grasps from Only One Labeled Instance</b>
-<a href="https://arxiv.org/abs/2207.07861">arxiv:2207.07861</a>
+<details><summary><b>Multiscale Causal Structure Learning</b>
+<a href="https://arxiv.org/abs/2207.07908">arxiv:2207.07908</a>
 &#x1F4C8; 3 <br>
-<p>Hongtao Wen, Jianhang Yan, Wanli Peng, Yi Sun</p></summary>
+<p>Gabriele D'Acunto, Paolo Di Lorenzo, Sergio Barbarossa</p></summary>
 <p>
 
-**Abstract:** Grasp pose estimation is an important issue for robots to interact with the real world. However, most of existing methods require exact 3D object models available beforehand or a large amount of grasp annotations for training. To avoid these problems, we propose TransGrasp, a category-level grasp pose estimation method that predicts grasp poses of a category of objects by labeling only one object instance. Specifically, we perform grasp pose transfer across a category of objects based on their shape correspondences and propose a grasp pose refinement module to further fine-tune grasp pose of grippers so as to ensure successful grasps. Experiments demonstrate the effectiveness of our method on achieving high-quality grasps with the transferred grasp poses. Our code is available at https://github.com/yanjh97/TransGrasp.
+**Abstract:** The inference of causal structures from observed data plays a key role in unveiling the underlying dynamics of the system. This paper exposes a novel method, named Multiscale-Causal Structure Learning (MS-CASTLE), to estimate the structure of linear causal relationships occurring at different time scales. Differently from existing approaches, MS-CASTLE takes explicitly into account instantaneous and lagged inter-relations between multiple time series, represented at different scales, hinging on stationary wavelet transform and non-convex optimization. MS-CASTLE incorporates, as a special case, a single-scale version named SS-CASTLE, which compares favorably in terms of computational efficiency, performance and robustness with respect to the state of the art onto synthetic data. We used MS-CASTLE to study the multiscale causal structure of the risk of 15 global equity markets, during covid-19 pandemic, illustrating how MS-CASTLE can extract meaningful information thanks to its multiscale analysis, outperforming SS-CASTLE. We found that the most persistent and strongest interactions occur at mid-term time resolutions. Moreover, we identified the stock markets that drive the risk during the considered period: Brazil, Canada and Italy. The proposed approach can be exploited by financial investors who, depending to their investment horizon, can manage the risk within equity portfolios from a causal perspective.
+
+</p>
+</details>
+
+<details><summary><b>Mutual Adaptive Reasoning for Monocular 3D Multi-Person Pose Estimation</b>
+<a href="https://arxiv.org/abs/2207.07900">arxiv:2207.07900</a>
+&#x1F4C8; 3 <br>
+<p>Juze Zhang, Jingya Wang, Ye Shi, Fei Gao, Lan Xu, Jingyi Yu</p></summary>
+<p>
+
+**Abstract:** Inter-person occlusion and depth ambiguity make estimating the 3D poses of monocular multiple persons as camera-centric coordinates a challenging problem. Typical top-down frameworks suffer from high computational redundancy with an additional detection stage. By contrast, the bottom-up methods enjoy low computational costs as they are less affected by the number of humans. However, most existing bottom-up methods treat camera-centric 3D human pose estimation as two unrelated subtasks: 2.5D pose estimation and camera-centric depth estimation. In this paper, we propose a unified model that leverages the mutual benefits of both these subtasks. Within the framework, a robust structured 2.5D pose estimation is designed to recognize inter-person occlusion based on depth relationships. Additionally, we develop an end-to-end geometry-aware depth reasoning method that exploits the mutual benefits of both 2.5D pose and camera-centric root depths. This method first uses 2.5D pose and geometry information to infer camera-centric root depths in a forward pass, and then exploits the root depths to further improve representation learning of 2.5D pose estimation in a backward pass. Further, we designed an adaptive fusion scheme that leverages both visual perception and body geometry to alleviate inherent depth ambiguity issues. Extensive experiments demonstrate the superiority of our proposed model over a wide range of bottom-up methods. Our accuracy is even competitive with top-down counterparts. Notably, our model runs much faster than existing bottom-up and top-down methods.
 
 </p>
 </details>
@@ -186,13 +238,13 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Single MR Image Super-Resolution using Generative Adversarial Network</b>
-<a href="https://arxiv.org/abs/2207.08036">arxiv:2207.08036</a>
+<details><summary><b>Analysis of liver cancer detection based on image processing</b>
+<a href="https://arxiv.org/abs/2207.08032">arxiv:2207.08032</a>
 &#x1F4C8; 2 <br>
-<p>Shawkh Ibne Rashid, Elham Shakibapour, Mehran Ebrahimi</p></summary>
+<p>Mahmoudreza Moghimhanjani, Ali Taghavirashidizadeh</p></summary>
 <p>
 
-**Abstract:** Spatial resolution of medical images can be improved using super-resolution methods. Real Enhanced Super Resolution Generative Adversarial Network (Real-ESRGAN) is one of the recent effective approaches utilized to produce higher resolution images, given input images of lower resolution. In this paper, we apply this method to enhance the spatial resolution of 2D MR images. In our proposed approach, we slightly modify the structure of the Real-ESRGAN to train 2D Magnetic Resonance images (MRI) taken from the Brain Tumor Segmentation Challenge (BraTS) 2018 dataset. The obtained results are validated qualitatively and quantitatively by computing SSIM (Structural Similarity Index Measure), NRMSE (Normalized Root Mean Square Error), MAE (Mean Absolute Error), and VIF (Visual Information Fidelity) values.
+**Abstract:** Medical imaging is the most important tool for detecting complications in the inner body of medicine. Nowadays, with the development of image processing technology as well as changing the size of photos to higher resolution images in the field of digital medical imaging, there is an efficient and accurate system for segmenting this. Real-world images that for a variety of reasons have poor heterogeneity, noise and contrast are essential. Digital image segmentation in medicine is used for diagnostic and therapeutic analysis, which is very helpful for physicians. In this study, we aim at liver cancer photographs, which aim to more accurately detect the lesion or tumor of the liver because accurate and timely detection of the tumor is very important in the survival and life of the patient.The aim of this paper is to simplify the obnoxious study problems related to the study of MR images. The liver is the second organ most generic involved by metastatic disease being liver cancer one of the prominent causes of death worldwide. Without healthy liver a person cannot survive. It is life threatening disease which is very challenging perceptible for both medical and engineering technologists. Medical image processing is used as a non-invasive method to detect tumours. The chances of survival having liver Tumor highly depends on early detection of Tumor and then classification as cancerous and noncancerous tumours. Image processing techniques for automatic detection of brain are includes pre-processing and enhancement, image segmentation, classification and volume calculation, Poly techniques have been developed for the detection of liver Tumor and different liver toM oR detection algorithms and methodologies utilized for Tumor diagnosis. Novel methodology for the detection and diagnosis of liver Tumor.
 
 </p>
 </details>
@@ -208,6 +260,31 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
+<details><summary><b>Monitoring Vegetation From Space at Extremely Fine Resolutions via Coarsely-Supervised Smooth U-Net</b>
+<a href="https://arxiv.org/abs/2207.08022">arxiv:2207.08022</a>
+&#x1F4C8; 2 <br>
+<p>Joshua Fan, Di Chen, Jiaming Wen, Ying Sun, Carla P. Gomes</p></summary>
+<p>
+
+**Abstract:** Monitoring vegetation productivity at extremely fine resolutions is valuable for real-world agricultural applications, such as detecting crop stress and providing early warning of food insecurity. Solar-Induced Chlorophyll Fluorescence (SIF) provides a promising way to directly measure plant productivity from space. However, satellite SIF observations are only available at a coarse spatial resolution, making it impossible to monitor how individual crop types or farms are doing. This poses a challenging coarsely-supervised regression (or downscaling) task; at training time, we only have SIF labels at a coarse resolution (3km), but we want to predict SIF at much finer spatial resolutions (e.g. 30m, a 100x increase). We also have additional fine-resolution input features, but the relationship between these features and SIF is unknown. To address this, we propose Coarsely-Supervised Smooth U-Net (CS-SUNet), a novel method for this coarse supervision setting. CS-SUNet combines the expressive power of deep convolutional networks with novel regularization methods based on prior knowledge (such as a smoothness loss) that are crucial for preventing overfitting. Experiments show that CS-SUNet resolves fine-grained variations in SIF more accurately than existing methods.
+
+</p>
+</details>
+
+<details><summary><b>Meta-Referential Games to Learn Compositional Learning Behaviours</b>
+<a href="https://arxiv.org/abs/2207.08012">arxiv:2207.08012</a>
+&#x1F4C8; 2 <br>
+<p>Kevin Denamganaï, Sondess Missaoui, James Alfred Walker</p></summary>
+<p>
+
+**Abstract:** Human beings use compositionality to generalise from past experiences to actual or fictive, novel experiences. To do so, we separate our experiences into fundamental atomic components. These atomic components can then be recombined in novel ways to support our ability to imagine and engage with novel experiences. We frame this as the ability to learn to generalise compositionally. And, we will refer to behaviours making use of this ability as compositional learning behaviours (CLBs).
+  A central problem to learning CLBs is the resolution of a binding problem (BP) (by learning to, firstly, segregate the supportive stimulus components from the observation of multiple stimuli, and then, combine them in a single episodic experience). While it is another feat of intelligence that human beings perform with ease, it is not the case for state-of-the-art artificial agents.
+  Thus, in order to build artificial agents able to collaborate with human beings, we propose to develop a novel benchmark to investigate agents' abilities to exhibit CLBs by solving a domain-agnostic version of the BP. We take inspiration from the language emergence and grounding framework of referential games and propose a meta-learning extension of referential games, entitled Meta-Referential Games, and use this framework to build our benchmark, that we name Symbolic Behaviour Benchmark (S2B).
+  While it has the potential to test for more symbolic behaviours, rather than solely CLBs, in the present paper, though, we solely focus on the single-agent language grounding task that tests for CLBs. We provide baseline results for it, using state-of-the-art RL agents, and show that our proposed benchmark is a compelling challenge that we hope will spur the research community towards developing more capable artificial agents.
+
+</p>
+</details>
+
 <details><summary><b>S4: a High-sparsity, High-performance AI Accelerator</b>
 <a href="https://arxiv.org/abs/2207.08006">arxiv:2207.08006</a>
 &#x1F4C8; 2 <br>
@@ -219,123 +296,35 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>SSMTL++: Revisiting Self-Supervised Multi-Task Learning for Video Anomaly Detection</b>
-<a href="https://arxiv.org/abs/2207.08003">arxiv:2207.08003</a>
+<details><summary><b>Learnable Mixed-precision and Dimension Reduction Co-design for Low-storage Activation</b>
+<a href="https://arxiv.org/abs/2207.07931">arxiv:2207.07931</a>
 &#x1F4C8; 2 <br>
-<p>Antonio Barbalau, Radu Tudor Ionescu, Mariana-Iuliana Georgescu, Jacob Dueholm, Bharathkumar Ramachandra, Kamal Nasrollahi, Fahad Shahbaz Khan, Thomas B. Moeslund, Mubarak Shah</p></summary>
+<p>Yu-Shan Tai, Cheng-Yang Chang, Chieh-Fang Teng,  AnYeu,  Wu</p></summary>
 <p>
 
-**Abstract:** A self-supervised multi-task learning (SSMTL) framework for video anomaly detection was recently introduced in literature. Due to its highly accurate results, the method attracted the attention of many researchers. In this work, we revisit the self-supervised multi-task learning framework, proposing several updates to the original method. First, we study various detection methods, e.g. based on detecting high-motion regions using optical flow or background subtraction, since we believe the currently used pre-trained YOLOv3 is suboptimal, e.g. objects in motion or objects from unknown classes are never detected. Second, we modernize the 3D convolutional backbone by introducing multi-head self-attention modules, inspired by the recent success of vision transformers. As such, we alternatively introduce both 2D and 3D convolutional vision transformer (CvT) blocks. Third, in our attempt to further improve the model, we study additional self-supervised learning tasks, such as predicting segmentation maps through knowledge distillation, solving jigsaw puzzles, estimating body pose through knowledge distillation, predicting masked regions (inpainting), and adversarial learning with pseudo-anomalies. We conduct experiments to assess the performance impact of the introduced changes. Upon finding more promising configurations of the framework, dubbed SSMTL++v1 and SSMTL++v2, we extend our preliminary experiments to more data sets, demonstrating that our performance gains are consistent across all data sets. In most cases, our results on Avenue, ShanghaiTech and UBnormal raise the state-of-the-art performance to a new level.
+**Abstract:** Recently, deep convolutional neural networks (CNNs) have achieved many eye-catching results. However, deploying CNNs on resource-constrained edge devices is constrained by limited memory bandwidth for transmitting large intermediated data during inference, i.e., activation. Existing research utilizes mixed-precision and dimension reduction to reduce computational complexity but pays less attention to its application for activation compression. To further exploit the redundancy in activation, we propose a learnable mixed-precision and dimension reduction co-design system, which separates channels into groups and allocates specific compression policies according to their importance. In addition, the proposed dynamic searching technique enlarges search space and finds out the optimal bit-width allocation automatically. Our experimental results show that the proposed methods improve 3.54%/1.27% in accuracy and save 0.18/2.02 bits per value over existing mixed-precision methods on ResNet18 and MobileNetv2, respectively.
+
+</p>
+</details>
+
+<details><summary><b>Discriminative Kernel Convolution Network for Multi-Label Ophthalmic Disease Detection on Imbalanced Fundus Image Dataset</b>
+<a href="https://arxiv.org/abs/2207.07918">arxiv:2207.07918</a>
+&#x1F4C8; 2 <br>
+<p>Amit Bhati, Neha Gour, Pritee Khanna, Aparajita Ojha</p></summary>
+<p>
+
+**Abstract:** It is feasible to recognize the presence and seriousness of eye disease by investigating the progressions in retinal biological structure. Fundus examination is a diagnostic procedure to examine the biological structure and anomaly of the eye. Ophthalmic diseases like glaucoma, diabetic retinopathy, and cataract are the main reason for visual impairment around the world. Ocular Disease Intelligent Recognition (ODIR-5K) is a benchmark structured fundus image dataset utilized by researchers for multi-label multi-disease classification of fundus images. This work presents a discriminative kernel convolution network (DKCNet), which explores discriminative region-wise features without adding extra computational cost. DKCNet is composed of an attention block followed by a squeeze and excitation (SE) block. The attention block takes features from the backbone network and generates discriminative feature attention maps. The SE block takes the discriminative feature maps and improves channel interdependencies. Better performance of DKCNet is observed with InceptionResnet backbone network for multi-label classification of ODIR-5K fundus images with 96.08 AUC, 94.28 F1-score and 0.81 kappa score. The proposed method splits the common target label for an eye pair based on the diagnostic keyword. Based on these labels oversampling and undersampling is done to resolve class imbalance. To check the biasness of proposed model towards training data, the model trained on ODIR dataset is tested on three publicly available benchmark datasets. It is found to give good performance on completely unseen fundus images also.
 
 </p>
 </details>
 
 <details><summary><b>Signed Cumulative Distribution Transform for Parameter Estimation of 1-D Signals</b>
 <a href="https://arxiv.org/abs/2207.07989">arxiv:2207.07989</a>
-&#x1F4C8; 2 <br>
+&#x1F4C8; 1 <br>
 <p>Sumati Thareja, Gustavo Rohde, Rocio Diaz Martin, Ivan Medri, Akram Aldroubi</p></summary>
 <p>
 
 **Abstract:** We describe a method for signal parameter estimation using the signed cumulative distribution transform (SCDT), a recently introduced signal representation tool based on optimal transport theory. The method builds upon signal estimation using the cumulative distribution transform (CDT) originally introduced for positive distributions. Specifically, we show that Wasserstein-type distance minimization can be performed simply using linear least squares techniques in SCDT space for arbitrary signal classes, thus providing a global minimizer for the estimation problem even when the underlying signal is a nonlinear function of the unknown parameters. Comparisons to current signal estimation methods using $L_p$ minimization shows the advantage of the method.
-
-</p>
-</details>
-
-<details><summary><b>Online Prediction in Sub-linear Space</b>
-<a href="https://arxiv.org/abs/2207.07974">arxiv:2207.07974</a>
-&#x1F4C8; 2 <br>
-<p>Binghui Peng, Fred Zhang</p></summary>
-<p>
-
-**Abstract:** We provide the first sub-linear space and sub-linear regret algorithm for online learning with expert advice (against an oblivious adversary), addressing an open question raised recently by Srinivas, Woodruff, Xu and Zhou (STOC 2022). We also demonstrate a separation between oblivious and (strong) adaptive adversaries by proving a linear memory lower bound of any sub-linear regret algorithm against an adaptive adversary. Our algorithm is based on a novel pool selection procedure that bypasses the traditional wisdom of leader selection for online learning, and a generic reduction that transforms any weakly sub-linear regret $o(T)$ algorithm to $T^{1-α}$ regret algorithm, which may be of independent interest. Our lower bound utilizes the connection of no-regret learning and equilibrium computation in zero-sum games, leading to a proof of a strong lower bound against an adaptive adversary.
-
-</p>
-</details>
-
-<details><summary><b>CNN-based Euler's Elastica Inpainting with Deep Energy and Deep Image Prior</b>
-<a href="https://arxiv.org/abs/2207.07921">arxiv:2207.07921</a>
-&#x1F4C8; 2 <br>
-<p>Karl Schrader, Tobias Alt, Joachim Weickert, Michael Ertel</p></summary>
-<p>
-
-**Abstract:** Euler's elastica constitute an appealing variational image inpainting model. It minimises an energy that involves the total variation as well as the level line curvature. These components are transparent and make it attractive for shape completion tasks. However, its gradient flow is a singular, anisotropic, and nonlinear PDE of fourth order, which is numerically challenging: It is difficult to find efficient algorithms that offer sharp edges and good rotation invariance. As a remedy, we design the first neural algorithm that simulates inpainting with Euler's Elastica. We use the deep energy concept which employs the variational energy as neural network loss. Furthermore, we pair it with a deep image prior where the network architecture itself acts as a prior. This yields better inpaintings by steering the optimisation trajectory closer to the desired solution. Our results are qualitatively on par with state-of-the-art algorithms on elastica-based shape completion. They combine good rotation invariance with sharp edges. Moreover, we benefit from the high efficiency and effortless parallelisation within a neural framework. Our neural elastica approach only requires 3x3 central difference stencils. It is thus much simpler than other well-performing algorithms for elastica inpainting. Last but not least, it is unsupervised as it requires no ground truth training data.
-
-</p>
-</details>
-
-<details><summary><b>Multiscale Causal Structure Learning</b>
-<a href="https://arxiv.org/abs/2207.07908">arxiv:2207.07908</a>
-&#x1F4C8; 2 <br>
-<p>Gabriele D'Acunto, Paolo Di Lorenzo, Sergio Barbarossa</p></summary>
-<p>
-
-**Abstract:** The inference of causal structures from observed data plays a key role in unveiling the underlying dynamics of the system. This paper exposes a novel method, named Multiscale-Causal Structure Learning (MS-CASTLE), to estimate the structure of linear causal relationships occurring at different time scales. Differently from existing approaches, MS-CASTLE takes explicitly into account instantaneous and lagged inter-relations between multiple time series, represented at different scales, hinging on stationary wavelet transform and non-convex optimization. MS-CASTLE incorporates, as a special case, a single-scale version named SS-CASTLE, which compares favorably in terms of computational efficiency, performance and robustness with respect to the state of the art onto synthetic data. We used MS-CASTLE to study the multiscale causal structure of the risk of 15 global equity markets, during covid-19 pandemic, illustrating how MS-CASTLE can extract meaningful information thanks to its multiscale analysis, outperforming SS-CASTLE. We found that the most persistent and strongest interactions occur at mid-term time resolutions. Moreover, we identified the stock markets that drive the risk during the considered period: Brazil, Canada and Italy. The proposed approach can be exploited by financial investors who, depending to their investment horizon, can manage the risk within equity portfolios from a causal perspective.
-
-</p>
-</details>
-
-<details><summary><b>Unsupervised Ensemble Based Deep Learning Approach for Attack Detection in IoT Network</b>
-<a href="https://arxiv.org/abs/2207.07903">arxiv:2207.07903</a>
-&#x1F4C8; 2 <br>
-<p>Mir Shahnawaz Ahmed, Shahid Mehraj Shah</p></summary>
-<p>
-
-**Abstract:** The Internet of Things (IoT) has altered living by controlling devices/things over the Internet. IoT has specified many smart solutions for daily problems, transforming cyber-physical systems (CPS) and other classical fields into smart regions. Most of the edge devices that make up the Internet of Things have very minimal processing power. To bring down the IoT network, attackers can utilise these devices to conduct a variety of network attacks. In addition, as more and more IoT devices are added, the potential for new and unknown threats grows exponentially. For this reason, an intelligent security framework for IoT networks must be developed that can identify such threats. In this paper, we have developed an unsupervised ensemble learning model that is able to detect new or unknown attacks in an IoT network from an unlabelled dataset. The system-generated labelled dataset is used to train a deep learning model to detect IoT network attacks. Additionally, the research presents a feature selection mechanism for identifying the most relevant aspects in the dataset for detecting attacks. The study shows that the suggested model is able to identify the unlabelled IoT network datasets and DBN (Deep Belief Network) outperform the other models with a detection accuracy of 97.5% and a false alarm rate of 2.3% when trained using labelled dataset supplied by the proposed approach.
-
-</p>
-</details>
-
-<details><summary><b>Mutual Adaptive Reasoning for Monocular 3D Multi-Person Pose Estimation</b>
-<a href="https://arxiv.org/abs/2207.07900">arxiv:2207.07900</a>
-&#x1F4C8; 2 <br>
-<p>Juze Zhang, Jingya Wang, Ye Shi, Fei Gao, Lan Xu, Jingyi Yu</p></summary>
-<p>
-
-**Abstract:** Inter-person occlusion and depth ambiguity make estimating the 3D poses of monocular multiple persons as camera-centric coordinates a challenging problem. Typical top-down frameworks suffer from high computational redundancy with an additional detection stage. By contrast, the bottom-up methods enjoy low computational costs as they are less affected by the number of humans. However, most existing bottom-up methods treat camera-centric 3D human pose estimation as two unrelated subtasks: 2.5D pose estimation and camera-centric depth estimation. In this paper, we propose a unified model that leverages the mutual benefits of both these subtasks. Within the framework, a robust structured 2.5D pose estimation is designed to recognize inter-person occlusion based on depth relationships. Additionally, we develop an end-to-end geometry-aware depth reasoning method that exploits the mutual benefits of both 2.5D pose and camera-centric root depths. This method first uses 2.5D pose and geometry information to infer camera-centric root depths in a forward pass, and then exploits the root depths to further improve representation learning of 2.5D pose estimation in a backward pass. Further, we designed an adaptive fusion scheme that leverages both visual perception and body geometry to alleviate inherent depth ambiguity issues. Extensive experiments demonstrate the superiority of our proposed model over a wide range of bottom-up methods. Our accuracy is even competitive with top-down counterparts. Notably, our model runs much faster than existing bottom-up and top-down methods.
-
-</p>
-</details>
-
-<details><summary><b>Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial</b>
-<a href="https://arxiv.org/abs/2207.07859">arxiv:2207.07859</a>
-&#x1F4C8; 2 <br>
-<p>Jianfei Yang, Xinyan Chen, Dazhuo Wang, Han Zou, Chris Xiaoxuan Lu, Sumei Sun, Lihua Xie</p></summary>
-<p>
-
-**Abstract:** WiFi sensing has been evolving rapidly in recent years. Empowered by propagation models and deep learning methods, many challenging applications are realized such as WiFi-based human activity recognition and gesture recognition. However, in contrast to deep learning for visual recognition and natural language processing, no sufficiently comprehensive public benchmark exists. In this paper, we highlight the recent progress on deep learning enabled WiFi sensing, and then propose a benchmark, SenseFi, to study the effectiveness of various deep learning models for WiFi sensing. These advanced models are compared in terms of distinct sensing tasks, WiFi platforms, recognition accuracy, model size, computational complexity, feature transferability, and adaptability of unsupervised learning. It is also regarded as a tutorial for deep learning based WiFi sensing, starting from CSI hardware platform to sensing algorithms. The extensive experiments provide us with experiences in deep model design, learning strategy skills and training techniques for real-world applications. To the best of our knowledge, this is the first benchmark with an open-source library for deep learning in WiFi sensing research. The benchmark codes are available at https://github.com/CHENXINYAN-sg/WiFi-CSI-Sensing-Benchmark.
-
-</p>
-</details>
-
-<details><summary><b>Data Representativeness in Accessibility Datasets: A Meta-Analysis</b>
-<a href="https://arxiv.org/abs/2207.08037">arxiv:2207.08037</a>
-&#x1F4C8; 1 <br>
-<p>Rie Kamikubo, Lining Wang, Crystal Marte, Amnah Mahmood, Hernisa Kacorri</p></summary>
-<p>
-
-**Abstract:** As data-driven systems are increasingly deployed at scale, ethical concerns have arisen around unfair and discriminatory outcomes for historically marginalized groups that are underrepresented in training data. In response, work around AI fairness and inclusion has called for datasets that are representative of various demographic groups.In this paper, we contribute an analysis of the representativeness of age, gender, and race & ethnicity in accessibility datasets - datasets sourced from people with disabilities and older adults - that can potentially play an important role in mitigating bias for inclusive AI-infused applications. We examine the current state of representation within datasets sourced by people with disabilities by reviewing publicly-available information of 190 datasets, we call these accessibility datasets. We find that accessibility datasets represent diverse ages, but have gender and race representation gaps. Additionally, we investigate how the sensitive and complex nature of demographic variables makes classification difficult and inconsistent (e.g., gender, race & ethnicity), with the source of labeling often unknown. By reflecting on the current challenges and opportunities for representation of disabled data contributors, we hope our effort expands the space of possibility for greater inclusion of marginalized communities in AI-infused systems.
-
-</p>
-</details>
-
-<details><summary><b>Analysis of liver cancer detection based on image processing</b>
-<a href="https://arxiv.org/abs/2207.08032">arxiv:2207.08032</a>
-&#x1F4C8; 1 <br>
-<p>Mahmoudreza Moghimhanjani, Ali Taghavirashidizadeh</p></summary>
-<p>
-
-**Abstract:** Medical imaging is the most important tool for detecting complications in the inner body of medicine. Nowadays, with the development of image processing technology as well as changing the size of photos to higher resolution images in the field of digital medical imaging, there is an efficient and accurate system for segmenting this. Real-world images that for a variety of reasons have poor heterogeneity, noise and contrast are essential. Digital image segmentation in medicine is used for diagnostic and therapeutic analysis, which is very helpful for physicians. In this study, we aim at liver cancer photographs, which aim to more accurately detect the lesion or tumor of the liver because accurate and timely detection of the tumor is very important in the survival and life of the patient.The aim of this paper is to simplify the obnoxious study problems related to the study of MR images. The liver is the second organ most generic involved by metastatic disease being liver cancer one of the prominent causes of death worldwide. Without healthy liver a person cannot survive. It is life threatening disease which is very challenging perceptible for both medical and engineering technologists. Medical image processing is used as a non-invasive method to detect tumours. The chances of survival having liver Tumor highly depends on early detection of Tumor and then classification as cancerous and noncancerous tumours. Image processing techniques for automatic detection of brain are includes pre-processing and enhancement, image segmentation, classification and volume calculation, Poly techniques have been developed for the detection of liver Tumor and different liver toM oR detection algorithms and methodologies utilized for Tumor diagnosis. Novel methodology for the detection and diagnosis of liver Tumor.
-
-</p>
-</details>
-
-<details><summary><b>Monitoring Vegetation From Space at Extremely Fine Resolutions via Coarsely-Supervised Smooth U-Net</b>
-<a href="https://arxiv.org/abs/2207.08022">arxiv:2207.08022</a>
-&#x1F4C8; 1 <br>
-<p>Joshua Fan, Di Chen, Jiaming Wen, Ying Sun, Carla P. Gomes</p></summary>
-<p>
-
-**Abstract:** Monitoring vegetation productivity at extremely fine resolutions is valuable for real-world agricultural applications, such as detecting crop stress and providing early warning of food insecurity. Solar-Induced Chlorophyll Fluorescence (SIF) provides a promising way to directly measure plant productivity from space. However, satellite SIF observations are only available at a coarse spatial resolution, making it impossible to monitor how individual crop types or farms are doing. This poses a challenging coarsely-supervised regression (or downscaling) task; at training time, we only have SIF labels at a coarse resolution (3km), but we want to predict SIF at much finer spatial resolutions (e.g. 30m, a 100x increase). We also have additional fine-resolution input features, but the relationship between these features and SIF is unknown. To address this, we propose Coarsely-Supervised Smooth U-Net (CS-SUNet), a novel method for this coarse supervision setting. CS-SUNet combines the expressive power of deep convolutional networks with novel regularization methods based on prior knowledge (such as a smoothness loss) that are crucial for preventing overfitting. Experiments show that CS-SUNet resolves fine-grained variations in SIF more accurately than existing methods.
 
 </p>
 </details>
@@ -351,13 +340,24 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Learnable Mixed-precision and Dimension Reduction Co-design for Low-storage Activation</b>
-<a href="https://arxiv.org/abs/2207.07931">arxiv:2207.07931</a>
+<details><summary><b>Online Prediction in Sub-linear Space</b>
+<a href="https://arxiv.org/abs/2207.07974">arxiv:2207.07974</a>
 &#x1F4C8; 1 <br>
-<p>Yu-Shan Tai, Cheng-Yang Chang, Chieh-Fang Teng,  AnYeu,  Wu</p></summary>
+<p>Binghui Peng, Fred Zhang</p></summary>
 <p>
 
-**Abstract:** Recently, deep convolutional neural networks (CNNs) have achieved many eye-catching results. However, deploying CNNs on resource-constrained edge devices is constrained by limited memory bandwidth for transmitting large intermediated data during inference, i.e., activation. Existing research utilizes mixed-precision and dimension reduction to reduce computational complexity but pays less attention to its application for activation compression. To further exploit the redundancy in activation, we propose a learnable mixed-precision and dimension reduction co-design system, which separates channels into groups and allocates specific compression policies according to their importance. In addition, the proposed dynamic searching technique enlarges search space and finds out the optimal bit-width allocation automatically. Our experimental results show that the proposed methods improve 3.54%/1.27% in accuracy and save 0.18/2.02 bits per value over existing mixed-precision methods on ResNet18 and MobileNetv2, respectively.
+**Abstract:** We provide the first sub-linear space and sub-linear regret algorithm for online learning with expert advice (against an oblivious adversary), addressing an open question raised recently by Srinivas, Woodruff, Xu and Zhou (STOC 2022). We also demonstrate a separation between oblivious and (strong) adaptive adversaries by proving a linear memory lower bound of any sub-linear regret algorithm against an adaptive adversary. Our algorithm is based on a novel pool selection procedure that bypasses the traditional wisdom of leader selection for online learning, and a generic reduction that transforms any weakly sub-linear regret $o(T)$ algorithm to $T^{1-α}$ regret algorithm, which may be of independent interest. Our lower bound utilizes the connection of no-regret learning and equilibrium computation in zero-sum games, leading to a proof of a strong lower bound against an adaptive adversary.
+
+</p>
+</details>
+
+<details><summary><b>A Survey of Decision Making in Adversarial Games</b>
+<a href="https://arxiv.org/abs/2207.07971">arxiv:2207.07971</a>
+&#x1F4C8; 1 <br>
+<p>Xiuxian Li, Min Meng, Yiguang Hong, Jie Chen</p></summary>
+<p>
+
+**Abstract:** Game theory has by now found numerous applications in various fields, including economics, industry, jurisprudence, and artificial intelligence, where each player only cares about its own interest in a noncooperative or cooperative manner, but without obvious malice to other players. However, in many practical applications, such as poker, chess, evader pursuing, drug interdiction, coast guard, cyber-security, and national defense, players often have apparently adversarial stances, that is, selfish actions of each player inevitably or intentionally inflict loss or wreak havoc on other players. Along this line, this paper provides a systematic survey on three main game models widely employed in adversarial games, i.e., zero-sum normal-form and extensive-form games, Stackelberg (security) games, zero-sum differential games, from an array of perspectives, including basic knowledge of game models, (approximate) equilibrium concepts, problem classifications, research frontiers, (approximate) optimal strategy seeking techniques, prevailing algorithms, and practical applications. Finally, promising future research directions are also discussed for relevant adversarial games.
 
 </p>
 </details>
@@ -373,13 +373,13 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Discriminative Kernel Convolution Network for Multi-Label Ophthalmic Disease Detection on Imbalanced Fundus Image Dataset</b>
-<a href="https://arxiv.org/abs/2207.07918">arxiv:2207.07918</a>
+<details><summary><b>Unsupervised Ensemble Based Deep Learning Approach for Attack Detection in IoT Network</b>
+<a href="https://arxiv.org/abs/2207.07903">arxiv:2207.07903</a>
 &#x1F4C8; 1 <br>
-<p>Amit Bhati, Neha Gour, Pritee Khanna, Aparajita Ojha</p></summary>
+<p>Mir Shahnawaz Ahmed, Shahid Mehraj Shah</p></summary>
 <p>
 
-**Abstract:** It is feasible to recognize the presence and seriousness of eye disease by investigating the progressions in retinal biological structure. Fundus examination is a diagnostic procedure to examine the biological structure and anomaly of the eye. Ophthalmic diseases like glaucoma, diabetic retinopathy, and cataract are the main reason for visual impairment around the world. Ocular Disease Intelligent Recognition (ODIR-5K) is a benchmark structured fundus image dataset utilized by researchers for multi-label multi-disease classification of fundus images. This work presents a discriminative kernel convolution network (DKCNet), which explores discriminative region-wise features without adding extra computational cost. DKCNet is composed of an attention block followed by a squeeze and excitation (SE) block. The attention block takes features from the backbone network and generates discriminative feature attention maps. The SE block takes the discriminative feature maps and improves channel interdependencies. Better performance of DKCNet is observed with InceptionResnet backbone network for multi-label classification of ODIR-5K fundus images with 96.08 AUC, 94.28 F1-score and 0.81 kappa score. The proposed method splits the common target label for an eye pair based on the diagnostic keyword. Based on these labels oversampling and undersampling is done to resolve class imbalance. To check the biasness of proposed model towards training data, the model trained on ODIR dataset is tested on three publicly available benchmark datasets. It is found to give good performance on completely unseen fundus images also.
+**Abstract:** The Internet of Things (IoT) has altered living by controlling devices/things over the Internet. IoT has specified many smart solutions for daily problems, transforming cyber-physical systems (CPS) and other classical fields into smart regions. Most of the edge devices that make up the Internet of Things have very minimal processing power. To bring down the IoT network, attackers can utilise these devices to conduct a variety of network attacks. In addition, as more and more IoT devices are added, the potential for new and unknown threats grows exponentially. For this reason, an intelligent security framework for IoT networks must be developed that can identify such threats. In this paper, we have developed an unsupervised ensemble learning model that is able to detect new or unknown attacks in an IoT network from an unlabelled dataset. The system-generated labelled dataset is used to train a deep learning model to detect IoT network attacks. Additionally, the research presents a feature selection mechanism for identifying the most relevant aspects in the dataset for detecting attacks. The study shows that the suggested model is able to identify the unlabelled IoT network datasets and DBN (Deep Belief Network) outperform the other models with a detection accuracy of 97.5% and a false alarm rate of 2.3% when trained using labelled dataset supplied by the proposed approach.
 
 </p>
 </details>
@@ -395,6 +395,17 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
+<details><summary><b>Deep Learning and Its Applications to WiFi Human Sensing: A Benchmark and A Tutorial</b>
+<a href="https://arxiv.org/abs/2207.07859">arxiv:2207.07859</a>
+&#x1F4C8; 1 <br>
+<p>Jianfei Yang, Xinyan Chen, Dazhuo Wang, Han Zou, Chris Xiaoxuan Lu, Sumei Sun, Lihua Xie</p></summary>
+<p>
+
+**Abstract:** WiFi sensing has been evolving rapidly in recent years. Empowered by propagation models and deep learning methods, many challenging applications are realized such as WiFi-based human activity recognition and gesture recognition. However, in contrast to deep learning for visual recognition and natural language processing, no sufficiently comprehensive public benchmark exists. In this paper, we highlight the recent progress on deep learning enabled WiFi sensing, and then propose a benchmark, SenseFi, to study the effectiveness of various deep learning models for WiFi sensing. These advanced models are compared in terms of distinct sensing tasks, WiFi platforms, recognition accuracy, model size, computational complexity, feature transferability, and adaptability of unsupervised learning. It is also regarded as a tutorial for deep learning based WiFi sensing, starting from CSI hardware platform to sensing algorithms. The extensive experiments provide us with experiences in deep model design, learning strategy skills and training techniques for real-world applications. To the best of our knowledge, this is the first benchmark with an open-source library for deep learning in WiFi sensing research. The benchmark codes are available at https://github.com/CHENXINYAN-sg/WiFi-CSI-Sensing-Benchmark.
+
+</p>
+</details>
+
 <details><summary><b>Learning inducing points and uncertainty on molecular data</b>
 <a href="https://arxiv.org/abs/2207.07654">arxiv:2207.07654</a>
 &#x1F4C8; 1 <br>
@@ -406,6 +417,50 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 </p>
 </details>
 
+<details><summary><b>Proactive Distributed Constraint Optimization of Heterogeneous Incident Vehicle Teams</b>
+<a href="https://arxiv.org/abs/2207.11132">arxiv:2207.11132</a>
+&#x1F4C8; 0 <br>
+<p>Justice Darko, Hyoshin Park</p></summary>
+<p>
+
+**Abstract:** Traditionally, traffic incident management (TIM) programs coordinate the deployment of emergency resources to immediate incident requests without accommodating the interdependencies on incident evolutions in the environment. However, ignoring inherent interdependencies on the evolution of incidents in the environment while making current deployment decisions is shortsighted, and the resulting naive deployment strategy can significantly worsen the overall incident delay impact on the network. The interdependencies on incident evolution in the environment, including those between incident occurrences, and those between resource availability in near-future requests and the anticipated duration of the immediate incident request, should be considered through a look-ahead model when making current-stage deployment decisions. This study develops a new proactive framework based on the distributed constraint optimization problem (DCOP) to address the above limitations, overcoming conventional TIM models that cannot accommodate the dependencies in the TIM problem. Furthermore, the optimization objective is formulated to incorporate Unmanned Aerial Vehicles (UAVs). The UAVs' role in TIM includes exploring uncertain traffic conditions, detecting unexpected events, and augmenting information from roadway traffic sensors. Robustness analysis of our model for multiple TIM scenarios shows satisfactory performance using local search exploration heuristics. Overall, our model reports a significant reduction in total incident delay compared to conventional TIM models. With UAV support, we demonstrate a further decrease in the overall incident delay through the shorter response time of emergency vehicles, and a reduction in uncertainties associated with the estimated incident delay impact.
+
+</p>
+</details>
+
+<details><summary><b>A Convolutional Attention Based Deep Network Solution for UAV Network Attack Recognition over Fading Channels and Interference</b>
+<a href="https://arxiv.org/abs/2207.10810">arxiv:2207.10810</a>
+&#x1F4C8; 0 <br>
+<p>Joseanne Viana, Hamed Farkhari, Luis Miguel Campos, Pedro Sebastiao, Katerina Koutlia, Sandra Lagen, Luis Bernardo, Rui Dinis</p></summary>
+<p>
+
+**Abstract:** When users exchange data with Unmanned Aerial vehicles - (UAVs) over air-to-ground (A2G) wireless communication networks, they expose the link to attacks that could increase packet loss and might disrupt connectivity. For example, in emergency deliveries, losing control information (i.e data related to the UAV control communication) might result in accidents that cause UAV destruction and damage to buildings or other elements in a city. To prevent these problems, these issues must be addressed in 5G and 6G scenarios. This research offers a deep learning (DL) approach for detecting attacks in UAVs equipped with orthogonal frequency division multiplexing (OFDM) receivers on Clustered Delay Line (CDL) channels in highly complex scenarios involving authenticated terrestrial users, as well as attackers in unknown locations. We use the two observable parameters available in 5G UAV connections: the Received Signal Strength Indicator (RSSI) and the Signal to Interference plus Noise Ratio (SINR). The prospective algorithm is generalizable regarding attack identification, which does not occur during training. Further, it can identify all the attackers in the environment with 20 terrestrial users. A deeper investigation into the timing requirements for recognizing attacks show that after training, the minimum time necessary after the attack begins is 100 ms, and the minimum attack power is 2 dBm, which is the same power that the authenticated UAV uses. Our algorithm also detects moving attackers from a distance of 500 m.
+
+</p>
+</details>
+
+<details><summary><b>Security and Safety Aspects of AI in Industry Applications</b>
+<a href="https://arxiv.org/abs/2207.10809">arxiv:2207.10809</a>
+&#x1F4C8; 0 <br>
+<p>Hans Dermot Doran</p></summary>
+<p>
+
+**Abstract:** In this relatively informal discussion-paper we summarise issues in the domains of safety and security in machine learning that will affect industry sectors in the next five to ten years. Various products using neural network classification, most often in vision related applications but also in predictive maintenance, have been researched and applied in real-world applications in recent years. Nevertheless, reports of underlying problems in both safety and security related domains, for instance adversarial attacks have unsettled early adopters and are threatening to hinder wider scale adoption of this technology. The problem for real-world applicability lies in being able to assess the risk of applying these technologies. In this discussion-paper we describe the process of arriving at a machine-learnt neural network classifier pointing out safety and security vulnerabilities in that workflow, citing relevant research where appropriate.
+
+</p>
+</details>
+
+<details><summary><b>Data Representativeness in Accessibility Datasets: A Meta-Analysis</b>
+<a href="https://arxiv.org/abs/2207.08037">arxiv:2207.08037</a>
+&#x1F4C8; 0 <br>
+<p>Rie Kamikubo, Lining Wang, Crystal Marte, Amnah Mahmood, Hernisa Kacorri</p></summary>
+<p>
+
+**Abstract:** As data-driven systems are increasingly deployed at scale, ethical concerns have arisen around unfair and discriminatory outcomes for historically marginalized groups that are underrepresented in training data. In response, work around AI fairness and inclusion has called for datasets that are representative of various demographic groups.In this paper, we contribute an analysis of the representativeness of age, gender, and race & ethnicity in accessibility datasets - datasets sourced from people with disabilities and older adults - that can potentially play an important role in mitigating bias for inclusive AI-infused applications. We examine the current state of representation within datasets sourced by people with disabilities by reviewing publicly-available information of 190 datasets, we call these accessibility datasets. We find that accessibility datasets represent diverse ages, but have gender and race representation gaps. Additionally, we investigate how the sensitive and complex nature of demographic variables makes classification difficult and inconsistent (e.g., gender, race & ethnicity), with the source of labeling often unknown. By reflecting on the current challenges and opportunities for representation of disabled data contributors, we hope our effort expands the space of possibility for greater inclusion of marginalized communities in AI-infused systems.
+
+</p>
+</details>
+
 <details><summary><b>Indivisible Participatory Budgeting under Weak Rankings</b>
 <a href="https://arxiv.org/abs/2207.07981">arxiv:2207.07981</a>
 &#x1F4C8; 0 <br>
@@ -413,17 +468,6 @@ Prev: [2022.07.15]({{ '/2022/07/15/2022.07.15.html' | relative_url }})  Next: [2
 <p>
 
 **Abstract:** Participatory budgeting (PB) has attracted much attention in recent times due to its wide applicability in social choice settings. In this paper, we consider indivisible PB which involves allocating an available, limited budget to a set of indivisible projects, each having a certain cost, based on the preferences of agents over projects. The specific, important, research gap that we address in this paper is to propose classes of rules for indivisible PB with weak rankings (i.e., weak ordinal preferences) and investigate their key algorithmic and axiomatic issues. We propose two classes of rules having distinct significance and motivation. The first is layered approval rules which enable weak rankings to be studied by carefully translating them into approval votes. The second is need-based rules which enable to capture fairness issues. Under layered approval rules, we study two natural families of rules: greedy-truncation rules and cost-worthy rules. The paper has two parts. In the first part, we investigate algorithmic and complexity related issues for the proposed rules. In the second part, we present a detailed axiomatic analysis of these rules, for which, we examine and generalize axioms in the literature and also introduce a new axiom, pro-affordability. The paper helps to highlight the trade-offs among practical appeal, computational complexity, and axiomatic compliance of these rules.
-
-</p>
-</details>
-
-<details><summary><b>A Survey of Decision Making in Adversarial Games</b>
-<a href="https://arxiv.org/abs/2207.07971">arxiv:2207.07971</a>
-&#x1F4C8; 0 <br>
-<p>Xiuxian Li, Min Meng, Yiguang Hong, Jie Chen</p></summary>
-<p>
-
-**Abstract:** Game theory has by now found numerous applications in various fields, including economics, industry, jurisprudence, and artificial intelligence, where each player only cares about its own interest in a noncooperative or cooperative manner, but without obvious malice to other players. However, in many practical applications, such as poker, chess, evader pursuing, drug interdiction, coast guard, cyber-security, and national defense, players often have apparently adversarial stances, that is, selfish actions of each player inevitably or intentionally inflict loss or wreak havoc on other players. Along this line, this paper provides a systematic survey on three main game models widely employed in adversarial games, i.e., zero-sum normal-form and extensive-form games, Stackelberg (security) games, zero-sum differential games, from an array of perspectives, including basic knowledge of game models, (approximate) equilibrium concepts, problem classifications, research frontiers, (approximate) optimal strategy seeking techniques, prevailing algorithms, and practical applications. Finally, promising future research directions are also discussed for relevant adversarial games.
 
 </p>
 </details>

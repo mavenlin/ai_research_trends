@@ -1,0 +1,506 @@
+Prev: [2022.07.21]({{ '/2022/07/21/2022.07.21.html' | relative_url }})  Next: [2022.07.23]({{ '/2022/07/23/2022.07.23.html' | relative_url }})
+{% raw %}
+## Summary for 2022-07-22, created on 2022-07-26
+
+
+<details><summary><b>Deep learning of diffeomorphisms for optimal reparametrizations of shapes</b>
+<a href="https://arxiv.org/abs/2207.11141">arxiv:2207.11141</a>
+&#x1F4C8; 8 <br>
+<p>Elena Celledoni, Helge Glöckner, Jørgen Riseth, Alexander Schmeding</p></summary>
+<p>
+
+**Abstract:** In shape analysis, one of the fundamental problems is to align curves or surfaces before computing a (geodesic) distance between these shapes. To find the optimal reparametrization realizing this alignment is a computationally demanding task which leads to an optimization problem on the diffeomorphism group. In this paper, we construct approximations of orientation-preserving diffeomorphisms by composition of elementary diffeomorphisms to solve the approximation problem. We propose a practical algorithm implemented in PyTorch which is applicable both to unparametrized curves and surfaces. We derive universal approximation results and obtain bounds for the Lipschitz constant of the obtained compositions of diffeomorphisms.
+
+</p>
+</details>
+
+<details><summary><b>Dense RGB-D-Inertial SLAM with Map Deformations</b>
+<a href="https://arxiv.org/abs/2207.10940">arxiv:2207.10940</a>
+&#x1F4C8; 5 <br>
+<p>Tristan Laidlow, Michael Bloesch, Wenbin Li, Stefan Leutenegger</p></summary>
+<p>
+
+**Abstract:** While dense visual SLAM methods are capable of estimating dense reconstructions of the environment, they suffer from a lack of robustness in their tracking step, especially when the optimisation is poorly initialised. Sparse visual SLAM systems have attained high levels of accuracy and robustness through the inclusion of inertial measurements in a tightly-coupled fusion. Inspired by this performance, we propose the first tightly-coupled dense RGB-D-inertial SLAM system.
+  Our system has real-time capability while running on a GPU. It jointly optimises for the camera pose, velocity, IMU biases and gravity direction while building up a globally consistent, fully dense surfel-based 3D reconstruction of the environment. Through a series of experiments on both synthetic and real world datasets, we show that our dense visual-inertial SLAM system is more robust to fast motions and periods of low texture and low geometric variation than a related RGB-D-only SLAM system.
+
+</p>
+</details>
+
+<details><summary><b>Panoptic Scene Graph Generation</b>
+<a href="https://arxiv.org/abs/2207.11247">arxiv:2207.11247</a>
+&#x1F4C8; 4 <br>
+<p>Jingkang Yang, Yi Zhe Ang, Zujin Guo, Kaiyang Zhou, Wayne Zhang, Ziwei Liu</p></summary>
+<p>
+
+**Abstract:** Existing research addresses scene graph generation (SGG) -- a critical technology for scene understanding in images -- from a detection perspective, i.e., objects are detected using bounding boxes followed by prediction of their pairwise relationships. We argue that such a paradigm causes several problems that impede the progress of the field. For instance, bounding box-based labels in current datasets usually contain redundant classes like hairs, and leave out background information that is crucial to the understanding of context. In this work, we introduce panoptic scene graph generation (PSG), a new problem task that requires the model to generate a more comprehensive scene graph representation based on panoptic segmentations rather than rigid bounding boxes. A high-quality PSG dataset, which contains 49k well-annotated overlapping images from COCO and Visual Genome, is created for the community to keep track of its progress. For benchmarking, we build four two-stage baselines, which are modified from classic methods in SGG, and two one-stage baselines called PSGTR and PSGFormer, which are based on the efficient Transformer-based detector, i.e., DETR. While PSGTR uses a set of queries to directly learn triplets, PSGFormer separately models the objects and relations in the form of queries from two Transformer decoders, followed by a prompting-like relation-object matching mechanism. In the end, we share insights on open challenges and future directions.
+
+</p>
+</details>
+
+<details><summary><b>Statistical and Computational Trade-offs in Variational Inference: A Case Study in Inferential Model Selection</b>
+<a href="https://arxiv.org/abs/2207.11208">arxiv:2207.11208</a>
+&#x1F4C8; 4 <br>
+<p>Kush Bhatia, Nikki Lijing Kuang, Yi-An Ma, Yixin Wang</p></summary>
+<p>
+
+**Abstract:** Variational inference has recently emerged as a popular alternative to the classical Markov chain Monte Carlo (MCMC) in large-scale Bayesian inference. The core idea of variational inference is to trade statistical accuracy for computational efficiency. It aims to approximate the posterior, reducing computation costs but potentially compromising its statistical accuracy. In this work, we study this statistical and computational trade-off in variational inference via a case study in inferential model selection. Focusing on Gaussian inferential models (a.k.a. variational approximating families) with diagonal plus low-rank precision matrices, we initiate a theoretical study of the trade-offs in two aspects, Bayesian posterior inference error and frequentist uncertainty quantification error. From the Bayesian posterior inference perspective, we characterize the error of the variational posterior relative to the exact posterior. We prove that, given a fixed computation budget, a lower-rank inferential model produces variational posteriors with a higher statistical approximation error, but a lower computational error; it reduces variances in stochastic optimization and, in turn, accelerates convergence. From the frequentist uncertainty quantification perspective, we consider the precision matrix of the variational posterior as an uncertainty estimate. We find that, relative to the true asymptotic precision, the variational approximation suffers from an additional statistical error originating from the sampling uncertainty of the data. Moreover, this statistical error becomes the dominant factor as the computation budget increases. As a consequence, for small datasets, the inferential model need not be full-rank to achieve optimal estimation error. We finally demonstrate these statistical and computational trade-offs inference across empirical studies, corroborating the theoretical findings.
+
+</p>
+</details>
+
+<details><summary><b>DeVIS: Making Deformable Transformers Work for Video Instance Segmentation</b>
+<a href="https://arxiv.org/abs/2207.11103">arxiv:2207.11103</a>
+&#x1F4C8; 4 <br>
+<p>Adrià Caelles, Tim Meinhardt, Guillem Brasó, Laura Leal-Taixé</p></summary>
+<p>
+
+**Abstract:** Video Instance Segmentation (VIS) jointly tackles multi-object detection, tracking, and segmentation in video sequences. In the past, VIS methods mirrored the fragmentation of these subtasks in their architectural design, hence missing out on a joint solution. Transformers recently allowed to cast the entire VIS task as a single set-prediction problem. Nevertheless, the quadratic complexity of existing Transformer-based methods requires long training times, high memory requirements, and processing of low-single-scale feature maps. Deformable attention provides a more efficient alternative but its application to the temporal domain or the segmentation task have not yet been explored.
+  In this work, we present Deformable VIS (DeVIS), a VIS method which capitalizes on the efficiency and performance of deformable Transformers. To reason about all VIS subtasks jointly over multiple frames, we present temporal multi-scale deformable attention with instance-aware object queries. We further introduce a new image and video instance mask head with multi-scale features, and perform near-online video processing with multi-cue clip tracking. DeVIS reduces memory as well as training time requirements, and achieves state-of-the-art results on the YouTube-VIS 2021, as well as the challenging OVIS dataset.
+  Code is available at https://github.com/acaelles97/DeVIS.
+
+</p>
+</details>
+
+<details><summary><b>MobileDenseNet: A new approach to object detection on mobile devices</b>
+<a href="https://arxiv.org/abs/2207.11031">arxiv:2207.11031</a>
+&#x1F4C8; 4 <br>
+<p>Mohammad Hajizadeh, Mohammad Sabokrou, Adel Rahmani</p></summary>
+<p>
+
+**Abstract:** Object detection problem solving has developed greatly within the past few years. There is a need for lighter models in instances where hardware limitations exist, as well as a demand for models to be tailored to mobile devices. In this article, we will assess the methods used when creating algorithms that address these issues. The main goal of this article is to increase accuracy in state-of-the-art algorithms while maintaining speed and real-time efficiency. The most significant issues in one-stage object detection pertains to small objects and inaccurate localization. As a solution, we created a new network by the name of MobileDenseNet suitable for embedded systems. We also developed a light neck FCPNLite for mobile devices that will aid with the detection of small objects. Our research revealed that very few papers cited necks in embedded systems. What differentiates our network from others is our use of concatenation features. A small yet significant change to the head of the network amplified accuracy without increasing speed or limiting parameters. In short, our focus on the challenging CoCo and Pascal VOC datasets were 24.8 and 76.8 in percentage terms respectively - a rate higher than that recorded by other state-of-the-art systems thus far. Our network is able to increase accuracy while maintaining real-time efficiency on mobile devices. We calculated operational speed on Pixel 3 (Snapdragon 845) to 22.8 fps. The source code of this research is available on https://github.com/hajizadeh/MobileDenseNet.
+
+</p>
+</details>
+
+<details><summary><b>Seeing 3D Objects in a Single Image via Self-Supervised Static-Dynamic Disentanglement</b>
+<a href="https://arxiv.org/abs/2207.11232">arxiv:2207.11232</a>
+&#x1F4C8; 3 <br>
+<p>Prafull Sharma, Ayush Tewari, Yilun Du, Sergey Zakharov, Rares Ambrus, Adrien Gaidon, William T. Freeman, Fredo Durand, Joshua B. Tenenbaum, Vincent Sitzmann</p></summary>
+<p>
+
+**Abstract:** Human perception reliably identifies movable and immovable parts of 3D scenes, and completes the 3D structure of objects and background from incomplete observations. We learn this skill not via labeled examples, but simply by observing objects move. In this work, we propose an approach that observes unlabeled multi-view videos at training time and learns to map a single image observation of a complex scene, such as a street with cars, to a 3D neural scene representation that is disentangled into movable and immovable parts while plausibly completing its 3D structure. We separately parameterize movable and immovable scene parts via 2D neural ground plans. These ground plans are 2D grids of features aligned with the ground plane that can be locally decoded into 3D neural radiance fields. Our model is trained self-supervised via neural rendering. We demonstrate that the structure inherent to our disentangled 3D representation enables a variety of downstream tasks in street-scale 3D scenes using simple heuristics, such as extraction of object-centric 3D representations, novel view synthesis, instance segmentation, and 3D bounding box prediction, highlighting its value as a backbone for data-efficient 3D scene understanding models. This disentanglement further enables scene editing via object manipulation such as deletion, insertion, and rigid-body motion.
+
+</p>
+</details>
+
+<details><summary><b>Training Certifiably Robust Neural Networks Against Semantic Perturbations</b>
+<a href="https://arxiv.org/abs/2207.11177">arxiv:2207.11177</a>
+&#x1F4C8; 3 <br>
+<p>Rem Yang, Jacob Laurel, Sasa Misailovic, Gagandeep Singh</p></summary>
+<p>
+
+**Abstract:** Semantic image perturbations, such as scaling and rotation, have been shown to easily deceive deep neural networks (DNNs). Hence, training DNNs to be certifiably robust to these perturbations is critical. However, no prior work has been able to incorporate the objective of deterministic semantic robustness into the training procedure, as existing deterministic semantic verifiers are exceedingly slow. To address these challenges, we propose Certified Semantic Training (CST), the first training framework for deterministic certified robustness against semantic image perturbations. Our framework leverages a novel GPU-optimized verifier that, unlike existing works, is fast enough for use in training. Our results show that networks trained via CST consistently achieve both better provable semantic robustness and clean accuracy, compared to networks trained via baselines based on existing works.
+
+</p>
+</details>
+
+<details><summary><b>Learn Continuously, Act Discretely: Hybrid Action-Space Reinforcement Learning For Optimal Execution</b>
+<a href="https://arxiv.org/abs/2207.11152">arxiv:2207.11152</a>
+&#x1F4C8; 3 <br>
+<p>Feiyang Pan, Tongzhe Zhang, Ling Luo, Jia He, Shuoling Liu</p></summary>
+<p>
+
+**Abstract:** Optimal execution is a sequential decision-making problem for cost-saving in algorithmic trading. Studies have found that reinforcement learning (RL) can help decide the order-splitting sizes. However, a problem remains unsolved: how to place limit orders at appropriate limit prices? The key challenge lies in the "continuous-discrete duality" of the action space. On the one hand, the continuous action space using percentage changes in prices is preferred for generalization. On the other hand, the trader eventually needs to choose limit prices discretely due to the existence of the tick size, which requires specialization for every single stock with different characteristics (e.g., the liquidity and the price range). So we need continuous control for generalization and discrete control for specialization. To this end, we propose a hybrid RL method to combine the advantages of both of them. We first use a continuous control agent to scope an action subset, then deploy a fine-grained agent to choose a specific limit price. Extensive experiments show that our method has higher sample efficiency and better training stability than existing RL algorithms and significantly outperforms previous learning-based methods for order execution.
+
+</p>
+</details>
+
+<details><summary><b>Custom Structure Preservation in Face Aging</b>
+<a href="https://arxiv.org/abs/2207.11025">arxiv:2207.11025</a>
+&#x1F4C8; 3 <br>
+<p>Guillermo Gomez-Trenado, Stéphane Lathuilière, Pablo Mesejo, Óscar Cordón</p></summary>
+<p>
+
+**Abstract:** In this work, we propose a novel architecture for face age editing that can produce structural modifications while maintaining relevant details present in the original image. We disentangle the style and content of the input image and propose a new decoder network that adopts a style-based strategy to combine the style and content representations of the input image while conditioning the output on the target age. We go beyond existing aging methods allowing users to adjust the degree of structure preservation in the input image during inference. To this purpose, we introduce a masking mechanism, the CUstom Structure Preservation module, that distinguishes relevant regions in the input image from those that should be discarded. CUSP requires no additional supervision. Finally, our quantitative and qualitative analysis which include a user study, show that our method outperforms prior art and demonstrates the effectiveness of our strategy regarding image editing and adjustable structure preservation. Code and pretrained models are available at https://github.com/guillermogotre/CUSP.
+
+</p>
+</details>
+
+<details><summary><b>Learning Generalized Non-Rigid Multimodal Biomedical Image Registration from Generic Point Set Data</b>
+<a href="https://arxiv.org/abs/2207.10994">arxiv:2207.10994</a>
+&#x1F4C8; 3 <br>
+<p>Zachary MC Baum, Tamas Ungi, Christopher Schlenger, Yipeng Hu, Dean C Barratt</p></summary>
+<p>
+
+**Abstract:** Free Point Transformer (FPT) has been proposed as a data-driven, non-rigid point set registration approach using deep neural networks. As FPT does not assume constraints based on point vicinity or correspondence, it may be trained simply and in a flexible manner by minimizing an unsupervised loss based on the Chamfer Distance. This makes FPT amenable to real-world medical imaging applications where ground-truth deformations may be infeasible to obtain, or in scenarios where only a varying degree of completeness in the point sets to be aligned is available. To test the limit of the correspondence finding ability of FPT and its dependency on training data sets, this work explores the generalizability of the FPT from well-curated non-medical data sets to medical imaging data sets. First, we train FPT on the ModelNet40 dataset to demonstrate its effectiveness and the superior registration performance of FPT over iterative and learning-based point set registration methods. Second, we demonstrate superior performance in rigid and non-rigid registration and robustness to missing data. Last, we highlight the interesting generalizability of the ModelNet-trained FPT by registering reconstructed freehand ultrasound scans of the spine and generic spine models without additional training, whereby the average difference to the ground truth curvatures is 1.3 degrees, across 13 patients.
+
+</p>
+</details>
+
+<details><summary><b>Verifying Fairness in Quantum Machine Learning</b>
+<a href="https://arxiv.org/abs/2207.11173">arxiv:2207.11173</a>
+&#x1F4C8; 2 <br>
+<p>Ji Guan, Wang Fang, Mingsheng Ying</p></summary>
+<p>
+
+**Abstract:** Due to the beyond-classical capability of quantum computing, quantum machine learning is applied independently or embedded in classical models for decision making, especially in the field of finance. Fairness and other ethical issues are often one of the main concerns in decision making. In this work, we define a formal framework for the fairness verification and analysis of quantum machine learning decision models, where we adopt one of the most popular notions of fairness in the literature based on the intuition -- any two similar individuals must be treated similarly and are thus unbiased. We show that quantum noise can improve fairness and develop an algorithm to check whether a (noisy) quantum machine learning model is fair. In particular, this algorithm can find bias kernels of quantum data (encoding individuals) during checking. These bias kernels generate infinitely many bias pairs for investigating the unfairness of the model. Our algorithm is designed based on a highly efficient data structure -- Tensor Networks -- and implemented on Google's TensorFlow Quantum. The utility and effectiveness of our algorithm are confirmed by the experimental results, including income prediction and credit scoring on real-world data, for a class of random (noisy) quantum decision models with 27 qubits ($2^{27}$-dimensional state space) tripling ($2^{18}$ times more than) that of the state-of-the-art algorithms for verifying quantum machine learning models.
+
+</p>
+</details>
+
+<details><summary><b>High dimensional stochastic linear contextual bandit with missing covariates</b>
+<a href="https://arxiv.org/abs/2207.11165">arxiv:2207.11165</a>
+&#x1F4C8; 2 <br>
+<p>Byoungwook Jang, Julia Nepper, Marc Chevrette, Jo Handelsman, Alfred O. Hero III</p></summary>
+<p>
+
+**Abstract:** Recent works in bandit problems adopted lasso convergence theory in the sequential decision-making setting. Even with fully observed contexts, there are technical challenges that hinder the application of existing lasso convergence theory: 1) proving the restricted eigenvalue condition under conditionally sub-Gaussian noise and 2) accounting for the dependence between the context variables and the chosen actions. This paper studies the effect of missing covariates on regret for stochastic linear bandit algorithms. Our work provides a high-probability upper bound on the regret incurred by the proposed algorithm in terms of covariate sampling probabilities, showing that the regret degrades due to missingness by at most $ζ_{min}^2$, where $ζ_{min}$ is the minimum probability of observing covariates in the context vector. We illustrate our algorithm for the practical application of experimental design for collecting gene expression data by a sequential selection of class discriminating DNA probes.
+
+</p>
+</details>
+
+<details><summary><b>Generalized Identifiability Bounds for Mixture Models with Grouped Samples</b>
+<a href="https://arxiv.org/abs/2207.11164">arxiv:2207.11164</a>
+&#x1F4C8; 2 <br>
+<p>Robert A. Vandermeulen, René Saitenmacher</p></summary>
+<p>
+
+**Abstract:** Recent work has shown that finite mixture models with $m$ components are identifiable, while making no assumptions on the mixture components, so long as one has access to groups of samples of size $2m-1$ which are known to come from the same mixture component. In this work we generalize that result and show that, if every subset of $k$ mixture components of a mixture model are linearly independent, then that mixture model is identifiable with only $(2m-1)/(k-1)$ samples per group. We further show that this value cannot be improved. We prove an analogous result for a stronger form of identifiability known as "determinedness" along with a corresponding lower bound. This independence assumption almost surely holds if mixture components are chosen randomly from a $k$-dimensional space. We describe some implications of our results for multinomial mixture models and topic modeling.
+
+</p>
+</details>
+
+<details><summary><b>Lagrangian Method for Q-Function Learning (with Applications to Machine Translation)</b>
+<a href="https://arxiv.org/abs/2207.11161">arxiv:2207.11161</a>
+&#x1F4C8; 2 <br>
+<p>Huang Bojun</p></summary>
+<p>
+
+**Abstract:** This paper discusses a new approach to the fundamental problem of learning optimal Q-functions. In this approach, optimal Q-functions are formulated as saddle points of a nonlinear Lagrangian function derived from the classic Bellman optimality equation. The paper shows that the Lagrangian enjoys strong duality, in spite of its nonlinearity, which paves the way to a general Lagrangian method to Q-function learning. As a demonstration, the paper develops an imitation learning algorithm based on the duality theory, and applies the algorithm to a state-of-the-art machine translation benchmark. The paper then turns to demonstrate a symmetry breaking phenomenon regarding the optimality of the Lagrangian saddle points, which justifies a largely overlooked direction in developing the Lagrangian method.
+
+</p>
+</details>
+
+<details><summary><b>Fairness-aware Network Revenue Management with Demand Learning</b>
+<a href="https://arxiv.org/abs/2207.11159">arxiv:2207.11159</a>
+&#x1F4C8; 2 <br>
+<p>Xi Chen, Jiameng Lyu, Yining Wang, Yuan Zhou</p></summary>
+<p>
+
+**Abstract:** In addition to maximizing the total revenue, decision-makers in lots of industries would like to guarantee fair consumption across different resources and avoid saturating certain resources. Motivated by these practical needs, this paper studies the price-based network revenue management problem with both demand learning and fairness concern about the consumption across different resources. We introduce the regularized revenue, i.e., the total revenue with a fairness regularization, as our objective to incorporate fairness into the revenue maximization goal. We propose a primal-dual-type online policy with the Upper-Confidence-Bound (UCB) demand learning method to maximize the regularized revenue. We adopt several innovative techniques to make our algorithm a unified and computationally efficient framework for the continuous price set and a wide class of fairness regularizers. Our algorithm achieves a worst-case regret of $\tilde O(N^{5/2}\sqrt{T})$, where $N$ denotes the number of products and $T$ denotes the number of time periods. Numerical experiments in a few NRM examples demonstrate the effectiveness of our algorithm for balancing revenue and fairness.
+
+</p>
+</details>
+
+<details><summary><b>SPRT-based Efficient Best Arm Identification in Stochastic Bandits</b>
+<a href="https://arxiv.org/abs/2207.11158">arxiv:2207.11158</a>
+&#x1F4C8; 2 <br>
+<p>Arpan Mukherjee, Ali Tajer</p></summary>
+<p>
+
+**Abstract:** This paper investigates the best arm identification (BAI) problem in stochastic multi-armed bandits in the fixed confidence setting. The general class of the exponential family of bandits is considered. The state-of-the-art algorithms for the exponential family of bandits face computational challenges. To mitigate these challenges, a novel framework is proposed, which views the BAI problem as sequential hypothesis testing, and is amenable to tractable analysis for the exponential family of bandits. Based on this framework, a BAI algorithm is designed that leverages the canonical sequential probability ratio tests. This algorithm has three features for both settings: (1) its sample complexity is asymptotically optimal, (2) it is guaranteed to be $δ-$PAC, and (3) it addresses the computational challenge of the state-of-the-art approaches. Specifically, these approaches, which are focused only on the Gaussian setting, require Thompson sampling from the arm that is deemed the best and a challenger arm. This paper analytically shows that identifying the challenger is computationally expensive and that the proposed algorithm circumvents it. Finally, numerical experiments are provided to support the analysis.
+
+</p>
+</details>
+
+<details><summary><b>Fast strategies for multi-temporal speckle reduction of Sentinel-1 GRD images</b>
+<a href="https://arxiv.org/abs/2207.11111">arxiv:2207.11111</a>
+&#x1F4C8; 2 <br>
+<p>Inès Meraoumia, Emanuele Dalsasso, Loïc Denis, Florence Tupin</p></summary>
+<p>
+
+**Abstract:** Reducing speckle and limiting the variations of the physical parameters in Synthetic Aperture Radar (SAR) images is often a key-step to fully exploit the potential of such data. Nowadays, deep learning approaches produce state of the art results in single-image SAR restoration. Nevertheless, huge multi-temporal stacks are now often available and could be efficiently exploited to further improve image quality. This paper explores two fast strategies employing a single-image despeckling algorithm, namely SAR2SAR, in a multi-temporal framework. The first one is based on Quegan filter and replaces the local reflectivity pre-estimation by SAR2SAR. The second one uses SAR2SAR to suppress speckle from a ratio image encoding the multi-temporal information under the form of a "super-image", i.e. the temporal arithmetic mean of a time series. Experimental results on Sentinel-1 GRD data show that these two multi-temporal strategies provide improved filtering results while adding a limited computational cost.
+
+</p>
+</details>
+
+<details><summary><b>Physiology-based simulation of the retinal vasculature enables annotation-free segmentation of OCT angiographs</b>
+<a href="https://arxiv.org/abs/2207.11102">arxiv:2207.11102</a>
+&#x1F4C8; 2 <br>
+<p>Martin J. Menten, Johannes C. Paetzold, Alina Dima, Bjoern H. Menze, Benjamin Knier, Daniel Rueckert</p></summary>
+<p>
+
+**Abstract:** Optical coherence tomography angiography (OCTA) can non-invasively image the eye's circulatory system. In order to reliably characterize the retinal vasculature, there is a need to automatically extract quantitative metrics from these images. The calculation of such biomarkers requires a precise semantic segmentation of the blood vessels. However, deep-learning-based methods for segmentation mostly rely on supervised training with voxel-level annotations, which are costly to obtain. In this work, we present a pipeline to synthesize large amounts of realistic OCTA images with intrinsically matching ground truth labels; thereby obviating the need for manual annotation of training data. Our proposed method is based on two novel components: 1) a physiology-based simulation that models the various retinal vascular plexuses and 2) a suite of physics-based image augmentations that emulate the OCTA image acquisition process including typical artifacts. In extensive benchmarking experiments, we demonstrate the utility of our synthetic data by successfully training retinal vessel segmentation algorithms. Encouraged by our method's competitive quantitative and superior qualitative performance, we believe that it constitutes a versatile tool to advance the quantitative analysis of OCTA images.
+
+</p>
+</details>
+
+<details><summary><b>Multi-temporal speckle reduction with self-supervised deep neural networks</b>
+<a href="https://arxiv.org/abs/2207.11095">arxiv:2207.11095</a>
+&#x1F4C8; 2 <br>
+<p>Inès Meraoumia, Emanuele Dalsasso, Loïc Denis, Rémy Abergel, Florence Tupin</p></summary>
+<p>
+
+**Abstract:** Speckle filtering is generally a prerequisite to the analysis of synthetic aperture radar (SAR) images. Tremendous progress has been achieved in the domain of single-image despeckling. Latest techniques rely on deep neural networks to restore the various structures and textures peculiar to SAR images. The availability of time series of SAR images offers the possibility of improving speckle filtering by combining different speckle realizations over the same area. The supervised training of deep neural networks requires ground-truth speckle-free images. Such images can only be obtained indirectly through some form of averaging, by spatial or temporal integration, and are imperfect. Given the potential of very high quality restoration reachable by multi-temporal speckle filtering, the limitations of ground-truth images need to be circumvented. We extend a recent self-supervised training strategy for single-look complex SAR images, called MERLIN, to the case of multi-temporal filtering. This requires modeling the sources of statistical dependencies in the spatial and temporal dimensions as well as between the real and imaginary components of the complex amplitudes. Quantitative analysis on datasets with simulated speckle indicates a clear improvement of speckle reduction when additional SAR images are included. Our method is then applied to stacks of TerraSAR-X images and shown to outperform competing multi-temporal speckle filtering approaches. The code of the trained models is made freely available on the $\href{https://gitlab.telecom-paris.fr/ring/multi-temporal-merlin/}{\text{GitLab}}$ of the IMAGES team of the LTCI Lab, Télécom Paris Institut Polytechnique de Paris.
+
+</p>
+</details>
+
+<details><summary><b>Latent Space Unsupervised Semantic Segmentation</b>
+<a href="https://arxiv.org/abs/2207.11067">arxiv:2207.11067</a>
+&#x1F4C8; 2 <br>
+<p>Knut J. Strømmen, Jim Tørresen, Ulysse Côté-Allard</p></summary>
+<p>
+
+**Abstract:** The development of compact and energy-efficient wearable sensors has led to an increase in the availability of biosignals. To analyze these continuously recorded, and often multidimensional, time series at scale, being able to conduct meaningful unsupervised data segmentation is an auspicious target. A common way to achieve this is to identify change-points within the time series as the segmentation basis. However, traditional change-point detection algorithms often come with drawbacks, limiting their real-world applicability. Notably, they generally rely on the complete time series to be available and thus cannot be used for real-time applications. Another common limitation is that they poorly (or cannot) handle the segmentation of multidimensional time series. Consequently, the main contribution of this work is to propose a novel unsupervised segmentation algorithm for multidimensional time series named Latent Space Unsupervised Semantic Segmentation (LS-USS), which was designed to work easily with both online and batch data. When comparing LS-USS against other state-of-the-art change-point detection algorithms on a variety of real-world datasets, in both the offline and real-time setting, LS-USS systematically achieves on par or better performances.
+
+</p>
+</details>
+
+<details><summary><b>Graph Spatio-Spectral Total Variation Model for Hyperspectral Image Denoising</b>
+<a href="https://arxiv.org/abs/2207.11050">arxiv:2207.11050</a>
+&#x1F4C8; 2 <br>
+<p>Shingo Takemoto, Kazuki Naganuma, Shunsuke Ono</p></summary>
+<p>
+
+**Abstract:** The spatio-spectral total variation (SSTV) model has been widely used as an effective regularization of hyperspectral images (HSI) for various applications such as mixed noise removal. However, since SSTV computes local spatial differences uniformly, it is difficult to remove noise while preserving complex spatial structures with fine edges and textures, especially in situations of high noise intensity. To solve this problem, we propose a new TV-type regularization called Graph-SSTV (GSSTV), which generates a graph explicitly reflecting the spatial structure of the target HSI from noisy HSIs and incorporates a weighted spatial difference operator designed based on this graph. Furthermore, we formulate the mixed noise removal problem as a convex optimization problem involving GSSTV and develop an efficient algorithm based on the primal-dual splitting method to solve this problem. Finally, we demonstrate the effectiveness of GSSTV compared with existing HSI regularization models through experiments on mixed noise removal. The source code will be available at https://www.mdi.c.titech.ac.jp/publications/gsstv.
+
+</p>
+</details>
+
+<details><summary><b>Open video data sharing in developmental and behavioural science</b>
+<a href="https://arxiv.org/abs/2207.11020">arxiv:2207.11020</a>
+&#x1F4C8; 2 <br>
+<p>Peter B Marschik, Tomas Kulvicius, Sarah Flügge, Claudius Widmann, Karin Nielsen-Saines, Martin Schulte-Rüther, Britta Hüning, Sven Bölte, Luise Poustka, Jeff Sigafoos, Florentin Wörgötter, Christa Einspieler, Dajie Zhang</p></summary>
+<p>
+
+**Abstract:** Video recording is a widely used method for documenting infant and child behaviours in research and clinical practice. Video data has rarely been shared due to ethical concerns of confidentiality, although the need of shared large-scaled datasets remains increasing. This demand is even more imperative when data-driven computer-based approaches are involved, such as screening tools to complement clinical assessments. To share data while abiding by privacy protection rules, a critical question arises whether efforts at data de-identification reduce data utility? We addressed this question by showcasing the Prechtl's general movements assessment (GMA), an established and globally practised video-based diagnostic tool in early infancy for detecting neurological deficits, such as cerebral palsy. To date, no shared expert-annotated large data repositories for infant movement analyses exist. Such datasets would massively benefit training and recalibration of human assessors and the development of computer-based approaches. In the current study, sequences from a prospective longitudinal infant cohort with a total of 19451 available general movements video snippets were randomly selected for human clinical reasoning and computer-based analysis. We demonstrated for the first time that pseudonymisation by face-blurring video recordings is a viable approach. The video redaction did not affect classification accuracy for either human assessors or computer vision methods, suggesting an adequate and easy-to-apply solution for sharing movement video data. We call for further explorations into efficient and privacy rule-conforming approaches for deidentifying video data in scientific and clinical fields beyond movement assessments. These approaches shall enable sharing and merging stand-alone video datasets into large data pools to advance science and public health.
+
+</p>
+</details>
+
+<details><summary><b>Rapid Lung Ultrasound COVID-19 Severity Scoring with Resource-Efficient Deep Feature Extraction</b>
+<a href="https://arxiv.org/abs/2207.10998">arxiv:2207.10998</a>
+&#x1F4C8; 2 <br>
+<p>Pierre Raillard, Lorenzo Cristoni, Andrew Walden, Roberto Lazzari, Thomas Pulimood, Louis Grandjean, Claudia AM Gandini Wheeler-Kingshott, Yipeng Hu, Zachary MC Baum</p></summary>
+<p>
+
+**Abstract:** Artificial intelligence-based analysis of lung ultrasound imaging has been demonstrated as an effective technique for rapid diagnostic decision support throughout the COVID-19 pandemic. However, such techniques can require days- or weeks-long training processes and hyper-parameter tuning to develop intelligent deep learning image analysis models. This work focuses on leveraging 'off-the-shelf' pre-trained models as deep feature extractors for scoring disease severity with minimal training time. We propose using pre-trained initializations of existing methods ahead of simple and compact neural networks to reduce reliance on computational capacity. This reduction of computational capacity is of critical importance in time-limited or resource-constrained circumstances, such as the early stages of a pandemic. On a dataset of 49 patients, comprising over 20,000 images, we demonstrate that the use of existing methods as feature extractors results in the effective classification of COVID-19-related pneumonia severity while requiring only minutes of training time. Our methods can achieve an accuracy of over 0.93 on a 4-level severity score scale and provides comparable per-patient region and global scores compared to expert annotated ground truths. These results demonstrate the capability for rapid deployment and use of such minimally-adapted methods for progress monitoring, patient stratification and management in clinical practice for COVID-19 patients, and potentially in other respiratory diseases.
+
+</p>
+</details>
+
+<details><summary><b>Taguchi based Design of Sequential Convolution Neural Network for Classification of Defective Fasteners</b>
+<a href="https://arxiv.org/abs/2207.10992">arxiv:2207.10992</a>
+&#x1F4C8; 2 <br>
+<p>Manjeet Kaur, Krishan Kumar Chauhan, Tanya Aggarwal, Pushkar Bharadwaj, Renu Vig, Isibor Kennedy Ihianle, Garima Joshi, Kayode Owa</p></summary>
+<p>
+
+**Abstract:** Fasteners play a critical role in securing various parts of machinery. Deformations such as dents, cracks, and scratches on the surface of fasteners are caused by material properties and incorrect handling of equipment during production processes. As a result, quality control is required to ensure safe and reliable operations. The existing defect inspection method relies on manual examination, which consumes a significant amount of time, money, and other resources; also, accuracy cannot be guaranteed due to human error. Automatic defect detection systems have proven impactful over the manual inspection technique for defect analysis. However, computational techniques such as convolutional neural networks (CNN) and deep learning-based approaches are evolutionary methods. By carefully selecting the design parameter values, the full potential of CNN can be realised. Using Taguchi-based design of experiments and analysis, an attempt has been made to develop a robust automatic system in this study. The dataset used to train the system has been created manually for M14 size nuts having two labeled classes: Defective and Non-defective. There are a total of 264 images in the dataset. The proposed sequential CNN comes up with a 96.3% validation accuracy, 0.277 validation loss at 0.001 learning rate.
+
+</p>
+</details>
+
+<details><summary><b>Principal Geodesic Analysis of Merge Trees (and Persistence Diagrams)</b>
+<a href="https://arxiv.org/abs/2207.10960">arxiv:2207.10960</a>
+&#x1F4C8; 2 <br>
+<p>Mathieu Pont, Jules Vidal, Julien Tierny</p></summary>
+<p>
+
+**Abstract:** This paper presents a computational framework for the Principal Geodesic Analysis of merge trees (MT-PGA), a novel adaptation of the celebrated Principal Component Analysis (PCA) framework [87] to the Wasserstein metric space of merge trees [92]. We formulate MT-PGA computation as a constrained optimization problem, aiming at adjusting a basis of orthogonal geodesic axes, while minimizing a fitting energy. We introduce an efficient, iterative algorithm which exploits shared-memory parallelism, as well as an analytic expression of the fitting energy gradient, to ensure fast iterations. Our approach also trivially extends to extremum persistence diagrams. Extensive experiments on public ensembles demonstrate the efficiency of our approach - with MT-PGA computations in the orders of minutes for the largest examples. We show the utility of our contributions by extending to merge trees two typical PCA applications. First, we apply MT-PGA to data reduction and reliably compress merge trees by concisely representing them by their first coordinates in the MT-PGA basis. Second, we present a dimensionality reduction framework exploiting the first two directions of the MT-PGA basis to generate two-dimensional layouts of the ensemble. We augment these layouts with persistence correlation views, enabling global and local visual inspections of the feature variability in the ensemble. In both applications, quantitative experiments assess the relevance of our framework. Finally, we provide a lightweight C++ implementation that can be used to reproduce our results.
+
+</p>
+</details>
+
+<details><summary><b>Statistical Hypothesis Testing Based on Machine Learning: Large Deviations Analysis</b>
+<a href="https://arxiv.org/abs/2207.10939">arxiv:2207.10939</a>
+&#x1F4C8; 2 <br>
+<p>Paolo Braca, Leonardo M. Millefiori, Augusto Aubry, Stefano Marano, Antonio De Maio, Peter Willett</p></summary>
+<p>
+
+**Abstract:** We study the performance -- and specifically the rate at which the error probability converges to zero -- of Machine Learning (ML) classification techniques. Leveraging the theory of large deviations, we provide the mathematical conditions for a ML classifier to exhibit error probabilities that vanish exponentially, say $\sim \exp\left(-n\,I + o(n) \right)$, where $n$ is the number of informative observations available for testing (or another relevant parameter, such as the size of the target in an image) and $I$ is the error rate. Such conditions depend on the Fenchel-Legendre transform of the cumulant-generating function of the Data-Driven Decision Function (D3F, i.e., what is thresholded before the final binary decision is made) learned in the training phase. As such, the D3F and, consequently, the related error rate $I$, depend on the given training set, which is assumed of finite size. Interestingly, these conditions can be verified and tested numerically exploiting the available dataset, or a synthetic dataset, generated according to the available information on the underlying statistical model. In other words, the classification error probability convergence to zero and its rate can be computed on a portion of the dataset available for training. Coherently with the large deviations theory, we can also establish the convergence, for $n$ large enough, of the normalized D3F statistic to a Gaussian distribution. This property is exploited to set a desired asymptotic false alarm probability, which empirically turns out to be accurate even for quite realistic values of $n$. Furthermore, approximate error probability curves $\sim ζ_n \exp\left(-n\,I \right)$ are provided, thanks to the refined asymptotic derivation (often referred to as exact asymptotics), where $ζ_n$ represents the most representative sub-exponential terms of the error probabilities.
+
+</p>
+</details>
+
+<details><summary><b>Decoupled Adversarial Contrastive Learning for Self-supervised Adversarial Robustness</b>
+<a href="https://arxiv.org/abs/2207.10899">arxiv:2207.10899</a>
+&#x1F4C8; 2 <br>
+<p>Chaoning Zhang, Kang Zhang, Chenshuang Zhang, Axi Niu, Jiu Feng, Chang D. Yoo, In So Kweon</p></summary>
+<p>
+
+**Abstract:** Adversarial training (AT) for robust representation learning and self-supervised learning (SSL) for unsupervised representation learning are two active research fields. Integrating AT into SSL, multiple prior works have accomplished a highly significant yet challenging task: learning robust representation without labels. A widely used framework is adversarial contrastive learning which couples AT and SSL, and thus constitute a very complex optimization problem. Inspired by the divide-and-conquer philosophy, we conjecture that it might be simplified as well as improved by solving two sub-problems: non-robust SSL and pseudo-supervised AT. This motivation shifts the focus of the task from seeking an optimal integrating strategy for a coupled problem to finding sub-solutions for sub-problems. With this said, this work discards prior practices of directly introducing AT to SSL frameworks and proposed a two-stage framework termed Decoupled Adversarial Contrastive Learning (DeACL). Extensive experimental results demonstrate that our DeACL achieves SOTA self-supervised adversarial robustness while significantly reducing the training time, which validates its effectiveness and efficiency. Moreover, our DeACL constitutes a more explainable solution, and its success also bridges the gap with semi-supervised AT for exploiting unlabeled samples for robust representation learning. The code is publicly accessible at https://github.com/pantheon5100/DeACL.
+
+</p>
+</details>
+
+<details><summary><b>Discrete Key-Value Bottleneck</b>
+<a href="https://arxiv.org/abs/2207.11240">arxiv:2207.11240</a>
+&#x1F4C8; 1 <br>
+<p>Frederik Träuble, Anirudh Goyal, Nasim Rahaman, Michael Mozer, Kenji Kawaguchi, Yoshua Bengio, Bernhard Schölkopf</p></summary>
+<p>
+
+**Abstract:** Deep neural networks perform well on prediction and classification tasks in the canonical setting where data streams are i.i.d., labeled data is abundant, and class labels are balanced. Challenges emerge with distribution shifts, including non-stationary or imbalanced data streams. One powerful approach that has addressed this challenge involves self-supervised pretraining of large encoders on volumes of unlabeled data, followed by task-specific tuning. Given a new task, updating the weights of these encoders is challenging as a large number of weights needs to be fine-tuned, and as a result, they forget information about the previous tasks. In the present work, we propose a model architecture to address this issue, building upon a discrete bottleneck containing pairs of separate and learnable (key, value) codes. In this setup, we follow the encode; process the representation via a discrete bottleneck; and decode paradigm, where the input is fed to the pretrained encoder, the output of the encoder is used to select the nearest keys, and the corresponding values are fed to the decoder to solve the current task. The model can only fetch and re-use a limited number of these (key, value) pairs during inference, enabling localized and context-dependent model updates. We theoretically investigate the ability of the proposed model to minimize the effect of the distribution shifts and show that such a discrete bottleneck with (key, value) pairs reduces the complexity of the hypothesis class. We empirically verified the proposed methods' benefits under challenging distribution shift scenarios across various benchmark datasets and show that the proposed model reduces the common vulnerability to non-i.i.d. and non-stationary training distributions compared to various other baselines.
+
+</p>
+</details>
+
+<details><summary><b>Classification via score-based generative modelling</b>
+<a href="https://arxiv.org/abs/2207.11091">arxiv:2207.11091</a>
+&#x1F4C8; 1 <br>
+<p>Yongchao Huang</p></summary>
+<p>
+
+**Abstract:** In this work, we investigated the application of score-based gradient learning in discriminative and generative classification settings. Score function can be used to characterize data distribution as an alternative to density. It can be efficiently learned via score matching, and used to flexibly generate credible samples to enhance discriminative classification quality, to recover density and to build generative classifiers. We analysed the decision theories involving score-based representations, and performed experiments on simulated and real-world datasets, demonstrating its effectiveness in achieving and improving binary classification performance, and robustness to perturbations, particularly in high dimensions and imbalanced situations.
+
+</p>
+</details>
+
+<details><summary><b>Do Artificial Intelligence Systems Understand?</b>
+<a href="https://arxiv.org/abs/2207.11089">arxiv:2207.11089</a>
+&#x1F4C8; 1 <br>
+<p>Eduardo C. Garrido-Merchán, Carlos Blanco</p></summary>
+<p>
+
+**Abstract:** Are intelligent machines really intelligent? Is the underlying philosophical concept of intelligence satisfactory for describing how the present systems work? Is understanding a necessary and sufficient condition for intelligence? If a machine could understand, should we attribute subjectivity to it? This paper addresses the problem of deciding whether the so-called "intelligent machines" are capable of understanding, instead of merely processing signs. It deals with the relationship between syntaxis and semantics. The main thesis concerns the inevitability of semantics for any discussion about the possibility of building conscious machines, condensed into the following two tenets: "If a machine is capable of understanding (in the strong sense), then it must be capable of combining rules and intuitions"; "If semantics cannot be reduced to syntaxis, then a machine cannot understand." Our conclusion states that it is not necessary to attribute understanding to a machine in order to explain its exhibited "intelligent" behavior; a merely syntactic and mechanistic approach to intelligence as a task-solving tool suffices to justify the range of operations that it can display in the current state of technological development.
+
+</p>
+</details>
+
+<details><summary><b>Context-aware controller inference for stabilizing dynamical systems from scarce data</b>
+<a href="https://arxiv.org/abs/2207.11049">arxiv:2207.11049</a>
+&#x1F4C8; 1 <br>
+<p>Steffen W. R. Werner, Benjamin Peherstorfer</p></summary>
+<p>
+
+**Abstract:** This work introduces a data-driven control approach for stabilizing high-dimensional dynamical systems from scarce data. The proposed context-aware controller inference approach is based on the observation that controllers need to act locally only on the unstable dynamics to stabilize systems. This means it is sufficient to learn the unstable dynamics alone, which are typically confined to much lower dimensional spaces than the high-dimensional state spaces of all system dynamics and thus few data samples are sufficient to identify them. Numerical experiments demonstrate that context-aware controller inference learns stabilizing controllers from orders of magnitude fewer data samples than traditional data-driven control techniques and variants of reinforcement learning. The experiments further show that the low data requirements of context-aware controller inference are especially beneficial in data-scarce engineering problems with complex physics, for which learning complete system dynamics is often intractable in terms of data and training costs.
+
+</p>
+</details>
+
+<details><summary><b>Layer-Wise Partitioning and Merging for Efficient and Scalable Deep Learning</b>
+<a href="https://arxiv.org/abs/2207.11019">arxiv:2207.11019</a>
+&#x1F4C8; 1 <br>
+<p>Samson B. Akintoye, Liangxiu Han, Huw Lloyd, Xin Zhang, Darren Dancey, Haoming Chen, Daoqiang Zhang</p></summary>
+<p>
+
+**Abstract:** Deep Neural Network (DNN) models are usually trained sequentially from one layer to another, which causes forward, backward and update locking's problems, leading to poor performance in terms of training time. The existing parallel strategies to mitigate these problems provide suboptimal runtime performance. In this work, we have proposed a novel layer-wise partitioning and merging, forward and backward pass parallel framework to provide better training performance. The novelty of the proposed work consists of 1) a layer-wise partition and merging model which can minimise communication overhead between devices without the memory cost of existing strategies during the training process; 2) a forward pass and backward pass parallelisation and optimisation to address the update locking problem and minimise the total training cost. The experimental evaluation on real use cases shows that the proposed method outperforms the state-of-the-art approaches in terms of training speed; and achieves almost linear speedup without compromising the accuracy performance of the non-parallel approach.
+
+</p>
+</details>
+
+<details><summary><b>Vision-based Human Fall Detection Systems using Deep Learning: A Review</b>
+<a href="https://arxiv.org/abs/2207.10952">arxiv:2207.10952</a>
+&#x1F4C8; 1 <br>
+<p>Ekram Alam, Abu Sufian, Paramartha Dutta, Marco Leo</p></summary>
+<p>
+
+**Abstract:** Human fall is one of the very critical health issues, especially for elders and disabled people living alone. The number of elder populations is increasing steadily worldwide. Therefore, human fall detection is becoming an effective technique for assistive living for those people. For assistive living, deep learning and computer vision have been used largely. In this review article, we discuss deep learning (DL)-based state-of-the-art non-intrusive (vision-based) fall detection techniques. We also present a survey on fall detection benchmark datasets. For a clear understanding, we briefly discuss different metrics which are used to evaluate the performance of the fall detection systems. This article also gives a future direction on vision-based human fall detection techniques.
+
+</p>
+</details>
+
+<details><summary><b>Respecting Time Series Properties Makes Deep Time Series Forecasting Perfect</b>
+<a href="https://arxiv.org/abs/2207.10941">arxiv:2207.10941</a>
+&#x1F4C8; 1 <br>
+<p>Li Shen, Yuning Wei, Yangzhu Wang</p></summary>
+<p>
+
+**Abstract:** How to handle time features shall be the core question of any time series forecasting model. Ironically, it is often ignored or misunderstood by deep-learning based models, even those baselines which are state-of-the-art. This behavior makes their inefficient, untenable and unstable. In this paper, we rigorously analyze three prevalent but deficient/unfounded deep time series forecasting mechanisms or methods from the view of time series properties, including normalization methods, multivariate forecasting and input sequence length. Corresponding corollaries and solutions are given on both empirical and theoretical basis. We thereby propose a novel time series forecasting network, i.e. RTNet, on the basis of aforementioned analysis. It is general enough to be combined with both supervised and self-supervised forecasting format. Thanks to the core idea of respecting time series properties, no matter in which forecasting format, RTNet shows obviously superior forecasting performances compared with dozens of other SOTA time series forecasting baselines in three real-world benchmark datasets. By and large, it even occupies less time complexity and memory usage while acquiring better forecasting accuracy. The source code is available at https://github.com/OrigamiSL/RTNet.
+
+</p>
+</details>
+
+<details><summary><b>FairGRAPE: Fairness-aware GRAdient Pruning mEthod for Face Attribute Classification</b>
+<a href="https://arxiv.org/abs/2207.10888">arxiv:2207.10888</a>
+&#x1F4C8; 1 <br>
+<p>Xiaofeng Lin, Seungbae Kim, Jungseock Joo</p></summary>
+<p>
+
+**Abstract:** Existing pruning techniques preserve deep neural networks' overall ability to make correct predictions but may also amplify hidden biases during the compression process. We propose a novel pruning method, Fairness-aware GRAdient Pruning mEthod (FairGRAPE), that minimizes the disproportionate impacts of pruning on different sub-groups. Our method calculates the per-group importance of each model weight and selects a subset of weights that maintain the relative between-group total importance in pruning. The proposed method then prunes network edges with small importance values and repeats the procedure by updating importance values. We demonstrate the effectiveness of our method on four different datasets, FairFace, UTKFace, CelebA, and ImageNet, for the tasks of face attribute classification where our method reduces the disparity in performance degradation by up to 90% compared to the state-of-the-art pruning algorithms. Our method is substantially more effective in a setting with a high pruning rate (99%). The code and dataset used in the experiments are available at https://github.com/Bernardo1998/FairGRAPE
+
+</p>
+</details>
+
+<details><summary><b>XAI based Performance Preserving Adaptive Image Compression for Efficient Satellite Communication</b>
+<a href="https://arxiv.org/abs/2207.10885">arxiv:2207.10885</a>
+&#x1F4C8; 1 <br>
+<p>KyungChae Lee</p></summary>
+<p>
+
+**Abstract:** In the era of multinational cooperation, gathering and analyzing the satellite images are getting easier and more important. Typical procedure of the satellite image analysis include transmission of the bulky image data from satellite to the ground producing significant overhead. To reduce the amount of the transmission overhead while making no harm to the analysis result, we propose a novel image compression scheme RDIC in this paper. RDIC is a reasoning based image compression scheme that compresses an image according to the pixel importance score acquired from the analysis model itself. From the experimental results we showed that our RDIC scheme successfully captures the important regions in an image showing high compression rate and low accuracy loss.
+
+</p>
+</details>
+
+<details><summary><b>My View is the Best View: Procedure Learning from Egocentric Videos</b>
+<a href="https://arxiv.org/abs/2207.10883">arxiv:2207.10883</a>
+&#x1F4C8; 1 <br>
+<p>Siddhant Bansal, Chetan Arora, C. V. Jawahar</p></summary>
+<p>
+
+**Abstract:** Procedure learning involves identifying the key-steps and determining their logical order to perform a task. Existing approaches commonly use third-person videos for learning the procedure, making the manipulated object small in appearance and often occluded by the actor, leading to significant errors. In contrast, we observe that videos obtained from first-person (egocentric) wearable cameras provide an unobstructed and clear view of the action. However, procedure learning from egocentric videos is challenging because (a) the camera view undergoes extreme changes due to the wearer's head motion, and (b) the presence of unrelated frames due to the unconstrained nature of the videos. Due to this, current state-of-the-art methods' assumptions that the actions occur at approximately the same time and are of the same duration, do not hold. Instead, we propose to use the signal provided by the temporal correspondences between key-steps across videos. To this end, we present a novel self-supervised Correspond and Cut (CnC) framework for procedure learning. CnC identifies and utilizes the temporal correspondences between the key-steps across multiple videos to learn the procedure. Our experiments show that CnC outperforms the state-of-the-art on the benchmark ProceL and CrossTask datasets by 5.2% and 6.3%, respectively. Furthermore, for procedure learning using egocentric videos, we propose the EgoProceL dataset consisting of 62 hours of videos captured by 130 subjects performing 16 tasks. The source code and the dataset are available on the project page https://sid2697.github.io/egoprocel/.
+
+</p>
+</details>
+
+<details><summary><b>An Ensemble Approach for Multiple Emotion Descriptors Estimation Using Multi-task Learning</b>
+<a href="https://arxiv.org/abs/2207.10878">arxiv:2207.10878</a>
+&#x1F4C8; 1 <br>
+<p>Irfan Haider, Minh-Trieu Tran, Soo-Hyung Kim, Hyung-Jeong Yang, Guee-Sang Lee</p></summary>
+<p>
+
+**Abstract:** This paper illustrates our submission method to the fourth Affective Behavior Analysis in-the-Wild (ABAW) Competition. The method is used for the Multi-Task Learning Challenge. Instead of using only face information, we employ full information from a provided dataset containing face and the context around the face. We utilized the InceptionNet V3 model to extract deep features then we applied the attention mechanism to refine the features. After that, we put those features into the transformer block and multi-layer perceptron networks to get the final multiple kinds of emotion. Our model predicts arousal and valence, classifies the emotional expression and estimates the action units simultaneously. The proposed system achieves the performance of 0.917 on the MTL Challenge validation dataset.
+
+</p>
+</details>
+
+<details><summary><b>CQE in OWL 2 QL: A "Longest Honeymoon" Approach (extended version)</b>
+<a href="https://arxiv.org/abs/2207.11155">arxiv:2207.11155</a>
+&#x1F4C8; 0 <br>
+<p>Piero Bonatti, Gianluca Cima, Domenico Lembo, Lorenzo Marconi, Riccardo Rosati, Luigi Sauro, Domenico Fabio Savo</p></summary>
+<p>
+
+**Abstract:** Controlled Query Evaluation (CQE) has been recently studied in the context of Semantic Web ontologies. The goal of CQE is concealing some query answers so as to prevent external users from inferring confidential information. In general, there exist multiple, mutually incomparable ways of concealing answers, and previous CQE approaches choose in advance which answers are visible and which are not. In this paper, instead, we study a dynamic CQE method, namely, we propose to alter the answer to the current query based on the evaluation of previous ones. We aim at a system that, besides being able to protect confidential data, is maximally cooperative, which intuitively means that it answers affirmatively to as many queries as possible; it achieves this goal by delaying answer modifications as much as possible. We also show that the behavior we get cannot be intensionally simulated through a static approach, independent of query history. Interestingly, for OWL 2 QL ontologies and policy expressed through denials, query evaluation under our semantics is first-order rewritable, and thus in AC0 in data complexity. This paves the way for the development of practical algorithms, which we also preliminarily discuss in the paper.
+
+</p>
+</details>
+
+<details><summary><b>Motion Planning and Control for Multi Vehicle Autonomous Racing at High Speeds</b>
+<a href="https://arxiv.org/abs/2207.11136">arxiv:2207.11136</a>
+&#x1F4C8; 0 <br>
+<p>Ayoub Raji, Alexander Liniger, Andrea Giove, Alessandro Toschi, Nicola Musiu, Daniele Morra, Micaela Verucchi, Danilo Caporale, Marko Bertogna</p></summary>
+<p>
+
+**Abstract:** This paper presents a multi-layer motion planning and control architecture for autonomous racing, capable of avoiding static obstacles, performing active overtakes, and reaching velocities above 75 $m/s$. The used offline global trajectory generation and the online model predictive controller are highly based on optimization and dynamic models of the vehicle, where the tires and camber effects are represented in an extended version of the basic Pacejka Magic Formula. The proposed single-track model is identified and validated using multi-body motorsport libraries which allow simulating the vehicle dynamics properly, especially useful when real experimental data are missing. The fundamental regularization terms and constraints of the controller are tuned to reduce the rate of change of the inputs while assuring an acceptable velocity and path tracking. The motion planning strategy consists of a Frenét-Frame-based planner which considers a forecast of the opponent produced by a Kalman filter. The planner chooses the collision-free path and velocity profile to be tracked on a 3 seconds horizon to realize different goals such as following and overtaking. The proposed solution has been applied on a Dallara AV-21 racecar and tested at oval race tracks achieving lateral accelerations up to 25 $m/s^{2}$.
+
+</p>
+</details>
+
+<details><summary><b>GesSure -- A Robust Face-Authentication enabled Dynamic Gesture Recognition GUI Application</b>
+<a href="https://arxiv.org/abs/2207.11033">arxiv:2207.11033</a>
+&#x1F4C8; 0 <br>
+<p>Ankit Jha, Ishita Pratham G. Shenwai, Ayush Batra, Siddharth Kotian, Piyush Modi</p></summary>
+<p>
+
+**Abstract:** Using physical interactive devices like mouse and keyboards hinders naturalistic human-machine interaction and increases the probability of surface contact during a pandemic. Existing gesture-recognition systems do not possess user authentication, making them unreliable. Static gestures in current gesture-recognition technology introduce long adaptation periods and reduce user compatibility. Our technology places a strong emphasis on user recognition and safety. We use meaningful and relevant gestures for task operation, resulting in a better user experience. This paper aims to design a robust, face-verification-enabled gesture recognition system that utilizes a graphical user interface and primarily focuses on security through user recognition and authorization. The face model uses MTCNN and FaceNet to verify the user, and our LSTM-CNN architecture for gesture recognition, achieving an accuracy of 95% with five classes of gestures. The prototype developed through our research has successfully executed context-dependent tasks like save, print, control video-player operations and exit, and context-free operating system tasks like sleep, shut-down, and unlock intuitively. Our application and dataset are available as open source.
+
+</p>
+</details>
+
+<details><summary><b>WRHT: Efficient All-reduce for Distributed DNN Training in Optical Interconnect System</b>
+<a href="https://arxiv.org/abs/2207.10982">arxiv:2207.10982</a>
+&#x1F4C8; 0 <br>
+<p>Fei Dai, Yawen Chen, Zhiyi Huang, Haibo Zhang, Fangfang Zhang</p></summary>
+<p>
+
+**Abstract:** Communication efficiency plays an important role in accelerating the distributed training of Deep Neural Networks (DNN). All-reduce is the key communication primitive to reduce model parameters in distributed DNN training. Most existing all-reduce algorithms are designed for traditional electrical interconnect systems, which cannot meet the communication requirements for distributed training of large DNNs. One of the promising alternatives for electrical interconnect is optical interconnect, which can provide high bandwidth, low transmission delay, and low power cost. We propose an efficient scheme called WRHT (Wavelength Reused Hierarchical Tree) for implementing all-reduce operation in optical interconnect system, which can take advantage of WDM (Wavelength Division Multiplexing) to reduce the communication time of distributed data-parallel DNN training. We further derive the minimum number of communication steps and communication time to realize the all-reduce using WRHT. Simulation results show that the communication time of WRHT is reduced by 75.59%, 49.25%, and 70.1% respectively compared with three traditional all-reduce algorithms simulated in optical interconnect system. Simulation results also show that WRHT can reduce the communication time for all-reduce operation by 86.69% and 84.71% in comparison with two existing all-reduce algorithms in electrical interconnect system.
+
+</p>
+</details>
+
+<details><summary><b>Efficient Testing of Deep Neural Networks via Decision Boundary Analysis</b>
+<a href="https://arxiv.org/abs/2207.10942">arxiv:2207.10942</a>
+&#x1F4C8; 0 <br>
+<p>Qiang Hu, Yuejun Guo, Xiaofei Xie, Maxime Cordy, Lei Ma, Mike Papadakis, Yves Le Traon</p></summary>
+<p>
+
+**Abstract:** Deep learning plays a more and more important role in our daily life due to its competitive performance in multiple industrial application domains. As the core of DL-enabled systems, deep neural networks automatically learn knowledge from carefully collected and organized training data to gain the ability to predict the label of unseen data. Similar to the traditional software systems that need to be comprehensively tested, DNNs also need to be carefully evaluated to make sure the quality of the trained model meets the demand. In practice, the de facto standard to assess the quality of DNNs in industry is to check their performance (accuracy) on a collected set of labeled test data. However, preparing such labeled data is often not easy partly because of the huge labeling effort, i.e., data labeling is labor-intensive, especially with the massive new incoming unlabeled data every day. Recent studies show that test selection for DNN is a promising direction that tackles this issue by selecting minimal representative data to label and using these data to assess the model. However, it still requires human effort and cannot be automatic. In this paper, we propose a novel technique, named Aries, that can estimate the performance of DNNs on new unlabeled data using only the information obtained from the original test data. The key insight behind our technique is that the model should have similar prediction accuracy on the data which have similar distances to the decision boundary. We performed a large-scale evaluation of our technique on 13 types of data transformation methods. The results demonstrate the usefulness of our technique that the estimated accuracy by Aries is only 0.03% -- 2.60% (on average 0.61%) off the true accuracy. Besides, Aries also outperforms the state-of-the-art selection-labeling-based methods in most (96 out of 128) cases.
+
+</p>
+</details>
+
+<details><summary><b>Impact of RoCE Congestion Control Policies on Distributed Training of DNNs</b>
+<a href="https://arxiv.org/abs/2207.10898">arxiv:2207.10898</a>
+&#x1F4C8; 0 <br>
+<p>Tarannum Khan, Saeed Rashidi, Srinivas Sridharan, Pallavi Shurpali, Aditya Akella, Tushar Krishna</p></summary>
+<p>
+
+**Abstract:** RDMA over Converged Ethernet (RoCE) has gained significant attraction for datacenter networks due to its compatibility with conventional Ethernet-based fabric. However, the RDMA protocol is efficient only on (nearly) lossless networks, emphasizing the vital role of congestion control on RoCE networks. Unfortunately, the native RoCE congestion control scheme, based on Priority Flow Control (PFC), suffers from many drawbacks such as unfairness, head-of-line-blocking, and deadlock. Therefore, in recent years many schemes have been proposed to provide additional congestion control for RoCE networks to minimize PFC drawbacks. However, these schemes are proposed for general datacenter environments. In contrast to the general datacenters that are built using commodity hardware and run general-purpose workloads, high-performance distributed training platforms deploy high-end accelerators and network components and exclusively run training workloads using collectives (All-Reduce, All-To-All) communication libraries for communication. Furthermore, these platforms usually have a private network, separating their communication traffic from the rest of the datacenter traffic. Scalable topology-aware collective algorithms are inherently designed to avoid incast patterns and balance traffic optimally. These distinct features necessitate revisiting previously proposed congestion control schemes for general-purpose datacenter environments. In this paper, we thoroughly analyze some of the SOTA RoCE congestion control schemes vs. PFC when running on distributed training platforms. Our results indicate that previously proposed RoCE congestion control schemes have little impact on the end-to-end performance of training workloads, motivating the necessity of designing an optimized, yet low-overhead, congestion control scheme based on the characteristics of distributed training platforms and workloads.
+
+</p>
+</details>
+
+
+{% endraw %}
+Prev: [2022.07.21]({{ '/2022/07/21/2022.07.21.html' | relative_url }})  Next: [2022.07.23]({{ '/2022/07/23/2022.07.23.html' | relative_url }})
