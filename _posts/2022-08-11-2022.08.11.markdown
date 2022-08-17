@@ -1,11 +1,44 @@
 Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2022.08.12]({{ '/2022/08/12/2022.08.12.html' | relative_url }})
 {% raw %}
-## Summary for 2022-08-11, created on 2022-08-15
+## Summary for 2022-08-11, created on 2022-08-18
 
+
+<details><summary><b>RelPose: Predicting Probabilistic Relative Rotation for Single Objects in the Wild</b>
+<a href="https://arxiv.org/abs/2208.05963">arxiv:2208.05963</a>
+&#x1F4C8; 99 <br>
+<p>Jason Y. Zhang, Deva Ramanan, Shubham Tulsiani</p></summary>
+<p>
+
+**Abstract:** We describe a data-driven method for inferring the camera viewpoints given multiple images of an arbitrary object. This task is a core component of classic geometric pipelines such as SfM and SLAM, and also serves as a vital pre-processing requirement for contemporary neural approaches (e.g. NeRF) to object reconstruction and view synthesis. In contrast to existing correspondence-driven methods that do not perform well given sparse views, we propose a top-down prediction based approach for estimating camera viewpoints. Our key technical insight is the use of an energy-based formulation for representing distributions over relative camera rotations, thus allowing us to explicitly represent multiple camera modes arising from object symmetries or views. Leveraging these relative predictions, we jointly estimate a consistent set of camera rotations from multiple images. We show that our approach outperforms state-of-the-art SfM and SLAM methods given sparse images on both seen and unseen categories. Further, our probabilistic approach significantly outperforms directly regressing relative poses, suggesting that modeling multimodality is important for coherent joint reconstruction. We demonstrate that our system can be a stepping stone toward in-the-wild reconstruction from multi-view datasets. The project page with code and videos can be found at https://jasonyzhang.com/relpose.
+
+</p>
+</details>
+
+<details><summary><b>Speech Enhancement and Dereverberation with Diffusion-based Generative Models</b>
+<a href="https://arxiv.org/abs/2208.05830">arxiv:2208.05830</a>
+&#x1F4C8; 80 <br>
+<p>Julius Richter, Simon Welker, Jean-Marie Lemercier, Bunlong Lay, Timo Gerkmann</p></summary>
+<p>
+
+**Abstract:** Recently, diffusion-based generative models have been introduced to the task of speech enhancement. The corruption of clean speech is modeled as a fixed forward process in which increasing amounts of noise are gradually added. By learning to reverse this process in an iterative fashion conditioned on the noisy input, clean speech is generated. We build upon our previous work and derive the training task within the formalism of stochastic differential equations. We present a detailed theoretical review of the underlying score matching objective and explore different sampler configurations for solving the reverse process at test time. By using a sophisticated network architecture from natural image generation literature, we significantly improve performance compared to our previous publication. We also show that we can compete with recent discriminative models and achieve better generalization when evaluating on a different corpus than used for training. We complement the evaluation results with a subjective listening test, in which our proposed method is rated best. Furthermore, we show that the proposed method achieves remarkable state-of-the-art performance in single-channel speech dereverberation. Our code and audio examples are available online, see https://uhh.de/inf-sp-sgmse
+
+</p>
+</details>
+
+<details><summary><b>Adaptive and Implicit Regularization for Matrix Completion</b>
+<a href="https://arxiv.org/abs/2208.05640">arxiv:2208.05640</a>
+&#x1F4C8; 79 <br>
+<p>Zhemin Li, Tao Sun, Hongxia Wang, Bao Wang</p></summary>
+<p>
+
+**Abstract:** The explicit low-rank regularization, e.g., nuclear norm regularization, has been widely used in imaging sciences. However, it has been found that implicit regularization outperforms explicit ones in various image processing tasks. Another issue is that the fixed explicit regularization limits the applicability to broad images since different images favor different features captured by different explicit regularizations. As such, this paper proposes a new adaptive and implicit low-rank regularization that captures the low-rank prior dynamically from the training data. The core of our new adaptive and implicit low-rank regularization is parameterizing the Laplacian matrix in the Dirichlet energy-based regularization, which we call the regularization AIR. Theoretically, we show that the adaptive regularization of \ReTwo{AIR} enhances the implicit regularization and vanishes at the end of training. We validate AIR's effectiveness on various benchmark tasks, indicating that the AIR is particularly favorable for the scenarios when the missing entries are non-uniform. The code can be found at https://github.com/lizhemin15/AIR-Net.
+
+</p>
+</details>
 
 <details><summary><b>Semi-supervised Vision Transformers at Scale</b>
 <a href="https://arxiv.org/abs/2208.05688">arxiv:2208.05688</a>
-&#x1F4C8; 18 <br>
+&#x1F4C8; 39 <br>
 <p>Zhaowei Cai, Avinash Ravichandran, Paolo Favaro, Manchen Wang, Davide Modolo, Rahul Bhotika, Zhuowen Tu, Stefano Soatto</p></summary>
 <p>
 
@@ -14,20 +47,42 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>General Cutting Planes for Bound-Propagation-Based Neural Network Verification</b>
-<a href="https://arxiv.org/abs/2208.05740">arxiv:2208.05740</a>
-&#x1F4C8; 14 <br>
-<p>Huan Zhang, Shiqi Wang, Kaidi Xu, Linyi Li, Bo Li, Suman Jana, Cho-Jui Hsieh, J. Zico Kolter</p></summary>
+<details><summary><b>MAIScope: A low-cost portable microscope with built-in vision AI to automate microscopic diagnosis of diseases in remote rural settings</b>
+<a href="https://arxiv.org/abs/2208.06114">arxiv:2208.06114</a>
+&#x1F4C8; 20 <br>
+<p>Rohan Sangameswaran</p></summary>
 <p>
 
-**Abstract:** Bound propagation methods, when combined with branch and bound, are among the most effective methods to formally verify properties of deep neural networks such as correctness, robustness, and safety. However, existing works cannot handle the general form of cutting plane constraints widely accepted in traditional solvers, which are crucial for strengthening verifiers with tightened convex relaxations. In this paper, we generalize the bound propagation procedure to allow the addition of arbitrary cutting plane constraints, including those involving relaxed integer variables that do not appear in existing bound propagation formulations. Our generalized bound propagation method, GCP-CROWN, opens up the opportunity to apply general cutting plane methods} for neural network verification while benefiting from the efficiency and GPU acceleration of bound propagation methods. As a case study, we investigate the use of cutting planes generated by off-the-shelf mixed integer programming (MIP) solver. We find that MIP solvers can generate high-quality cutting planes for strengthening bound-propagation-based verifiers using our new formulation. Since the branching-focused bound propagation procedure and the cutting-plane-focused MIP solver can run in parallel utilizing different types of hardware (GPUs and CPUs), their combination can quickly explore a large number of branches with strong cutting planes, leading to strong verification performance. Experiments demonstrate that our method is the first verifier that can completely solve the oval20 benchmark and verify twice as many instances on the oval21 benchmark compared to the best tool in VNN-COMP 2021, and also noticeably outperforms state-of-the-art verifiers on a wide range of benchmarks. GCP-CROWN is part of the $α$,$β$-CROWN verifier, the VNN-COMP 2022 winner. Code is available at http://PaperCode.cc/GCP-CROWN
+**Abstract:** According to the World Health Organization(WHO), malaria is estimated to have killed 627,000 people and infected over 241 million people in 2020 alone, a 12% increase from 2019. Microscopic diagnosis of blood cells is the standard testing procedure to diagnose malaria. However, this style of diagnosis is expensive, time-consuming, and greatly subjective to human error, especially in developing nations that lack well-trained personnel to perform high-quality microscopy examinations. This paper proposes Mass-AI-Scope (MAIScope): a novel, low-cost, portable device that can take microscopic images and automatically detect malaria parasites with embedded AI. The device has two subsystems. The first subsystem is an on-device multi-layered deep learning network, that detects red blood cells (RBCs) from microscopic images, followed by a malaria parasite classifier that recognizes malaria parasites in the individual RBCs. The testing and validation demonstrated a high average accuracy of 89.9% for classification and average precision of 61.5% for detection models using TensorFlow Lite while addressing limited storage and computational capacity. This system also has cloud synchronization, which sends images to the cloud when connected to the Internet for analysis and model improvement purposes. The second subsystem is the hardware which consists of components like Raspberry Pi, a camera, a touch screen display, and an innovative low-cost bead microscope. Evaluation of the bead microscope demonstrated similar image quality with that of expensive light microscopes. The device is designed to be portable and work in remote environments without the Internet or power. The solution is extensible to other diseases requiring microscopy and can help standardize automation of disease diagnosis in rural parts of developing nations.
+
+</p>
+</details>
+
+<details><summary><b>Interactive Code Generation via Test-Driven User-Intent Formalization</b>
+<a href="https://arxiv.org/abs/2208.05950">arxiv:2208.05950</a>
+&#x1F4C8; 20 <br>
+<p>Shuvendu K. Lahiri, Aaditya Naik, Georgios Sakkas, Piali Choudhury, Curtis von Veh, Madanlal Musuvathi, Jeevana Priya Inala, Chenglong Wang, Jianfeng Gao</p></summary>
+<p>
+
+**Abstract:** Pre-trained large language models (LLMs) such as OpenAI Codex have shown immense potential in automating significant aspects of coding by producing natural code from informal natural language (NL) intent. However, the code produced does not have any correctness guarantees around satisfying user's intent. In fact, it is hard to define a notion of correctness since natural language can be ambiguous and lacks a formal semantics. In this paper, we take a first step towards addressing the problem above by proposing the workflow of test-driven user-intent formalization (TDUIF), which leverages lightweight user feedback to jointly (a) formalize the user intent as tests (a partial specification), and (b) generates code that meets the formal user intent. To perform a scalable and large-scale automated evaluation of the algorithms without requiring a user in the loop, we describe how to simulate user interaction with high-fidelity using a reference solution. We also describe and implement alternate implementations of several algorithmic components (including mutating and ranking a set of tests) that can be composed for efficient solutions to the TDUIF problem. We have developed a system TICODER that implements several solutions to TDUIF, and compare their relative effectiveness on the MBPP academic code generation benchmark. Our results are promising with using the OpenAI Codex LLM on MBPP: our best algorithm improves the pass@1 code generation accuracy metric from 48.39% to 70.49% with a single user query, and up to 85.48% with up to 5 user queries. Second, we can generate a non-trivial functional unit test consistent with the user intent within an average of 1.69 user queries for 90.40% of the examples for this dataset.
+
+</p>
+</details>
+
+<details><summary><b>Speech Synthesis with Mixed Emotions</b>
+<a href="https://arxiv.org/abs/2208.05890">arxiv:2208.05890</a>
+&#x1F4C8; 20 <br>
+<p>Kun Zhou, Berrak Sisman, Rajib Rana, B. W. Schuller, Haizhou Li</p></summary>
+<p>
+
+**Abstract:** Emotional speech synthesis aims to synthesize human voices with various emotional effects. The current studies are mostly focused on imitating an averaged style belonging to a specific emotion type. In this paper, we seek to generate speech with a mixture of emotions at run-time. We propose a novel formulation that measures the relative difference between the speech samples of different emotions. We then incorporate our formulation into a sequence-to-sequence emotional text-to-speech framework. During the training, the framework does not only explicitly characterize emotion styles, but also explores the ordinal nature of emotions by quantifying the differences with other emotions. At run-time, we control the model to produce the desired emotion mixture by manually defining an emotion attribute vector. The objective and subjective evaluations have validated the effectiveness of the proposed framework. To our best knowledge, this research is the first study on modelling, synthesizing and evaluating mixed emotions in speech.
 
 </p>
 </details>
 
 <details><summary><b>Language Tokens: A Frustratingly Simple Approach Improves Zero-Shot Performance of Multilingual Translation</b>
 <a href="https://arxiv.org/abs/2208.05852">arxiv:2208.05852</a>
-&#x1F4C8; 12 <br>
+&#x1F4C8; 20 <br>
 <p>Muhammad ElNokrashy, Amr Hendy, Mohamed Maher, Mohamed Afify, Hany Hassan Awadalla</p></summary>
 <p>
 
@@ -36,20 +91,20 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Solving MathWord Problems Automatically with Heterogeneous Line Graph Transformer for Online Learning</b>
-<a href="https://arxiv.org/abs/2208.05645">arxiv:2208.05645</a>
-&#x1F4C8; 12 <br>
-<p>Zijian Hu, Meng Jiang</p></summary>
+<details><summary><b>General Cutting Planes for Bound-Propagation-Based Neural Network Verification</b>
+<a href="https://arxiv.org/abs/2208.05740">arxiv:2208.05740</a>
+&#x1F4C8; 20 <br>
+<p>Huan Zhang, Shiqi Wang, Kaidi Xu, Linyi Li, Bo Li, Suman Jana, Cho-Jui Hsieh, J. Zico Kolter</p></summary>
 <p>
 
-**Abstract:** This paper describes the design and implementation of a new machine learning model for online learning systems.We aim at improving the intelligent level of the systems by enabling an automated math word problem solver which can support a wide range of functions such as homework correction, difficulty estimation, and priority recommendation. We originally planned to employ existing models but realized that they processed a math word problem as a sequence or a homogeneous graph of tokens. Relationships between the multiple types of tokens such as entity, unit, rate, and number were ignored.We decided to design and implement a novel model to use such relational data to bridge the information gap between human-readable language and machine-understandable logical form. We propose a heterogeneous line graph transformer (HLGT) model that constructs a heterogeneous line graph via semantic role labeling on math word problems and then perform node representation learning aware of edge types. We add numerical comparison as an auxiliary task to improve model training for real-world use. Experimental results show that the proposed model achieves a better performance than existing models and suggest that it is still far below human performance. Information utilization and knowledge discovery is continuously needed to improve the online learning systems.
+**Abstract:** Bound propagation methods, when combined with branch and bound, are among the most effective methods to formally verify properties of deep neural networks such as correctness, robustness, and safety. However, existing works cannot handle the general form of cutting plane constraints widely accepted in traditional solvers, which are crucial for strengthening verifiers with tightened convex relaxations. In this paper, we generalize the bound propagation procedure to allow the addition of arbitrary cutting plane constraints, including those involving relaxed integer variables that do not appear in existing bound propagation formulations. Our generalized bound propagation method, GCP-CROWN, opens up the opportunity to apply general cutting plane methods} for neural network verification while benefiting from the efficiency and GPU acceleration of bound propagation methods. As a case study, we investigate the use of cutting planes generated by off-the-shelf mixed integer programming (MIP) solver. We find that MIP solvers can generate high-quality cutting planes for strengthening bound-propagation-based verifiers using our new formulation. Since the branching-focused bound propagation procedure and the cutting-plane-focused MIP solver can run in parallel utilizing different types of hardware (GPUs and CPUs), their combination can quickly explore a large number of branches with strong cutting planes, leading to strong verification performance. Experiments demonstrate that our method is the first verifier that can completely solve the oval20 benchmark and verify twice as many instances on the oval21 benchmark compared to the best tool in VNN-COMP 2021, and also noticeably outperforms state-of-the-art verifiers on a wide range of benchmarks. GCP-CROWN is part of the $α$,$β$-CROWN verifier, the VNN-COMP 2022 winner. Code is available at http://PaperCode.cc/GCP-CROWN
 
 </p>
 </details>
 
 <details><summary><b>Word-Embeddings Distinguish Denominal and Root-Derived Verbs in Semitic</b>
 <a href="https://arxiv.org/abs/2208.05721">arxiv:2208.05721</a>
-&#x1F4C8; 9 <br>
+&#x1F4C8; 12 <br>
 <p>Ido Benbaji, Omri Doron, Adèle Hénot-Mortier</p></summary>
 <p>
 
@@ -58,13 +113,68 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Speech Synthesis with Mixed Emotions</b>
-<a href="https://arxiv.org/abs/2208.05890">arxiv:2208.05890</a>
-&#x1F4C8; 8 <br>
-<p>Kun Zhou, Berrak Sisman, Rajib Rana, B. W. Schuller, Haizhou Li</p></summary>
+<details><summary><b>Learning Point Processes using Recurrent Graph Network</b>
+<a href="https://arxiv.org/abs/2208.05736">arxiv:2208.05736</a>
+&#x1F4C8; 10 <br>
+<p>Saurabh Dash, Xueyuan She, Saibal Mukhopadhyay</p></summary>
 <p>
 
-**Abstract:** Emotional speech synthesis aims to synthesize human voices with various emotional effects. The current studies are mostly focused on imitating an averaged style belonging to a specific emotion type. In this paper, we seek to generate speech with a mixture of emotions at run-time. We propose a novel formulation that measures the relative difference between the speech samples of different emotions. We then incorporate our formulation into a sequence-to-sequence emotional text-to-speech framework. During the training, the framework does not only explicitly characterize emotion styles, but also explores the ordinal nature of emotions by quantifying the differences with other emotions. At run-time, we control the model to produce the desired emotion mixture by manually defining an emotion attribute vector. The objective and subjective evaluations have validated the effectiveness of the proposed framework. To our best knowledge, this research is the first study on modelling, synthesizing and evaluating mixed emotions in speech.
+**Abstract:** We present a novel Recurrent Graph Network (RGN) approach for predicting discrete marked event sequences by learning the underlying complex stochastic process. Using the framework of Point Processes, we interpret a marked discrete event sequence as the superposition of different sequences each of a unique type. The nodes of the Graph Network use LSTM to incorporate past information whereas a Graph Attention Network (GAT Network) introduces strong inductive biases to capture the interaction between these different types of events. By changing the self-attention mechanism from attending over past events to attending over event types, we obtain a reduction in time and space complexity from $\mathcal{O}(N^2)$ (total number of events) to $\mathcal{O}(|\mathcal{Y}|^2)$ (number of event types). Experiments show that the proposed approach improves performance in log-likelihood, prediction and goodness-of-fit tasks with lower time and space complexity compared to state-of-the art Transformer based architectures.
+
+</p>
+</details>
+
+<details><summary><b>Cine-AI: Generating Video Game Cutscenes in the Style of Human Directors</b>
+<a href="https://arxiv.org/abs/2208.05701">arxiv:2208.05701</a>
+&#x1F4C8; 10 <br>
+<p>Inan Evin, Perttu Hämäläinen, Christian Guckelsberger</p></summary>
+<p>
+
+**Abstract:** Cutscenes form an integral part of many video games, but their creation is costly, time-consuming, and requires skills that many game developers lack. While AI has been leveraged to semi-automate cutscene production, the results typically lack the internal consistency and uniformity in style that is characteristic of professional human directors. We overcome this shortcoming with Cine-AI, an open-source procedural cinematography toolset capable of generating in-game cutscenes in the style of eminent human directors. Implemented in the popular game engine Unity, Cine-AI features a novel timeline and storyboard interface for design-time manipulation, combined with runtime cinematography automation. Via two user studies, each employing quantitative and qualitative measures, we demonstrate that Cine-AI generates cutscenes that people correctly associate with a target director, while providing above-average usability. Our director imitation dataset is publicly available, and can be extended by users and film enthusiasts.
+
+</p>
+</details>
+
+<details><summary><b>A Model of Anaphoric Ambiguities using Sheaf Theoretic Quantum-like Contextuality and BERT</b>
+<a href="https://arxiv.org/abs/2208.05720">arxiv:2208.05720</a>
+&#x1F4C8; 9 <br>
+<p>Kin Ian Lo, Mehrnoosh Sadrzadeh, Shane Mansfield</p></summary>
+<p>
+
+**Abstract:** Ambiguities of natural language do not preclude us from using it and context helps in getting ideas across.  They, nonetheless, pose a key challenge to the development of competent machines to understand natural language and use it as humans do. Contextuality is an unparalleled phenomenon in quantum mechanics,  where different mathematical formalisms have been put forwards to understand and reason about it. In this paper, we construct a schema for anaphoric ambiguities that exhibits quantum-like contextuality. We use a recently developed criterion of sheaf-theoretic contextuality that is applicable to signalling models. We then take advantage of the neural word embedding engine BERT to instantiate the schema to natural language examples and extract probability distributions for the instances. As a result, plenty of sheaf-contextual examples were discovered in the natural language corpora BERT utilises. Our hope is that these examples will pave the way for future research and for finding ways to extend applications of quantum computing to natural language processing.
+
+</p>
+</details>
+
+<details><summary><b>Embedding Compression with Hashing for Efficient Representation Learning in Large-Scale Graph</b>
+<a href="https://arxiv.org/abs/2208.05648">arxiv:2208.05648</a>
+&#x1F4C8; 9 <br>
+<p>Chin-Chia Michael Yeh, Mengting Gu, Yan Zheng, Huiyuan Chen, Javid Ebrahimi, Zhongfang Zhuang, Junpeng Wang, Liang Wang, Wei Zhang</p></summary>
+<p>
+
+**Abstract:** Graph neural networks (GNNs) are deep learning models designed specifically for graph data, and they typically rely on node features as the input to the first layer. When applying such a type of network on the graph without node features, one can extract simple graph-based node features (e.g., number of degrees) or learn the input node representations (i.e., embeddings) when training the network. While the latter approach, which trains node embeddings, more likely leads to better performance, the number of parameters associated with the embeddings grows linearly with the number of nodes. It is therefore impractical to train the input node embeddings together with GNNs within graphics processing unit (GPU) memory in an end-to-end fashion when dealing with industrial-scale graph data. Inspired by the embedding compression methods developed for natural language processing (NLP) tasks, we develop a node embedding compression method where each node is compactly represented with a bit vector instead of a floating-point vector. The parameters utilized in the compression method can be trained together with GNNs. We show that the proposed node embedding compression method achieves superior performance compared to the alternatives.
+
+</p>
+</details>
+
+<details><summary><b>Super-Universal Regularized Newton Method</b>
+<a href="https://arxiv.org/abs/2208.05888">arxiv:2208.05888</a>
+&#x1F4C8; 8 <br>
+<p>Nikita Doikov, Konstantin Mishchenko, Yurii Nesterov</p></summary>
+<p>
+
+**Abstract:** We analyze the performance of a variant of Newton method with quadratic regularization for solving composite convex minimization problems. At each step of our method, we choose regularization parameter proportional to a certain power of the gradient norm at the current point. We introduce a family of problem classes characterized by Hölder continuity of either the second or third derivative. Then we present the method with a simple adaptive search procedure allowing an automatic adjustment to the problem class with the best global complexity bounds, without knowing specific parameters of the problem. In particular, for the class of functions with Lipschitz continuous third derivative, we get the global $O(1/k^3)$ rate, which was previously attributed to third-order tensor methods. When the objective function is uniformly convex, we justify an automatic acceleration of our scheme, resulting in a faster global rate and local superlinear convergence. The switching between the different rates (sublinear, linear, and superlinear) is automatic. Again, for that, no a priori knowledge of parameters is needed.
+
+</p>
+</details>
+
+<details><summary><b>Uncertainty-Aware Blob Detection with an Application to Integrated-Light Stellar Population Recoveries</b>
+<a href="https://arxiv.org/abs/2208.05881">arxiv:2208.05881</a>
+&#x1F4C8; 8 <br>
+<p>Prashin Jethwa, Fabian Parzer, Otmar Scherzer, Glenn van de Ven</p></summary>
+<p>
+
+**Abstract:** Context. Blob detection is a common problem in astronomy. One example is in stellar population modelling, where the distribution of stellar ages and metallicities in a galaxy is inferred from observations. In this context, blobs may correspond to stars born in-situ versus those accreted from satellites, and the task of blob detection is to disentangle these components. A difficulty arises when the distributions come with significant uncertainties, as is the case for stellar population recoveries inferred from modelling spectra of unresolved stellar systems. There is currently no satisfactory method for blob detection with uncertainties. Aims. We introduce a method for uncertainty-aware blob detection developed in the context of stellar population modelling of integrated-light spectra of stellar systems. Methods. We develop theory and computational tools for an uncertainty-aware version of the classic Laplacian-of-Gaussians method for blob detection, which we call ULoG. This identifies significant blobs considering a variety of scales. As a prerequisite to apply ULoG to stellar population modelling, we introduce a method for efficient computation of uncertainties for spectral modelling. This method is based on the truncated Singular Value Decomposition and Markov Chain Monte Carlo sampling (SVD-MCMC). Results. We apply the methods to data of the star cluster M54. We show that the SVD-MCMC inferences match those from standard MCMC, but are a factor 5-10 faster to compute. We apply ULoG to the inferred M54 age/metallicity distributions, identifying between 2 or 3 significant, distinct populations amongst its stars.
 
 </p>
 </details>
@@ -80,123 +190,146 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>A Model of Anaphoric Ambiguities using Sheaf Theoretic Quantum-like Contextuality and BERT</b>
-<a href="https://arxiv.org/abs/2208.05720">arxiv:2208.05720</a>
-&#x1F4C8; 8 <br>
-<p>Kin Ian Lo, Mehrnoosh Sadrzadeh, Shane Mansfield</p></summary>
+<details><summary><b>Comparison of Forecasting Methods of House Electricity Consumption for Honda Smart Home</b>
+<a href="https://arxiv.org/abs/2208.07217">arxiv:2208.07217</a>
+&#x1F4C8; 7 <br>
+<p>Farshad Ahmadi Asl, Mehmet Bodur</p></summary>
 <p>
 
-**Abstract:** Ambiguities of natural language do not preclude us from using it and context helps in getting ideas across.  They, nonetheless, pose a key challenge to the development of competent machines to understand natural language and use it as humans do. Contextuality is an unparalleled phenomenon in quantum mechanics,  where different mathematical formalisms have been put forwards to understand and reason about it. In this paper, we construct a schema for anaphoric ambiguities that exhibits quantum-like contextuality. We use a recently developed criterion of sheaf-theoretic contextuality that is applicable to signalling models. We then take advantage of the neural word embedding engine BERT to instantiate the schema to natural language examples and extract probability distributions for the instances. As a result, plenty of sheaf-contextual examples were discovered in the natural language corpora BERT utilises. Our hope is that these examples will pave the way for future research and for finding ways to extend applications of quantum computing to natural language processing.
+**Abstract:** The electricity consumption of buildings composes a major part of the city's energy consumption. Electricity consumption forecasting enables the development of home energy management systems resulting in the future design of more sustainable houses and a decrease in total energy consumption. Energy performance in buildings is influenced by many factors like ambient temperature, humidity, and a variety of electrical devices. Therefore, multivariate prediction methods are preferred rather than univariate. The Honda Smart Home US data set was selected to compare three methods for minimizing forecasting errors, MAE and RMSE: Artificial Neural Networks, Support Vector Regression, and Fuzzy Rule-Based Systems for Regression by constructing many models for each method on a multivariate data set in different time terms. The comparison shows that SVR is a superior method over the alternatives.
 
 </p>
 </details>
 
-<details><summary><b>RelPose: Predicting Probabilistic Relative Rotation for Single Objects in the Wild</b>
-<a href="https://arxiv.org/abs/2208.05963">arxiv:2208.05963</a>
+<details><summary><b>MILAN: Masked Image Pretraining on Language Assisted Representation</b>
+<a href="https://arxiv.org/abs/2208.06049">arxiv:2208.06049</a>
 &#x1F4C8; 7 <br>
-<p>Jason Y. Zhang, Deva Ramanan, Shubham Tulsiani</p></summary>
+<p>Zejiang Hou, Fei Sun, Yen-Kuang Chen, Yuan Xie, Sun-Yuan Kung</p></summary>
 <p>
 
-**Abstract:** We describe a data-driven method for inferring the camera viewpoints given multiple images of an arbitrary object. This task is a core component of classic geometric pipelines such as SfM and SLAM, and also serves as a vital pre-processing requirement for contemporary neural approaches (e.g. NeRF) to object reconstruction and view synthesis. In contrast to existing correspondence-driven methods that do not perform well given sparse views, we propose a top-down prediction based approach for estimating camera viewpoints. Our key technical insight is the use of an energy-based formulation for representing distributions over relative camera rotations, thus allowing us to explicitly represent multiple camera modes arising from object symmetries or views. Leveraging these relative predictions, we jointly estimate a consistent set of camera rotations from multiple images. We show that our approach outperforms state-of-the-art SfM and SLAM methods given sparse images on both seen and unseen categories. Further, our probabilistic approach significantly outperforms directly regressing relative poses, suggesting that modeling multimodality is important for coherent joint reconstruction. We demonstrate that our system can be a stepping stone toward in-the-wild reconstruction from multi-view datasets. The project page with code and videos can be found at https://jasonyzhang.com/relpose.
+**Abstract:** Self-attention based transformer models have been dominating many computer vision tasks in the past few years. Their superb model qualities heavily depend on the excessively large labeled image datasets. In order to reduce the reliance on large labeled datasets, reconstruction based masked autoencoders are gaining popularity, which learn high quality transferable representations from unlabeled images. For the same purpose, recent weakly supervised image pretraining methods explore language supervision from text captions accompanying the images. In this work, we propose masked image pretraining on language assisted representation, dubbed as MILAN. Instead of predicting raw pixels or low level features, our pretraining objective is to reconstruct the image features with substantial semantic signals that are obtained using caption supervision. Moreover, to accommodate our reconstruction target, we propose a more efficient prompting decoder architecture and a semantic aware mask sampling mechanism, which further advance the transfer performance of the pretrained model. Experimental results demonstrate that MILAN delivers higher accuracy than the previous works. When the masked autoencoder is pretrained and finetuned on ImageNet-1K dataset with an input resolution of 224x224, MILAN achieves a top-1 accuracy of 85.4% on ViTB/16, surpassing previous state-of-the-arts by 1%. In the downstream semantic segmentation task, MILAN achieves 52.7 mIoU using ViT-B/16 backbone on ADE20K dataset, outperforming previous masked pretraining results by 4 points.
+
+</p>
+</details>
+
+<details><summary><b>Region-Based Evidential Deep Learning to Quantify Uncertainty and Improve Robustness of Brain Tumor Segmentation</b>
+<a href="https://arxiv.org/abs/2208.06038">arxiv:2208.06038</a>
+&#x1F4C8; 7 <br>
+<p>Hao Li, Yang Nan, Javier Del Ser, Guang Yang</p></summary>
+<p>
+
+**Abstract:** Despite recent advances in the accuracy of brain tumor segmentation, the results still suffer from low reliability and robustness. Uncertainty estimation is an efficient solution to this problem, as it provides a measure of confidence in the segmentation results. The current uncertainty estimation methods based on quantile regression, Bayesian neural network, ensemble, and Monte Carlo dropout are limited by their high computational cost and inconsistency. In order to overcome these challenges, Evidential Deep Learning (EDL) was developed in recent work but primarily for natural image classification. In this paper, we proposed a region-based EDL segmentation framework that can generate reliable uncertainty maps and robust segmentation results. We used the Theory of Evidence to interpret the output of a neural network as evidence values gathered from input features. Following Subjective Logic, evidence was parameterized as a Dirichlet distribution, and predicted probabilities were treated as subjective opinions. To evaluate the performance of our model on segmentation and uncertainty estimation, we conducted quantitative and qualitative experiments on the BraTS 2020 dataset. The results demonstrated the top performance of the proposed method in quantifying segmentation uncertainty and robustly segmenting tumors. Furthermore, our proposed new framework maintained the advantages of low computational cost and easy implementation and showed the potential for clinical application.
+
+</p>
+</details>
+
+<details><summary><b>Optimizing Anchor-based Detectors for Autonomous Driving Scenes</b>
+<a href="https://arxiv.org/abs/2208.06062">arxiv:2208.06062</a>
+&#x1F4C8; 6 <br>
+<p>Xianzhi Du, Wei-Chih Hung, Tsung-Yi Lin</p></summary>
+<p>
+
+**Abstract:** This paper summarizes model improvements and inference-time optimizations for the popular anchor-based detectors in the scenes of autonomous driving. Based on the high-performing RCNN-RS and RetinaNet-RS detection frameworks designed for common detection scenes, we study a set of framework improvements to adapt the detectors to better detect small objects in crowd scenes. Then, we propose a model scaling strategy by scaling input resolution and model size to achieve a better speed-accuracy trade-off curve. We evaluate our family of models on the real-time 2D detection track of the Waymo Open Dataset (WOD). Within the 70 ms/frame latency constraint on a V100 GPU, our largest Cascade RCNN-RS model achieves 76.9% AP/L1 and 70.1% AP/L2, attaining the new state-of-the-art on WOD real-time 2D detection. Our fastest RetinaNet-RS model achieves 6.3 ms/frame while maintaining a reasonable detection precision at 50.7% AP/L1 and 42.9% AP/L2.
+
+</p>
+</details>
+
+<details><summary><b>BSAC: Bayesian Strategy Network Based Soft Actor-Critic in Deep Reinforcement Learning</b>
+<a href="https://arxiv.org/abs/2208.06033">arxiv:2208.06033</a>
+&#x1F4C8; 6 <br>
+<p>Qin Yang, Ramviyas Parasuraman</p></summary>
+<p>
+
+**Abstract:** Adopting reasonable strategies is challenging but crucial for an intelligent agent with limited resources working in hazardous, unstructured, and dynamic environments to improve the system utility, decrease the overall cost, and increase mission success probability. Deep Reinforcement Learning (DRL) helps organize agents' behaviors and actions based on their state and represents complex strategies (composition of actions). This paper proposes a novel hierarchical strategy decomposition approach based on Bayesian chaining to separate an intricate policy into several simple sub-policies and organize their relationships as Bayesian strategy networks (BSN). We integrate this approach into the state-of-the-art DRL method, soft actor-critic (SAC), and build the corresponding Bayesian soft actor-critic (BSAC) model by organizing several sub-policies as a joint policy. We compare the proposed BSAC method with the SAC and other state-of-the-art approaches such as TD3, DDPG, and PPO on the standard continuous control benchmarks -- Hopper-v2, Walker2d-v2, and Humanoid-v2 -- in MuJoCo with the OpenAI Gym environment. The results demonstrate that the promising potential of the BSAC method significantly improves training efficiency. The open sourced codes for BSAC can be accessed at https://github.com/herolab-uga/bsac.
+
+</p>
+</details>
+
+<details><summary><b>Gaussian process surrogate models for neural networks</b>
+<a href="https://arxiv.org/abs/2208.06028">arxiv:2208.06028</a>
+&#x1F4C8; 6 <br>
+<p>Michael Y. Li, Erin Grant, Thomas L. Griffiths</p></summary>
+<p>
+
+**Abstract:** The lack of insight into deep learning systems hinders their systematic design. In science and engineering, modeling is a methodology used to understand complex systems whose internal processes are opaque. Modeling replaces a complex system with a simpler surrogate that is more amenable to interpretation. Drawing inspiration from this, we construct a class of surrogate models for neural networks using Gaussian processes. Rather than deriving the kernels for certain limiting cases of neural networks, we learn the kernels of the Gaussian process empirically from the naturalistic behavior of neural networks. We first evaluate our approach with two case studies inspired by previous theoretical studies of neural network behavior in which we capture neural network preferences for learning low frequencies and identify pathological behavior in deep neural networks. In two further practical case studies, we use the learned kernel to predict the generalization properties of neural networks.
+
+</p>
+</details>
+
+<details><summary><b>New drugs and stock market: how to predict pharma market reaction to clinical trial announcements</b>
+<a href="https://arxiv.org/abs/2208.07248">arxiv:2208.07248</a>
+&#x1F4C8; 5 <br>
+<p>Semen Budennyy, Alexey Kazakov, Elizaveta Kovtun, Leonid Zhukov</p></summary>
+<p>
+
+**Abstract:** Pharmaceutical companies operate in a strictly regulated and highly risky environment in which a single slip can lead to serious financial implications. Accordingly, the announcements of clinical trial results tend to determine the future course of events, hence being closely monitored by the public. In this work, we provide statistical evidence for the result promulgation influence on the public pharma market value. Whereas most works focus on retrospective impact analysis, the present research aims to predict the numerical values of announcement-induced changes in stock prices. For this purpose, we develop a pipeline that includes a BERT-based model for extracting sentiment polarity of announcements, a Temporal Fusion Transformer for forecasting the expected return, a graph convolution network for capturing event relationships, and gradient boosting for predicting the price change. The challenge of the problem lies in inherently different patterns of responses to positive and negative announcements, reflected in a stronger and more pronounced reaction to the negative news. Moreover, such phenomenon as the drop in stocks after the positive announcements affirms the counterintuitiveness of the price behavior. Importantly, we discover two crucial factors that should be considered while working within a predictive framework. The first factor is the drug portfolio size of the company, indicating the greater susceptibility to an announcement in the case of small drug diversification. The second one is the network effect of the events related to the same company or nosology. All findings and insights are gained on the basis of one of the biggest FDA (the Food and Drug Administration) announcement datasets, consisting of 5436 clinical trial announcements from 681 companies over the last five years.
+
+</p>
+</details>
+
+<details><summary><b>Understanding the stochastic dynamics of sequential decision-making processes: A path-integral analysis of Multi-armed Bandits</b>
+<a href="https://arxiv.org/abs/2208.06245">arxiv:2208.06245</a>
+&#x1F4C8; 5 <br>
+<p>Bo Li, Chi Ho Yeung</p></summary>
+<p>
+
+**Abstract:** The multi-armed bandit (MAB) model is one of the most classical models to study decision-making in an uncertain environment. In this model, a player needs to choose one of K possible arms of a bandit machine to play at each time step, where the corresponding arm returns a random reward to the player, potentially from a specific unknown distribution. The target of the player is to collect as much rewards as possible during the process. Despite its simplicity, the MAB model offers an excellent playground for studying the trade-off between exploration versus exploitation and designing effective algorithms for sequential decision-making under uncertainty. Although many asymptotically optimal algorithms have been established, the finite-time behaviours of the stochastic dynamics of the MAB model appears much more difficult to analyze, due to the intertwining between the decision-making and the rewards being collected. In this paper, we employ techniques in statistical physics to analyze the MAB model, which facilitates to characterize the distribution of cumulative regrets at a finite short time, the central quantity of interest in an MAB algorithm, as well as the intricate dynamical behaviours of the model.
+
+</p>
+</details>
+
+<details><summary><b>Zeus: Understanding and Optimizing GPU Energy Consumption of DNN Training</b>
+<a href="https://arxiv.org/abs/2208.06102">arxiv:2208.06102</a>
+&#x1F4C8; 5 <br>
+<p>Jie You, Jae-Won Chung, Mosharaf Chowdhury</p></summary>
+<p>
+
+**Abstract:** Training deep neural networks (DNNs) is becoming more and more resource- and energy-intensive every year. Unfortunately, existing works primarily focus on optimizing DNN training for faster completion, often without considering the impact on energy efficiency.
+  In this paper, we observe that common practices to improve training performance can often lead to inefficient energy usage. More importantly, we demonstrate that there is a tradeoff between energy consumption and performance optimization. To this end, we propose an optimization framework, Zeus, to navigate this tradeoff by automatically finding optimal job- and GPU-level configurations for recurring DNN training jobs. Zeus uses an online exploration-exploitation approach in conjunction with just-in-time energy profiling, averting the need for expensive offline measurements, while adapting to data drifts over time. Our evaluation shows that Zeus can improve the energy efficiency of DNN training by 15.3%--75.8% for diverse workloads.
+
+</p>
+</details>
+
+<details><summary><b>Comparing Baseline Shapley and Integrated Gradients for Local Explanation: Some Additional Insights</b>
+<a href="https://arxiv.org/abs/2208.06096">arxiv:2208.06096</a>
+&#x1F4C8; 5 <br>
+<p>Tianshu Feng, Zhipu Zhou, Joshi Tarun, Vijayan N. Nair</p></summary>
+<p>
+
+**Abstract:** There are many different methods in the literature for local explanation of machine learning results. However, the methods differ in their approaches and often do not provide same explanations. In this paper, we consider two recent methods: Integrated Gradients (Sundararajan, Taly, & Yan, 2017) and Baseline Shapley (Sundararajan and Najmi, 2020). The original authors have already studied the axiomatic properties of the two methods and provided some comparisons. Our work provides some additional insights on their comparative behavior for tabular data. We discuss common situations where the two provide identical explanations and where they differ. We also use simulation studies to examine the differences when neural networks with ReLU activation function is used to fit the models.
+
+</p>
+</details>
+
+<details><summary><b>Mixed-Precision Neural Networks: A Survey</b>
+<a href="https://arxiv.org/abs/2208.06064">arxiv:2208.06064</a>
+&#x1F4C8; 5 <br>
+<p>Mariam Rakka, Mohammed E. Fouda, Pramod Khargonekar, Fadi Kurdahi</p></summary>
+<p>
+
+**Abstract:** Mixed-precision Deep Neural Networks achieve the energy efficiency and throughput needed for hardware deployment, particularly when the resources are limited, without sacrificing accuracy. However, the optimal per-layer bit precision that preserves accuracy is not easily found, especially with the abundance of models, datasets, and quantization techniques that creates an enormous search space. In order to tackle this difficulty, a body of literature has emerged recently, and several frameworks that achieved promising accuracy results have been proposed. In this paper, we start by summarizing the quantization techniques used generally in literature. Then, we present a thorough survey of the mixed-precision frameworks, categorized according to their optimization techniques such as reinforcement learning and quantization techniques like deterministic rounding. Furthermore, the advantages and shortcomings of each framework are discussed, where we present a juxtaposition. We finally give guidelines for future mixed-precision frameworks.
+
+</p>
+</details>
+
+<details><summary><b>WeightMom: Learning Sparse Networks using Iterative Momentum-based pruning</b>
+<a href="https://arxiv.org/abs/2208.05970">arxiv:2208.05970</a>
+&#x1F4C8; 5 <br>
+<p>Elvis Johnson, Xiaochen Tang, Sriramacharyulu Samudrala</p></summary>
+<p>
+
+**Abstract:** Deep Neural Networks have been used in a wide variety of applications with significant success. However, their highly complex nature owing to comprising millions of parameters has lead to problems during deployment in pipelines with low latency requirements. As a result, it is more desirable to obtain lightweight neural networks which have the same performance during inference time. In this work, we propose a weight based pruning approach in which the weights are pruned gradually based on their momentum of the previous iterations. Each layer of the neural network is assigned an importance value based on their relative sparsity, followed by the magnitude of the weight in the previous iterations. We evaluate our approach on networks such as AlexNet, VGG16 and ResNet50 with image classification datasets such as CIFAR-10 and CIFAR-100. We found that the results outperformed the previous approaches with respect to accuracy and compression ratio. Our method is able to obtain a compression of 15% for the same degradation in accuracy on both the datasets.
 
 </p>
 </details>
 
 <details><summary><b>Valid Inference after Causal Discovery</b>
 <a href="https://arxiv.org/abs/2208.05949">arxiv:2208.05949</a>
-&#x1F4C8; 7 <br>
+&#x1F4C8; 5 <br>
 <p>Paula Gradu, Tijana Zrnic, Yixin Wang, Michael I. Jordan</p></summary>
 <p>
 
 **Abstract:** Causal graph discovery and causal effect estimation are two fundamental tasks in causal inference. While many methods have been developed for each task individually, statistical challenges arise when applying these methods jointly: estimating causal effects after running causal discovery algorithms on the same data leads to "double dipping," invalidating coverage guarantees of classical confidence intervals. To this end, we develop tools for valid post-causal-discovery inference. One key contribution is a randomized version of the greedy equivalence search (GES) algorithm, which permits a valid, finite-sample correction of classical confidence intervals. Across empirical studies, we show that a naive combination of causal discovery and subsequent inference algorithms typically leads to highly inflated miscoverage rates; at the same time, our noisy GES method provides reliable coverage control while achieving more accurate causal graph recovery than data splitting.
-
-</p>
-</details>
-
-<details><summary><b>Speech Enhancement and Dereverberation with Diffusion-based Generative Models</b>
-<a href="https://arxiv.org/abs/2208.05830">arxiv:2208.05830</a>
-&#x1F4C8; 7 <br>
-<p>Julius Richter, Simon Welker, Jean-Marie Lemercier, Bunlong Lay, Timo Gerkmann</p></summary>
-<p>
-
-**Abstract:** Recently, diffusion-based generative models have been introduced to the task of speech enhancement. The corruption of clean speech is modeled as a fixed forward process in which increasing amounts of noise are gradually added. By learning to reverse this process in an iterative fashion conditioned on the noisy input, clean speech is generated. We build upon our previous work and derive the training task within the formalism of stochastic differential equations. We present a detailed theoretical review of the underlying score matching objective and explore different sampler configurations for solving the reverse process at test time. By using a sophisticated network architecture from natural image generation literature, we significantly improve performance compared to our previous publication. We also show that we can compete with recent discriminative models and achieve better generalization when evaluating on a different corpus than used for training. We complement the evaluation results with a subjective listening test, in which our proposed method is rated best. Furthermore, we show that the proposed method achieves remarkable state-of-the-art performance in single-channel speech dereverberation. Our code and audio examples are available online, see https://uhh.de/inf-sp-sgmse
-
-</p>
-</details>
-
-<details><summary><b>ROC: A New Paradigm for Lyric-to-Melody Generation</b>
-<a href="https://arxiv.org/abs/2208.05697">arxiv:2208.05697</a>
-&#x1F4C8; 7 <br>
-<p>Ang Lv, Xu Tan, Tao Qin, Tie-Yan Liu, Rui Yan</p></summary>
-<p>
-
-**Abstract:** Lyric-to-melody generation is an important task in songwriting, and is also quite challenging due to its distinctive characteristics: the generated melodies should not only follow good musical patterns, but also align with features in lyrics such as rhythms and structures. These characteristics cannot be well handled by neural generation models that learn lyric-to-melody mapping in an end-to-end way, due to several issues: (1) lack of aligned lyric-melody training data to sufficiently learn lyric-melody feature alignment; (2) lack of controllability in generation to explicitly guarantee the lyric-melody feature alignment. In this paper, we propose ROC, a new paradigm for lyric-to-melody generation that addresses the above issues through a generation-retrieval pipeline. Specifically, our paradigm has two stages: (1) creation stage, where a huge amount of music pieces are generated by a neural-based melody language model and indexed in a database through several key features (e.g., chords, tonality, rhythm, and structural information including chorus or verse); (2) re-creation stage, where melodies are recreated by retrieving music pieces from the database according to the key features from lyrics and concatenating best music pieces based on composition guidelines and melody language model scores. Our ROC paradigm has several advantages: (1) It only needs unpaired melody data to train melody language model, instead of paired lyric-melody data in previous models. (2) It achieves good lyric-melody feature alignment in lyric-to-melody generation. Experiments on English and Chinese datasets demonstrate that ROC outperforms previous neural based lyric-to-melody generation models on both objective and subjective metrics.
-
-</p>
-</details>
-
-<details><summary><b>Embedding Compression with Hashing for Efficient Representation Learning in Large-Scale Graph</b>
-<a href="https://arxiv.org/abs/2208.05648">arxiv:2208.05648</a>
-&#x1F4C8; 7 <br>
-<p>Chin-Chia Michael Yeh, Mengting Gu, Yan Zheng, Huiyuan Chen, Javid Ebrahimi, Zhongfang Zhuang, Junpeng Wang, Liang Wang, Wei Zhang</p></summary>
-<p>
-
-**Abstract:** Graph neural networks (GNNs) are deep learning models designed specifically for graph data, and they typically rely on node features as the input to the first layer. When applying such a type of network on the graph without node features, one can extract simple graph-based node features (e.g., number of degrees) or learn the input node representations (i.e., embeddings) when training the network. While the latter approach, which trains node embeddings, more likely leads to better performance, the number of parameters associated with the embeddings grows linearly with the number of nodes. It is therefore impractical to train the input node embeddings together with GNNs within graphics processing unit (GPU) memory in an end-to-end fashion when dealing with industrial-scale graph data. Inspired by the embedding compression methods developed for natural language processing (NLP) tasks, we develop a node embedding compression method where each node is compactly represented with a bit vector instead of a floating-point vector. The parameters utilized in the compression method can be trained together with GNNs. We show that the proposed node embedding compression method achieves superior performance compared to the alternatives.
-
-</p>
-</details>
-
-<details><summary><b>Uncertainty-Aware Blob Detection with an Application to Integrated-Light Stellar Population Recoveries</b>
-<a href="https://arxiv.org/abs/2208.05881">arxiv:2208.05881</a>
-&#x1F4C8; 6 <br>
-<p>Prashin Jethwa, Fabian Parzer, Otmar Scherzer, Glenn van de Ven</p></summary>
-<p>
-
-**Abstract:** Context. Blob detection is a common problem in astronomy. One example is in stellar population modelling, where the distribution of stellar ages and metallicities in a galaxy is inferred from observations. In this context, blobs may correspond to stars born in-situ versus those accreted from satellites, and the task of blob detection is to disentangle these components. A difficulty arises when the distributions come with significant uncertainties, as is the case for stellar population recoveries inferred from modelling spectra of unresolved stellar systems. There is currently no satisfactory method for blob detection with uncertainties. Aims. We introduce a method for uncertainty-aware blob detection developed in the context of stellar population modelling of integrated-light spectra of stellar systems. Methods. We develop theory and computational tools for an uncertainty-aware version of the classic Laplacian-of-Gaussians method for blob detection, which we call ULoG. This identifies significant blobs considering a variety of scales. As a prerequisite to apply ULoG to stellar population modelling, we introduce a method for efficient computation of uncertainties for spectral modelling. This method is based on the truncated Singular Value Decomposition and Markov Chain Monte Carlo sampling (SVD-MCMC). Results. We apply the methods to data of the star cluster M54. We show that the SVD-MCMC inferences match those from standard MCMC, but are a factor 5-10 faster to compute. We apply ULoG to the inferred M54 age/metallicity distributions, identifying between 2 or 3 significant, distinct populations amongst its stars.
-
-</p>
-</details>
-
-<details><summary><b>A Comprehensive Analysis of AI Biases in DeepFake Detection With Massively Annotated Databases</b>
-<a href="https://arxiv.org/abs/2208.05845">arxiv:2208.05845</a>
-&#x1F4C8; 6 <br>
-<p>Ying Xu, Philipp Terhörst, Kiran Raja, Marius Pedersen</p></summary>
-<p>
-
-**Abstract:** In recent years, image and video manipulations with DeepFake have become a severe concern for security and society. Therefore, many detection models and databases have been proposed to detect DeepFake data reliably. However, there is an increased concern that these models and training databases might be biased and thus, cause DeepFake detectors to fail. In this work, we tackle these issues by (a) providing large-scale demographic and non-demographic attribute annotations of 41 different attributes for five popular DeepFake datasets and (b) comprehensively analysing AI-bias of multiple state-of-the-art DeepFake detection models on these databases. The investigation analyses the influence of a large variety of distinctive attributes (from over 65M labels) on the detection performance, including demographic (age, gender, ethnicity) and non-demographic (hair, skin, accessories, etc.) information. The results indicate that investigated databases lack diversity and, more importantly, show that the utilised DeepFake detection models are strongly biased towards many investigated attributes. Moreover, the results show that the models' decision-making might be based on several questionable (biased) assumptions, such if a person is smiling or wearing a hat. Depending on the application of such DeepFake detection methods, these biases can lead to generalizability, fairness, and security issues. We hope that the findings of this study and the annotation databases will help to evaluate and mitigate bias in future DeepFake detection techniques. Our annotation datasets are made publicly available.
-
-</p>
-</details>
-
-<details><summary><b>Adaptively Identifying Patient Populations With Treatment Benefit in Clinical Trials</b>
-<a href="https://arxiv.org/abs/2208.05844">arxiv:2208.05844</a>
-&#x1F4C8; 6 <br>
-<p>Alicia Curth, Alihan Hüyük, Mihaela van der Schaar</p></summary>
-<p>
-
-**Abstract:** We study the problem of adaptively identifying patient subpopulations that benefit from a given treatment during a confirmatory clinical trial. This type of adaptive clinical trial, often referred to as adaptive enrichment design, has been thoroughly studied in biostatistics with a focus on a limited number of subgroups (typically two) which make up (sub)populations, and a small number of interim analysis points. In this paper, we aim to relax classical restrictions on such designs and investigate how to incorporate ideas from the recent machine learning literature on adaptive and online experimentation to make trials more flexible and efficient. We find that the unique characteristics of the subpopulation selection problem -- most importantly that (i) one is usually interested in finding subpopulations with any treatment benefit (and not necessarily the single subgroup with largest effect) given a limited budget and that (ii) effectiveness only has to be demonstrated across the subpopulation on average -- give rise to interesting challenges and new desiderata when designing algorithmic solutions. Building on these findings, we propose AdaGGI and AdaGCPI, two meta-algorithms for subpopulation construction, which focus on identifying good subgroups and good composite subpopulations, respectively. We empirically investigate their performance across a range of simulation scenarios and derive insights into their (dis)advantages across different settings.
-
-</p>
-</details>
-
-<details><summary><b>Learning Point Processes using Recurrent Graph Network</b>
-<a href="https://arxiv.org/abs/2208.05736">arxiv:2208.05736</a>
-&#x1F4C8; 6 <br>
-<p>Saurabh Dash, Xueyuan She, Saibal Mukhopadhyay</p></summary>
-<p>
-
-**Abstract:** We present a novel Recurrent Graph Network (RGN) approach for predicting discrete marked event sequences by learning the underlying complex stochastic process. Using the framework of Point Processes, we interpret a marked discrete event sequence as the superposition of different sequences each of a unique type. The nodes of the Graph Network use LSTM to incorporate past information whereas a Graph Attention Network (GAT Network) introduces strong inductive biases to capture the interaction between these different types of events. By changing the self-attention mechanism from attending over past events to attending over event types, we obtain a reduction in time and space complexity from $\mathcal{O}(N^2)$ (total number of events) to $\mathcal{O}(|\mathcal{Y}|^2)$ (number of event types). Experiments show that the proposed approach improves performance in log-likelihood, prediction and goodness-of-fit tasks with lower time and space complexity compared to state-of-the art Transformer based architectures.
-
-</p>
-</details>
-
-<details><summary><b>Interactive Code Generation via Test-Driven User-Intent Formalization</b>
-<a href="https://arxiv.org/abs/2208.05950">arxiv:2208.05950</a>
-&#x1F4C8; 5 <br>
-<p>Shuvendu K. Lahiri, Aaditya Naik, Georgios Sakkas, Piali Choudhury, Curtis von Veh, Madanlal Musuvathi, Jeevana Priya Inala, Chenglong Wang, Jianfeng Gao</p></summary>
-<p>
-
-**Abstract:** Pre-trained large language models (LLMs) such as OpenAI Codex have shown immense potential in automating significant aspects of coding by producing natural code from informal natural language (NL) intent. However, the code produced does not have any correctness guarantees around satisfying user's intent. In fact, it is hard to define a notion of correctness since natural language can be ambiguous and lacks a formal semantics. In this paper, we take a first step towards addressing the problem above by proposing the workflow of test-driven user-intent formalization (TDUIF), which leverages lightweight user feedback to jointly (a) formalize the user intent as tests (a partial specification), and (b) generates code that meets the formal user intent. To perform a scalable and large-scale automated evaluation of the algorithms without requiring a user in the loop, we describe how to simulate user interaction with high-fidelity using a reference solution. We also describe and implement alternate implementations of several algorithmic components (including mutating and ranking a set of tests) that can be composed for efficient solutions to the TDUIF problem. We have developed a system TICODER that implements several solutions to TDUIF, and compare their relative effectiveness on the MBPP academic code generation benchmark. Our results are promising with using the OpenAI Codex LLM on MBPP: our best algorithm improves the pass@1 code generation accuracy metric from 48.39% to 70.49% with a single user query, and up to 85.48% with up to 5 user queries. Second, we can generate a non-trivial functional unit test consistent with the user intent within an average of 1.69 user queries for 90.40% of the examples for this dataset.
 
 </p>
 </details>
@@ -212,13 +345,35 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Uncertainty Quantification of Sparse Travel Demand Prediction with Spatial-Temporal Graph Neural Networks</b>
-<a href="https://arxiv.org/abs/2208.05908">arxiv:2208.05908</a>
+<details><summary><b>Shielding Federated Learning Systems against Inference Attacks with ARM TrustZone</b>
+<a href="https://arxiv.org/abs/2208.05895">arxiv:2208.05895</a>
 &#x1F4C8; 5 <br>
-<p>Dingyi Zhuang, Shenhao Wang, Haris N. Koutsopoulos, Jinhua Zhao</p></summary>
+<p>Aghiles Ait Messaoud, Sonia Ben Mokhtar, Vlad Nitu, Valerio Shiavoni</p></summary>
 <p>
 
-**Abstract:** Origin-Destination (O-D) travel demand prediction is a fundamental challenge in transportation. Recently, spatial-temporal deep learning models demonstrate the tremendous potential to enhance prediction accuracy. However, few studies tackled the uncertainty and sparsity issues in fine-grained O-D matrices. This presents a serious problem, because a vast number of zeros deviate from the Gaussian assumption underlying the deterministic deep learning models. To address this issue, we design a Spatial-Temporal Zero-Inflated Negative Binomial Graph Neural Network (STZINB-GNN) to quantify the uncertainty of the sparse travel demand. It analyzes spatial and temporal correlations using diffusion and temporal convolution networks, which are then fused to parameterize the probabilistic distributions of travel demand. The STZINB-GNN is examined using two real-world datasets with various spatial and temporal resolutions. The results demonstrate the superiority of STZINB-GNN over benchmark models, especially under high spatial-temporal resolutions, because of its high accuracy, tight confidence intervals, and interpretable parameters. The sparsity parameter of the STZINB-GNN has physical interpretation for various transportation applications.
+**Abstract:** Federated Learning (FL) opens new perspectives for training machine learning models while keeping personal data on the users premises. Specifically, in FL, models are trained on the users devices and only model updates (i.e., gradients) are sent to a central server for aggregation purposes. However, the long list of inference attacks that leak private data from gradients, published in the recent years, have emphasized the need of devising effective protection mechanisms to incentivize the adoption of FL at scale. While there exist solutions to mitigate these attacks on the server side, little has been done to protect users from attacks performed on the client side. In this context, the use of Trusted Execution Environments (TEEs) on the client side are among the most proposing solutions. However, existing frameworks (e.g., DarkneTZ) require statically putting a large portion of the machine learning model into the TEE to effectively protect against complex attacks or a combination of attacks. We present GradSec, a solution that allows protecting in a TEE only sensitive layers of a machine learning model, either statically or dynamically, hence reducing both the TCB size and the overall training time by up to 30% and 56%, respectively compared to state-of-the-art competitors.
+
+</p>
+</details>
+
+<details><summary><b>TotalSegmentator: robust segmentation of 104 anatomical structures in CT images</b>
+<a href="https://arxiv.org/abs/2208.05868">arxiv:2208.05868</a>
+&#x1F4C8; 5 <br>
+<p>Jakob Wasserthal, Manfred Meyer, Hanns-Christian Breit, Joshy Cyriac, Shan Yang, Martin Segeroth</p></summary>
+<p>
+
+**Abstract:** In this work we focus on automatic segmentation of multiple anatomical structures in (whole body) CT images. Many segmentation algorithms exist for this task. However, in most cases they suffer from 3 problems: 1. They are difficult to use (the code and data is not publicly available or difficult to use). 2. They do not generalize (often the training dataset was curated to only contain very clean images which do not reflect the image distribution found during clinical routine), 3. The algorithm can only segment one anatomical structure. For more structures several algorithms have to be used which increases the effort required to set up the system. In this work we publish a new dataset and segmentation toolkit which solves all three of these problems: In 1204 CT images we segmented 104 anatomical structures (27 organs, 59 bones, 10 muscles, 8 vessels) covering a majority of relevant classes for most use cases. We show an improved workflow for the creation of ground truth segmentations which speeds up the process by over 10x. The CT images were randomly sampled from clinical routine, thus representing a real world dataset which generalizes to clinical application. The dataset contains a wide range of different pathologies, scanners, sequences and sites. Finally, we train a segmentation algorithm on this new dataset. We call this algorithm TotalSegmentator and make it easily available as a pretrained python pip package (pip install totalsegmentator). Usage is as simple as TotalSegmentator -i ct.nii.gz -o seg and it works well for most CT images. The code is available at https://github.com/wasserth/TotalSegmentator and the dataset at https://doi.org/10.5281/zenodo.6802613.
+
+</p>
+</details>
+
+<details><summary><b>A Comprehensive Analysis of AI Biases in DeepFake Detection With Massively Annotated Databases</b>
+<a href="https://arxiv.org/abs/2208.05845">arxiv:2208.05845</a>
+&#x1F4C8; 5 <br>
+<p>Ying Xu, Philipp Terhörst, Kiran Raja, Marius Pedersen</p></summary>
+<p>
+
+**Abstract:** In recent years, image and video manipulations with DeepFake have become a severe concern for security and society. Therefore, many detection models and databases have been proposed to detect DeepFake data reliably. However, there is an increased concern that these models and training databases might be biased and thus, cause DeepFake detectors to fail. In this work, we tackle these issues by (a) providing large-scale demographic and non-demographic attribute annotations of 41 different attributes for five popular DeepFake datasets and (b) comprehensively analysing AI-bias of multiple state-of-the-art DeepFake detection models on these databases. The investigation analyses the influence of a large variety of distinctive attributes (from over 65M labels) on the detection performance, including demographic (age, gender, ethnicity) and non-demographic (hair, skin, accessories, etc.) information. The results indicate that investigated databases lack diversity and, more importantly, show that the utilised DeepFake detection models are strongly biased towards many investigated attributes. Moreover, the results show that the models' decision-making might be based on several questionable (biased) assumptions, such if a person is smiling or wearing a hat. Depending on the application of such DeepFake detection methods, these biases can lead to generalizability, fairness, and security issues. We hope that the findings of this study and the annotation databases will help to evaluate and mitigate bias in future DeepFake detection techniques. Our annotation datasets are made publicly available.
 
 </p>
 </details>
@@ -234,35 +389,35 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Distributionally Robust Model-Based Offline Reinforcement Learning with Near-Optimal Sample Complexity</b>
-<a href="https://arxiv.org/abs/2208.05767">arxiv:2208.05767</a>
-&#x1F4C8; 5 <br>
-<p>Laixi Shi, Yuejie Chi</p></summary>
+<details><summary><b>Semi-automatic tuning of coupled climate models with multiple intrinsic timescales: lessons learned from the Lorenz96 model</b>
+<a href="https://arxiv.org/abs/2208.06243">arxiv:2208.06243</a>
+&#x1F4C8; 4 <br>
+<p>Redouane Lguensat, Julie Deshayes, Homer Durand, V. Balaji</p></summary>
 <p>
 
-**Abstract:** This paper concerns the central issues of model robustness and sample efficiency in offline reinforcement learning (RL), which aims to learn to perform decision making from history data without active exploration. Due to uncertainties and variabilities of the environment, it is critical to learn a robust policy -- with as few samples as possible -- that performs well even when the deployed environment deviates from the nominal one used to collect the history dataset. We consider a distributionally robust formulation of offline RL, focusing on a tabular non-stationary finite-horizon robust Markov decision process with an uncertainty set specified by the Kullback-Leibler divergence. To combat with sample scarcity, a model-based algorithm that combines distributionally robust value iteration with the principle of pessimism in the face of uncertainty is proposed, by penalizing the robust value estimates with a carefully designed data-driven penalty term. Under a mild and tailored assumption of the history dataset that measures distribution shift without requiring full coverage of the state-action space, we establish the finite-sample complexity of the proposed algorithm, and further show it is almost unimprovable in light of a nearly-matching information-theoretic lower bound up to a polynomial factor of the horizon length. To the best our knowledge, this provides the first provably near-optimal robust offline RL algorithm that learns under model uncertainty and partial coverage.
+**Abstract:** The objective of this study is to evaluate the potential for History Matching (HM) to tune a climate system with multi-scale dynamics. By considering a toy climate model, namely, the two-scale Lorenz96 model and producing experiments in perfect-model setting, we explore in detail how several built-in choices need to be carefully tested. We also demonstrate the importance of introducing physical expertise in the range of parameters, a priori to running HM. Finally we revisit a classical procedure in climate model tuning, that consists of tuning the slow and fast components separately. By doing so in the Lorenz96 model, we illustrate the non-uniqueness of plausible parameters and highlight the specificity of metrics emerging from the coupling. This paper contributes also to bridging the communities of uncertainty quantification, machine learning and climate modeling, by making connections between the terms used by each community for the same concept and presenting promising collaboration avenues that would benefit climate modeling research.
 
 </p>
 </details>
 
-<details><summary><b>A Modified UDP for Federated Learning Packet Transmissions</b>
-<a href="https://arxiv.org/abs/2208.05737">arxiv:2208.05737</a>
-&#x1F4C8; 5 <br>
-<p>Bright Kudzaishe Mahembe, Clement Nyirenda</p></summary>
+<details><summary><b>TBI-GAN: An Adversarial Learning Approach for Data Synthesis on Traumatic Brain Segmentation</b>
+<a href="https://arxiv.org/abs/2208.06099">arxiv:2208.06099</a>
+&#x1F4C8; 4 <br>
+<p>Xiangyu Zhao, Di Zang, Sheng Wang, Zhenrong Shen, Kai Xuan, Zeyu Wei, Zhe Wang, Ruizhe Zheng, Xuehai Wu, Zheren Li, Qian Wang, Zengxin Qi, Lichi Zhang</p></summary>
 <p>
 
-**Abstract:** This paper introduces a Modified User Datagram Protocol (UDP) for Federated Learning to ensure efficiency and reliability in the model parameter transport process, maximizing the potential of the Global model in each Federated Learning round. In developing and testing this protocol, the NS3 simulator is utilized to simulate the packet transport over the network and Google TensorFlow is used to create a custom Federated learning environment. In this preliminary implementation, the simulation contains three nodes where two nodes are client nodes, and one is a server node. The results obtained in this paper provide confidence in the capabilities of the protocol in the future of Federated Learning therefore, in future the Modified UDP will be tested on a larger Federated learning system with a TensorFlow model containing more parameters and a comparison between the traditional UDP protocol and the Modified UDP protocol will be simulated. Optimization of the Modified UDP will also be explored to improve efficiency while ensuring reliability.
+**Abstract:** Brain network analysis for traumatic brain injury (TBI) patients is critical for its consciousness level assessment and prognosis evaluation, which requires the segmentation of certain consciousness-related brain regions. However, it is difficult to construct a TBI segmentation model as manually annotated MR scans of TBI patients are hard to collect. Data augmentation techniques can be applied to alleviate the issue of data scarcity. However, conventional data augmentation strategies such as spatial and intensity transformation are unable to mimic the deformation and lesions in traumatic brains, which limits the performance of the subsequent segmentation task. To address these issues, we propose a novel medical image inpainting model named TBI-GAN to synthesize TBI MR scans with paired brain label maps. The main strength of our TBI-GAN method is that it can generate TBI images and corresponding label maps simultaneously, which has not been achieved in the previous inpainting methods for medical images. We first generate the inpainted image under the guidance of edge information following a coarse-to-fine manner, and then the synthesized intensity image is used as the prior for label inpainting. Furthermore, we introduce a registration-based template augmentation pipeline to increase the diversity of the synthesized image pairs and enhance the capacity of data augmentation. Experimental results show that the proposed TBI-GAN method can produce sufficient synthesized TBI images with high quality and valid label maps, which can greatly improve the 2D and 3D traumatic brain segmentation performance compared with the alternatives.
 
 </p>
 </details>
 
-<details><summary><b>Adaptive and Implicit Regularization for Matrix Completion</b>
-<a href="https://arxiv.org/abs/2208.05640">arxiv:2208.05640</a>
-&#x1F4C8; 5 <br>
-<p>Zhemin Li, Tao Sun, Hongxia Wang, Bao Wang</p></summary>
+<details><summary><b>Figure Descriptive Text Extraction using Ontological Representation</b>
+<a href="https://arxiv.org/abs/2208.06040">arxiv:2208.06040</a>
+&#x1F4C8; 4 <br>
+<p>Gilchan Park, Julia Rayz, Line Pouchard</p></summary>
 <p>
 
-**Abstract:** The explicit low-rank regularization, e.g., nuclear norm regularization, has been widely used in imaging sciences. However, it has been found that implicit regularization outperforms explicit ones in various image processing tasks. Another issue is that the fixed explicit regularization limits the applicability to broad images since different images favor different features captured by different explicit regularizations. As such, this paper proposes a new adaptive and implicit low-rank regularization that captures the low-rank prior dynamically from the training data. The core of our new adaptive and implicit low-rank regularization is parameterizing the Laplacian matrix in the Dirichlet energy-based regularization, which we call the regularization AIR. Theoretically, we show that the adaptive regularization of \ReTwo{AIR} enhances the implicit regularization and vanishes at the end of training. We validate AIR's effectiveness on various benchmark tasks, indicating that the AIR is particularly favorable for the scenarios when the missing entries are non-uniform. The code can be found at https://github.com/lizhemin15/AIR-Net.
+**Abstract:** Experimental research publications provide figure form resources including graphs, charts, and any type of images to effectively support and convey methods and results. To describe figures, authors add captions, which are often incomplete, and more descriptions reside in body text. This work presents a method to extract figure descriptive text from the body of scientific articles. We adopted ontological semantics to aid concept recognition of figure-related information, which generates human- and machine-readable knowledge representations from sentences. Our results show that conceptual models bring an improvement in figure descriptive sentence classification over word-based approaches.
 
 </p>
 </details>
@@ -278,24 +433,24 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Super-Universal Regularized Newton Method</b>
-<a href="https://arxiv.org/abs/2208.05888">arxiv:2208.05888</a>
+<details><summary><b>Machine learning in front of statistical methods for prediction spread SARS-CoV-2 in Colombia</b>
+<a href="https://arxiv.org/abs/2208.05910">arxiv:2208.05910</a>
 &#x1F4C8; 4 <br>
-<p>Nikita Doikov, Konstantin Mishchenko, Yurii Nesterov</p></summary>
+<p>A. Estupiñán, J. Acuña, A. Rodriguez, A. Ayala, C. Estupiñán, Ramon E. R. Gonzalez, D. A. Triana-Camacho, K. L. Cristiano-Rodríguez, Carlos Andrés Collazos Morales</p></summary>
 <p>
 
-**Abstract:** We analyze the performance of a variant of Newton method with quadratic regularization for solving composite convex minimization problems. At each step of our method, we choose regularization parameter proportional to a certain power of the gradient norm at the current point. We introduce a family of problem classes characterized by Hölder continuity of either the second or third derivative. Then we present the method with a simple adaptive search procedure allowing an automatic adjustment to the problem class with the best global complexity bounds, without knowing specific parameters of the problem. In particular, for the class of functions with Lipschitz continuous third derivative, we get the global $O(1/k^3)$ rate, which was previously attributed to third-order tensor methods. When the objective function is uniformly convex, we justify an automatic acceleration of our scheme, resulting in a faster global rate and local superlinear convergence. The switching between the different rates (sublinear, linear, and superlinear) is automatic. Again, for that, no a priori knowledge of parameters is needed.
+**Abstract:** An analytical study of the disease COVID-19 in Colombia was carried out using mathematical models such as Susceptible-Exposed-Infectious-Removed (SEIR), Logistic Regression (LR), and a machine learning method called Polynomial Regression Method. Previous analysis has been performed on the daily number of cases, deaths, infected people, and people who were exposed to the virus, all of them in a timeline of 550 days. Moreover, it has made the fitting of infection spread detailing the most efficient and optimal methods with lower propagation error and the presence of statistical biases. Finally, four different prevention scenarios were proposed to evaluate the ratio of each one of the parameters related to the disease.
 
 </p>
 </details>
 
-<details><summary><b>TotalSegmentator: robust segmentation of 104 anatomical structures in CT images</b>
-<a href="https://arxiv.org/abs/2208.05868">arxiv:2208.05868</a>
+<details><summary><b>Adaptively Identifying Patient Populations With Treatment Benefit in Clinical Trials</b>
+<a href="https://arxiv.org/abs/2208.05844">arxiv:2208.05844</a>
 &#x1F4C8; 4 <br>
-<p>Jakob Wasserthal, Manfred Meyer, Hanns-Christian Breit, Joshy Cyriac, Shan Yang, Martin Segeroth</p></summary>
+<p>Alicia Curth, Alihan Hüyük, Mihaela van der Schaar</p></summary>
 <p>
 
-**Abstract:** In this work we focus on automatic segmentation of multiple anatomical structures in (whole body) CT images. Many segmentation algorithms exist for this task. However, in most cases they suffer from 3 problems: 1. They are difficult to use (the code and data is not publicly available or difficult to use). 2. They do not generalize (often the training dataset was curated to only contain very clean images which do not reflect the image distribution found during clinical routine), 3. The algorithm can only segment one anatomical structure. For more structures several algorithms have to be used which increases the effort required to set up the system. In this work we publish a new dataset and segmentation toolkit which solves all three of these problems: In 1204 CT images we segmented 104 anatomical structures (27 organs, 59 bones, 10 muscles, 8 vessels) covering a majority of relevant classes for most use cases. We show an improved workflow for the creation of ground truth segmentations which speeds up the process by over 10x. The CT images were randomly sampled from clinical routine, thus representing a real world dataset which generalizes to clinical application. The dataset contains a wide range of different pathologies, scanners, sequences and sites. Finally, we train a segmentation algorithm on this new dataset. We call this algorithm TotalSegmentator and make it easily available as a pretrained python pip package (pip install totalsegmentator). Usage is as simple as TotalSegmentator -i ct.nii.gz -o seg and it works well for most CT images. The code is available at https://github.com/wasserth/TotalSegmentator and the dataset at https://doi.org/10.5281/zenodo.6802613.
+**Abstract:** We study the problem of adaptively identifying patient subpopulations that benefit from a given treatment during a confirmatory clinical trial. This type of adaptive clinical trial, often referred to as adaptive enrichment design, has been thoroughly studied in biostatistics with a focus on a limited number of subgroups (typically two) which make up (sub)populations, and a small number of interim analysis points. In this paper, we aim to relax classical restrictions on such designs and investigate how to incorporate ideas from the recent machine learning literature on adaptive and online experimentation to make trials more flexible and efficient. We find that the unique characteristics of the subpopulation selection problem -- most importantly that (i) one is usually interested in finding subpopulations with any treatment benefit (and not necessarily the single subgroup with largest effect) given a limited budget and that (ii) effectiveness only has to be demonstrated across the subpopulation on average -- give rise to interesting challenges and new desiderata when designing algorithmic solutions. Building on these findings, we propose AdaGGI and AdaGCPI, two meta-algorithms for subpopulation construction, which focus on identifying good subgroups and good composite subpopulations, respectively. We empirically investigate their performance across a range of simulation scenarios and derive insights into their (dis)advantages across different settings.
 
 </p>
 </details>
@@ -311,13 +466,24 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>A Principled Method for the Creation of Synthetic Multi-fidelity Data Sets</b>
-<a href="https://arxiv.org/abs/2208.05667">arxiv:2208.05667</a>
-&#x1F4C8; 4 <br>
-<p>Clyde Fare, Peter Fenner, Edward O. Pyzer-Knapp</p></summary>
+<details><summary><b>Incorporating Customer Reviews in Size and Fit Recommendation systems for Fashion E-Commerce</b>
+<a href="https://arxiv.org/abs/2208.06261">arxiv:2208.06261</a>
+&#x1F4C8; 3 <br>
+<p>Oishik Chatterjee, Jaidam Ram Tej, Narendra Varma Dasaraju</p></summary>
 <p>
 
-**Abstract:** Multifidelity and multioutput optimisation algorithms are an area of current interest in many areas of computational design as they allow experimental and computational proxies to be used intelligently in the search for optimal species. Characterisation of these algorithms involves benchmarks that typically either use analytic functions or existing multifidelity datasets. Unfortunately, existing analytic functions are often not representative of relevant problems, while many existing datasets are not constructed to easily allow systematic investigation of the influence of characteristics of the contained proxies functions. To fulfil this need, we present a methodology for systematic generation of synthetic fidelities derived from a reference ground truth function with a controllable degree of correlation.
+**Abstract:** With the huge growth in e-commerce domain, product recommendations have become an increasing field of interest amongst e-commerce companies. One of the more difficult tasks in product recommendations is size and fit predictions. There are a lot of size related returns and refunds in e-fashion domain which causes inconvenience to the customers as well as costs the company. Thus having a good size and fit recommendation system, which can predict the correct sizes for the customers will not only reduce size related returns and refunds but also improve customer experience. Early works in this field used traditional machine learning approaches to estimate customer and product sizes from purchase history. These methods suffered from cold start problem due to huge sparsity in the customer-product data. More recently, people have used deep learning to address this problem by embedding customer and product features. But none of them incorporates valuable customer feedback present on product pages along with the customer and product features. We propose a novel approach which can use information from customer reviews along with customer and product features for size and fit predictions. We demonstrate the effectiveness of our approach compared to using just product and customer features on 4 datasets. Our method shows an improvement of 1.37% - 4.31% in F1 (macro) score over the baseline across the 4 different datasets.
+
+</p>
+</details>
+
+<details><summary><b>Deep is a Luxury We Don't Have</b>
+<a href="https://arxiv.org/abs/2208.06066">arxiv:2208.06066</a>
+&#x1F4C8; 3 <br>
+<p>Ahmed Taha, Yen Nhi Truong Vu, Brent Mombourquette, Thomas Paul Matthews, Jason Su, Sadanand Singh</p></summary>
+<p>
+
+**Abstract:** Medical images come in high resolutions. A high resolution is vital for finding malignant tissues at an early stage. Yet, this resolution presents a challenge in terms of modeling long range dependencies. Shallow transformers eliminate this problem, but they suffer from quadratic complexity. In this paper, we tackle this complexity by leveraging a linear self-attention approximation. Through this approximation, we propose an efficient vision model called HCT that stands for High resolution Convolutional Transformer. HCT brings transformers' merits to high resolution images at a significantly lower cost. We evaluate HCT using a high resolution mammography dataset. HCT is significantly superior to its CNN counterpart. Furthermore, we demonstrate HCT's fitness for medical images by evaluating its effective receptive field.Code available at https://bit.ly/3ykBhhf
 
 </p>
 </details>
@@ -333,35 +499,116 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
-<details><summary><b>Machine learning in front of statistical methods for prediction spread SARS-CoV-2 in Colombia</b>
-<a href="https://arxiv.org/abs/2208.05910">arxiv:2208.05910</a>
+<details><summary><b>Uncertainty Quantification of Sparse Travel Demand Prediction with Spatial-Temporal Graph Neural Networks</b>
+<a href="https://arxiv.org/abs/2208.05908">arxiv:2208.05908</a>
 &#x1F4C8; 3 <br>
-<p>A. Estupiñán, J. Acuña, A. Rodriguez, A. Ayala, C. Estupiñán, Ramon E. R. Gonzalez, D. A. Triana-Camacho, K. L. Cristiano-Rodríguez</p></summary>
+<p>Dingyi Zhuang, Shenhao Wang, Haris N. Koutsopoulos, Jinhua Zhao</p></summary>
 <p>
 
-**Abstract:** An analytical study of the disease COVID-19 in Colombia was carried out using mathematical models such as Susceptible-Exposed-Infectious-Removed (SEIR), Logistic Regression (LR), and a machine learning method called Polynomial Regression Method. Previous analysis has been performed on the daily number of cases, deaths, infected people, and people who were exposed to the virus, all of them in a timeline of 550 days. Moreover, it has made the fitting of infection spread detailing the most efficient and optimal methods with lower propagation error and the presence of statistical biases. Finally, four different prevention scenarios were proposed to evaluate the ratio of each one of the parameters related to the disease.
+**Abstract:** Origin-Destination (O-D) travel demand prediction is a fundamental challenge in transportation. Recently, spatial-temporal deep learning models demonstrate the tremendous potential to enhance prediction accuracy. However, few studies tackled the uncertainty and sparsity issues in fine-grained O-D matrices. This presents a serious problem, because a vast number of zeros deviate from the Gaussian assumption underlying the deterministic deep learning models. To address this issue, we design a Spatial-Temporal Zero-Inflated Negative Binomial Graph Neural Network (STZINB-GNN) to quantify the uncertainty of the sparse travel demand. It analyzes spatial and temporal correlations using diffusion and temporal convolution networks, which are then fused to parameterize the probabilistic distributions of travel demand. The STZINB-GNN is examined using two real-world datasets with various spatial and temporal resolutions. The results demonstrate the superiority of STZINB-GNN over benchmark models, especially under high spatial-temporal resolutions, because of its high accuracy, tight confidence intervals, and interpretable parameters. The sparsity parameter of the STZINB-GNN has physical interpretation for various transportation applications.
 
 </p>
 </details>
 
-<details><summary><b>Shielding Federated Learning Systems against Inference Attacks with ARM TrustZone</b>
-<a href="https://arxiv.org/abs/2208.05895">arxiv:2208.05895</a>
+<details><summary><b>Distributionally Robust Model-Based Offline Reinforcement Learning with Near-Optimal Sample Complexity</b>
+<a href="https://arxiv.org/abs/2208.05767">arxiv:2208.05767</a>
 &#x1F4C8; 3 <br>
-<p>Aghiles Ait Messaoud, Sonia Ben Mokhtar, Vlad Nitu, Valerio Shiavoni</p></summary>
+<p>Laixi Shi, Yuejie Chi</p></summary>
 <p>
 
-**Abstract:** Federated Learning (FL) opens new perspectives for training machine learning models while keeping personal data on the users premises. Specifically, in FL, models are trained on the users devices and only model updates (i.e., gradients) are sent to a central server for aggregation purposes. However, the long list of inference attacks that leak private data from gradients, published in the recent years, have emphasized the need of devising effective protection mechanisms to incentivize the adoption of FL at scale. While there exist solutions to mitigate these attacks on the server side, little has been done to protect users from attacks performed on the client side. In this context, the use of Trusted Execution Environments (TEEs) on the client side are among the most proposing solutions. However, existing frameworks (e.g., DarkneTZ) require statically putting a large portion of the machine learning model into the TEE to effectively protect against complex attacks or a combination of attacks. We present GradSec, a solution that allows protecting in a TEE only sensitive layers of a machine learning model, either statically or dynamically, hence reducing both the TCB size and the overall training time by up to 30% and 56%, respectively compared to state-of-the-art competitors.
+**Abstract:** This paper concerns the central issues of model robustness and sample efficiency in offline reinforcement learning (RL), which aims to learn to perform decision making from history data without active exploration. Due to uncertainties and variabilities of the environment, it is critical to learn a robust policy -- with as few samples as possible -- that performs well even when the deployed environment deviates from the nominal one used to collect the history dataset. We consider a distributionally robust formulation of offline RL, focusing on a tabular non-stationary finite-horizon robust Markov decision process with an uncertainty set specified by the Kullback-Leibler divergence. To combat with sample scarcity, a model-based algorithm that combines distributionally robust value iteration with the principle of pessimism in the face of uncertainty is proposed, by penalizing the robust value estimates with a carefully designed data-driven penalty term. Under a mild and tailored assumption of the history dataset that measures distribution shift without requiring full coverage of the state-action space, we establish the finite-sample complexity of the proposed algorithm, and further show it is almost unimprovable in light of a nearly-matching information-theoretic lower bound up to a polynomial factor of the horizon length. To the best our knowledge, this provides the first provably near-optimal robust offline RL algorithm that learns under model uncertainty and partial coverage.
 
 </p>
 </details>
 
-<details><summary><b>Cine-AI: Generating Video Game Cutscenes in the Style of Human Directors</b>
-<a href="https://arxiv.org/abs/2208.05701">arxiv:2208.05701</a>
+<details><summary><b>A Modified UDP for Federated Learning Packet Transmissions</b>
+<a href="https://arxiv.org/abs/2208.05737">arxiv:2208.05737</a>
 &#x1F4C8; 3 <br>
-<p>Inan Evin, Perttu Hämäläinen, Christian Guckelsberger</p></summary>
+<p>Bright Kudzaishe Mahembe, Clement Nyirenda</p></summary>
 <p>
 
-**Abstract:** Cutscenes form an integral part of many video games, but their creation is costly, time-consuming, and requires skills that many game developers lack. While AI has been leveraged to semi-automate cutscene production, the results typically lack the internal consistency and uniformity in style that is characteristic of professional human directors. We overcome this shortcoming with Cine-AI, an open-source procedural cinematography toolset capable of generating in-game cutscenes in the style of eminent human directors. Implemented in the popular game engine Unity, Cine-AI features a novel timeline and storyboard interface for design-time manipulation, combined with runtime cinematography automation. Via two user studies, each employing quantitative and qualitative measures, we demonstrate that Cine-AI generates cutscenes that people correctly associate with a target director, while providing above-average usability. Our director imitation dataset is publicly available, and can be extended by users and film enthusiasts.
+**Abstract:** This paper introduces a Modified User Datagram Protocol (UDP) for Federated Learning to ensure efficiency and reliability in the model parameter transport process, maximizing the potential of the Global model in each Federated Learning round. In developing and testing this protocol, the NS3 simulator is utilized to simulate the packet transport over the network and Google TensorFlow is used to create a custom Federated learning environment. In this preliminary implementation, the simulation contains three nodes where two nodes are client nodes, and one is a server node. The results obtained in this paper provide confidence in the capabilities of the protocol in the future of Federated Learning therefore, in future the Modified UDP will be tested on a larger Federated learning system with a TensorFlow model containing more parameters and a comparison between the traditional UDP protocol and the Modified UDP protocol will be simulated. Optimization of the Modified UDP will also be explored to improve efficiency while ensuring reliability.
+
+</p>
+</details>
+
+<details><summary><b>Class-attention Video Transformer for Engagement Intensity Prediction</b>
+<a href="https://arxiv.org/abs/2208.07216">arxiv:2208.07216</a>
+&#x1F4C8; 2 <br>
+<p>Xusheng Ai, Victor S. Sheng, Chunhua Li</p></summary>
+<p>
+
+**Abstract:** In order to deal with variant-length long videos, prior works extract multi-modal features and fuse them to predict students' engagement intensity. In this paper, we present a new end-to-end method Class Attention in Video Transformer (CavT), which involves a single vector to process class embedding and to uniformly perform end-to-end learning on variant-length long videos and fixed-length short videos. Furthermore, to address the lack of sufficient samples, we propose a binary-order representatives sampling method (BorS) to add multiple video sequences of each video to augment the training set. BorS+CavT not only achieves the state-of-the-art MSE (0.0495) on the EmotiW-EP dataset, but also obtains the state-of-the-art MSE (0.0377) on the DAiSEE dataset. The code and models will be made publicly available at https://github.com/mountainai/cavt.
+
+</p>
+</details>
+
+<details><summary><b>Multi-Agent Reinforcement Learning with Graph Convolutional Neural Networks for optimal Bidding Strategies of Generation Units in Electricity Markets</b>
+<a href="https://arxiv.org/abs/2208.06242">arxiv:2208.06242</a>
+&#x1F4C8; 2 <br>
+<p>Pegah Rokhforoz, Olga Fink</p></summary>
+<p>
+
+**Abstract:** Finding optimal bidding strategies for generation units in electricity markets would result in higher profit. However, it is a challenging problem due to the system uncertainty which is due to the unknown other generation units' strategies. Distributed optimization, where each entity or agent decides on its bid individually, has become state of the art. However, it cannot overcome the challenges of system uncertainties. Deep reinforcement learning is a promising approach to learn the optimal strategy in uncertain environments. Nevertheless, it is not able to integrate the information on the spatial system topology in the learning process. This paper proposes a distributed learning algorithm based on deep reinforcement learning (DRL) combined with a graph convolutional neural network (GCN). In fact, the proposed framework helps the agents to update their decisions by getting feedback from the environment so that it can overcome the challenges of the uncertainties. In this proposed algorithm, the state and connection between nodes are the inputs of the GCN, which can make agents aware of the structure of the system. This information on the system topology helps the agents to improve their bidding strategies and increase the profit. We evaluate the proposed algorithm on the IEEE 30-bus system under different scenarios. Also, to investigate the generalization ability of the proposed approach, we test the trained model on IEEE 39-bus system. The results show that the proposed algorithm has more generalization abilities compare to the DRL and can result in higher profit when changing the topology of the system.
+
+</p>
+</details>
+
+<details><summary><b>An Algorithm-Hardware Co-Optimized Framework for Accelerating N:M Sparse Transformers</b>
+<a href="https://arxiv.org/abs/2208.06118">arxiv:2208.06118</a>
+&#x1F4C8; 2 <br>
+<p>Chao Fang, Aojun Zhou, Zhongfeng Wang</p></summary>
+<p>
+
+**Abstract:** The Transformer has been an indispensable staple in deep learning. However, for real-life applications, it is very challenging to deploy efficient Transformers due to immense parameters and operations of models. To relieve this burden, exploiting sparsity is an effective approach to accelerate Transformers. Newly emerging Ampere GPUs leverage a 2:4 sparsity pattern to achieve model acceleration, while it can hardly meet the diverse algorithm and hardware constraints when deploying models. By contrast, we propose an algorithm-hardware co-optimized framework to flexibly and efficiently accelerate Transformers by utilizing general N:M sparsity patterns. (1) From algorithm perspective, we propose a sparsity inheritance mechanism along with an inherited dynamic pruning (IDP) method to obtain a series of N:M sparse candidate Transformers rapidly. A model compression scheme is further proposed to significantly reduce the storage requirement for deployment. (2) From hardware perspective, we present a flexible and efficient hardware architecture, namely STA, to achieve significant speedup when deploying N:M sparse Transformers. STA features not only a computing engine unifying both sparse-dense and dense-dense matrix multiplications with high computational efficiency but also a scalable softmax module eliminating the latency from intermediate off-chip data communication. Experimental results show that compared to other methods, N:M sparse Transformers, generated using IDP, achieves an average of 6.7% improvement on accuracy with high training efficiency. Moreover, STA can achieve 14.47x and 11.33x speedup compared to Intel i9-9900X and NVIDIA RTX 2080 Ti, respectively, and perform 2.00-19.47x faster inference than the state-of-the-art FPGA-based accelerators for Transformers.
+
+</p>
+</details>
+
+<details><summary><b>Accurate Action Recommendation for Smart Home via Two-Level Encoders and Commonsense Knowledge</b>
+<a href="https://arxiv.org/abs/2208.06089">arxiv:2208.06089</a>
+&#x1F4C8; 2 <br>
+<p>Hyunsik Jeon, Jongjin Kim, Hoyoung Yoon, Jaeri Lee, U Kang</p></summary>
+<p>
+
+**Abstract:** How can we accurately recommend actions for users to control their devices at home? Action recommendation for smart home has attracted increasing attention due to its potential impact on the markets of virtual assistants and Internet of Things (IoT). However, designing an effective action recommender system for smart home is challenging because it requires handling context correlations, considering both queried contexts and previous histories of users, and dealing with capricious intentions in history. In this work, we propose SmartSense, an accurate action recommendation method for smart home. For individual action, SmartSense summarizes its device control and its temporal contexts in a self-attentive manner, to reflect the importance of the correlation between them. SmartSense then summarizes sequences of users considering queried contexts in a query-attentive manner to extract the query-related patterns from the sequential actions. SmartSense also transfers the commonsense knowledge from routine data to better handle intentions in action sequences. As a result, SmartSense addresses all three main challenges of action recommendation for smart home, and achieves the state-of-the-art performance giving up to 9.8% higher mAP@1 than the best competitor.
+
+</p>
+</details>
+
+<details><summary><b>Conditional Antibody Design as 3D Equivariant Graph Translation</b>
+<a href="https://arxiv.org/abs/2208.06073">arxiv:2208.06073</a>
+&#x1F4C8; 2 <br>
+<p>Xiangzhe Kong, Wenbing Huang, Yang Liu</p></summary>
+<p>
+
+**Abstract:** Antibody design is valuable for therapeutic usage and biological research. Existing deep-learning-based methods encounter several key issues: 1) incomplete context for Complementarity-Determining Regions (CDRs) generation; 2) incapable of capturing the entire 3D geometry of the input structure; 3) inefficient prediction of the CDR sequences in an autoregressive manner. In this paper, we propose Multi-channel Equivariant Attention Network (MEAN), an end-to-end model that is able to co-design 1D sequences and 3D structures of CDRs. To be specific, MEAN formulates antibody design as a conditional graph translation problem by importing extra components including the target antigen and the light chain of the antibody. Then, MEAN resorts to E(3)-equivariant message passing along with a proposed attention mechanism to better capture the geometrical correlation between different components. Finally, it outputs both the 1D sequences and 3D structure via a multi-round progressive full-shot scheme, which enjoys more efficiency against previous autoregressive approaches. Our method significantly surpasses state-of-the-art models in sequence and structure modeling, antigen-binding antibody design, and binding affinity optimization. Specifically, the relative improvement to baselines is about 22% in antigen-binding CDR design and 34% for affinity optimization.
+
+</p>
+</details>
+
+<details><summary><b>Shifted Windows Transformers for Medical Image Quality Assessment</b>
+<a href="https://arxiv.org/abs/2208.06034">arxiv:2208.06034</a>
+&#x1F4C8; 2 <br>
+<p>Caner Ozer, Arda Guler, Aysel Turkvatan Cansever, Deniz Alis, Ercan Karaarslan, Ilkay Oksuz</p></summary>
+<p>
+
+**Abstract:** To maintain a standard in a medical imaging study, images should have necessary image quality for potential diagnostic use. Although CNN-based approaches are used to assess the image quality, their performance can still be improved in terms of accuracy. In this work, we approach this problem by using Swin Transformer, which improves the poor-quality image classification performance that causes the degradation in medical image quality. We test our approach on Foreign Object Classification problem on Chest X-Rays (Object-CXR) and Left Ventricular Outflow Tract Classification problem on Cardiac MRI with a four-chamber view (LVOT). While we obtain a classification accuracy of 87.1% and 95.48% on the Object-CXR and LVOT datasets, our experimental results suggest that the use of Swin Transformer improves the Object-CXR classification performance while obtaining a comparable performance for the LVOT dataset. To the best of our knowledge, our study is the first vision transformer application for medical image quality assessment.
+
+</p>
+</details>
+
+<details><summary><b>A Probabilistic Framework for Mutation Testing in Deep Neural Networks</b>
+<a href="https://arxiv.org/abs/2208.06018">arxiv:2208.06018</a>
+&#x1F4C8; 2 <br>
+<p>Florian Tambon, Foutse Khomh, Giuliano Antoniol</p></summary>
+<p>
+
+**Abstract:** Context: Mutation Testing (MT) is an important tool in traditional Software Engineering (SE) white-box testing. It aims to artificially inject faults in a system to evaluate a test suite's capability to detect them, assuming that the test suite defects finding capability will then translate to real faults. If MT has long been used in SE, it is only recently that it started gaining the attention of the Deep Learning (DL) community, with researchers adapting it to improve the testability of DL models and improve the trustworthiness of DL systems.
+  Objective: If several techniques have been proposed for MT, most of them neglected the stochasticity inherent to DL resulting from the training phase. Even the latest MT approaches in DL, which propose to tackle MT through a statistical approach, might give inconsistent results. Indeed, as their statistic is based on a fixed set of sampled training instances, it can lead to different results across instances set when results should be consistent for any instance.
+  Methods: In this work, we propose a Probabilistic Mutation Testing (PMT) approach that alleviates the inconsistency problem and allows for a more consistent decision on whether a mutant is killed or not.
+  Results: We show that PMT effectively allows a more consistent and informed decision on mutations through evaluation using three models and eight mutation operators used in previously proposed MT methods. We also analyze the trade-off between the approximation error and the cost of our method, showing that relatively small error can be achieved for a manageable cost.
+  Conclusion: Our results showed the limitation of current MT practices in DNN and the need to rethink them. We believe PMT is the first step in that direction which effectively removes the lack of consistency across test executions of previous methods caused by the stochasticity of DNN training.
 
 </p>
 </details>
@@ -377,13 +624,79 @@ Prev: [2022.08.10]({{ '/2022/08/10/2022.08.10.html' | relative_url }})  Next: [2
 </p>
 </details>
 
+<details><summary><b>A Principled Method for the Creation of Synthetic Multi-fidelity Data Sets</b>
+<a href="https://arxiv.org/abs/2208.05667">arxiv:2208.05667</a>
+&#x1F4C8; 2 <br>
+<p>Clyde Fare, Peter Fenner, Edward O. Pyzer-Knapp</p></summary>
+<p>
+
+**Abstract:** Multifidelity and multioutput optimisation algorithms are an area of current interest in many areas of computational design as they allow experimental and computational proxies to be used intelligently in the search for optimal species. Characterisation of these algorithms involves benchmarks that typically either use analytic functions or existing multifidelity datasets. Unfortunately, existing analytic functions are often not representative of relevant problems, while many existing datasets are not constructed to easily allow systematic investigation of the influence of characteristics of the contained proxies functions. To fulfil this need, we present a methodology for systematic generation of synthetic fidelities derived from a reference ground truth function with a controllable degree of correlation.
+
+</p>
+</details>
+
+<details><summary><b>Cross Section Doppler Broadening prediction using Physically Informed Deep Neural Networks</b>
+<a href="https://arxiv.org/abs/2208.07224">arxiv:2208.07224</a>
+&#x1F4C8; 1 <br>
+<p>Arthur Pignet, Luiz Leal, Vaibhav Jaiswal</p></summary>
+<p>
+
+**Abstract:** Temperature dependence of the neutron-nucleus interaction is known as the Doppler broadening of the cross-sections. This is a well-known effect due to the thermal motion of the target nuclei that occurs in the neutron-nucleus interaction. The fast computation of such effects is crucial for any nuclear application. Mechanisms have been developed that allow determining the Doppler effects in the cross-section, most of them based on the numerical resolution of the equation known as Solbrig's kernel, which is a cross-section Doppler broadening formalism derived from a free gas atoms distribution hypothesis. This paper explores a novel non-linear approach based on deep learning techniques. Deep neural networks are trained on synthetic and experimental data, serving as an alternative to the cross-section Doppler Broadening (DB). This paper explores the possibility of using physically informed neural networks, where the network is physically regularized to be the solution of a partial derivative equation, inferred from Solbrig's kernel. The learning process is demonstrated by using the fission, capture, and scattering cross sections for $^{235}U$ in the energy range from thermal to 2250 eV.
+
+</p>
+</details>
+
+<details><summary><b>A Modular Framework for Reinforcement Learning Optimal Execution</b>
+<a href="https://arxiv.org/abs/2208.06244">arxiv:2208.06244</a>
+&#x1F4C8; 1 <br>
+<p>Fernando de Meer Pardo, Christoph Auth, Florin Dascalu</p></summary>
+<p>
+
+**Abstract:** In this article, we develop a modular framework for the application of Reinforcement Learning to the problem of Optimal Trade Execution. The framework is designed with flexibility in mind, in order to ease the implementation of different simulation setups. Rather than focusing on agents and optimization methods, we focus on the environment and break down the necessary requirements to simulate an Optimal Trade Execution under a Reinforcement Learning framework such as data pre-processing, construction of observations, action processing, child order execution, simulation of benchmarks, reward calculations etc. We give examples of each component, explore the difficulties their individual implementations \& the interactions between them entail, and discuss the different phenomena that each component induces in the simulation, highlighting the divergences between the simulation and the behavior of a real market. We showcase our modular implementation through a setup that, following a Time-Weighted Average Price (TWAP) order submission schedule, allows the agent to exclusively place limit orders, simulates their execution via iterating over snapshots of the Limit Order Book (LOB), and calculates rewards as the \$ improvement over the price achieved by a TWAP benchmark algorithm following the same schedule. We also develop evaluation procedures that incorporate iterative re-training and evaluation of a given agent over intervals of a training horizon, mimicking how an agent may behave when being continuously retrained as new market data becomes available and emulating the monitoring practices that algorithm providers are bound to perform under current regulatory frameworks.
+
+</p>
+</details>
+
+<details><summary><b>On deceiving malware classification with section injection</b>
+<a href="https://arxiv.org/abs/2208.06092">arxiv:2208.06092</a>
+&#x1F4C8; 1 <br>
+<p>Adeilson Antonio da Silva, Mauricio Pamplona Segundo</p></summary>
+<p>
+
+**Abstract:** We investigate how to modify executable files to deceive malware classification systems. This work's main contribution is a methodology to inject bytes across a malware file randomly and use it both as an attack to decrease classification accuracy but also as a defensive method, augmenting the data available for training. It respects the operating system file format to make sure the malware will still execute after our injection and will not change its behavior. We reproduced five state-of-the-art malware classification approaches to evaluate our injection scheme: one based on GIST+KNN, three CNN variations and one Gated CNN. We performed our experiments on a public dataset with 9,339 malware samples from 25 different families. Our results show that a mere increase of 7% in the malware size causes an accuracy drop between 25% and 40% for malware family classification. They show that a automatic malware classification system may not be as trustworthy as initially reported in the literature. We also evaluate using modified malwares alongside the original ones to increase networks robustness against mentioned attacks. Results show that a combination of reordering malware sections and injecting random data can improve overall performance of the classification. Code available at https://github.com/adeilsonsilva/malware-injection.
+
+</p>
+</details>
+
 <details><summary><b>Learning Based Joint Coding-Modulation for Digital Semantic Communication Systems</b>
 <a href="https://arxiv.org/abs/2208.05704">arxiv:2208.05704</a>
-&#x1F4C8; 2 <br>
+&#x1F4C8; 1 <br>
 <p>Yufei Bo, Yiheng Duan, Shuo Shao, Meixia Tao</p></summary>
 <p>
 
 **Abstract:** In learning-based semantic communications, neural networks have replaced different building blocks in traditional communication systems. However, the digital modulation still remains a challenge for neural networks. The intrinsic mechanism of neural network based digital modulation is mapping continuous output of the neural network encoder into discrete constellation symbols, which is a non-differentiable function that cannot be trained with existing gradient descend algorithms. To overcome this challenge, in this paper we develop a joint coding-modulation scheme for digital semantic communications with BPSK modulation. In our method, the neural network outputs the likelihood of each constellation point, instead of having a concrete mapping. A random code rather than a deterministic code is hence used, which preserves more information for the symbols with a close likelihood on each constellation point. The joint coding-modulation design can match the modulation process with channel states, and hence improve the performance of digital semantic communications. Experiment results show that our method outperforms existing digital modulation methods in semantic communications over a wide range of SNR, and outperforms neural network based analog modulation method in low SNR regime.
+
+</p>
+</details>
+
+<details><summary><b>Re-creation of Creations: A New Paradigm for Lyric-to-Melody Generation</b>
+<a href="https://arxiv.org/abs/2208.05697">arxiv:2208.05697</a>
+&#x1F4C8; 1 <br>
+<p>Ang Lv, Xu Tan, Tao Qin, Tie-Yan Liu, Rui Yan</p></summary>
+<p>
+
+**Abstract:** Lyric-to-melody generation is an important task in songwriting, and is also quite challenging due to its distinctive characteristics: the generated melodies should not only follow good musical patterns, but also align with features in lyrics such as rhythms and structures. These characteristics cannot be well handled by neural generation models that learn lyric-to-melody mapping in an end-to-end way, due to several issues: (1) lack of aligned lyric-melody training data to sufficiently learn lyric-melody feature alignment; (2) lack of controllability in generation to explicitly guarantee the lyric-melody feature alignment. In this paper, we propose Re-creation of Creations (ROC), a new paradigm for lyric-to-melody generation that addresses the above issues through a generation-retrieval pipeline. Specifically, our paradigm has two stages: (1) creation stage, where a huge amount of music pieces are generated by a neural-based melody language model and indexed in a database through several key features (e.g., chords, tonality, rhythm, and structural information including chorus or verse); (2) re-creation stage, where melodies are recreated by retrieving music pieces from the database according to the key features from lyrics and concatenating best music pieces based on composition guidelines and melody language model scores. Our new paradigm has several advantages: (1) It only needs unpaired melody data to train melody language model, instead of paired lyric-melody data in previous models. (2) It achieves good lyric-melody feature alignment in lyric-to-melody generation. Experiments on English and Chinese datasets demonstrate that ROC outperforms previous neural based lyric-to-melody generation models on both objective and subjective metrics. We provide our code in supplementary material and provide demos on github.
+
+</p>
+</details>
+
+<details><summary><b>Heterogeneous Line Graph Transformer for Math Word Problems</b>
+<a href="https://arxiv.org/abs/2208.05645">arxiv:2208.05645</a>
+&#x1F4C8; 1 <br>
+<p>Zijian Hu, Meng Jiang</p></summary>
+<p>
+
+**Abstract:** This paper describes the design and implementation of a new machine learning model for online learning systems. We aim at improving the intelligent level of the systems by enabling an automated math word problem solver which can support a wide range of functions such as homework correction, difficulty estimation, and priority recommendation. We originally planned to employ existing models but realized that they processed a math word problem as a sequence or a homogeneous graph of tokens. Relationships between the multiple types of tokens such as entity, unit, rate, and number were ignored. We decided to design and implement a novel model to use such relational data to bridge the information gap between human-readable language and machine-understandable logical form. We propose a heterogeneous line graph transformer (HLGT) model that constructs a heterogeneous line graph via semantic role labeling on math word problems and then perform node representation learning aware of edge types. We add numerical comparison as an auxiliary task to improve model training for real-world use. Experimental results show that the proposed model achieves a better performance than existing models and suggest that it is still far below human performance. Information utilization and knowledge discovery is continuously needed to improve the online learning systems.
 
 </p>
 </details>
