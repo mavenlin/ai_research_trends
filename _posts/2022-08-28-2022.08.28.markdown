@@ -1,0 +1,377 @@
+Prev: [2022.08.27]({{ '/2022/08/27/2022.08.27.html' | relative_url }})  Next: [2022.08.29]({{ '/2022/08/29/2022.08.29.html' | relative_url }})
+{% raw %}
+## Summary for 2022-08-28, created on 2022-09-01
+
+
+<details><summary><b>Towards Disentangled Speech Representations</b>
+<a href="https://arxiv.org/abs/2208.13191">arxiv:2208.13191</a>
+&#x1F4C8; 9 <br>
+<p>Cal Peyser, Ronny Huang Andrew Rosenberg Tara N. Sainath, Michael Picheny, Kyunghyun Cho</p></summary>
+<p>
+
+**Abstract:** The careful construction of audio representations has become a dominant feature in the design of approaches to many speech tasks. Increasingly, such approaches have emphasized "disentanglement", where a representation contains only parts of the speech signal relevant to transcription while discarding irrelevant information. In this paper, we construct a representation learning task based on joint modeling of ASR and TTS, and seek to learn a representation of audio that disentangles that part of the speech signal that is relevant to transcription from that part which is not. We present empirical evidence that successfully finding such a representation is tied to the randomness inherent in training. We then make the observation that these desired, disentangled solutions to the optimization problem possess unique statistical properties. Finally, we show that enforcing these properties during training improves WER by 24.5% relative on average for our joint modeling task. These observations motivate a novel approach to learning effective audio representations.
+
+</p>
+</details>
+
+<details><summary><b>Visualizing high-dimensional loss landscapes with Hessian directions</b>
+<a href="https://arxiv.org/abs/2208.13219">arxiv:2208.13219</a>
+&#x1F4C8; 7 <br>
+<p>Lucas Böttcher, Gregory Wheeler</p></summary>
+<p>
+
+**Abstract:** Analyzing geometric properties of high-dimensional loss functions, such as local curvature and the existence of other optima around a certain point in loss space, can help provide a better understanding of the interplay between neural network structure, implementation attributes, and learning performance. In this work, we combine concepts from high-dimensional probability and differential geometry to study how curvature properties in lower-dimensional loss representations depend on those in the original loss space. We show that saddle points in the original space are rarely correctly identified as such in lower-dimensional representations if random projections are used. In such projections, the expected curvature in a lower-dimensional representation is proportional to the mean curvature in the original loss space. Hence, the mean curvature in the original loss space determines if saddle points appear, on average, as either minima, maxima, or almost flat regions. We use the connection between expected curvature and mean curvature (i.e., the normalized Hessian trace) to estimate the trace of Hessians without calculating the Hessian or Hessian-vector products as in Hutchinson's method. Because random projections are not able to correctly identify saddle information, we propose to study projections along Hessian directions that are associated with the largest and smallest principal curvatures. We connect our findings to the ongoing debate on loss landscape flatness and generalizability. Finally, we illustrate our method in numerical experiments on different image classifiers with up to about $7\times 10^6$ parameters.
+
+</p>
+</details>
+
+<details><summary><b>RUAD: unsupervised anomaly detection in HPC systems</b>
+<a href="https://arxiv.org/abs/2208.13169">arxiv:2208.13169</a>
+&#x1F4C8; 5 <br>
+<p>Martin Molan, Andrea Borghesi, Daniele Cesarini, Luca Benini, Andrea Bartolini</p></summary>
+<p>
+
+**Abstract:** The increasing complexity of modern high-performance computing (HPC) systems necessitates the introduction of automated and data-driven methodologies to support system administrators' effort toward increasing the system's availability. Anomaly detection is an integral part of improving the availability as it eases the system administrator's burden and reduces the time between an anomaly and its resolution. However, current state-of-the-art (SoA) approaches to anomaly detection are supervised and semi-supervised, so they require a human-labelled dataset with anomalies - this is often impractical to collect in production HPC systems. Unsupervised anomaly detection approaches based on clustering, aimed at alleviating the need for accurate anomaly data, have so far shown poor performance.
+  In this work, we overcome these limitations by proposing RUAD, a novel Recurrent Unsupervised Anomaly Detection model. RUAD achieves better results than the current semi-supervised and unsupervised SoA approaches. This is achieved by considering temporal dependencies in the data and including long-short term memory cells in the model architecture. The proposed approach is assessed on a complete ten-month history of a Tier-0 system (Marconi100 from CINECA with 980 nodes). RUAD achieves an area under the curve (AUC) of 0.763 in semi-supervised training and an AUC of 0.767 in unsupervised training, which improves upon the SoA approach that achieves an AUC of 0.747 in semi-supervised training and an AUC of 0.734 in unsupervised training. It also vastly outperforms the current SoA unsupervised anomaly detection approach based on clustering, achieving the AUC of 0.548.
+
+</p>
+</details>
+
+<details><summary><b>Neural Network Approximation of Lipschitz Functions in High Dimensions with Applications to Inverse Problems</b>
+<a href="https://arxiv.org/abs/2208.13305">arxiv:2208.13305</a>
+&#x1F4C8; 4 <br>
+<p>Santhosh Karnik, Rongrong Wang, Mark Iwen</p></summary>
+<p>
+
+**Abstract:** The remarkable successes of neural networks in a huge variety of inverse problems have fueled their adoption in disciplines ranging from medical imaging to seismic analysis over the past decade. However, the high dimensionality of such inverse problems has simultaneously left current theory, which predicts that networks should scale exponentially in the dimension of the problem, unable to explain why the seemingly small networks used in these settings work as well as they do in practice. To reduce this gap between theory and practice, a general method for bounding the complexity required for a neural network to approximate a Lipschitz function on a high-dimensional set with a low-complexity structure is provided herein. The approach is based on the observation that the existence of a linear Johnson-Lindenstrauss embedding $\mathbf{A} \in \mathbb{R}^{d \times D}$ of a given high-dimensional set $\mathcal{S} \subset \mathbb{R}^D$ into a low dimensional cube $[-M,M]^d$ implies that for any Lipschitz function $f : \mathcal{S}\to \mathbb{R}^p$, there exists a Lipschitz function $g : [-M,M]^d \to \mathbb{R}^p$ such that $g(\mathbf{A}\mathbf{x}) = f(\mathbf{x})$ for all $\mathbf{x} \in \mathcal{S}$. Hence, if one has a neural network which approximates $g : [-M,M]^d \to \mathbb{R}^p$, then a layer can be added which implements the JL embedding $\mathbf{A}$ to obtain a neural network which approximates $f : \mathcal{S} \to \mathbb{R}^p$. By pairing JL embedding results along with results on approximation of Lipschitz functions by neural networks, one then obtains results which bound the complexity required for a neural network to approximate Lipschitz functions on high dimensional sets. The end result is a general theoretical framework which can then be used to better explain the observed empirical successes of smaller networks in a wider variety of inverse problems than current theory allows.
+
+</p>
+</details>
+
+<details><summary><b>Statistical Inverse Problems in Hilbert Scales</b>
+<a href="https://arxiv.org/abs/2208.13289">arxiv:2208.13289</a>
+&#x1F4C8; 4 <br>
+<p>Abhishake Rastogi</p></summary>
+<p>
+
+**Abstract:** In this paper, we study the Tikhonov regularization scheme in Hilbert scales for the nonlinear statistical inverse problem with a general noise. The regularizing norm in this scheme is stronger than the norm in Hilbert space. We focus on developing a theoretical analysis for this scheme based on the conditional stability estimates. We utilize the concept of the distance function to establish the high probability estimates of the direct and reconstruction error in Reproducing kernel Hilbert space setting. Further, the explicit rates of convergence in terms of sample size are established for the oversmoothing case and the regular case over the regularity class defined through appropriate source condition. Our results improve and generalize previous results obtained in related settings.
+
+</p>
+</details>
+
+<details><summary><b>Leachable Component Clustering</b>
+<a href="https://arxiv.org/abs/2208.13217">arxiv:2208.13217</a>
+&#x1F4C8; 4 <br>
+<p>Miao Cheng, Xinge You</p></summary>
+<p>
+
+**Abstract:** Clustering attempts to partition data instances into several distinctive groups, while the similarities among data belonging to the common partition can be principally reserved. Furthermore, incomplete data frequently occurs in many realworld applications, and brings perverse influence on pattern analysis. As a consequence, the specific solutions to data imputation and handling are developed to conduct the missing values of data, and independent stage of knowledge exploitation is absorbed for information understanding. In this work, a novel approach to clustering of incomplete data, termed leachable component clustering, is proposed. Rather than existing methods, the proposed method handles data imputation with Bayes alignment, and collects the lost patterns in theory. Due to the simple numeric computation of equations, the proposed method can learn optimized partitions while the calculation efficiency is held. Experiments on several artificial incomplete data sets demonstrate that, the proposed method is able to present superior performance compared with other state-of-the-art algorithms.
+
+</p>
+</details>
+
+<details><summary><b>Time-aware Self-Attention Meets Logic Reasoning in Recommender Systems</b>
+<a href="https://arxiv.org/abs/2208.13330">arxiv:2208.13330</a>
+&#x1F4C8; 3 <br>
+<p>Zhijian Luo, Zihan Huang, Jiahui Tang, Yueen Hou, Yanzeng Gao</p></summary>
+<p>
+
+**Abstract:** At the age of big data, recommender systems have shown remarkable success as a key means of information filtering in our daily life. Recent years have witnessed the technical development of recommender systems, from perception learning to cognition reasoning which intuitively build the task of recommendation as the procedure of logical reasoning and have achieve significant improvement. However, the logical statement in reasoning implicitly admits irrelevance of ordering, even does not consider time information which plays an important role in many recommendation tasks. Furthermore, recommendation model incorporated with temporal context would tend to be self-attentive, i.e., automatically focus more (less) on the relevance (irrelevance), respectively.
+  To address these issues, in this paper, we propose a Time-aware Self-Attention with Neural Collaborative Reasoning (TiSANCR) based recommendation model, which integrates temporal patterns and self-attention mechanism into reasoning-based recommendation. Specially, temporal patterns represented by relative time, provide context and auxiliary information to characterize the user's preference in recommendation, while self-attention is leveraged to distill informative patterns and suppress irrelevances. Therefore, the fusion of self-attentive temporal information provides deeper representation of user's preference. Extensive experiments on benchmark datasets demonstrate that the proposed TiSANCR achieves significant improvement and consistently outperforms the state-of-the-art recommendation methods.
+
+</p>
+</details>
+
+<details><summary><b>Adapting the LodView RDF Browser for Navigation over the Multilingual Linguistic Linked Open Data Cloud</b>
+<a href="https://arxiv.org/abs/2208.13295">arxiv:2208.13295</a>
+&#x1F4C8; 3 <br>
+<p>Alexander Kirillovich, Konstantin Nikolaev</p></summary>
+<p>
+
+**Abstract:** The paper is dedicated to the use of LodView for navigation over the multilingual Linguistic Linked Open Data cloud. First, we define the class of Pubby-like tools, that LodView belongs to, and clarify the relation of this class to the classes of URI dereferenciation tools, RDF browsers and LOD visualization tools. Second, we reveal several limitations of LodView that impede its use for the designated purpose, and propose improvements to be made for fixing these limitations. These improvements are: 1) resolution of Cyrillic URIs; 2) decoding Cyrillic URIs in Turtle representations of resources; 3) support of Cyrillic literals; 4) user-friendly URLs for RDF representations of resources; 5) support of hash URIs; 6) expanding nested resources; 7) support of RDF collections; 8) pagination of resource property values; and 9) support of $\LaTeX$ math notation. Third, we partially implement several of the proposed improvements.
+
+</p>
+</details>
+
+<details><summary><b>Computing with Hypervectors for Efficient Speaker Identification</b>
+<a href="https://arxiv.org/abs/2208.13285">arxiv:2208.13285</a>
+&#x1F4C8; 3 <br>
+<p>Ping-Chen Huang, Denis Kleyko, Jan M. Rabaey, Bruno A. Olshausen, Pentti Kanerva</p></summary>
+<p>
+
+**Abstract:** We introduce a method to identify speakers by computing with high-dimensional random vectors. Its strengths are simplicity and speed. With only 1.02k active parameters and a 128-minute pass through the training data we achieve Top-1 and Top-5 scores of 31% and 52% on the VoxCeleb1 dataset of 1,251 speakers. This is in contrast to CNN models requiring several million parameters and orders of magnitude higher computational complexity for only a 2$\times$ gain in discriminative power as measured in mutual information. An additional 92 seconds of training with Generalized Learning Vector Quantization (GLVQ) raises the scores to 48% and 67%. A trained classifier classifies 1 second of speech in 5.7 ms. All processing was done on standard CPU-based machines.
+
+</p>
+</details>
+
+<details><summary><b>Bayesian Neural Network Language Modeling for Speech Recognition</b>
+<a href="https://arxiv.org/abs/2208.13259">arxiv:2208.13259</a>
+&#x1F4C8; 3 <br>
+<p>Boyang Xue, Shoukang Hu, Junhao Xu, Mengzhe Geng, Xunying Liu, Helen Meng</p></summary>
+<p>
+
+**Abstract:** State-of-the-art neural network language models (NNLMs) represented by long short term memory recurrent neural networks (LSTM-RNNs) and Transformers are becoming highly complex. They are prone to overfitting and poor generalization when given limited training data. To this end, an overarching full Bayesian learning framework encompassing three methods is proposed in this paper to account for the underlying uncertainty in LSTM-RNN and Transformer LMs. The uncertainty over their model parameters, choice of neural activations and hidden output representations are modeled using Bayesian, Gaussian Process and variational LSTM-RNN or Transformer LMs respectively. Efficient inference approaches were used to automatically select the optimal network internal components to be Bayesian learned using neural architecture search. A minimal number of Monte Carlo parameter samples as low as one was also used. These allow the computational costs incurred in Bayesian NNLM training and evaluation to be minimized. Experiments are conducted on two tasks: AMI meeting transcription and Oxford-BBC LipReading Sentences 2 (LRS2) overlapped speech recognition using state-of-the-art LF-MMI trained factored TDNN systems featuring data augmentation, speaker adaptation and audio-visual multi-channel beamforming for overlapped speech. Consistent performance improvements over the baseline LSTM-RNN and Transformer LMs with point estimated model parameters and drop-out regularization were obtained across both tasks in terms of perplexity and word error rate (WER). In particular, on the LRS2 data, statistically significant WER reductions up to 1.3% and 1.2% absolute (12.1% and 11.3% relative) were obtained over the baseline LSTM-RNN and Transformer LMs respectively after model combination between Bayesian NNLMs and their respective baselines.
+
+</p>
+</details>
+
+<details><summary><b>FFCNN: Fast FPGA based Acceleration for Convolution neural network inference</b>
+<a href="https://arxiv.org/abs/2208.13250">arxiv:2208.13250</a>
+&#x1F4C8; 3 <br>
+<p>F. Keddous, H-N. Nguyen, A. Nakib</p></summary>
+<p>
+
+**Abstract:** We present a new efficient OpenCL-based Accelerator for large scale Convolutional Neural Networks called Fast Inference on FPGAs for Convolution Neural Network (FFCNN). FFCNN is based on a deeply pipelined OpenCL kernels architecture. As pointed out before, high-level synthesis tools such as the OpenCL framework can easily port codes originally designed for CPUs and GPUs to FPGAs, but it is still difficult to make OpenCL codes run efficiently on FPGAs. This work aims to propose an efficient FPGA implementation of OpenCL High-Performance Computing Applications. To do so, a Data reuse and task mapping techniques are also presented to improve design efficiency. In addition, the following motivations were taken into account when developing FFCNN: 1) FFCNN has been designed to be easily implemented on Intel OpenCL SDK based FPGA design flow. 2) In FFFCN, different techniques have been integrated to improve the memory band with and throughput. A performance analysis is conducted on two deep CNN for Large-Scale Images classification. The obtained results, and the comparison with other works designed to accelerate the same types of architectures, show the efficiency and the competitiveness of the proposed accelerator design by significantly improved performance and resource utilization.
+
+</p>
+</details>
+
+<details><summary><b>AutoQML: Automatic Generation and Training of Robust Quantum-Inspired Classifiers by Using Genetic Algorithms on Grayscale Images</b>
+<a href="https://arxiv.org/abs/2208.13246">arxiv:2208.13246</a>
+&#x1F4C8; 3 <br>
+<p>Sergio Altares-López, Juan José García-Ripoll, Angela Ribeiro</p></summary>
+<p>
+
+**Abstract:** We propose a new hybrid system for automatically generating and training quantum-inspired classifiers on grayscale images by using multiobjective genetic algorithms. We define a dynamic fitness function to obtain the smallest possible circuit and highest accuracy on unseen data, ensuring that the proposed technique is generalizable and robust. We minimize the complexity of the generated circuits in terms of the number of entanglement gates by penalizing their appearance. We reduce the size of the images with two dimensionality reduction approaches: principal component analysis (PCA), which is encoded in the individual for optimization purpose, and a small convolutional autoencoder (CAE). These two methods are compared with one another and with a classical nonlinear approach to understand their behaviors and to ensure that the classification ability is due to the quantum circuit and not the preprocessing technique used for dimensionality reduction.
+
+</p>
+</details>
+
+<details><summary><b>IDP-PGFE: An Interpretable Disruption Predictor based on Physics-Guided Feature Extraction</b>
+<a href="https://arxiv.org/abs/2208.13197">arxiv:2208.13197</a>
+&#x1F4C8; 3 <br>
+<p>Chengshuo Shen, Wei Zheng, Yonghua Ding, Xinkun Ai, Fengming Xue, Yu Zhong, Nengchao Wang, Li Gao, Zhipeng Chen, Zhoujun Yang, Zhongyong Chen, Yuan Pan, J-TEXT team</p></summary>
+<p>
+
+**Abstract:** Disruption prediction has made rapid progress in recent years, especially in machine learning (ML)-based methods. Understanding why a predictor makes a certain prediction can be as crucial as the prediction's accuracy for future tokamak disruption predictors. The purpose of most disruption predictors is accuracy or cross-machine capability. However, if a disruption prediction model can be interpreted, it can tell why certain samples are classified as disruption precursors. This allows us to tell the types of incoming disruption and gives us insight into the mechanism of disruption. This paper designs a disruption predictor called Interpretable Disruption Predictor based On Physics-guided feature extraction (IDP-PGFE) on J-TEXT. The prediction performance of the model is effectively improved by extracting physics-guided features. A high-performance model is required to ensure the validity of the interpretation results. The interpretability study of IDP-PGFE provides an understanding of J-TEXT disruption and is generally consistent with existing comprehension of disruption. IDP-PGFE has been applied to the disruption due to continuously increasing density towards density limit experiments on J-TEXT. The time evolution of the PGFE features contribution demonstrates that the application of ECRH triggers radiation-caused disruption, which lowers the density at disruption. While the application of RMP indeed raises the density limit in J-TEXT. The interpretability study guides intuition on the physical mechanisms of density limit disruption that RMPs affect not only the MHD instabilities but also the radiation profile, which delays density limit disruption.
+
+</p>
+</details>
+
+<details><summary><b>Generative Modelling of the Ageing Heart with Cross-Sectional Imaging and Clinical Data</b>
+<a href="https://arxiv.org/abs/2208.13146">arxiv:2208.13146</a>
+&#x1F4C8; 3 <br>
+<p>Mengyun Qiao, Berke Doga Basaran, Huaqi Qiu, Shuo Wang, Yi Guo, Yuanyuan Wang, Paul M. Matthews, Daniel Rueckert, Wenjia Bai</p></summary>
+<p>
+
+**Abstract:** Cardiovascular disease, the leading cause of death globally, is an age-related disease. Understanding the morphological and functional changes of the heart during ageing is a key scientific question, the answer to which will help us define important risk factors of cardiovascular disease and monitor disease progression. In this work, we propose a novel conditional generative model to describe the changes of 3D anatomy of the heart during ageing. The proposed model is flexible and allows integration of multiple clinical factors (e.g. age, gender) into the generating process. We train the model on a large-scale cross-sectional dataset of cardiac anatomies and evaluate on both cross-sectional and longitudinal datasets. The model demonstrates excellent performance in predicting the longitudinal evolution of the ageing heart and modelling its data distribution.
+
+</p>
+</details>
+
+<details><summary><b>Interpretable (not just posthoc-explainable) medical claims modeling for discharge placement to prevent avoidable all-cause readmissions or death</b>
+<a href="https://arxiv.org/abs/2208.12814">arxiv:2208.12814</a>
+&#x1F4C8; 3 <br>
+<p>Joshua C. Chang, Ted L. Chang, Carson C. Chow, Rohit Mahajan, Sonya Mahajan, Shashaank Vattikuti, Hongjing Xia</p></summary>
+<p>
+
+**Abstract:** This manuscript addresses the simultaneous problems of predicting all-cause inpatient readmission or death after discharge, and quantifying the impact of discharge placement in preventing these adverse events. To this end, we developed an inherently interpretable multilevel Bayesian modeling framework inspired by the piecewise linearity of ReLU-activated deep neural networks. In a survival model, we explicitly adjust for confounding in quantifying local average treatment effects for discharge placement interventions. We trained the model on a 5% sample of Medicare beneficiaries from 2008 and 2011, and then tested the model on 2012 claims. Evaluated on classification accuracy for 30-day all-cause unplanned readmissions (defined using official CMS methodology) or death, the model performed similarly against XGBoost, logistic regression (after feature engineering), and a Bayesian deep neural network trained on the same data. Tested on the 30-day classification task of predicting readmissions or death using left-out future data, the model achieved an AUROC of approximately 0.76 and and AUPRC of approximately 0.50 (relative to an overall positively rate in the testing data of 18%), demonstrating how one need not sacrifice interpretability for accuracy. Additionally, the model had a testing AUROC of 0.78 on the classification of 90-day all-cause unplanned readmission or death. We easily peer into our inherently interpretable model, summarizing its main findings. Additionally, we demonstrate how the black-box posthoc explainer tool SHAP generates explanations that are not supported by the fitted model -- and if taken at face value does not offer enough context to make a model actionable.
+
+</p>
+</details>
+
+<details><summary><b>Normalized Activation Function: Toward Better Convergence</b>
+<a href="https://arxiv.org/abs/2208.13315">arxiv:2208.13315</a>
+&#x1F4C8; 2 <br>
+<p>Yuan Peiwen, Zhu Changsheng</p></summary>
+<p>
+
+**Abstract:** Activation functions are essential for neural networks to introduce non-linearity. A great number of empirical experiments have validated various activation functions, yet theoretical research on activation functions are insufficient. In this work, we study the impact of activation functions on the variance of gradients and propose an approach to normalize activation functions to keep the variance of the gradient same for all layers so that the neural network can achieve better convergence. First, we complement the previous work on the analysis of the variance of gradients where the impact of activation functions are just considered in an idealized initial state which almost cannot be preserved during training and obtained a property that good activation functions should satisfy as possible. Second, we offer an approach to normalize activation functions and testify its effectiveness on prevalent activation functions empirically. And by observing experiments, we discover that the speed of convergence is roughly related to the property we derived in the former part. We run experiments of our normalized activation functions against common activation functions. And the result shows our approach consistently outperforms their unnormalized counterparts. For example, normalized Swish outperforms vanilla Swish by 1.2% on ResNet50 with CIFAR-100 in terms of top-1 accuracy. Our method improves the performance by simply replacing activation functions with their normalized ones in both fully-connected networks and residual networks.
+
+</p>
+</details>
+
+<details><summary><b>Fluorescence molecular optomic signatures improve identification of tumors in head and neck specimens</b>
+<a href="https://arxiv.org/abs/2208.13314">arxiv:2208.13314</a>
+&#x1F4C8; 2 <br>
+<p>Yao Chen, Samuel S. Streeter, Brady Hunt, Hira S. Sardar, Jason R. Gunn, Laura J. Tafe, Joseph A. Paydarfar, Brian W. Pogue, Keith D. Paulsen, Kimberley S. Samkoe</p></summary>
+<p>
+
+**Abstract:** In this study, a radiomics approach was extended to optical fluorescence molecular imaging data for tissue classification, termed 'optomics'. Fluorescence molecular imaging is emerging for precise surgical guidance during head and neck squamous cell carcinoma (HNSCC) resection. However, the tumor-to-normal tissue contrast is confounded by intrinsic physiological limitations of heterogeneous expression of the target molecule, epidermal growth factor receptor (EGFR). Optomics seek to improve tumor identification by probing textural pattern differences in EGFR expression conveyed by fluorescence. A total of 1,472 standardized optomic features were extracted from fluorescence image samples. A supervised machine learning pipeline involving a support vector machine classifier was trained with 25 top-ranked features selected by minimum redundancy maximum relevance criterion. Model predictive performance was compared to fluorescence intensity thresholding method by classifying testing set image patches of resected tissue with histologically confirmed malignancy status. The optomics approach provided consistent improvement in prediction accuracy on all test set samples, irrespective of dose, compared to fluorescence intensity thresholding method (mean accuracies of 89% vs. 81%; P = 0.0072). The improved performance demonstrates that extending the radiomics approach to fluorescence molecular imaging data offers a promising image analysis technique for cancer detection in fluorescence-guided surgery.
+
+</p>
+</details>
+
+<details><summary><b>Unsupervised diffeomorphic cardiac image registration using parameterization of the deformation field</b>
+<a href="https://arxiv.org/abs/2208.13275">arxiv:2208.13275</a>
+&#x1F4C8; 2 <br>
+<p>Ameneh Sheikhjafari, Deepa Krishnaswamy, Michelle Noga, Nilanjan Ray, Kumaradevan Punithakumar</p></summary>
+<p>
+
+**Abstract:** This study proposes an end-to-end unsupervised diffeomorphic deformable registration framework based on moving mesh parameterization. Using this parameterization, a deformation field can be modeled with its transformation Jacobian determinant and curl of end velocity field. The new model of the deformation field has three important advantages; firstly, it relaxes the need for an explicit regularization term and the corresponding weight in the cost function. The smoothness is implicitly embedded in the solution which results in a physically plausible deformation field. Secondly, it guarantees diffeomorphism through explicit constraints applied to the transformation Jacobian determinant to keep it positive. Finally, it is suitable for cardiac data processing, since the nature of this parameterization is to define the deformation field in terms of the radial and rotational components. The effectiveness of the algorithm is investigated by evaluating the proposed method on three different data sets including 2D and 3D cardiac MRI scans. The results demonstrate that the proposed framework outperforms existing learning-based and non-learning-based methods while generating diffeomorphic transformations.
+
+</p>
+</details>
+
+<details><summary><b>Efficient liver segmentation with 3D CNN using computed tomography scans</b>
+<a href="https://arxiv.org/abs/2208.13271">arxiv:2208.13271</a>
+&#x1F4C8; 2 <br>
+<p>Khaled Humady, Yasmeen Al-Saeed, Nabila Eladawi, Ahmed Elgarayhi, Mohammed Elmogy, Mohammed Sallah</p></summary>
+<p>
+
+**Abstract:** The liver is one of the most critical metabolic organs in vertebrates due to its vital functions in the human body, such as detoxification of the blood from waste products and medications. Liver diseases due to liver tumors are one of the most common mortality reasons around the globe. Hence, detecting liver tumors in the early stages of tumor development is highly required as a critical part of medical treatment. Many imaging modalities can be used as aiding tools to detect liver tumors. Computed tomography (CT) is the most used imaging modality for soft tissue organs such as the liver. This is because it is an invasive modality that can be captured relatively quickly. This paper proposed an efficient automatic liver segmentation framework to detect and segment the liver out of CT abdomen scans using the 3D CNN DeepMedic network model. Segmenting the liver region accurately and then using the segmented liver region as input to tumors segmentation method is adopted by many studies as it reduces the false rates resulted from segmenting abdomen organs as tumors. The proposed 3D CNN DeepMedic model has two pathways of input rather than one pathway, as in the original 3D CNN model. In this paper, the network was supplied with multiple abdomen CT versions, which helped improve the segmentation quality. The proposed model achieved 94.36%, 94.57%, 91.86%, and 93.14% for accuracy, sensitivity, specificity, and Dice similarity score, respectively. The experimental results indicate the applicability of the proposed method.
+
+</p>
+</details>
+
+<details><summary><b>JARVIS: A Neuro-Symbolic Commonsense Reasoning Framework for Conversational Embodied Agents</b>
+<a href="https://arxiv.org/abs/2208.13266">arxiv:2208.13266</a>
+&#x1F4C8; 2 <br>
+<p>Kaizhi Zheng, Kaiwen Zhou, Jing Gu, Yue Fan, Jialu Wang, Zonglin Di, Xuehai He, Xin Eric Wang</p></summary>
+<p>
+
+**Abstract:** Building a conversational embodied agent to execute real-life tasks has been a long-standing yet quite challenging research goal, as it requires effective human-agent communication, multi-modal understanding, long-range sequential decision making, etc. Traditional symbolic methods have scaling and generalization issues, while end-to-end deep learning models suffer from data scarcity and high task complexity, and are often hard to explain. To benefit from both worlds, we propose a Neuro-Symbolic Commonsense Reasoning (JARVIS) framework for modular, generalizable, and interpretable conversational embodied agents. First, it acquires symbolic representations by prompting large language models (LLMs) for language understanding and sub-goal planning, and by constructing semantic maps from visual observations. Then the symbolic module reasons for sub-goal planning and action generation based on task- and action-level common sense. Extensive experiments on the TEACh dataset validate the efficacy and efficiency of our JARVIS framework, which achieves state-of-the-art (SOTA) results on all three dialog-based embodied tasks, including Execution from Dialog History (EDH), Trajectory from Dialog (TfD), and Two-Agent Task Completion (TATC) (e.g., our method boosts the unseen Success Rate on EDH from 6.1\% to 15.8\%). Moreover, we systematically analyze the essential factors that affect the task performance and also demonstrate the superiority of our method in few-shot settings. Our JARVIS model ranks first in the Alexa Prize SimBot Public Benchmark Challenge.
+
+</p>
+</details>
+
+<details><summary><b>Detection and Classification of Brain tumors Using Deep Convolutional Neural Networks</b>
+<a href="https://arxiv.org/abs/2208.13264">arxiv:2208.13264</a>
+&#x1F4C8; 2 <br>
+<p>Gopinath Balaji, Ranit Sen, Harsh Kirty</p></summary>
+<p>
+
+**Abstract:** Abnormal development of tissues in the body as a result of swelling and morbid enlargement is known as a tumor. They are mainly classified as Benign and Malignant. Tumour in the brain is fatal as it may be cancerous, so it can feed on healthy cells nearby and keep increasing in size. This may affect the soft tissues, nerve cells, and small blood vessels in the brain. Hence there is a need to detect and classify them during the early stages with utmost precision. There are different sizes and locations of brain tumors which makes it difficult to understand their nature. The process of detection and classification of brain tumors can prove to be an onerous task even with advanced MRI (Magnetic Resonance Imaging) techniques due to the similarities between the healthy cells nearby and the tumor. In this paper, we have used Keras and Tensorflow to implement state-of-the-art Convolutional Neural Network (CNN) architectures, like EfficientNetB0, ResNet50, Xception, MobileNetV2, and VGG16, using Transfer Learning to detect and classify three types of brain tumors namely - Glioma, Meningioma, and Pituitary. The dataset we used consisted of 3264 2-D magnetic resonance images and 4 classes. Due to the small size of the dataset, various data augmentation techniques were used to increase the size of the dataset. Our proposed methodology not only consists of data augmentation, but also various image denoising techniques, skull stripping, cropping, and bias correction. In our proposed work EfficientNetB0 architecture performed the best giving an accuracy of 97.61%. The aim of this paper is to differentiate between normal and abnormal pixels and also classify them with better accuracy.
+
+</p>
+</details>
+
+<details><summary><b>Federated Learning of Large Models at the Edge via Principal Sub-Model Training</b>
+<a href="https://arxiv.org/abs/2208.13141">arxiv:2208.13141</a>
+&#x1F4C8; 2 <br>
+<p>Yue Niu, Saurav Prakash, Souvik Kundu, Sunwoo Lee, Salman Avestimehr</p></summary>
+<p>
+
+**Abstract:** Limited compute and communication capabilities of edge users create a significant bottleneck for federated learning (FL) of large models. We consider a realistic, but much less explored, cross-device FL setting in which no client has the capacity to train a full large model nor is willing to share any intermediate activations with the server. To this end, we present Principal Sub-Model (PriSM) training methodology, which leverages models low-rank structure and kernel orthogonality to train sub-models in the orthogonal kernel space. More specifically, by applying singular value decomposition (SVD) to original kernels in the server model, PriSM first obtains a set of principal orthogonal kernels in which each one is weighed by its singular value. Thereafter, PriSM utilizes our novel sampling strategy that selects different subsets of the principal kernels independently to create sub-models for clients. Importantly, a kernel with a large singular value is assigned with a high sampling probability. Thus, each sub-model is a low-rank approximation of the full large model, and all clients together achieve the near full-model training. Our extensive evaluations on multiple datasets in various resource-constrained settings show that PriSM can yield an improved performance of up to 10% compared to existing alternatives, with only around 20% sub-model training.
+
+</p>
+</details>
+
+<details><summary><b>Boundary-Aware Network for Kidney Parsing</b>
+<a href="https://arxiv.org/abs/2208.13338">arxiv:2208.13338</a>
+&#x1F4C8; 1 <br>
+<p>Shishuai Hu, Yiwen Ye, Zehui Liao, Yong Xia</p></summary>
+<p>
+
+**Abstract:** Kidney structures segmentation is a crucial yet challenging task in the computer-aided diagnosis of surgery-based renal cancer. Although numerous deep learning models have achieved remarkable success in many medical image segmentation tasks, accurate segmentation of kidney structures on computed tomography angiography (CTA) images remains challenging, due to the variable sizes of kidney tumors and the ambiguous boundaries between kidney structures and their surroundings. In this paper, we propose a boundary-aware network (BA-Net) to segment kidneys, kidney tumors, arteries, and veins on CTA scans. This model contains a shared encoder, a boundary decoder, and a segmentation decoder. The multi-scale deep supervision strategy is adopted on both decoders, which can alleviate the issues caused by variable tumor sizes. The boundary probability maps produced by the boundary decoder at each scale are used as attention to enhance the segmentation feature maps. We evaluated the BA-Net on the Kidney PArsing (KiPA) Challenge dataset and achieved an average Dice score of 89.65$\%$ for kidney structure segmentation on CTA scans using 4-fold cross-validation. The results demonstrate the effectiveness of the BA-Net.
+
+</p>
+</details>
+
+<details><summary><b>Label Propagation for 3D Carotid Vessel Wall Segmentation and Atherosclerosis Diagnosis</b>
+<a href="https://arxiv.org/abs/2208.13337">arxiv:2208.13337</a>
+&#x1F4C8; 1 <br>
+<p>Shishuai Hu, Zehui Liao, Yong Xia</p></summary>
+<p>
+
+**Abstract:** Carotid vessel wall segmentation is a crucial yet challenging task in the computer-aided diagnosis of atherosclerosis. Although numerous deep learning models have achieved remarkable success in many medical image segmentation tasks, accurate segmentation of carotid vessel wall on magnetic resonance (MR) images remains challenging, due to limited annotations and heterogeneous arteries. In this paper, we propose a semi-supervised label propagation framework to segment lumen, normal vessel walls, and atherosclerotic vessel wall on 3D MR images. By interpolating the provided annotations, we get 3D continuous labels for training 3D segmentation model. With the trained model, we generate pseudo labels for unlabeled slices to incorporate them for model training. Then we use the whole MR scans and the propagated labels to re-train the segmentation model and improve its robustness. We evaluated the label propagation framework on the CarOtid vessel wall SegMentation and atherosclerOsis diagnosiS (COSMOS) Challenge dataset and achieved a QuanM score of 83.41\% on the testing dataset, which got the 1-st place on the online evaluation leaderboard. The results demonstrate the effectiveness of the proposed framework.
+
+</p>
+</details>
+
+<details><summary><b>Effective approaches to disaster evacuation during a COVID-like pandemic</b>
+<a href="https://arxiv.org/abs/2208.13326">arxiv:2208.13326</a>
+&#x1F4C8; 1 <br>
+<p>Yi-Lin Tsai, Dymasius Y. Sitepu, Karyn E. Chappell, Rishi P. Mediratta, C. Jason Wang, Peter K. Kitanidis, Christopher B. Field</p></summary>
+<p>
+
+**Abstract:** Since COVID-19 vaccines became available, no studies have quantified how different disaster evacuation strategies can mitigate pandemic risks in shelters. Therefore, we applied an age-structured epidemiological model, known as the Susceptible-Exposed-Infectious-Recovered (SEIR) model, to investigate to what extent different vaccine uptake levels and the Diversion protocol implemented in Taiwan decrease infections and delay pandemic peak occurrences. Taiwan's Diversion protocol involves diverting those in self-quarantine due to exposure, thus preventing them from mingling with the general public at a congregate shelter. The Diversion protocol, combined with sufficient vaccine uptake, can decrease the maximum number of infections and delay outbreaks relative to scenarios without such strategies. When the diversion of all exposed people is not possible, or vaccine uptake is insufficient, the Diversion protocol is still valuable. Furthermore, a group of evacuees that consists primarily of a young adult population tends to experience pandemic peak occurrences sooner and have up to 180% more infections than does a majority elderly group when the Diversion protocol is implemented. However, when the Diversion protocol is not enforced, the majority elderly group suffers from up to 20% more severe cases than the majority young adult group.
+
+</p>
+</details>
+
+<details><summary><b>Multi-dimensional Racism Classification during COVID-19: Stigmatization, Offensiveness, Blame, and Exclusion</b>
+<a href="https://arxiv.org/abs/2208.13318">arxiv:2208.13318</a>
+&#x1F4C8; 1 <br>
+<p>Xin Pei, Deval Mehta</p></summary>
+<p>
+
+**Abstract:** Transcending the binary categorization of racist texts, our study takes cues from social science theories to develop a multi-dimensional model for racism detection, namely stigmatization, offensiveness, blame, and exclusion. With the aid of BERT and topic modeling, this categorical detection enables insights into the underlying subtlety of racist discussion on digital platforms during COVID-19. Our study contributes to enriching the scholarly discussion on deviant racist behaviours on social media. First, a stage-wise analysis is applied to capture the dynamics of the topic changes across the early stages of COVID-19 which transformed from a domestic epidemic to an international public health emergency and later to a global pandemic. Furthermore, mapping this trend enables a more accurate prediction of public opinion evolvement concerning racism in the offline world, and meanwhile, the enactment of specified intervention strategies to combat the upsurge of racism during the global public health crisis like COVID-19. In addition, this interdisciplinary research also points out a direction for future studies on social network analysis and mining. Integration of social science perspectives into the development of computational methods provides insights into more accurate data detection and analytics.
+
+</p>
+</details>
+
+<details><summary><b>A Hybrid Iterative Numerical Transferable Solver (HINTS) for PDEs Based on Deep Operator Network and Relaxation Methods</b>
+<a href="https://arxiv.org/abs/2208.13273">arxiv:2208.13273</a>
+&#x1F4C8; 1 <br>
+<p>Enrui Zhang, Adar Kahana, Eli Turkel, Rishikesh Ranade, Jay Pathak, George Em Karniadakis</p></summary>
+<p>
+
+**Abstract:** Iterative solvers of linear systems are a key component for the numerical solutions of partial differential equations (PDEs). While there have been intensive studies through past decades on classical methods such as Jacobi, Gauss-Seidel, conjugate gradient, multigrid methods and their more advanced variants, there is still a pressing need to develop faster, more robust and reliable solvers. Based on recent advances in scientific deep learning for operator regression, we propose HINTS, a hybrid, iterative, numerical, and transferable solver for differential equations. HINTS combines standard relaxation methods and the Deep Operator Network (DeepONet). Compared to standard numerical solvers, HINTS is capable of providing faster solutions for a wide class of differential equations, while preserving the accuracy close to machine zero. Through an eigenmode analysis, we find that the individual solvers in HINTS target distinct regions in the spectrum of eigenmodes, resulting in a uniform convergence rate and hence exceptional performance of the hybrid solver overall. Moreover, HINTS applies to equations in multidimensions, and is flexible with regards to computational domain and transferable to different discretizations.
+
+</p>
+</details>
+
+<details><summary><b>MANDO: Multi-Level Heterogeneous Graph Embeddings for Fine-Grained Detection of Smart Contract Vulnerabilities</b>
+<a href="https://arxiv.org/abs/2208.13252">arxiv:2208.13252</a>
+&#x1F4C8; 1 <br>
+<p>Hoang H. Nguyen, Nhat-Minh Nguyen, Chunyao Xie, Zahra Ahmadi, Daniel Kudendo, Thanh-Nam Doan, Lingxiao Jiang</p></summary>
+<p>
+
+**Abstract:** Learning heterogeneous graphs consisting of different types of nodes and edges enhances the results of homogeneous graph techniques. An interesting example of such graphs is control-flow graphs representing possible software code execution flows. As such graphs represent more semantic information of code, developing techniques and tools for such graphs can be highly beneficial for detecting vulnerabilities in software for its reliability. However, existing heterogeneous graph techniques are still insufficient in handling complex graphs where the number of different types of nodes and edges is large and variable. This paper concentrates on the Ethereum smart contracts as a sample of software codes represented by heterogeneous contract graphs built upon both control-flow graphs and call graphs containing different types of nodes and links. We propose MANDO, a new heterogeneous graph representation to learn such heterogeneous contract graphs' structures. MANDO extracts customized metapaths, which compose relational connections between different types of nodes and their neighbors. Moreover, it develops a multi-metapath heterogeneous graph attention network to learn multi-level embeddings of different types of nodes and their metapaths in the heterogeneous contract graphs, which can capture the code semantics of smart contracts more accurately and facilitate both fine-grained line-level and coarse-grained contract-level vulnerability detection. Our extensive evaluation of large smart contract datasets shows that MANDO improves the vulnerability detection results of other techniques at the coarse-grained contract level. More importantly, it is the first learning-based approach capable of identifying vulnerabilities at the fine-grained line-level, and significantly improves the traditional code analysis-based vulnerability detection approaches by 11.35% to 70.81% in terms of F1-score.
+
+</p>
+</details>
+
+<details><summary><b>Deep Learning for automatic head and neck lymph node level delineation</b>
+<a href="https://arxiv.org/abs/2208.13224">arxiv:2208.13224</a>
+&#x1F4C8; 1 <br>
+<p>Thomas Weissmann, Yixing Huang, Stefan Fischer, Johannes Roesch, Sina Mansoorian, Horacio Ayala Gaona, Antoniu-Oreste Gostian, Markus Hecht, Sebastian Lettmaier, Lisa Deloch, Benjamin Frey, Udo S. Gaipl, Luitpold V. Distel, Andreas Maier, Heinrich Iro, Sabine Semrau, Christoph Bert, Rainer Fietkau, Florian Putz</p></summary>
+<p>
+
+**Abstract:** Background: Deep learning-based head and neck lymph node level (HN_LNL) autodelineation is of high relevance to radiotherapy research and clinical treatment planning but still understudied in academic literature.
+  Methods: An expert-delineated cohort of 35 planning CTs was used for training of an nnU-net 3D-fullres/2D-ensemble model for autosegmentation of 20 different HN_LNL. Validation was performed in an independent test set (n=20). In a completely blinded evaluation, 3 clinical experts rated the quality of deep learning autosegmentations in a head-to-head comparison with expert-created contours. For a subgroup of 10 cases, intraobserver variability was compared to deep learning autosegmentation performance. The effect of autocontour consistency with CT slice plane orientation on geometric accuracy and expert rating was investigated.
+  Results: Mean blinded expert rating per level was significantly better for deep learning segmentations with CT slice plane adjustment than for expert-created contours (81.0 vs. 79.6, p<0.001), but deep learning segmentations without slice plane adjustment were rated significantly worse than expert-created contours (77.2 vs. 79.6, p<0.001). Geometric accuracy of deep learning segmentations was non-different from intraobserver variability (mean Dice per level, 0.78 vs. 0.77, p=0.064) with variance in accuracy between levels being improved (p<0.001). Clinical significance of contour consistency with CT slice plane orientation was not represented by geometric accuracy metrics (Dice, 0.78 vs. 0.78, p=0.572)
+  Conclusions: We show that a nnU-net 3D-fullres/2D-ensemble model can be used for highly accurate autodelineation of HN_LNL using only a limited training dataset that is ideally suited for large-scale standardized autodelineation of HN_LNL in the research setting. Geometric accuracy metrics are only an imperfect surrogate for blinded expert rating.
+
+</p>
+</details>
+
+<details><summary><b>Cross-domain Cross-architecture Black-box Attacks on Fine-tuned Models with Transferred Evolutionary Strategies</b>
+<a href="https://arxiv.org/abs/2208.13182">arxiv:2208.13182</a>
+&#x1F4C8; 1 <br>
+<p>Yinghua Zhang, Yangqiu Song, Kun Bai, Qiang Yang</p></summary>
+<p>
+
+**Abstract:** Fine-tuning can be vulnerable to adversarial attacks. Existing works about black-box attacks on fine-tuned models (BAFT) are limited by strong assumptions. To fill the gap, we propose two novel BAFT settings, cross-domain and cross-domain cross-architecture BAFT, which only assume that (1) the target model for attacking is a fine-tuned model, and (2) the source domain data is known and accessible. To successfully attack fine-tuned models under both settings, we propose to first train an adversarial generator against the source model, which adopts an encoder-decoder architecture and maps a clean input to an adversarial example. Then we search in the low-dimensional latent space produced by the encoder of the adversarial generator. The search is conducted under the guidance of the surrogate gradient obtained from the source model. Experimental results on different domains and different network architectures demonstrate that the proposed attack method can effectively and efficiently attack the fine-tuned models.
+
+</p>
+</details>
+
+<details><summary><b>Influence Maximization (IM) in Complex Networks with Limited Visibility Using Statistical Methods</b>
+<a href="https://arxiv.org/abs/2208.13166">arxiv:2208.13166</a>
+&#x1F4C8; 1 <br>
+<p>aeid Ghafouri, Seyed Hossein Khasteh, Seyed Omid Azarkasb</p></summary>
+<p>
+
+**Abstract:** A social network (SN) is a social structure consisting of a group representing the interaction between them. SNs have recently been widely used and, subsequently, have become suitable and popular platforms for product promotion and information diffusion. People in an SN directly influence each other's interests and behavior. One of the most important problems in SNs is to find people who can have the maximum influence on other nodes in the network in a cascade manner if they are chosen as the seed nodes of a network diffusion scenario. Influential diffusers are people who, if they are chosen as the seed set in a publishing issue in the network, that network will have the most people who have learned about that diffused entity. This is a well-known problem in literature known as influence maximization (IM) problem. Although it has been proven that this is an NP-complete problem and does not have a solution in polynomial time, it has been argued that it has the properties of sub modular functions and, therefore, can be solved using a greedy algorithm. Most of the methods proposed to improve this complexity are based on the assumption that the entire graph is visible. However, this assumption does not hold for many real-world graphs. This study is conducted to extend current maximization methods with link prediction techniques to pseudo-visibility graphs. To this end, a graph generation method called the exponential random graph model (ERGM) is used for link prediction. The proposed method is tested using the data from the Snap dataset of Stanford University. According to the experimental tests, the proposed method is efficient on real-world graphs.
+
+</p>
+</details>
+
+<details><summary><b>Opinion Leader Detection in Online Social Networks Based on Output and Input Links</b>
+<a href="https://arxiv.org/abs/2208.13161">arxiv:2208.13161</a>
+&#x1F4C8; 1 <br>
+<p>Zahra Ghorbani, Seyed Hossein Khasteh, Saeid Ghafouri</p></summary>
+<p>
+
+**Abstract:** The understanding of how users in a network update their opinions based on their neighbours opinions has attracted a great deal of interest in the field of network science, and a growing body of literature recognises the significance of this issue. In this research paper, we propose a new dynamic model of opinion formation in directed networks. In this model, the opinion of each node is updated as the weighted average of its neighbours opinions, where the weights represent social influence. We define a new centrality measure as a social influence metric based on both influence and conformity. We measure this new approach using two opinion formation models: (i) the Degroot model and (ii) our own proposed model. Previously published research studies have not considered conformity, and have only considered the influence of the nodes when computing the social influence. In our definition, nodes with low in-degree and high out-degree that were connected to nodes with high out-degree and low in-degree had higher centrality. As the main contribution of this research, we propose an algorithm for finding a small subset of nodes in a social network that can have a significant impact on the opinions of other nodes. Experiments on real-world data demonstrate that the proposed algorithm significantly outperforms previously published state-of-the-art methods.
+
+</p>
+</details>
+
+<details><summary><b>On Evaluating Self-Adaptive and Self-Healing Systems using Chaos Engineering</b>
+<a href="https://arxiv.org/abs/2208.13227">arxiv:2208.13227</a>
+&#x1F4C8; 0 <br>
+<p>Moeen Ali Naqvi, Sehrish Malik, Merve Astekin, Leon Moonen</p></summary>
+<p>
+
+**Abstract:** With the growing adoption of self-adaptive systems in various domains, there is an increasing need for strategies to assess their correct behavior. In particular self-healing systems, which aim to provide resilience and fault-tolerance, often deal with unanticipated failures in critical and highly dynamic environments. Their reactive and complex behavior makes it challenging to assess if these systems execute according to the desired goals. Recently, several studies have expressed concern about the lack of systematic evaluation methods for self-healing behavior.
+  In this paper, we propose CHESS, an approach for the systematic evaluation of self-adaptive and self-healing systems that builds on chaos engineering. Chaos engineering is a methodology for subjecting a system to unexpected conditions and scenarios. It has shown great promise in helping developers build resilient microservice architectures and cyber-physical systems. CHESS turns this idea around by using chaos engineering to evaluate how well a self-healing system can withstand such perturbations. We investigate the viability of this approach through an exploratory study on a self-healing smart office environment. The study helps us explore the promises and limitations of the approach, as well as identify directions where additional work is needed. We conclude with a summary of lessons learned.
+
+</p>
+</details>
+
+
+{% endraw %}
+Prev: [2022.08.27]({{ '/2022/08/27/2022.08.27.html' | relative_url }})  Next: [2022.08.29]({{ '/2022/08/29/2022.08.29.html' | relative_url }})
