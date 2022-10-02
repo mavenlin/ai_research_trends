@@ -1,0 +1,802 @@
+Prev: [2022.09.28]({{ '/2022/09/28/2022.09.28.html' | relative_url }})  Next: [2022.09.30]({{ '/2022/09/30/2022.09.30.html' | relative_url }})
+{% raw %}
+## Summary for 2022-09-29, created on 2022-10-03
+
+
+<details><summary><b>DreamFusion: Text-to-3D using 2D Diffusion</b>
+<a href="https://arxiv.org/abs/2209.14988">arxiv:2209.14988</a>
+&#x1F4C8; 16300 <br>
+<p>Ben Poole, Ajay Jain, Jonathan T. Barron, Ben Mildenhall</p></summary>
+<p>
+
+**Abstract:** Recent breakthroughs in text-to-image synthesis have been driven by diffusion models trained on billions of image-text pairs. Adapting this approach to 3D synthesis would require large-scale datasets of labeled 3D data and efficient architectures for denoising 3D data, neither of which currently exist. In this work, we circumvent these limitations by using a pretrained 2D text-to-image diffusion model to perform text-to-3D synthesis. We introduce a loss based on probability density distillation that enables the use of a 2D diffusion model as a prior for optimization of a parametric image generator. Using this loss in a DeepDream-like procedure, we optimize a randomly-initialized 3D model (a Neural Radiance Field, or NeRF) via gradient descent such that its 2D renderings from random angles achieve a low loss. The resulting 3D model of the given text can be viewed from any angle, relit by arbitrary illumination, or composited into any 3D environment. Our approach requires no 3D training data and no modifications to the image diffusion model, demonstrating the effectiveness of pretrained image diffusion models as priors.
+
+</p>
+</details>
+
+<details><summary><b>Make-A-Video: Text-to-Video Generation without Text-Video Data</b>
+<a href="https://arxiv.org/abs/2209.14792">arxiv:2209.14792</a>
+&#x1F4C8; 527 <br>
+<p>Uriel Singer, Adam Polyak, Thomas Hayes, Xi Yin, Jie An, Songyang Zhang, Qiyuan Hu, Harry Yang, Oron Ashual, Oran Gafni, Devi Parikh, Sonal Gupta, Yaniv Taigman</p></summary>
+<p>
+
+**Abstract:** We propose Make-A-Video -- an approach for directly translating the tremendous recent progress in Text-to-Image (T2I) generation to Text-to-Video (T2V). Our intuition is simple: learn what the world looks like and how it is described from paired text-image data, and learn how the world moves from unsupervised video footage. Make-A-Video has three advantages: (1) it accelerates training of the T2V model (it does not need to learn visual and multimodal representations from scratch), (2) it does not require paired text-video data, and (3) the generated videos inherit the vastness (diversity in aesthetic, fantastical depictions, etc.) of today's image generation models. We design a simple yet effective way to build on T2I models with novel and effective spatial-temporal modules. First, we decompose the full temporal U-Net and attention tensors and approximate them in space and time. Second, we design a spatial temporal pipeline to generate high resolution and frame rate videos with a video decoder, interpolation model and two super resolution models that can enable various applications besides T2V. In all aspects, spatial and temporal resolution, faithfulness to text, and quality, Make-A-Video sets the new state-of-the-art in text-to-video generation, as determined by both qualitative and quantitative measures.
+
+</p>
+</details>
+
+<details><summary><b>Batch Normalization Explained</b>
+<a href="https://arxiv.org/abs/2209.14778">arxiv:2209.14778</a>
+&#x1F4C8; 264 <br>
+<p>Randall Balestriero, Richard G. Baraniuk</p></summary>
+<p>
+
+**Abstract:** A critically important, ubiquitous, and yet poorly understood ingredient in modern deep networks (DNs) is batch normalization (BN), which centers and normalizes the feature maps. To date, only limited progress has been made understanding why BN boosts DN learning and inference performance; work has focused exclusively on showing that BN smooths a DN's loss landscape. In this paper, we study BN theoretically from the perspective of function approximation; we exploit the fact that most of today's state-of-the-art DNs are continuous piecewise affine (CPA) splines that fit a predictor to the training data via affine mappings defined over a partition of the input space (the so-called "linear regions"). {\em We demonstrate that BN is an unsupervised learning technique that -- independent of the DN's weights or gradient-based learning -- adapts the geometry of a DN's spline partition to match the data.} BN provides a "smart initialization" that boosts the performance of DN learning, because it adapts even a DN initialized with random weights to align its spline partition with the data. We also show that the variation of BN statistics between mini-batches introduces a dropout-like random perturbation to the partition boundaries and hence the decision boundary for classification problems. This per mini-batch perturbation reduces overfitting and improves generalization by increasing the margin between the training samples and the decision boundary.
+
+</p>
+</details>
+
+<details><summary><b>Compositional Semantic Parsing with Large Language Models</b>
+<a href="https://arxiv.org/abs/2209.15003">arxiv:2209.15003</a>
+&#x1F4C8; 57 <br>
+<p>Andrew Drozdov, Nathanael Schärli, Ekin Akyuürek, Nathan Scales, Xinying Song, Xinyun Chen, Olivier Bousquet, Denny Zhou</p></summary>
+<p>
+
+**Abstract:** Humans can reason compositionally when presented with new tasks. Previous research shows that appropriate prompting techniques enable large language models (LLMs) to solve artificial compositional generalization tasks such as SCAN. In this work, we identify additional challenges in more realistic semantic parsing tasks with larger vocabulary and refine these prompting techniques to address them. Our best method is based on least-to-most prompting: it decomposes the problem using prompting-based syntactic parsing, then uses this decomposition to select appropriate exemplars and to sequentially generate the semantic parse. This method allows us to set a new state of the art for CFQ while requiring only 1% of the training data used by traditional approaches. Due to the general nature of our approach, we expect similar efforts will lead to new results in other tasks and domains, especially for knowledge-intensive applications.
+
+</p>
+</details>
+
+<details><summary><b>Federated Stain Normalization for Computational Pathology</b>
+<a href="https://arxiv.org/abs/2209.14849">arxiv:2209.14849</a>
+&#x1F4C8; 32 <br>
+<p>Nicolas Wagner, Moritz Fuchs, Yuri Tolkach, Anirban Mukhopadhyay</p></summary>
+<p>
+
+**Abstract:** Although deep federated learning has received much attention in recent years, progress has been made mainly in the context of natural images and barely for computational pathology. However, deep federated learning is an opportunity to create datasets that reflect the data diversity of many laboratories. Further, the effort of dataset construction can be divided among many. Unfortunately, existing algorithms cannot be easily applied to computational pathology since previous work presupposes that data distributions of laboratories must be similar. This is an unlikely assumption, mainly since different laboratories have different staining styles. As a solution, we propose BottleGAN, a generative model that can computationally align the staining styles of many laboratories and can be trained in a privacy-preserving manner to foster federated learning in computational pathology. We construct a heterogenic multi-institutional dataset based on the PESO segmentation dataset and improve the IOU by 42\% compared to existing federated learning algorithms. An implementation of BottleGAN is available at https://github.com/MECLabTUDA/BottleGAN
+
+</p>
+</details>
+
+<details><summary><b>Dilated Neighborhood Attention Transformer</b>
+<a href="https://arxiv.org/abs/2209.15001">arxiv:2209.15001</a>
+&#x1F4C8; 23 <br>
+<p>Ali Hassani, Humphrey Shi</p></summary>
+<p>
+
+**Abstract:** Transformers are quickly becoming one of the most heavily applied deep learning architectures across modalities, domains, and tasks. In vision, on top of ongoing efforts into plain transformers, hierarchical transformers have also gained significant attention, thanks to their performance and easy integration into existing frameworks. These models typically employ localized attention mechanisms, such as the sliding-window Neighborhood Attention (NA) or Swin Transformer's Shifted Window Self Attention. While effective at reducing self attention's quadratic complexity, local attention weakens two of the most desirable properties of self attention: long range inter-dependency modeling, and global receptive field. In this paper, we introduce Dilated Neighborhood Attention (DiNA), a natural, flexible and efficient extension to NA that can capture more global context and expand receptive fields exponentially at no additional cost. NA's local attention and DiNA's sparse global attention complement each other, and therefore we introduce Dilated Neighborhood Attention Transformer (DiNAT), a new hierarchical vision transformer built upon both. DiNAT variants enjoy significant improvements over attention-based baselines such as NAT and Swin, as well as modern convolutional baseline ConvNeXt. Our Large model is ahead of its Swin counterpart by 1.5% box AP in COCO object detection, 1.3% mask AP in COCO instance segmentation, and 1.1% mIoU in ADE20K semantic segmentation, and faster in throughput. We believe combinations of NA and DiNA have the potential to empower various tasks beyond those presented in this paper. To support and encourage research in this direction, in vision and beyond, we open-source our project at: https://github.com/SHI-Labs/Neighborhood-Attention-Transformer.
+
+</p>
+</details>
+
+<details><summary><b>Denoising Diffusion Probabilistic Models for Styled Walking Synthesis</b>
+<a href="https://arxiv.org/abs/2209.14828">arxiv:2209.14828</a>
+&#x1F4C8; 19 <br>
+<p>Edmund J. C. Findlay, Haozheng Zhang, Ziyi Chang, Hubert P. H. Shum</p></summary>
+<p>
+
+**Abstract:** Generating realistic motions for digital humans is time-consuming for many graphics applications. Data-driven motion synthesis approaches have seen solid progress in recent years through deep generative models. These results offer high-quality motions but typically suffer in motion style diversity. For the first time, we propose a framework using the denoising diffusion probabilistic model (DDPM) to synthesize styled human motions, integrating two tasks into one pipeline with increased style diversity compared with traditional motion synthesis methods. Experimental results show that our system can generate high-quality and diverse walking motions.
+
+</p>
+</details>
+
+<details><summary><b>Contrastive Unsupervised Learning of World Model with Invariant Causal Features</b>
+<a href="https://arxiv.org/abs/2209.14932">arxiv:2209.14932</a>
+&#x1F4C8; 16 <br>
+<p>Rudra P. K. Poudel, Harit Pandya, Roberto Cipolla</p></summary>
+<p>
+
+**Abstract:** In this paper we present a world model, which learns causal features using the invariance principle. In particular, we use contrastive unsupervised learning to learn the invariant causal features, which enforces invariance across augmentations of irrelevant parts or styles of the observation. The world-model-based reinforcement learning methods independently optimize representation learning and the policy. Thus naive contrastive loss implementation collapses due to a lack of supervisory signals to the representation learning module. We propose an intervention invariant auxiliary task to mitigate this issue. Specifically, we utilize depth prediction to explicitly enforce the invariance and use data augmentation as style intervention on the RGB observation space. Our design leverages unsupervised representation learning to learn the world model with invariant causal features. Our proposed method significantly outperforms current state-of-the-art model-based and model-free reinforcement learning methods on out-of-distribution point navigation tasks on the iGibson dataset. Moreover, our proposed model excels at the sim-to-real transfer of our perception learning module. Finally, we evaluate our approach on the DeepMind control suite and enforce invariance only implicitly since depth is not available. Nevertheless, our proposed model performs on par with the state-of-the-art counterpart.
+
+</p>
+</details>
+
+<details><summary><b>Neural Networks Efficiently Learn Low-Dimensional Representations with SGD</b>
+<a href="https://arxiv.org/abs/2209.14863">arxiv:2209.14863</a>
+&#x1F4C8; 16 <br>
+<p>Alireza Mousavi-Hosseini, Sejun Park, Manuela Girotti, Ioannis Mitliagkas, Murat A. Erdogdu</p></summary>
+<p>
+
+**Abstract:** We study the problem of training a two-layer neural network (NN) of arbitrary width using stochastic gradient descent (SGD) where the input $\boldsymbol{x}\in \mathbb{R}^d$ is Gaussian and the target $y \in \mathbb{R}$ follows a multiple-index model, i.e., $y=g(\langle\boldsymbol{u_1},\boldsymbol{x}\rangle,...,\langle\boldsymbol{u_k},\boldsymbol{x}\rangle)$ with a noisy link function $g$. We prove that the first-layer weights of the NN converge to the $k$-dimensional principal subspace spanned by the vectors $\boldsymbol{u_1},...,\boldsymbol{u_k}$ of the true model, when online SGD with weight decay is used for training. This phenomenon has several important consequences when $k \ll d$. First, by employing uniform convergence on this smaller subspace, we establish a generalization error bound of $\mathcal{O}(\sqrt{{kd}/{T}})$ after $T$ iterations of SGD, which is independent of the width of the NN. We further demonstrate that, SGD-trained ReLU NNs can learn a single-index target of the form $y=f(\langle\boldsymbol{u},\boldsymbol{x}\rangle) + ε$ by recovering the principal direction, with a sample complexity linear in $d$ (up to log factors), where $f$ is a monotonic function with at most polynomial growth, and $ε$ is the noise. This is in contrast to the known $d^{Ω(p)}$ sample requirement to learn any degree $p$ polynomial in the kernel regime, and it shows that NNs trained with SGD can outperform the neural tangent kernel at initialization. Finally, we also provide compressibility guarantees for NNs using the approximate low-rank structure produced by SGD.
+
+</p>
+</details>
+
+<details><summary><b>Bridging the Gap to Real-World Object-Centric Learning</b>
+<a href="https://arxiv.org/abs/2209.14860">arxiv:2209.14860</a>
+&#x1F4C8; 16 <br>
+<p>Maximilian Seitzer, Max Horn, Andrii Zadaianchuk, Dominik Zietlow, Tianjun Xiao, Carl-Johann Simon-Gabriel, Tong He, Zheng Zhang, Bernhard Schölkopf, Thomas Brox, Francesco Locatello</p></summary>
+<p>
+
+**Abstract:** Humans naturally decompose their environment into entities at the appropriate level of abstraction to act in the world. Allowing machine learning algorithms to derive this decomposition in an unsupervised way has become an important line of research. However, current methods are restricted to simulated data or require additional information in the form of motion or depth in order to successfully discover objects. In this work, we overcome this limitation by showing that reconstructing features from models trained in a self-supervised manner is a sufficient training signal for object-centric representations to arise in a fully unsupervised way. Our approach, DINOSAUR, significantly out-performs existing object-centric learning models on simulated data and is the first unsupervised object-centric model that scales to real world-datasets such as COCO and PASCAL VOC. DINOSAUR is conceptually simple and shows competitive performance compared to more involved pipelines from the computer vision literature.
+
+</p>
+</details>
+
+<details><summary><b>Understanding Collapse in Non-Contrastive Learning</b>
+<a href="https://arxiv.org/abs/2209.15007">arxiv:2209.15007</a>
+&#x1F4C8; 15 <br>
+<p>Alexander C. Li, Alexei A. Efros, Deepak Pathak</p></summary>
+<p>
+
+**Abstract:** Contrastive methods have led a recent surge in the performance of self-supervised representation learning (SSL). Recent methods like BYOL or SimSiam purportedly distill these contrastive methods down to their essence, removing bells and whistles, including the negative examples, that do not contribute to downstream performance. These "non-contrastive" methods work surprisingly well without using negatives even though the global minimum lies at trivial collapse. We empirically analyze these non-contrastive methods and find that SimSiam is extraordinarily sensitive to dataset and model size. In particular, SimSiam representations undergo partial dimensional collapse if the model is too small relative to the dataset size. We propose a metric to measure the degree of this collapse and show that it can be used to forecast the downstream task performance without any fine-tuning or labels. We further analyze architectural design choices and their effect on the downstream performance. Finally, we demonstrate that shifting to a continual learning setting acts as a regularizer and prevents collapse, and a hybrid between continual and multi-epoch training can improve linear probe accuracy by as many as 18 percentage points using ResNet-18 on ImageNet.
+
+</p>
+</details>
+
+<details><summary><b>Joint Embedding Self-Supervised Learning in the Kernel Regime</b>
+<a href="https://arxiv.org/abs/2209.14884">arxiv:2209.14884</a>
+&#x1F4C8; 11 <br>
+<p>Bobak T. Kiani, Randall Balestriero, Yubei Chen, Seth Lloyd, Yann LeCun</p></summary>
+<p>
+
+**Abstract:** The fundamental goal of self-supervised learning (SSL) is to produce useful representations of data without access to any labels for classifying the data. Modern methods in SSL, which form representations based on known or constructed relationships between samples, have been particularly effective at this task. Here, we aim to extend this framework to incorporate algorithms based on kernel methods where embeddings are constructed by linear maps acting on the feature space of a kernel. In this kernel regime, we derive methods to find the optimal form of the output representations for contrastive and non-contrastive loss functions. This procedure produces a new representation space with an inner product denoted as the induced kernel which generally correlates points which are related by an augmentation in kernel space and de-correlates points otherwise. We analyze our kernel model on small datasets to identify common features of self-supervised learning algorithms and gain theoretical insights into their performance on downstream tasks.
+
+</p>
+</details>
+
+<details><summary><b>Training Normalizing Flows from Dependent Data</b>
+<a href="https://arxiv.org/abs/2209.14933">arxiv:2209.14933</a>
+&#x1F4C8; 9 <br>
+<p>Matthias Kirchler, Christoph Lippert, Marius Kloft</p></summary>
+<p>
+
+**Abstract:** Normalizing flows are powerful non-parametric statistical models that function as a hybrid between density estimators and generative models. Current learning algorithms for normalizing flows assume that data points are sampled independently, an assumption that is frequently violated in practice, which may lead to erroneous density estimation and data generation. We propose a likelihood objective of normalizing flows incorporating dependencies between the data points, for which we derive a flexible and efficient learning algorithm suitable for different dependency structures. We show that respecting dependencies between observations can improve empirical results on both synthetic and real-world data.
+
+</p>
+</details>
+
+<details><summary><b>Evaluating the temporal understanding of neural networks on event-based action recognition with DVS-Gesture-Chain</b>
+<a href="https://arxiv.org/abs/2209.14915">arxiv:2209.14915</a>
+&#x1F4C8; 9 <br>
+<p>Alex Vicente-Sola, Davide L. Manna, Paul Kirkland, Gaetano Di Caterina, Trevor Bihl</p></summary>
+<p>
+
+**Abstract:** Enabling artificial neural networks (ANNs) to have temporal understanding in visual tasks is an essential requirement in order to achieve complete perception of video sequences. A wide range of benchmark datasets is available to allow for the evaluation of such capabilities when using conventional frame-based video sequences. In contrast, evaluating them for systems targeting neuromorphic data is still a challenge due to the lack of appropriate datasets. In this work we define a new benchmark task for action recognition in event-based video sequences, DVS-Gesture-Chain (DVS-GC), which is based on the temporal combination of multiple gestures from the widely used DVS-Gesture dataset. This methodology allows to create datasets that are arbitrarily complex in the temporal dimension. Using our newly defined task, we evaluate the spatio-temporal understanding of different feed-forward convolutional ANNs and convolutional Spiking Neural Networks (SNNs). Our study proves how the original DVS Gesture benchmark could be solved by networks without temporal understanding, unlike the new DVS-GC which demands an understanding of the ordering of events. From there, we provide a study showing how certain elements such as spiking neurons or time-dependent weights allow for temporal understanding in feed-forward networks without the need for recurrent connections. Code available at: https://github.com/VicenteAlex/DVS-Gesture-Chain
+
+</p>
+</details>
+
+<details><summary><b>Sparse PCA With Multiple Components</b>
+<a href="https://arxiv.org/abs/2209.14790">arxiv:2209.14790</a>
+&#x1F4C8; 9 <br>
+<p>Ryan Cory-Wright, Jean Pauphilet</p></summary>
+<p>
+
+**Abstract:** Sparse Principal Component Analysis is a cardinal technique for obtaining combinations of features, or principal components (PCs), that explain the variance of high-dimensional datasets in an interpretable manner. At its heart, this involves solving a sparsity and orthogonality constrained convex maximization problem, which is extremely computationally challenging. Most existing work address sparse PCA via heuristics such as iteratively computing one sparse PC and deflating the covariance matrix, which does not guarantee the orthogonality, let alone the optimality, of the resulting solution. We challenge this status by reformulating the orthogonality conditions as rank constraints and optimizing over the sparsity and rank constraints simultaneously. We design tight semidefinite relaxations and propose tractable second-order cone versions of these relaxations which supply high-quality upper bounds. We also design valid second-order cone inequalities which hold when each PC's individual sparsity is specified, and demonstrate that these inequalities tighten our relaxations significantly. Moreover, we propose exact methods and rounding mechanisms that exploit these relaxations' tightness to obtain solutions with a bound gap on the order of 1%-5% for real-world datasets with p = 100s or 1000s of features and r \in {2, 3} components. We investigate the performance of our methods in spiked covariance settings and demonstrate that simultaneously considering the orthogonality and sparsity constraints leads to improvements in the Area Under the ROC curve of 2%-8% compared to state-of-the-art deflation methods. All in all, our approach solves sparse PCA problems with multiple components to certifiable (near) optimality in a practically tractable fashion.
+
+</p>
+</details>
+
+<details><summary><b>A case study of spatiotemporal forecasting techniques for weather forecasting</b>
+<a href="https://arxiv.org/abs/2209.14782">arxiv:2209.14782</a>
+&#x1F4C8; 9 <br>
+<p>Shakir Showkat Sofi, Ivan Oseledets</p></summary>
+<p>
+
+**Abstract:** The majority of real-world processes are spatiotemporal, and the data generated by them exhibits both spatial and temporal evolution. Weather is one of the most important processes that fall under this domain, and forecasting it has become a crucial part of our daily routine. Weather data analysis is considered the most complex and challenging task. Although numerical weather prediction models are currently state-of-the-art, they are resource intensive and time-consuming. Numerous studies have proposed time-series-based models as a viable alternative to numerical forecasts. Recent research has primarily focused on forecasting weather at a specific location. Therefore, models can only capture temporal correlations. This self-contained paper explores various methods for regional data-driven weather forecasting, i.e., forecasting over multiple latitude-longitude points to capture spatiotemporal correlations. The results showed that spatiotemporal prediction models reduced computational cost while improving accuracy; in particular, the proposed tensor train dynamic mode decomposition-based forecasting model has comparable accuracy to ConvLSTM without the need for training. We use the NASA POWER meteorological dataset to evaluate the models and compare them with the current state of the art.
+
+</p>
+</details>
+
+<details><summary><b>Diffusion Posterior Sampling for General Noisy Inverse Problems</b>
+<a href="https://arxiv.org/abs/2209.14687">arxiv:2209.14687</a>
+&#x1F4C8; 9 <br>
+<p>Hyungjin Chung, Jeongsol Kim, Michael T. Mccann, Marc L. Klasky, Jong Chul Ye</p></summary>
+<p>
+
+**Abstract:** Diffusion models have been recently studied as powerful generative inverse problem solvers, owing to their high quality reconstructions and the ease of combining existing iterative solvers. However, most works focus on solving simple linear inverse problems in noiseless settings, which significantly under-represents the complexity of real-world problems. In this work, we extend diffusion solvers to efficiently handle general noisy (non)linear inverse problems via the Laplace approximation of the posterior sampling. Interestingly, the resulting posterior sampling scheme is a blended version of diffusion sampling with the manifold constrained gradient without a strict measurement consistency projection step, yielding a more desirable generative path in noisy settings compared to the previous studies. Our method demonstrates that diffusion models can incorporate various measurement noise statistics such as Gaussian and Poisson, and also efficiently handle noisy nonlinear inverse problems such as Fourier phase retrieval and non-uniform deblurring.
+
+</p>
+</details>
+
+<details><summary><b>An Equal-Size Hard EM Algorithm for Diverse Dialogue Generation</b>
+<a href="https://arxiv.org/abs/2209.14627">arxiv:2209.14627</a>
+&#x1F4C8; 9 <br>
+<p>Yuqiao Wen, Yongchang Hao, Yanshuai Cao, Lili Mou</p></summary>
+<p>
+
+**Abstract:** Open-domain dialogue systems aim to interact with humans through natural language texts in an open-ended fashion. However, the widely successful neural networks may not work well for dialogue systems, as they tend to generate generic responses. In this work, we propose an Equal-size Hard Expectation--Maximization (EqHard-EM) algorithm to train a multi-decoder model for diverse dialogue generation. Our algorithm assigns a sample to a decoder in a hard manner and additionally imposes an equal-assignment constraint to ensure that all decoders are well-trained. We provide detailed theoretical analysis to justify our approach. Further, experiments on two large-scale, open-domain dialogue datasets verify that our EqHard-EM algorithm generates high-quality diverse responses.
+
+</p>
+</details>
+
+<details><summary><b>Bayesian Neural Network Versus Ex-Post Calibration For Prediction Uncertainty</b>
+<a href="https://arxiv.org/abs/2209.14594">arxiv:2209.14594</a>
+&#x1F4C8; 9 <br>
+<p>Satya Borgohain, Klaus Ackermann, Ruben Loaiza-Maya</p></summary>
+<p>
+
+**Abstract:** Probabilistic predictions from neural networks which account for predictive uncertainty during classification is crucial in many real-world and high-impact decision making settings. However, in practice most datasets are trained on non-probabilistic neural networks which by default do not capture this inherent uncertainty. This well-known problem has led to the development of post-hoc calibration procedures, such as Platt scaling (logistic), isotonic and beta calibration, which transforms the scores into well calibrated empirical probabilities. A plausible alternative to the calibration approach is to use Bayesian neural networks, which directly models a predictive distribution. Although they have been applied to images and text datasets, they have seen limited adoption in the tabular and small data regime. In this paper, we demonstrate that Bayesian neural networks yields competitive performance when compared to calibrated neural networks and conduct experiments across a wide array of datasets.
+
+</p>
+</details>
+
+<details><summary><b>Equivariant maps from invariant functions</b>
+<a href="https://arxiv.org/abs/2209.14991">arxiv:2209.14991</a>
+&#x1F4C8; 8 <br>
+<p>Ben Blum-Smith, Soledad Villar</p></summary>
+<p>
+
+**Abstract:** In equivariant machine learning the idea is to restrict the learning to a hypothesis class where all the functions are equivariant with respect to some group action. Irreducible representations or invariant theory are typically used to parameterize the space of such functions. In this note, we explicate a general procedure, attributed to Malgrange, to express all polynomial maps between linear spaces that are equivariant with respect to the action of a group $G$, given a characterization of the invariant polynomials on a bigger space. The method also parametrizes smooth equivariant maps in the case that $G$ is a compact Lie group.
+
+</p>
+</details>
+
+<details><summary><b>Statistical Learning and Inverse Problems: An Stochastic Gradient Approach</b>
+<a href="https://arxiv.org/abs/2209.14967">arxiv:2209.14967</a>
+&#x1F4C8; 8 <br>
+<p>Yuri S. Fonseca, Yuri F. Saporito</p></summary>
+<p>
+
+**Abstract:** Inverse problems are paramount in Science and Engineering. In this paper, we consider the setup of Statistical Inverse Problem (SIP) and demonstrate how Stochastic Gradient Descent (SGD) algorithms can be used in the linear SIP setting. We provide consistency and finite sample bounds for the excess risk. We also propose a modification for the SGD algorithm where we leverage machine learning methods to smooth the stochastic gradients and improve empirical performance. We exemplify the algorithm in a setting of great interest nowadays: the Functional Linear Regression model. In this case we consider a synthetic data example and examples with a real data classification problem.
+
+</p>
+</details>
+
+<details><summary><b>DR.BENCH: Diagnostic Reasoning Benchmark for Clinical Natural Language Processing</b>
+<a href="https://arxiv.org/abs/2209.14901">arxiv:2209.14901</a>
+&#x1F4C8; 8 <br>
+<p>Yanjun Gao, Dmitriy Dligach, Timothy Miller, John Caskey, Brihat Sharma, Matthew M Churpek, Majid Afshar</p></summary>
+<p>
+
+**Abstract:** The meaningful use of electronic health records (EHR) continues to progress in the digital era with clinical decision support systems augmented by artificial intelligence. A priority in improving provider experience is to overcome information overload and reduce the cognitive burden so fewer medical errors and cognitive biases are introduced during patient care. One major type of medical error is diagnostic error due to systematic or predictable errors in judgment that rely on heuristics. The potential for clinical natural language processing (cNLP) to model diagnostic reasoning in humans with forward reasoning from data to diagnosis and potentially reduce the cognitive burden and medical error has not been investigated. Existing tasks to advance the science in cNLP have largely focused on information extraction and named entity recognition through classification tasks. We introduce a novel suite of tasks coined as Diagnostic Reasoning Benchmarks, DR.BENCH, as a new benchmark for developing and evaluating cNLP models with clinical diagnostic reasoning ability. The suite includes six tasks from ten publicly available datasets addressing clinical text understanding, medical knowledge reasoning, and diagnosis generation. DR.BENCH is the first clinical suite of tasks designed to be a natural language generation framework to evaluate pre-trained language models. Experiments with state-of-the-art pre-trained generative language models using large general domain models and models that were continually trained on a medical corpus demonstrate opportunities for improvement when evaluated in DR. BENCH. We share DR. BENCH as a publicly available GitLab repository with a systematic approach to load and evaluate models for the cNLP community.
+
+</p>
+</details>
+
+<details><summary><b>Creative Painting with Latent Diffusion Models</b>
+<a href="https://arxiv.org/abs/2209.14697">arxiv:2209.14697</a>
+&#x1F4C8; 8 <br>
+<p>Xianchao Wu</p></summary>
+<p>
+
+**Abstract:** Artistic painting has achieved significant progress during recent years by applying hundreds of GAN variants. However, adversarial training has been reported to be notoriously unstable and can lead to mode collapse. Recently, diffusion models have achieved GAN-level sample quality without adversarial training. Using autoencoders to project the original images into compressed latent spaces and cross attention enhanced U-Net as the backbone of diffusion, latent diffusion models have achieved stable and high fertility image generation. In this paper, we focus on enhancing the creative painting ability of current latent diffusion models in two directions, textual condition extension and model retraining with Wikiart dataset. Through textual condition extension, users' input prompts are expanded in temporal and spacial directions for deeper understanding and explaining the prompts. Wikiart dataset contains 80K famous artworks drawn during recent 400 years by more than 1,000 famous artists in rich styles and genres. Through the retraining, we are able to ask these artists to draw novel and creative painting on modern topics.
+
+</p>
+</details>
+
+<details><summary><b>Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning</b>
+<a href="https://arxiv.org/abs/2209.14610">arxiv:2209.14610</a>
+&#x1F4C8; 8 <br>
+<p>Pan Lu, Liang Qiu, Kai-Wei Chang, Ying Nian Wu, Song-Chun Zhu, Tanmay Rajpurohit, Peter Clark, Ashwin Kalyan</p></summary>
+<p>
+
+**Abstract:** Mathematical reasoning, a core ability of human intelligence, presents unique challenges for machines in abstract thinking and logical reasoning. Recent large pre-trained language models such as GPT-3 have achieved remarkable progress on mathematical reasoning tasks written in text form, such as math word problems (MWP). However, it is unknown if the models can handle more complex problems that involve math reasoning over heterogeneous information, such as tabular data. To fill the gap, we present Tabular Math Word Problems (TabMWP), a new dataset containing 38,431 open-domain grade-level problems that require mathematical reasoning on both textual and tabular data. Each question in TabMWP is aligned with a tabular context, which is presented as an image, semi-structured text, and a structured table. There are two types of questions: free-text and multi-choice, and each problem is annotated with gold solutions to reveal the multi-step reasoning process. We evaluate different pre-trained models on TabMWP, including the GPT-3 model in a few-shot setting. As earlier studies suggest, since few-shot GPT-3 relies on the selection of in-context examples, its performance is unstable and can degrade to near chance. The unstable issue is more severe when handling complex problems like TabMWP. To mitigate this, we further propose a novel approach, PromptPG, which utilizes policy gradient to learn to select in-context examples from a small amount of training data and then constructs the corresponding prompt for the test example. Experimental results show that our method outperforms the best baseline by 5.31% on the accuracy metric and reduces the prediction variance significantly compared to random selection, which verifies its effectiveness in the selection of in-context examples.
+
+</p>
+</details>
+
+<details><summary><b>REST: REtrieve & Self-Train for generative action recognition</b>
+<a href="https://arxiv.org/abs/2209.15000">arxiv:2209.15000</a>
+&#x1F4C8; 7 <br>
+<p>Adrian Bulat, Enrique Sanchez, Brais Martinez, Georgios Tzimiropoulos</p></summary>
+<p>
+
+**Abstract:** This work is on training a generative action/video recognition model whose output is a free-form action-specific caption describing the video (rather than an action class label). A generative approach has practical advantages like producing more fine-grained and human-readable output, and being naturally open-world. To this end, we propose to adapt a pre-trained generative Vision & Language (V&L) Foundation Model for video/action recognition. While recently there have been a few attempts to adapt V&L models trained with contrastive learning (e.g. CLIP) for video/action, to the best of our knowledge, we propose the very first method that sets outs to accomplish this goal for a generative model. We firstly show that direct fine-tuning of a generative model to produce action classes suffers from severe overfitting. To alleviate this, we introduce REST, a training framework consisting of two key components: an unsupervised method for adapting the generative model to action/video by means of pseudo-caption generation and Self-training, i.e. without using any action-specific labels; (b) a Retrieval approach based on CLIP for discovering a diverse set of pseudo-captions for each video to train the model. Importantly, we show that both components are necessary to obtain high accuracy. We evaluate REST on the problem of zero-shot action recognition where we show that our approach is very competitive when compared to contrastive learning-based methods. Code will be made available.
+
+</p>
+</details>
+
+<details><summary><b>Partially Observable RL with B-Stability: Unified Structural Condition and Sharp Sample-Efficient Algorithms</b>
+<a href="https://arxiv.org/abs/2209.14990">arxiv:2209.14990</a>
+&#x1F4C8; 7 <br>
+<p>Fan Chen, Yu Bai, Song Mei</p></summary>
+<p>
+
+**Abstract:** Partial Observability -- where agents can only observe partial information about the true underlying state of the system -- is ubiquitous in real-world applications of Reinforcement Learning (RL). Theoretically, learning a near-optimal policy under partial observability is known to be hard in the worst case due to an exponential sample complexity lower bound. Recent work has identified several tractable subclasses that are learnable with polynomial samples, such as Partially Observable Markov Decision Processes (POMDPs) with certain revealing or decodability conditions. However, this line of research is still in its infancy, where (1) unified structural conditions enabling sample-efficient learning are lacking; (2) existing sample complexities for known tractable subclasses are far from sharp; and (3) fewer sample-efficient algorithms are available than in fully observable RL.
+  This paper advances all three aspects above for Partially Observable RL in the general setting of Predictive State Representations (PSRs). First, we propose a natural and unified structural condition for PSRs called \emph{B-stability}. B-stable PSRs encompasses the vast majority of known tractable subclasses such as weakly revealing POMDPs, low-rank future-sufficient POMDPs, decodable POMDPs, and regular PSRs. Next, we show that any B-stable PSR can be learned with polynomial samples in relevant problem parameters. When instantiated in the aforementioned subclasses, our sample complexities improve substantially over the current best ones. Finally, our results are achieved by three algorithms simultaneously: Optimistic Maximum Likelihood Estimation, Estimation-to-Decisions, and Model-Based Optimistic Posterior Sampling. The latter two algorithms are new for sample-efficient learning of POMDPs/PSRs.
+
+</p>
+</details>
+
+<details><summary><b>EiHi Net: Out-of-Distribution Generalization Paradigm</b>
+<a href="https://arxiv.org/abs/2209.14946">arxiv:2209.14946</a>
+&#x1F4C8; 7 <br>
+<p>Qinglai Wei, Beiming Yuan, Diancheng Chen</p></summary>
+<p>
+
+**Abstract:** This paper develops a new EiHi net to solve the out-of-distribution (OoD) generalization problem in deep learning. EiHi net is a model learning paradigm that can be blessed on any visual backbone. This paradigm can change the previous learning method of the deep model, namely find out correlations between inductive sample features and corresponding categories, which suffers from pseudo correlations between indecisive features and labels. We fuse SimCLR and VIC-Reg via explicitly and dynamically establishing the original - positive - negative sample pair as a minimal learning element, the deep model iteratively establishes a relationship close to the causal one between features and labels, while suppressing pseudo correlations. To further validate the proposed model, and strengthen the established causal relationships, we develop a human-in-the-loop strategy, with few guidance samples, to prune the representation space directly. Finally, it is shown that the developed EiHi net makes significant improvements in the most difficult and typical OoD dataset Nico, compared with the current SOTA results, without any domain ($e.g.$ background, irrelevant features) information.
+
+</p>
+</details>
+
+<details><summary><b>NAG-GS: Semi-Implicit, Accelerated and Robust Stochastic Optimizers</b>
+<a href="https://arxiv.org/abs/2209.14937">arxiv:2209.14937</a>
+&#x1F4C8; 7 <br>
+<p>Valentin Leplat, Daniil Merkulov, Aleksandr Katrutsa, Daniel Bershatsky, Ivan Oseledets</p></summary>
+<p>
+
+**Abstract:** Classical machine learning models such as deep neural networks are usually trained by using Stochastic Gradient Descent-based (SGD) algorithms. The classical SGD can be interpreted as a discretization of the stochastic gradient flow. In this paper we propose a novel, robust and accelerated stochastic optimizer that relies on two key elements: (1) an accelerated Nesterov-like Stochastic Differential Equation (SDE) and (2) its semi-implicit Gauss-Seidel type discretization. The convergence and stability of the obtained method, referred to as NAG-GS, are first studied extensively in the case of the minimization of a quadratic function. This analysis allows us to come up with an optimal step size (or learning rate) in terms of rate of convergence while ensuring the stability of NAG-GS. This is achieved by the careful analysis of the spectral radius of the iteration matrix and the covariance matrix at stationarity with respect to all hyperparameters of our method. We show that NAG-GS is competitive with state-of-the-art methods such as momentum SGD with weight decay and AdamW for the training of machine learning models such as the logistic regression model, the residual networks models on standard computer vision datasets, and Transformers in the frame of the GLUE benchmark.
+
+</p>
+</details>
+
+<details><summary><b>Continuous PDE Dynamics Forecasting with Implicit Neural Representations</b>
+<a href="https://arxiv.org/abs/2209.14855">arxiv:2209.14855</a>
+&#x1F4C8; 7 <br>
+<p>Yuan Yin, Matthieu Kirchmeyer, Jean-Yves Franceschi, Alain Rakotomamonjy, Patrick Gallinari</p></summary>
+<p>
+
+**Abstract:** Effective data-driven PDE forecasting methods often rely on fixed spatial and / or temporal discretizations. This raises limitations in real-world applications like weather prediction where flexible extrapolation at arbitrary spatiotemporal locations is required. We address this problem by introducing a new data-driven approach, DINo, that models a PDE's flow with continuous-time dynamics of spatially continuous functions. This is achieved by embedding spatial observations independently of their discretization via Implicit Neural Representations in a small latent space temporally driven by a learned ODE. This separate and flexible treatment of time and space makes DINo the first data-driven model to combine the following advantages. It extrapolates at arbitrary spatial and temporal locations; it can learn from sparse irregular grids or manifolds; at test time, it generalizes to new grids or resolutions. DINo outperforms alternative neural PDE forecasters in a variety of challenging generalization scenarios on representative PDE systems.
+
+</p>
+</details>
+
+<details><summary><b>Access Control with Encrypted Feature Maps for Object Detection Models</b>
+<a href="https://arxiv.org/abs/2209.14831">arxiv:2209.14831</a>
+&#x1F4C8; 7 <br>
+<p>Teru Nagamori, Hiroki Ito, AprilPyone MaungMaung, Hitoshi Kiya</p></summary>
+<p>
+
+**Abstract:** In this paper, we propose an access control method with a secret key for object detection models for the first time so that unauthorized users without a secret key cannot benefit from the performance of trained models. The method enables us not only to provide a high detection performance to authorized users but to also degrade the performance for unauthorized users. The use of transformed images was proposed for the access control of image classification models, but these images cannot be used for object detection models due to performance degradation. Accordingly, in this paper, selected feature maps are encrypted with a secret key for training and testing models, instead of input images. In an experiment, the protected models allowed authorized users to obtain almost the same performance as that of non-protected models but also with robustness against unauthorized access without a key.
+
+</p>
+</details>
+
+<details><summary><b>RECALL: Rehearsal-free Continual Learning for Object Classification</b>
+<a href="https://arxiv.org/abs/2209.14774">arxiv:2209.14774</a>
+&#x1F4C8; 7 <br>
+<p>Markus Knauer, Maximilian Denninger, Rudolph Triebel</p></summary>
+<p>
+
+**Abstract:** Convolutional neural networks show remarkable results in classification but struggle with learning new things on the fly. We present a novel rehearsal-free approach, where a deep neural network is continually learning new unseen object categories without saving any data of prior sequences. Our approach is called RECALL, as the network recalls categories by calculating logits for old categories before training new ones. These are then used during training to avoid changing the old categories. For each new sequence, a new head is added to accommodate the new categories. To mitigate forgetting, we present a regularization strategy where we replace the classification with a regression. Moreover, for the known categories, we propose a Mahalanobis loss that includes the variances to account for the changing densities between known and unknown categories. Finally, we present a novel dataset for continual learning, especially suited for object recognition on a mobile robot (HOWS-CL-25), including 150,795 synthetic images of 25 household object categories. Our approach RECALL outperforms the current state of the art on CORe50 and iCIFAR-100 and reaches the best performance on HOWS-CL-25.
+
+</p>
+</details>
+
+<details><summary><b>Domain-aware Self-supervised Pre-training for Label-Efficient Meme Analysis</b>
+<a href="https://arxiv.org/abs/2209.14667">arxiv:2209.14667</a>
+&#x1F4C8; 7 <br>
+<p>Shivam Sharma, Mohd Khizir Siddiqui, Md. Shad Akhtar, Tanmoy Chakraborty</p></summary>
+<p>
+
+**Abstract:** Existing self-supervised learning strategies are constrained to either a limited set of objectives or generic downstream tasks that predominantly target uni-modal applications. This has isolated progress for imperative multi-modal applications that are diverse in terms of complexity and domain-affinity, such as meme analysis. Here, we introduce two self-supervised pre-training methods, namely Ext-PIE-Net and MM-SimCLR that (i) employ off-the-shelf multi-modal hate-speech data during pre-training and (ii) perform self-supervised learning by incorporating multiple specialized pretext tasks, effectively catering to the required complex multi-modal representation learning for meme analysis. We experiment with different self-supervision strategies, including potential variants that could help learn rich cross-modality representations and evaluate using popular linear probing on the Hateful Memes task. The proposed solutions strongly compete with the fully supervised baseline via label-efficient training while distinctly outperforming them on all three tasks of the Memotion challenge with 0.18%, 23.64%, and 0.93% performance gain, respectively. Further, we demonstrate the generalizability of the proposed solutions by reporting competitive performance on the HarMeme task. Finally, we empirically establish the quality of the learned representations by analyzing task-specific learning, using fewer labeled training samples, and arguing that the complexity of the self-supervision strategy and downstream task at hand are correlated. Our efforts highlight the requirement of better multi-modal self-supervision methods involving specialized pretext tasks for efficient fine-tuning and generalizable performance.
+
+</p>
+</details>
+
+<details><summary><b>Rectified Flow: A Marginal Preserving Approach to Optimal Transport</b>
+<a href="https://arxiv.org/abs/2209.14577">arxiv:2209.14577</a>
+&#x1F4C8; 7 <br>
+<p>Qiang Liu</p></summary>
+<p>
+
+**Abstract:** We present a flow-based approach to the optimal transport (OT) problem between two continuous distributions $π_0,π_1$ on $\mathbb{R}^d$, of minimizing a transport cost $\mathbb{E}[c(X_1-X_0)]$ in the set of couplings $(X_0,X_1)$ whose marginal distributions on $X_0,X_1$ equals $π_0,π_1$, respectively, where $c$ is a cost function. Our method iteratively constructs a sequence of neural ordinary differentiable equations (ODE), each learned by solving a simple unconstrained regression problem, which monotonically reduce the transport cost while automatically preserving the marginal constraints. This yields a monotonic interior approach that traverses inside the set of valid couplings to decrease the transport cost, which distinguishes itself from most existing approaches that enforce the coupling constraints from the outside. The main idea of the method draws from rectified flow, a recent approach that simultaneously decreases the whole family of transport costs induced by convex functions $c$ (and is hence multi-objective in nature), but is not tailored to minimize a specific transport cost. Our method is a single-object variant of rectified flow that guarantees to solve the OT problem for a fixed, user-specified convex cost function $c$.
+
+</p>
+</details>
+
+<details><summary><b>Stop Wasting My Time! Saving Days of ImageNet and BERT Training with Latest Weight Averaging</b>
+<a href="https://arxiv.org/abs/2209.14981">arxiv:2209.14981</a>
+&#x1F4C8; 6 <br>
+<p>Jean Kaddour</p></summary>
+<p>
+
+**Abstract:** Training vision or language models on large datasets can take days, if not weeks. We show that averaging the weights of the k latest checkpoints, each collected at the end of an epoch, can speed up the training progression in terms of loss and accuracy by dozens of epochs, corresponding to time savings up to ~68 and ~30 GPU hours when training a ResNet50 on ImageNet and RoBERTa-Base model on WikiText-103, respectively. We also provide the code and model checkpoint trajectory to reproduce the results and facilitate research on reusing historical weights for faster convergence.
+
+</p>
+</details>
+
+<details><summary><b>Graph Anomaly Detection with Graph Neural Networks: Current Status and Challenges</b>
+<a href="https://arxiv.org/abs/2209.14930">arxiv:2209.14930</a>
+&#x1F4C8; 6 <br>
+<p>Hwan Kim, Byung Suk Lee, Won-Yong Shin, Sungsu Lim</p></summary>
+<p>
+
+**Abstract:** Graphs are used widely to model complex systems, and detecting anomalies in a graph is an important task in the analysis of complex systems. Graph anomalies are patterns in a graph that do not conform to normal patterns expected of the attributes and/or structures of the graph. In recent years, graph neural networks (GNNs) have been studied extensively and have successfully performed difficult machine learning tasks in node classification, link prediction, and graph classification thanks to the highly expressive capability via message passing in effectively learning graph representations. To solve the graph anomaly detection problem, GNN-based methods leverage information about the graph attributes (or features) and/or structures to learn to score anomalies appropriately. In this survey, we review the recent advances made in detecting graph anomalies using GNN models. Specifically, we summarize GNN-based methods according to the graph type (i.e., static and dynamic), the anomaly type (i.e., node, edge, subgraph, and whole graph), and the network architecture (e.g., graph autoencoder, graph convolutional network). To the best of our knowledge, this survey is the first comprehensive review of graph anomaly detection methods based on GNNs.
+
+</p>
+</details>
+
+<details><summary><b>Patients' Severity States Classification based on Electronic Health Record (EHR) Data using Multiple Machine Learning and Deep Learning Approaches</b>
+<a href="https://arxiv.org/abs/2209.14907">arxiv:2209.14907</a>
+&#x1F4C8; 6 <br>
+<p>A. N. M. Sajedul Alam, Rimi Reza, Asir Abrar, Tanvir Ahmed, Salsabil Ahmed, Shihab Sharar, Annajiat Alim Rasel</p></summary>
+<p>
+
+**Abstract:** This research presents an examination of categorizing the severity states of patients based on their electronic health records during a certain time range using multiple machine learning and deep learning approaches. The suggested method uses an EHR dataset collected from an open-source platform to categorize severity. Some tools were used in this research, such as openRefine was used to pre-process, RapidMiner was used for implementing three algorithms (Fast Large Margin, Generalized Linear Model, Multi-layer Feed-forward Neural Network) and Tableau was used to visualize the data, for implementation of algorithms we used Google Colab. Here we implemented several supervised and unsupervised algorithms along with semi-supervised and deep learning algorithms. The experimental results reveal that hyperparameter-tuned Random Forest outperformed all the other supervised machine learning algorithms with 76% accuracy as well as Generalized Linear algorithm achieved the highest precision score 78%, whereas the hyperparameter-tuned Hierarchical Clustering with 86% precision score and Gaussian Mixture Model with 61% accuracy outperformed other unsupervised approaches. Dimensionality Reduction improved results a lot for most unsupervised techniques. For implementing Deep Learning we employed a feed-forward neural network (multi-layer) and the Fast Large Margin approach for semi-supervised learning. The Fast Large Margin performed really well with a recall score of 84% and an F1 score of 78%. Finally, the Multi-layer Feed-forward Neural Network performed admirably with 75% accuracy, 75% precision, 87% recall, 81% F1 score.
+
+</p>
+</details>
+
+<details><summary><b>Sequential Attention for Feature Selection</b>
+<a href="https://arxiv.org/abs/2209.14881">arxiv:2209.14881</a>
+&#x1F4C8; 6 <br>
+<p>MohammadHossein Bateni, Lin Chen, Matthew Fahrbach, Gang Fu, Vahab Mirrokni, Taisuke Yasuda</p></summary>
+<p>
+
+**Abstract:** Feature selection is the problem of selecting a subset of features for a machine learning model that maximizes model quality subject to a resource budget constraint. For neural networks, prior methods, including those based on $\ell_1$ regularization, attention, and stochastic gates, typically select all of the features in one evaluation round, ignoring the residual value of the features during selection (i.e., the marginal contribution of a feature conditioned on the previously selected features). We propose a feature selection algorithm called Sequential Attention that achieves state-of-the-art empirical results for neural networks. This algorithm is based on an efficient implementation of greedy forward selection and uses attention weights at each step as a proxy for marginal feature importance. We provide theoretical insights into our Sequential Attention algorithm for linear regression models by showing that an adaptation to this setting is equivalent to the classical Orthogonal Matching Pursuit algorithm [PRK1993], and thus inherits all of its provable guarantees. Lastly, our theoretical and empirical analyses provide new explanations towards the effectiveness of attention and its connections to overparameterization, which might be of independent interest.
+
+</p>
+</details>
+
+<details><summary><b>Analyzing Diffusion as Serial Reproduction</b>
+<a href="https://arxiv.org/abs/2209.14821">arxiv:2209.14821</a>
+&#x1F4C8; 6 <br>
+<p>Raja Marjieh, Ilia Sucholutsky, Thomas A. Langlois, Nori Jacoby, Thomas L. Griffiths</p></summary>
+<p>
+
+**Abstract:** Diffusion models are a class of generative models that learn to synthesize samples by inverting a diffusion process that gradually maps data into noise. While these models have enjoyed great success recently, a full theoretical understanding of their observed properties is still lacking, in particular, their weak sensitivity to the choice of noise family and the role of adequate scheduling of noise levels for good synthesis. By identifying a correspondence between diffusion models and a well-known paradigm in cognitive science known as serial reproduction, whereby human agents iteratively observe and reproduce stimuli from memory, we show how the aforementioned properties of diffusion models can be explained as a natural consequence of this correspondence. We then complement our theoretical analysis with simulations that exhibit these key features. Our work highlights how classic paradigms in cognitive science can shed light on state-of-the-art machine learning problems.
+
+</p>
+</details>
+
+<details><summary><b>Dataset Complexity Assessment Based on Cumulative Maximum Scaled Area Under Laplacian Spectrum</b>
+<a href="https://arxiv.org/abs/2209.14743">arxiv:2209.14743</a>
+&#x1F4C8; 6 <br>
+<p>Guang Li, Ren Togo, Takahiro Ogawa, Miki Haseyama</p></summary>
+<p>
+
+**Abstract:** Dataset complexity assessment aims to predict classification performance on a dataset with complexity calculation before training a classifier, which can also be used for classifier selection and dataset reduction. The training process of deep convolutional neural networks (DCNNs) is iterative and time-consuming because of hyperparameter uncertainty and the domain shift introduced by different datasets. Hence, it is meaningful to predict classification performance by assessing the complexity of datasets effectively before training DCNN models. This paper proposes a novel method called cumulative maximum scaled Area Under Laplacian Spectrum (cmsAULS), which can achieve state-of-the-art complexity assessment performance on six datasets.
+
+</p>
+</details>
+
+<details><summary><b>Hyper-Representations as Generative Models: Sampling Unseen Neural Network Weights</b>
+<a href="https://arxiv.org/abs/2209.14733">arxiv:2209.14733</a>
+&#x1F4C8; 6 <br>
+<p>Konstantin Schürholt, Boris Knyazev, Xavier Giró-i-Nieto, Damian Borth</p></summary>
+<p>
+
+**Abstract:** Learning representations of neural network weights given a model zoo is an emerging and challenging area with many potential applications from model inspection, to neural architecture search or knowledge distillation. Recently, an autoencoder trained on a model zoo was able to learn a hyper-representation, which captures intrinsic and extrinsic properties of the models in the zoo. In this work, we extend hyper-representations for generative use to sample new model weights. We propose layer-wise loss normalization which we demonstrate is key to generate high-performing models and several sampling methods based on the topology of hyper-representations. The models generated using our methods are diverse, performant and capable to outperform strong baselines as evaluated on several downstream tasks: initialization, ensemble sampling and transfer learning. Our results indicate the potential of knowledge aggregation from model zoos to new models via hyper-representations thereby paving the avenue for novel research directions.
+
+</p>
+</details>
+
+<details><summary><b>Reinforcement Learning Algorithms: An Overview and Classification</b>
+<a href="https://arxiv.org/abs/2209.14940">arxiv:2209.14940</a>
+&#x1F4C8; 5 <br>
+<p>Fadi AlMahamid, Katarina Grolinger</p></summary>
+<p>
+
+**Abstract:** The desire to make applications and machines more intelligent and the aspiration to enable their operation without human interaction have been driving innovations in neural networks, deep learning, and other machine learning techniques. Although reinforcement learning has been primarily used in video games, recent advancements and the development of diverse and powerful reinforcement algorithms have enabled the reinforcement learning community to move from playing video games to solving complex real-life problems in autonomous systems such as self-driving cars, delivery drones, and automated robotics. Understanding the environment of an application and the algorithms' limitations plays a vital role in selecting the appropriate reinforcement learning algorithm that successfully solves the problem on hand in an efficient manner. Consequently, in this study, we identify three main environment types and classify reinforcement learning algorithms according to those environment types. Moreover, within each category, we identify relationships between algorithms. The overview of each algorithm provides insight into the algorithms' foundations and reviews similarities and differences among algorithms. This study provides a perspective on the field and helps practitioners and researchers to select the appropriate algorithm for their use case.
+
+</p>
+</details>
+
+<details><summary><b>Spotlight: Mobile UI Understanding using Vision-Language Models with a Focus</b>
+<a href="https://arxiv.org/abs/2209.14927">arxiv:2209.14927</a>
+&#x1F4C8; 5 <br>
+<p>Gang Li, Yang Li</p></summary>
+<p>
+
+**Abstract:** Mobile UI understanding is important for enabling various interaction tasks such as UI automation and accessibility. Previous mobile UI modeling often depends on the view hierarchy information of a screen, which directly provides the structural data of the UI, with the hope to bypass challenging tasks of visual modeling from screen pixels. However, view hierarchy is not always available, and is often corrupted with missing object descriptions or misaligned bounding box positions. As a result, although using view hierarchy offers some short-term gains, it may ultimately hinder the applicability and performance of the model. In this paper, we propose Spotlight, a vision-only approach for mobile UI understanding. Specifically, we enhance a vision-language model that only takes the screenshot of the UI and a region of interest on the screen -- the focus -- as the input. This general architecture is easily scalable and capable of performing a range of UI modeling tasks. Our experiments show that our model obtains SoTA results on several representative UI tasks and outperforms previous methods that use both screenshots and view hierarchies as input. Furthermore, we explore the multi-task learning and few-shot prompting capacity of the proposed models, demonstrating promising results in the multi-task learning direction.
+
+</p>
+</details>
+
+<details><summary><b>Meta Knowledge Condensation for Federated Learning</b>
+<a href="https://arxiv.org/abs/2209.14851">arxiv:2209.14851</a>
+&#x1F4C8; 5 <br>
+<p>Ping Liu, Xin Yu, Joey Tianyi Zhou</p></summary>
+<p>
+
+**Abstract:** Existing federated learning paradigms usually extensively exchange distributed models at a central solver to achieve a more powerful model. However, this would incur severe communication burden between a server and multiple clients especially when data distributions are heterogeneous. As a result, current federated learning methods often require a large number of communication rounds in training. Unlike existing paradigms, we introduce an alternative perspective to significantly decrease the communication cost in federate learning. In this work, we first introduce a meta knowledge representation method that extracts meta knowledge from distributed clients. The extracted meta knowledge encodes essential information that can be used to improve the current model. As the training progresses, the contributions of training samples to a federated model also vary. Thus, we introduce a dynamic weight assignment mechanism that enables samples to contribute adaptively to the current model update. Then, informative meta knowledge from all active clients is sent to the server for model update. Training a model on the combined meta knowledge without exposing original data among different clients can significantly mitigate the heterogeneity issues. Moreover, to further ameliorate data heterogeneity, we also exchange meta knowledge among clients as conditional initialization for local meta knowledge extraction. Extensive experiments demonstrate the effectiveness and efficiency of our proposed method. Remarkably, our method outperforms the state-of-the-art by a large margin (from $74.07\%$ to $92.95\%$) on MNIST with a restricted communication budget (i.e. 10 rounds).
+
+</p>
+</details>
+
+<details><summary><b>R2C-GAN: Restore-to-Classify GANs for Blind X-Ray Restoration and COVID-19 Classification</b>
+<a href="https://arxiv.org/abs/2209.14770">arxiv:2209.14770</a>
+&#x1F4C8; 5 <br>
+<p>Mete Ahishali, Aysen Degerli, Serkan Kiranyaz, Tahir Hamid, Rashid Mazhar, Moncef Gabbouj</p></summary>
+<p>
+
+**Abstract:** Restoration of poor quality images with a blended set of artifacts plays a vital role for a reliable diagnosis. Existing studies have focused on specific restoration problems such as image deblurring, denoising, and exposure correction where there is usually a strong assumption on the artifact type and severity. As a pioneer study in blind X-ray restoration, we propose a joint model for generic image restoration and classification: Restore-to-Classify Generative Adversarial Networks (R2C-GANs). Such a jointly optimized model keeps any disease intact after the restoration. Therefore, this will naturally lead to a higher diagnosis performance thanks to the improved X-ray image quality. To accomplish this crucial objective, we define the restoration task as an Image-to-Image translation problem from poor quality having noisy, blurry, or over/under-exposed images to high quality image domain. The proposed R2C-GAN model is able to learn forward and inverse transforms between the two domains using unpaired training samples. Simultaneously, the joint classification preserves the disease label during restoration. Moreover, the R2C-GANs are equipped with operational layers/neurons reducing the network depth and further boosting both restoration and classification performances. The proposed joint model is extensively evaluated over the QaTa-COV19 dataset for Coronavirus Disease 2019 (COVID-19) classification. The proposed restoration approach achieves over 90% F1-Score which is significantly higher than the performance of any deep model. Moreover, in the qualitative analysis, the restoration performance of R2C-GANs is approved by a group of medical doctors. We share the software implementation at https://github.com/meteahishali/R2C-GAN.
+
+</p>
+</details>
+
+<details><summary><b>A Multi-Agent Framework for the Asynchronous and Collaborative Extension of Multitask ML Systems</b>
+<a href="https://arxiv.org/abs/2209.14745">arxiv:2209.14745</a>
+&#x1F4C8; 5 <br>
+<p>Andrea Gesmundo</p></summary>
+<p>
+
+**Abstract:** Tradition ML development methodology does not enable a large number of contributors, each with distinct objectives, to work collectively on the creation and extension of a shared intelligent system. Enabling such a collaborative methodology can accelerate the rate of innovation, increase ML technologies accessibility and enable the emergence of novel capabilities. We believe that this can be achieved through the definition of abstraction boundaries and a modularized representation of ML models and methods. We present a multi-agent framework for collaborative and asynchronous extension of dynamic large-scale multitask intelligent systems.
+
+</p>
+</details>
+
+<details><summary><b>Enumeration of max-pooling responses with generalized permutohedra</b>
+<a href="https://arxiv.org/abs/2209.14978">arxiv:2209.14978</a>
+&#x1F4C8; 4 <br>
+<p>Laura Escobar, Patricio Gallardo, Javier González-Anaya, José L. González, Guido Montúfar, Alejandro H. Morales</p></summary>
+<p>
+
+**Abstract:** We investigate the combinatorics of max-pooling layers, which are functions that downsample input arrays by taking the maximum over shifted windows of input coordinates, and which are commonly used in convolutional neural networks. We obtain results on the number of linearity regions of these functions by equivalently counting the number of vertices of certain Minkowski sums of simplices. We characterize the faces of such polytopes and obtain generating functions and closed formulas for the number of vertices and facets in a 1D max-pooling layer depending on the size of the pooling windows and stride, and for the number of vertices in a special case of 2D max-pooling.
+
+</p>
+</details>
+
+<details><summary><b>Learning Low-Frequency Motion Control for Robust and Dynamic Robot Locomotion</b>
+<a href="https://arxiv.org/abs/2209.14887">arxiv:2209.14887</a>
+&#x1F4C8; 4 <br>
+<p>Siddhant Gangapurwala, Luigi Campanaro, Ioannis Havoutis</p></summary>
+<p>
+
+**Abstract:** Robotic locomotion is often approached with the goal of maximizing robustness and reactivity by increasing motion control frequency. We challenge this intuitive notion by demonstrating robust and dynamic locomotion with a learned motion controller executing at as low as 8 Hz on a real ANYmal C quadruped. The robot is able to robustly and repeatably achieve a high heading velocity of 1.5 m/s, traverse uneven terrain, and resist unexpected external perturbations. We further present a comparative analysis of deep reinforcement learning (RL) based motion control policies trained and executed at frequencies ranging from 5 Hz to 200 Hz. We show that low-frequency policies are less sensitive to actuation latencies and variations in system dynamics. This is to the extent that a successful sim-to-real transfer can be performed even without any dynamics randomization or actuation modeling. We support this claim through a set of rigorous empirical evaluations. Moreover, to assist reproducibility, we provide the training and deployment code along with an extended analysis at https://ori-drs.github.io/lfmc/.
+
+</p>
+</details>
+
+<details><summary><b>polyBERT: A chemical language model to enable fully machine-driven ultrafast polymer informatics</b>
+<a href="https://arxiv.org/abs/2209.14803">arxiv:2209.14803</a>
+&#x1F4C8; 4 <br>
+<p>Christopher Kuenneth, Rampi Ramprasad</p></summary>
+<p>
+
+**Abstract:** Polymers are a vital part of everyday life. Their chemical universe is so large that it presents unprecedented opportunities as well as significant challenges to identify suitable application-specific candidates. We present a complete end-to-end machine-driven polymer informatics pipeline that can search this space for suitable candidates at unprecedented speed and accuracy. This pipeline includes a polymer chemical fingerprinting capability called polyBERT (inspired by Natural Language Processing concepts), and a multitask learning approach that maps the polyBERT fingerprints to a host of properties. polyBERT is a chemical linguist that treats the chemical structure of polymers as a chemical language. The present approach outstrips the best presently available concepts for polymer property prediction based on handcrafted fingerprint schemes in speed by two orders of magnitude while preserving accuracy, thus making it a strong candidate for deployment in scalable architectures including cloud infrastructures.
+
+</p>
+</details>
+
+<details><summary><b>Compressed Gastric Image Generation Based on Soft-Label Dataset Distillation for Medical Data Sharing</b>
+<a href="https://arxiv.org/abs/2209.14635">arxiv:2209.14635</a>
+&#x1F4C8; 4 <br>
+<p>Guang Li, Ren Togo, Takahiro Ogawa, Miki Haseyama</p></summary>
+<p>
+
+**Abstract:** Background and objective: Sharing of medical data is required to enable the cross-agency flow of healthcare information and construct high-accuracy computer-aided diagnosis systems. However, the large sizes of medical datasets, the massive amount of memory of saved deep convolutional neural network (DCNN) models, and patients' privacy protection are problems that can lead to inefficient medical data sharing. Therefore, this study proposes a novel soft-label dataset distillation method for medical data sharing. Methods: The proposed method distills valid information of medical image data and generates several compressed images with different data distributions for anonymous medical data sharing. Furthermore, our method can extract essential weights of DCNN models to reduce the memory required to save trained models for efficient medical data sharing. Results: The proposed method can compress tens of thousands of images into several soft-label images and reduce the size of a trained model to a few hundredths of its original size. The compressed images obtained after distillation have been visually anonymized; therefore, they do not contain the private information of the patients. Furthermore, we can realize high-detection performance with a small number of compressed images. Conclusions: The experimental results show that the proposed method can improve the efficiency and security of medical data sharing.
+
+</p>
+</details>
+
+<details><summary><b>Regularizing Neural Network Training via Identity-wise Discriminative Feature Suppression</b>
+<a href="https://arxiv.org/abs/2209.14553">arxiv:2209.14553</a>
+&#x1F4C8; 4 <br>
+<p>Avraham Chapman, Lingqiao Liu</p></summary>
+<p>
+
+**Abstract:** It is well-known that a deep neural network has a strong fitting capability and can easily achieve a low training error even with randomly assigned class labels. When the number of training samples is small, or the class labels are noisy, networks tend to memorize patterns specific to individual instances to minimize the training error. This leads to the issue of overfitting and poor generalisation performance. This paper explores a remedy by suppressing the network's tendency to rely on instance-specific patterns for empirical error minimisation. The proposed method is based on an adversarial training framework. It suppresses features that can be utilized to identify individual instances among samples within each class. This leads to classifiers only using features that are both discriminative across classes and common within each class. We call our method Adversarial Suppression of Identity Features (ASIF), and demonstrate the usefulness of this technique in boosting generalisation accuracy when faced with small datasets or noisy labels. Our source code is available.
+
+</p>
+</details>
+
+<details><summary><b>Accelerating Laboratory Automation Through Robot Skill Learning For Sample Scraping</b>
+<a href="https://arxiv.org/abs/2209.14875">arxiv:2209.14875</a>
+&#x1F4C8; 3 <br>
+<p>Gabriella Pizzuto, Hetong Wang, Hatem Fakhruldeen, Bei Peng, Kevin S. Luck, Andrew I. Cooper</p></summary>
+<p>
+
+**Abstract:** The potential use of robotics for laboratory experiments offers an attractive route to alleviate scientists from tedious tasks while accelerating the process of obtaining new materials, where topical issues such as climate change and disease risks worldwide would greatly benefit. While some experimental workflows can already benefit from automation, it is common that sample preparation is still carried out manually due to the high level of motor function required when dealing with heterogeneous systems, e.g., different tools, chemicals, and glassware. A fundamental workflow in chemical fields is crystallisation, where one application is polymorph screening, i.e., obtaining a three dimensional molecular structure from a crystal. For this process, it is of utmost importance to recover as much of the sample as possible since synthesising molecules is both costly in time and money. To this aim, chemists have to scrape vials to retrieve sample contents prior to imaging plate transfer. Automating this process is challenging as it goes beyond robotic insertion tasks due to a fundamental requirement of having to execute fine-granular movements within a constrained environment that is the sample vial. Motivated by how human chemists carry out this process of scraping powder from vials, our work proposes a model-free reinforcement learning method for learning a scraping policy, leading to a fully autonomous sample scraping procedure. To realise that, we first create a simulation environment with a Panda Franka Emika robot using a laboratory scraper which is inserted into a simulated vial, to demonstrate how a scraping policy can be learned successfully. We then evaluate our method on a real robotic manipulator in laboratory settings, and show that our method can autonomously scrape powder across various setups.
+
+</p>
+</details>
+
+<details><summary><b>FastPacket: Towards Pre-trained Packets Embedding based on FastText for next-generation NIDS</b>
+<a href="https://arxiv.org/abs/2209.14727">arxiv:2209.14727</a>
+&#x1F4C8; 3 <br>
+<p>Khloud Al Jallad</p></summary>
+<p>
+
+**Abstract:** New Attacks are increasingly used by attackers everyday but many of them are not detected by Intrusion Detection Systems as most IDS ignore raw packet information and only care about some basic statistical information extracted from PCAP files. Using networking programs to extract fixed statistical features from packets is good, but may not enough to detect nowadays challenges. We think that it is time to utilize big data and deep learning for automatic dynamic feature extraction from packets. It is time to get inspired by deep learning pre-trained models in computer vision and natural language processing, so security deep learning solutions will have its pre-trained models on big datasets to be used in future researches. In this paper, we proposed a new approach for embedding packets based on character-level embeddings, inspired by FastText success on text data. We called this approach FastPacket. Results are measured on subsets of CIC-IDS-2017 dataset, but we expect promising results on big data pre-trained models. We suggest building pre-trained FastPacket on MAWI big dataset and make it available to community, similar to FastText. To be able to outperform currently used NIDS, to start a new era of packet-level NIDS that can better detect complex attacks.
+
+</p>
+</details>
+
+<details><summary><b>Facial Landmark Predictions with Applications to Metaverse</b>
+<a href="https://arxiv.org/abs/2209.14698">arxiv:2209.14698</a>
+&#x1F4C8; 3 <br>
+<p>Qiao Han, Jun Zhao, Kwok-Yan Lam</p></summary>
+<p>
+
+**Abstract:** This research aims to make metaverse characters more realistic by adding lip animations learnt from videos in the wild. To achieve this, our approach is to extend Tacotron 2 text-to-speech synthesizer to generate lip movements together with mel spectrogram in one pass. The encoder and gate layer weights are pre-trained on LJ Speech 1.1 data set while the decoder is retrained on 93 clips of TED talk videos extracted from LRS 3 data set. Our novel decoder predicts displacement in 20 lip landmark positions across time, using labels automatically extracted by OpenFace 2.0 landmark predictor. Training converged in 7 hours using less than 5 minutes of video. We conducted ablation study for Pre/Post-Net and pre-trained encoder weights to demonstrate the effectiveness of transfer learning between audio and visual speech data.
+
+</p>
+</details>
+
+<details><summary><b>Towards Equalised Odds as Fairness Metric in Academic Performance Prediction</b>
+<a href="https://arxiv.org/abs/2209.14670">arxiv:2209.14670</a>
+&#x1F4C8; 3 <br>
+<p>Jannik Dunkelau, Manh Khoi Duong</p></summary>
+<p>
+
+**Abstract:** The literature for fairness-aware machine learning knows a plethora of different fairness notions. It is however wellknown, that it is impossible to satisfy all of them, as certain notions contradict each other. In this paper, we take a closer look at academic performance prediction (APP) systems and try to distil which fairness notions suit this task most. For this, we scan recent literature proposing guidelines as to which fairness notion to use and apply these guidelines onto APP. Our findings suggest equalised odds as most suitable notion for APP, based on APP's WYSIWYG worldview as well as potential long-term improvements for the population.
+
+</p>
+</details>
+
+<details><summary><b>Increasing Model Generalizability for Unsupervised Domain Adaptation</b>
+<a href="https://arxiv.org/abs/2209.14644">arxiv:2209.14644</a>
+&#x1F4C8; 3 <br>
+<p>Mohammad Rostami</p></summary>
+<p>
+
+**Abstract:** A dominant approach for addressing unsupervised domain adaptation is to map data points for the source and the target domains into an embedding space which is modeled as the output-space of a shared deep encoder. The encoder is trained to make the embedding space domain-agnostic to make a source-trained classifier generalizable on the target domain. A secondary mechanism to improve UDA performance further is to make the source domain distribution more compact to improve model generalizability. We demonstrate that increasing the interclass margins in the embedding space can help to develop a UDA algorithm with improved performance. We estimate the internally learned multi-modal distribution for the source domain, learned as a result of pretraining, and use it to increase the interclass class separation in the source domain to reduce the effect of domain shift. We demonstrate that using our approach leads to improved model generalizability on four standard benchmark UDA image classification datasets and compares favorably against exiting methods.
+
+</p>
+</details>
+
+<details><summary><b>Dataset Distillation using Parameter Pruning</b>
+<a href="https://arxiv.org/abs/2209.14609">arxiv:2209.14609</a>
+&#x1F4C8; 3 <br>
+<p>Guang Li, Ren Togo, Takahiro Ogawa, Miki Haseyama</p></summary>
+<p>
+
+**Abstract:** The acquisition of advanced models relies on large datasets in many fields, which makes storing datasets and training models expensive. As a solution, dataset distillation can synthesize a small dataset such that models trained on it achieve high performance on par with the original large dataset. The recently proposed dataset distillation method by matching network parameters has been proved effective for several datasets. However, a few parameters in the distillation process are difficult to match, which harms the distillation performance. Based on this observation, this paper proposes a new method to solve the problem using parameter pruning. The proposed method can synthesize more robust distilled datasets and improve the distillation performance by pruning difficult-to-match parameters in the distillation process. Experimental results on three datasets show that the proposed method outperformed other SOTA dataset distillation methods.
+
+</p>
+</details>
+
+<details><summary><b>Dataset Distillation for Medical Dataset Sharing</b>
+<a href="https://arxiv.org/abs/2209.14603">arxiv:2209.14603</a>
+&#x1F4C8; 3 <br>
+<p>Guang Li, Ren Togo, Takahiro Ogawa, Miki Haseyama</p></summary>
+<p>
+
+**Abstract:** Sharing medical datasets between hospitals is challenging because of the privacy-protection problem and the massive cost of transmitting and storing many high-resolution medical images. However, dataset distillation can synthesize a small dataset such that models trained on it achieve comparable performance with the original large dataset, which shows potential for solving the existing medical sharing problems. Hence, this paper proposes a novel dataset distillation-based method for medical dataset sharing. Experimental results on a COVID-19 chest X-ray image dataset show that our method can achieve high detection performance even using scarce anonymized chest X-ray images.
+
+</p>
+</details>
+
+<details><summary><b>Exploring Cross-Point Embeddings for 3D Dense Uncertainty Estimation</b>
+<a href="https://arxiv.org/abs/2209.14602">arxiv:2209.14602</a>
+&#x1F4C8; 3 <br>
+<p>Kaiwen Cai, Chris Xiaoxuan Lu, Xiaowei Huang</p></summary>
+<p>
+
+**Abstract:** Dense prediction tasks are common for 3D point clouds, but the inherent uncertainties in massive points and their embeddings have long been ignored. In this work, we present CUE, a novel uncertainty estimation method for dense prediction tasks of 3D point clouds. Inspired by metric learning, the key idea of CUE is to explore cross-point embeddings upon a conventional dense prediction pipeline. Specifically, CUE involves building a probabilistic embedding model and then enforcing metric alignments of massive points in the embedding space. We demonstrate that CUE is a generic and effective tool for dense uncertainty estimation of 3D point clouds in two different tasks: (1) in 3D geometric feature learning we for the first time obtain well-calibrated dense uncertainty, and (2) in semantic segmentation we reduce uncertainty`s Expected Calibration Error of the state-of-the-arts by 43.8%. All uncertainties are estimated without compromising predictive performance.
+
+</p>
+</details>
+
+<details><summary><b>Optimistic MLE -- A Generic Model-based Algorithm for Partially Observable Sequential Decision Making</b>
+<a href="https://arxiv.org/abs/2209.14997">arxiv:2209.14997</a>
+&#x1F4C8; 2 <br>
+<p>Qinghua Liu, Praneeth Netrapalli, Csaba Szepesvari, Chi Jin</p></summary>
+<p>
+
+**Abstract:** This paper introduces a simple efficient learning algorithms for general sequential decision making. The algorithm combines Optimism for exploration with Maximum Likelihood Estimation for model estimation, which is thus named OMLE. We prove that OMLE learns the near-optimal policies of an enormously rich class of sequential decision making problems in a polynomial number of samples. This rich class includes not only a majority of known tractable model-based Reinforcement Learning (RL) problems (such as tabular MDPs, factored MDPs, low witness rank problems, tabular weakly-revealing/observable POMDPs and multi-step decodable POMDPs), but also many new challenging RL problems especially in the partially observable setting that were not previously known to be tractable.
+  Notably, the new problems addressed by this paper include (1) observable POMDPs with continuous observation and function approximation, where we achieve the first sample complexity that is completely independent of the size of observation space; (2) well-conditioned low-rank sequential decision making problems (also known as Predictive State Representations (PSRs)), which include and generalize all known tractable POMDP examples under a more intrinsic representation; (3) general sequential decision making problems under SAIL condition, which unifies our existing understandings of model-based RL in both fully observable and partially observable settings. SAIL condition is identified by this paper, which can be viewed as a natural generalization of Bellman/witness rank to address partial observability.
+
+</p>
+</details>
+
+<details><summary><b>Trading off Quality for Efficiency of Community Detection: An Inductive Method across Graphs</b>
+<a href="https://arxiv.org/abs/2209.14825">arxiv:2209.14825</a>
+&#x1F4C8; 2 <br>
+<p>Meng Qin, Chaorui Zhang, Bo Bai, Gong Zhang, Dit-Yan Yeung</p></summary>
+<p>
+
+**Abstract:** Many network applications can be formulated as NP-hard combinatorial optimization problems of community detection (CD). Due to the NP-hardness, to balance the CD quality and efficiency remains a challenge. Most existing CD methods are transductive, which are independently optimized only for the CD on a single graph. Some of these methods use advanced machine learning techniques to obtain high-quality CD results but usually have high complexity. Other approaches use fast heuristic approximation to ensure low runtime but may suffer from quality degradation. In contrast to these transductive methods, we propose an alternative inductive community detection (ICD) method across graphs of a system or scenario to alleviate the NP-hard challenge. ICD first conducts the offline training of an adversarial dual GNN on historical graphs to capture key properties of the system. The trained model is then directly generalized to new unseen graphs for online CD without additional optimization, where a better trade-off between quality and efficiency can be achieved. ICD can also capture the permutation invariant community labels in the offline training and tackle the online CD on new graphs with non-fixed number of nodes and communities. Experiments on a set of benchmarks demonstrate that ICD can achieve a significant trade-off between quality and efficiency over various baselines.
+
+</p>
+</details>
+
+<details><summary><b>Causal inference in drug discovery and development</b>
+<a href="https://arxiv.org/abs/2209.14664">arxiv:2209.14664</a>
+&#x1F4C8; 2 <br>
+<p>Tom Michoel, Jitao David Zhang</p></summary>
+<p>
+
+**Abstract:** To discover new drugs is to seek and to prove causality. As an emerging approach leveraging human knowledge and creativity, data, and machine intelligence, causal inference holds the promise of reducing cognitive bias and improving decision making in drug discovery. While it has been applied across the value chain, the concepts and practice of causal inference remain obscure to many practitioners. This article offers a non-technical introduction to causal inference, reviews its recent applications, and discusses opportunities and challenges of adopting the causal language in drug discovery and development.
+
+</p>
+</details>
+
+<details><summary><b>Bounded Future MS-TCN++ for surgical gesture recognition</b>
+<a href="https://arxiv.org/abs/2209.14647">arxiv:2209.14647</a>
+&#x1F4C8; 2 <br>
+<p>Adam Goldbraikh, Netanell Avisdris, Carla M. Pugh, Shlomi Laufer</p></summary>
+<p>
+
+**Abstract:** In recent times there is a growing development of video based applications for surgical purposes. Part of these applications can work offline after the end of the procedure, other applications must react immediately. However, there are cases where the response should be done during the procedure but some delay is acceptable. In the literature, the online-offline performance gap is known. Our goal in this study was to learn the performance-delay trade-off and design an MS-TCN++-based algorithm that can utilize this trade-off. To this aim, we used our open surgery simulation data-set containing 96 videos of 24 participants that perform a suturing task on a variable tissue simulator. In this study, we used video data captured from the side view. The Networks were trained to identify the performed surgical gestures. The naive approach is to reduce the MS-TCN++ depth, as a result, the receptive field is reduced, and also the number of required future frames is also reduced. We showed that this method is sub-optimal, mainly in the small delay cases. The second method was to limit the accessible future in each temporal convolution. This way, we have flexibility in the network design and as a result, we achieve significantly better performance than in the naive approach.
+
+</p>
+</details>
+
+<details><summary><b>Is Complexity Required for Neural Network Pruning? A Case Study on Global Magnitude Pruning</b>
+<a href="https://arxiv.org/abs/2209.14624">arxiv:2209.14624</a>
+&#x1F4C8; 2 <br>
+<p>Manas Gupta, Efe Camci, Vishandi Rudy Keneta, Abhishek Vaidyanathan, Ritwik Kanodia, Chuan-Sheng Foo, Wu Min, Lin Jie</p></summary>
+<p>
+
+**Abstract:** Pruning neural networks has become popular in the last decade when it was shown that a large number of weights can be safely removed from modern neural networks without compromising accuracy. Numerous pruning methods have been proposed since then, each claiming to be better than the previous. Many state-of-the-art (SOTA) techniques today rely on complex pruning methodologies utilizing importance scores, getting feedback through back-propagation or having heuristics-based pruning rules amongst others. We question this pattern of introducing complexity in order to achieve better pruning results. We benchmark these SOTA techniques against Global Magnitude Pruning (Global MP), a naive pruning baseline, to evaluate whether complexity is really needed to achieve higher performance. Global MP ranks weights in order of their magnitudes and prunes the smallest ones. Hence, in its vanilla form, it is one of the simplest pruning techniques. Surprisingly, we find that vanilla Global MP outperforms all the other SOTA techniques and achieves a new SOTA result. It also achieves good performance on FLOPs sparsification, which we find is enhanced, when pruning is conducted in a gradual fashion. We also find that Global MP is generalizable across tasks, datasets and models with superior performance. Moreover, a common issue that many pruning algorithms run into at high sparsity rates, namely, layer-collapse, can be easily fixed in Global MP by setting a minimum threshold of weights to be retained in each layer. Lastly, unlike many other SOTA techniques, Global MP does not require any additional algorithm specific hyper-parameters and is very straightforward to tune and implement. We showcase our findings on various models (WRN-28-8, ResNet-32, ResNet-50, MobileNet-V1 and FastGRNN) and multiple datasets (CIFAR-10, ImageNet and HAR-2). Code is available at https://github.com/manasgupta-1/GlobalMP.
+
+</p>
+</details>
+
+<details><summary><b>Spherical Image Inpainting with Frame Transformation and Data-driven Prior Deep Networks</b>
+<a href="https://arxiv.org/abs/2209.14604">arxiv:2209.14604</a>
+&#x1F4C8; 2 <br>
+<p>Jianfei Li, Chaoyan Huang, Raymond Chan, Han Feng, Micheal Ng, Tieyong Zeng</p></summary>
+<p>
+
+**Abstract:** Spherical image processing has been widely applied in many important fields, such as omnidirectional vision for autonomous cars, global climate modelling, and medical imaging. It is non-trivial to extend an algorithm developed for flat images to the spherical ones. In this work, we focus on the challenging task of spherical image inpainting with deep learning-based regularizer. Instead of a naive application of existing models for planar images, we employ a fast directional spherical Haar framelet transform and develop a novel optimization framework based on a sparsity assumption of the framelet transform. Furthermore, by employing progressive encoder-decoder architecture, a new and better-performed deep CNN denoiser is carefully designed and works as an implicit regularizer. Finally, we use a plug-and-play method to handle the proposed optimization model, which can be implemented efficiently by training the CNN denoiser prior. Numerical experiments are conducted and show that the proposed algorithms can greatly recover damaged spherical images and achieve the best performance over purely using deep learning denoiser and plug-and-play model.
+
+</p>
+</details>
+
+<details><summary><b>Dynamic Surrogate Switching: Sample-Efficient Search for Factorization Machine Configurations in Online Recommendations</b>
+<a href="https://arxiv.org/abs/2209.14598">arxiv:2209.14598</a>
+&#x1F4C8; 2 <br>
+<p>Blaž Škrlj, Adi Schwartz, Jure Ferlež, Davorin Kopič, Naama Ziporin</p></summary>
+<p>
+
+**Abstract:** Hyperparameter optimization is the process of identifying the appropriate hyperparameter configuration of a given machine learning model with regard to a given learning task. For smaller data sets, an exhaustive search is possible; However, when the data size and model complexity increase, the number of configuration evaluations becomes the main computational bottleneck. A promising paradigm for tackling this type of problem is surrogate-based optimization. The main idea underlying this paradigm considers an incrementally updated model of the relation between the hyperparameter space and the output (target) space; the data for this model are obtained by evaluating the main learning engine, which is, for example, a factorization machine-based model. By learning to approximate the hyperparameter-target relation, the surrogate (machine learning) model can be used to score large amounts of hyperparameter configurations, exploring parts of the configuration space beyond the reach of direct machine learning engine evaluation. Commonly, a surrogate is selected prior to optimization initialization and remains the same during the search. We investigated whether dynamic switching of surrogates during the optimization itself is a sensible idea of practical relevance for selecting the most appropriate factorization machine-based models for large-scale online recommendation. We conducted benchmarks on data sets containing hundreds of millions of instances against established baselines such as Random Forest- and Gaussian process-based surrogates. The results indicate that surrogate switching can offer good performance while considering fewer learning engine evaluations.
+
+</p>
+</details>
+
+<details><summary><b>Denoising MCMC for Accelerating Diffusion-Based Generative Models</b>
+<a href="https://arxiv.org/abs/2209.14593">arxiv:2209.14593</a>
+&#x1F4C8; 2 <br>
+<p>Beomsu Kim, Jong Chul Ye</p></summary>
+<p>
+
+**Abstract:** Diffusion models are powerful generative models that simulate the reverse of diffusion processes using score functions to synthesize data from noise. The sampling process of diffusion models can be interpreted as solving the reverse stochastic differential equation (SDE) or the ordinary differential equation (ODE) of the diffusion process, which often requires up to thousands of discretization steps to generate a single image. This has sparked a great interest in developing efficient integration techniques for reverse-S/ODEs. Here, we propose an orthogonal approach to accelerating score-based sampling: Denoising MCMC (DMCMC). DMCMC first uses MCMC to produce samples in the product space of data and variance (or diffusion time). Then, a reverse-S/ODE integrator is used to denoise the MCMC samples. Since MCMC traverses close to the data manifold, the computation cost of producing a clean sample for DMCMC is much less than that of producing a clean sample from noise. To verify the proposed concept, we show that Denoising Langevin Gibbs (DLG), an instance of DMCMC, successfully accelerates all six reverse-S/ODE integrators considered in this work on the tasks of CIFAR10 and CelebA-HQ-256 image generation. Notably, combined with integrators of Karras et al. (2022) and pre-trained score models of Song et al. (2021b), DLG achieves SOTA results. In the limited number of score function evaluation (NFE) settings on CIFAR10, we have $3.86$ FID with $\approx 10$ NFE and $2.63$ FID with $\approx 20$ NFE. On CelebA-HQ-256, we have $6.99$ FID with $\approx 160$ NFE, which beats the current best record of Kim et al. (2022) among score-based models, $7.16$ FID with $4000$ NFE. Code: https://github.com/1202kbs/DMCMC
+
+</p>
+</details>
+
+<details><summary><b>Rethinking Counterfactual Explanations as Local and Regional Counterfactual Policies</b>
+<a href="https://arxiv.org/abs/2209.14568">arxiv:2209.14568</a>
+&#x1F4C8; 2 <br>
+<p>Salim I. Amoukou, Nicolas J. B Brunel</p></summary>
+<p>
+
+**Abstract:** Among the challenges not yet resolved for Counterfactual Explanations (CE), there are stability, synthesis of the various CE and the lack of plausibility/sparsity guarantees. From a more practical point of view, recent studies show that the prescribed counterfactual recourses are often not implemented exactly by the individuals and demonstrate that most state-of-the-art CE algorithms are very likely to fail in this noisy environment. To address these issues, we propose a probabilistic framework that gives a sparse local counterfactual rule for each observation: we provide rules that give a range of values that can change the decision with a given high probability instead of giving diverse CE. In addition, the recourses derived from these rules are robust by construction. These local rules are aggregated into a regional counterfactual rule to ensure the stability of the counterfactual explanations across observations. Our local and regional rules guarantee that the recourses are faithful to the data distribution because our rules use a consistent estimator of the probabilities of changing the decision based on a Random Forest. In addition, these probabilities give interpretable and sparse rules as we select the smallest set of variables having a given probability of changing the decision. Codes for computing our counterfactual rules are available, and we compare their relevancy with standard CE and recent similar attempts.
+
+</p>
+</details>
+
+<details><summary><b>Diffusion Adversarial Representation Learning for Self-supervised Vessel Segmentation</b>
+<a href="https://arxiv.org/abs/2209.14566">arxiv:2209.14566</a>
+&#x1F4C8; 2 <br>
+<p>Boah Kim, Yujin Oh, Jong Chul Ye</p></summary>
+<p>
+
+**Abstract:** Vessel segmentation in medical images is one of the important tasks in the diagnosis of vascular diseases and therapy planning. Although learning-based segmentation approaches have been extensively studied, a large amount of ground-truth labels are required in supervised methods and confusing background structures make neural networks hard to segment vessels in an unsupervised manner. To address this, here we introduce a novel diffusion adversarial representation learning (DARL) model that leverages a denoising diffusion probabilistic model with adversarial learning, and apply it for vessel segmentation. In particular, for self-supervised vessel segmentation, DARL learns background image distribution using a diffusion module, which lets a generation module effectively provide vessel representations. Also, by adversarial learning based on the proposed switchable spatially-adaptive denormalization, our model estimates synthetic fake vessel images as well as vessel segmentation masks, which further makes the model capture vessel-relevant semantic information. Once the proposed model is trained, the model generates segmentation masks by one step and can be applied to general vascular structure segmentation of coronary angiography and retinal images. Experimental results on various datasets show that our method significantly outperforms existing unsupervised and self-supervised methods in vessel segmentation.
+
+</p>
+</details>
+
+<details><summary><b>Repairing Bugs in Python Assignments Using Large Language Models</b>
+<a href="https://arxiv.org/abs/2209.14876">arxiv:2209.14876</a>
+&#x1F4C8; 1 <br>
+<p>Jialu Zhang, José Cambronero, Sumit Gulwani, Vu Le, Ruzica Piskac, Gustavo Soares, Gust Verbruggen</p></summary>
+<p>
+
+**Abstract:** Students often make mistakes on their introductory programming assignments as part of their learning process. Unfortunately, providing custom repairs for these mistakes can require a substantial amount of time and effort from class instructors. Automated program repair (APR) techniques can be used to synthesize such fixes. Prior work has explored the use of symbolic and neural techniques for APR in the education domain. Both types of approaches require either substantial engineering efforts or large amounts of data and training. We propose to use a large language model trained on code, such as Codex, to build an APR system -- MMAPR -- for introductory Python programming assignments. Our system can fix both syntactic and semantic mistakes by combining multi-modal prompts, iterative querying, test-case-based selection of few-shots, and program chunking. We evaluate MMAPR on 286 real student programs and compare to a baseline built by combining a state-of-the-art Python syntax repair engine, BIFI, and state-of-the-art Python semantic repair engine for student assignments, Refactory. We find that MMAPR can fix more programs and produce smaller patches on average.
+
+</p>
+</details>
+
+<details><summary><b>TruEyes: Utilizing Microtasks in Mobile Apps for Crowdsourced Labeling of Machine Learning Datasets</b>
+<a href="https://arxiv.org/abs/2209.14708">arxiv:2209.14708</a>
+&#x1F4C8; 1 <br>
+<p>Chandramohan Sudar, Michael Froehlich, Florian Alt</p></summary>
+<p>
+
+**Abstract:** The growing use of supervised machine learning in research and industry has increased the need for labeled datasets. Crowdsourcing has emerged as a popular method to create data labels. However, working on large batches of tasks leads to worker fatigue, negatively impacting labeling quality. To address this, we present TruEyes, a collaborative crowdsourcing system, enabling the distribution of micro-tasks to mobile app users. TruEyes allows machine learning practitioners to publish labeling tasks, mobile app developers to integrate task ads for monetization, and users to label data instead of watching advertisements. To evaluate the system, we conducted an experiment with N=296 participants. Our results show that the quality of the labeled data is comparable to traditional crowdsourcing approaches and most users prefer task ads over traditional ads. We discuss extensions to the system and address how mobile advertisement space can be used as a productive resource in the future.
+
+</p>
+</details>
+
+<details><summary><b>A canonical correlation-based framework for performance analysis of radio access networks</b>
+<a href="https://arxiv.org/abs/2209.14684">arxiv:2209.14684</a>
+&#x1F4C8; 1 <br>
+<p>Furqan Ahmed, Muhammad Zeeshan Asghar, Jyri Hämäläinen</p></summary>
+<p>
+
+**Abstract:** Data driven optimization and machine learning based performance diagnostics of radio access networks entails significant challenges arising not only from the nature of underlying data sources but also due to complex spatio-temporal relationships and interdependencies between cells due to user mobility and varying traffic patterns. We discuss how to study these configuration and performance management data sets and identify relationships between cells in terms of key performance indicators using multivariate analysis. To this end, we leverage a novel framework based on canonical correlation analysis (CCA), which is a highly effective method for not only dimensionality reduction but also for analyzing relationships across different sets of multivariate data. As a case study, we discuss energy saving use-case based on cell shutdown in commercial cellular networks, where we apply CCA to analyze the impact of capacity cell shutdown on the KPIs of coverage cell in the same sector. Data from LTE Network is used to analyzed example case. We conclude that CCA is a viable approach for identifying key relationships not only between network planning and configuration data, but also dynamic performance data, paving the way for endeavors such as dimensionality reduction, performance analysis, and root cause analysis for performance diagnostics.
+
+</p>
+</details>
+
+<details><summary><b>Correlated Feature Aggregation by Region Helps Distinguish Aggressive from Indolent Clear Cell Renal Cell Carcinoma Subtypes on CT</b>
+<a href="https://arxiv.org/abs/2209.14657">arxiv:2209.14657</a>
+&#x1F4C8; 1 <br>
+<p>Karin Stacke, Indrani Bhattacharya, Justin R. Tse, James D. Brooks, Geoffrey A. Sonn, Mirabela Rusu</p></summary>
+<p>
+
+**Abstract:** Renal cell carcinoma (RCC) is a common cancer that varies in clinical behavior. Indolent RCC is often low-grade without necrosis and can be monitored without treatment. Aggressive RCC is often high-grade and can cause metastasis and death if not promptly detected and treated. While most kidney cancers are detected on CT scans, grading is based on histology from invasive biopsy or surgery. Determining aggressiveness on CT images is clinically important as it facilitates risk stratification and treatment planning. This study aims to use machine learning methods to identify radiology features that correlate with features on pathology to facilitate assessment of cancer aggressiveness on CT images instead of histology. This paper presents a novel automated method, Correlated Feature Aggregation By Region (CorrFABR), for classifying aggressiveness of clear cell RCC by leveraging correlations between radiology and corresponding unaligned pathology images. CorrFABR consists of three main steps: (1) Feature Aggregation where region-level features are extracted from radiology and pathology images, (2) Fusion where radiology features correlated with pathology features are learned on a region level, and (3) Prediction where the learned correlated features are used to distinguish aggressive from indolent clear cell RCC using CT alone as input. Thus, during training, CorrFABR learns from both radiology and pathology images, but during inference, CorrFABR will distinguish aggressive from indolent clear cell RCC using CT alone, in the absence of pathology images. CorrFABR improved classification performance over radiology features alone, with an increase in binary classification F1-score from 0.68 (0.04) to 0.73 (0.03). This demonstrates the potential of incorporating pathology disease characteristics for improved classification of aggressiveness of clear cell RCC on CT images.
+
+</p>
+</details>
+
+
+{% endraw %}
+Prev: [2022.09.28]({{ '/2022/09/28/2022.09.28.html' | relative_url }})  Next: [2022.09.30]({{ '/2022/09/30/2022.09.30.html' | relative_url }})
