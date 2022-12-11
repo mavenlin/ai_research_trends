@@ -1,0 +1,560 @@
+Prev: [2022.12.07]({{ '/2022/12/07/2022.12.07.html' | relative_url }})  Next: [2022.12.09]({{ '/2022/12/09/2022.12.09.html' | relative_url }})
+{% raw %}
+## Summary for 2022-12-08, created on 2022-12-12
+
+
+<details><summary><b>General-Purpose In-Context Learning by Meta-Learning Transformers</b>
+<a href="https://arxiv.org/abs/2212.04458">arxiv:2212.04458</a>
+&#x1F4C8; 441 <br>
+<p>Louis Kirsch, James Harrison, Jascha Sohl-Dickstein, Luke Metz</p></summary>
+<p>
+
+**Abstract:** Modern machine learning requires system designers to specify aspects of the learning pipeline, such as losses, architectures, and optimizers. Meta-learning, or learning-to-learn, instead aims to learn those aspects, and promises to unlock greater capabilities with less manual effort. One particularly ambitious goal of meta-learning is to train general-purpose in-context learning algorithms from scratch, using only black-box models with minimal inductive bias. Such a model takes in training data, and produces test-set predictions across a wide range of problems, without any explicit definition of an inference model, training loss, or optimization algorithm. In this paper we show that Transformers and other black-box models can be meta-trained to act as general-purpose in-context learners. We characterize phase transitions between algorithms that generalize, algorithms that memorize, and algorithms that fail to meta-train at all, induced by changes in model size, number of tasks, and meta-optimization. We further show that the capabilities of meta-trained algorithms are bottlenecked by the accessible state size (memory) determining the next prediction, unlike standard models which are thought to be bottlenecked by parameter count. Finally, we propose practical interventions such as biasing the training distribution that improve the meta-training and meta-generalization of general-purpose learning algorithms.
+
+</p>
+</details>
+
+<details><summary><b>SINE: SINgle Image Editing with Text-to-Image Diffusion Models</b>
+<a href="https://arxiv.org/abs/2212.04489">arxiv:2212.04489</a>
+&#x1F4C8; 227 <br>
+<p>Zhixing Zhang, Ligong Han, Arnab Ghosh, Dimitris Metaxas, Jian Ren</p></summary>
+<p>
+
+**Abstract:** Recent works on diffusion models have demonstrated a strong capability for conditioning image generation, e.g., text-guided image synthesis. Such success inspires many efforts trying to use large-scale pre-trained diffusion models for tackling a challenging problem--real image editing. Works conducted in this area learn a unique textual token corresponding to several images containing the same object. However, under many circumstances, only one image is available, such as the painting of the Girl with a Pearl Earring. Using existing works on fine-tuning the pre-trained diffusion models with a single image causes severe overfitting issues. The information leakage from the pre-trained diffusion models makes editing can not keep the same content as the given image while creating new features depicted by the language guidance. This work aims to address the problem of single-image editing. We propose a novel model-based guidance built upon the classifier-free guidance so that the knowledge from the model trained on a single image can be distilled into the pre-trained diffusion model, enabling content creation even with one given image. Additionally, we propose a patch-based fine-tuning that can effectively help the model generate images of arbitrary resolution. We provide extensive experiments to validate the design choices of our approach and show promising editing capabilities, including changing style, content addition, and object manipulation. The code is available for research purposes at https://github.com/zhang-zx/SINE.git .
+
+</p>
+</details>
+
+<details><summary><b>VideoDex: Learning Dexterity from Internet Videos</b>
+<a href="https://arxiv.org/abs/2212.04498">arxiv:2212.04498</a>
+&#x1F4C8; 163 <br>
+<p>Kenneth Shaw, Shikhar Bahl, Deepak Pathak</p></summary>
+<p>
+
+**Abstract:** To build general robotic agents that can operate in many environments, it is often imperative for the robot to collect experience in the real world. However, this is often not feasible due to safety, time, and hardware restrictions. We thus propose leveraging the next best thing as real-world experience: internet videos of humans using their hands. Visual priors, such as visual features, are often learned from videos, but we believe that more information from videos can be utilized as a stronger prior. We build a learning algorithm, VideoDex, that leverages visual, action, and physical priors from human video datasets to guide robot behavior. These actions and physical priors in the neural network dictate the typical human behavior for a particular robot task. We test our approach on a robot arm and dexterous hand-based system and show strong results on various manipulation tasks, outperforming various state-of-the-art methods. Videos at https://video-dex.github.io
+
+</p>
+</details>
+
+<details><summary><b>Multi-View Mesh Reconstruction with Neural Deferred Shading</b>
+<a href="https://arxiv.org/abs/2212.04386">arxiv:2212.04386</a>
+&#x1F4C8; 119 <br>
+<p>Markus Worchel, Rodrigo Diaz, Weiwen Hu, Oliver Schreer, Ingo Feldmann, Peter Eisert</p></summary>
+<p>
+
+**Abstract:** We propose an analysis-by-synthesis method for fast multi-view 3D reconstruction of opaque objects with arbitrary materials and illumination. State-of-the-art methods use both neural surface representations and neural rendering. While flexible, neural surface representations are a significant bottleneck in optimization runtime. Instead, we represent surfaces as triangle meshes and build a differentiable rendering pipeline around triangle rasterization and neural shading. The renderer is used in a gradient descent optimization where both a triangle mesh and a neural shader are jointly optimized to reproduce the multi-view images. We evaluate our method on a public 3D reconstruction dataset and show that it can match the reconstruction accuracy of traditional baselines and neural approaches while surpassing them in optimization runtime. Additionally, we investigate the shader and find that it learns an interpretable representation of appearance, enabling applications such as 3D material editing.
+
+</p>
+</details>
+
+<details><summary><b>SDFusion: Multimodal 3D Shape Completion, Reconstruction, and Generation</b>
+<a href="https://arxiv.org/abs/2212.04493">arxiv:2212.04493</a>
+&#x1F4C8; 104 <br>
+<p>Yen-Chi Cheng, Hsin-Ying Lee, Sergey Tulyakov, Alexander Schwing, Liangyan Gui</p></summary>
+<p>
+
+**Abstract:** In this work, we present a novel framework built to simplify 3D asset generation for amateur users. To enable interactive generation, our method supports a variety of input modalities that can be easily provided by a human, including images, text, partially observed shapes and combinations of these, further allowing to adjust the strength of each input. At the core of our approach is an encoder-decoder, compressing 3D shapes into a compact latent representation, upon which a diffusion model is learned. To enable a variety of multi-modal inputs, we employ task-specific encoders with dropout followed by a cross-attention mechanism. Due to its flexibility, our model naturally supports a variety of tasks, outperforming prior works on shape completion, image-based 3D reconstruction, and text-to-3D. Most interestingly, our model can combine all these tasks into one swiss-army-knife tool, enabling the user to perform shape generation using incomplete shapes, images, and textual descriptions at the same time, providing the relative weights for each input and facilitating interactivity. Despite our approach being shape-only, we further show an efficient method to texture the generated shape using large-scale text-to-image models.
+
+</p>
+</details>
+
+<details><summary><b>A probabilistic autoencoder for causal discovery</b>
+<a href="https://arxiv.org/abs/2212.04235">arxiv:2212.04235</a>
+&#x1F4C8; 66 <br>
+<p>Matthias Feiler</p></summary>
+<p>
+
+**Abstract:** The paper addresses the problem of finding the causal direction between two associated variables. The proposed solution is to build an autoencoder of their joint distribution and to maximize its estimation capacity relative to both the marginal distributions. It is shown that the resulting two capacities cannot, in general, be equal. This leads to a new criterion for causal discovery: the higher capacity is consistent with the unconstrained choice of a distribution representing the cause while the lower capacity reflects the constraints imposed by the mechanism on the distribution of the effect. Estimation capacity is defined as the ability of the auto-encoder to represent arbitrary datasets. A regularization term forces it to decide which one of the variables to model in a more generic way i.e., while maintaining higher model capacity. The causal direction is revealed by the constraints encountered while encoding the data instead of being measured as a property of the data itself. The idea is implemented and tested using a restricted Boltzmann machine.
+
+</p>
+</details>
+
+<details><summary><b>Multi-Concept Customization of Text-to-Image Diffusion</b>
+<a href="https://arxiv.org/abs/2212.04488">arxiv:2212.04488</a>
+&#x1F4C8; 59 <br>
+<p>Nupur Kumari, Bingliang Zhang, Richard Zhang, Eli Shechtman, Jun-Yan Zhu</p></summary>
+<p>
+
+**Abstract:** While generative models produce high-quality images of concepts learned from a large-scale database, a user often wishes to synthesize instantiations of their own concepts (for example, their family, pets, or items). Can we teach a model to quickly acquire a new concept, given a few examples? Furthermore, can we compose multiple new concepts together? We propose Custom Diffusion, an efficient method for augmenting existing text-to-image models. We find that only optimizing a few parameters in the text-to-image conditioning mechanism is sufficiently powerful to represent new concepts while enabling fast tuning (~6 minutes). Additionally, we can jointly train for multiple concepts or combine multiple fine-tuned models into one via closed-form constrained optimization. Our fine-tuned model generates variations of multiple, new concepts and seamlessly composes them with existing concepts in novel settings. Our method outperforms several baselines and concurrent works, regarding both qualitative and quantitative evaluations, while being memory and computationally efficient.
+
+</p>
+</details>
+
+<details><summary><b>Self-training via Metric Learning for Source-Free Domain Adaptation of Semantic Segmentation</b>
+<a href="https://arxiv.org/abs/2212.04227">arxiv:2212.04227</a>
+&#x1F4C8; 52 <br>
+<p>Ibrahim Batuhan Akkaya, Ugur Halici</p></summary>
+<p>
+
+**Abstract:** Unsupervised source-free domain adaptation methods aim to train a model to be used in the target domain utilizing the pretrained source-domain model and unlabeled target-domain data, where the source data may not be accessible due to intellectual property or privacy issues. These methods frequently utilize self-training with pseudo-labeling thresholded by prediction confidence. In a source-free scenario, only supervision comes from target data, and thresholding limits the contribution of the self-training. In this study, we utilize self-training with a mean-teacher approach. The student network is trained with all predictions of the teacher network. Instead of thresholding the predictions, the gradients calculated from the pseudo-labels are weighted based on the reliability of the teacher's predictions. We propose a novel method that uses proxy-based metric learning to estimate reliability. We train a metric network on the encoder features of the teacher network. Since the teacher is updated with the moving average, the encoder feature space is slowly changing. Therefore, the metric network can be updated in training time, which enables end-to-end training. We also propose a metric-based online ClassMix method to augment the input of the student network where the patches to be mixed are decided based on the metric reliability. We evaluated our method in synthetic-to-real and cross-city scenarios. The benchmarks show that our method significantly outperforms the existing state-of-the-art methods.
+
+</p>
+</details>
+
+<details><summary><b>Editing Models with Task Arithmetic</b>
+<a href="https://arxiv.org/abs/2212.04089">arxiv:2212.04089</a>
+&#x1F4C8; 45 <br>
+<p>Gabriel Ilharco, Marco Tulio Ribeiro, Mitchell Wortsman, Suchin Gururangan, Ludwig Schmidt, Hannaneh Hajishirzi, Ali Farhadi</p></summary>
+<p>
+
+**Abstract:** Changing how pre-trained models behave -- e.g., improving their performance on a downstream task or mitigating biases learned during pre-training -- is a common practice when developing machine learning systems. In this work, we propose a new paradigm for steering the behavior of neural networks, centered around \textit{task vectors}. A task vector specifies a direction in the weight space of a pre-trained model, such that movement in that direction improves performance on the task. We build task vectors by subtracting the weights of a pre-trained model from the weights of the same model after fine-tuning on a task. We show that these task vectors can be modified and combined together through arithmetic operations such as negation and addition, and the behavior of the resulting model is steered accordingly. Negating a task vector decreases performance on the target task, with little change in model behavior on control tasks. Moreover, adding task vectors together can improve performance on multiple tasks at once. Finally, when tasks are linked by an analogy relationship of the form ``A is to B as C is to D", combining task vectors from three of the tasks can improve performance on the fourth, even when no data from the fourth task is used for training. Overall, our experiments with several models, modalities and tasks show that task arithmetic is a simple, efficient and effective way of editing models.
+
+</p>
+</details>
+
+<details><summary><b>Lie detection algorithms attract few users but vastly increase accusation rates</b>
+<a href="https://arxiv.org/abs/2212.04277">arxiv:2212.04277</a>
+&#x1F4C8; 20 <br>
+<p>Alicia von Schenk, Victor Klockmann, Jean-François Bonnefon, Iyad Rahwan, Nils Köbis</p></summary>
+<p>
+
+**Abstract:** People are not very good at detecting lies, which may explain why they refrain from accusing others of lying, given the social costs attached to false accusations - both for the accuser and the accused. Here we consider how this social balance might be disrupted by the availability of lie-detection algorithms powered by Artificial Intelligence. Will people elect to use lie detection algorithms that perform better than humans, and if so, will they show less restraint in their accusations? We built a machine learning classifier whose accuracy (67\%) was significantly better than human accuracy (50\%) in a lie-detection task and conducted an incentivized lie-detection experiment in which we measured participants' propensity to use the algorithm, as well as the impact of that use on accusation rates. We find that the few people (33\%) who elect to use the algorithm drastically increase their accusation rates (from 25\% in the baseline condition up to 86% when the algorithm flags a statement as a lie). They make more false accusations (18pp increase), but at the same time, the probability of a lie remaining undetected is much lower in this group (36pp decrease). We consider individual motivations for using lie detection algorithms and the social implications of these algorithms.
+
+</p>
+</details>
+
+<details><summary><b>Bio-Inspired, Task-Free Continual Learning through Activity Regularization</b>
+<a href="https://arxiv.org/abs/2212.04316">arxiv:2212.04316</a>
+&#x1F4C8; 19 <br>
+<p>Francesco Lässig, Pau Vilimelis Aceituno, Martino Sorbaro, Benjamin F. Grewe</p></summary>
+<p>
+
+**Abstract:** The ability to sequentially learn multiple tasks without forgetting is a key skill of biological brains, whereas it represents a major challenge to the field of deep learning. To avoid catastrophic forgetting, various continual learning (CL) approaches have been devised. However, these usually require discrete task boundaries. This requirement seems biologically implausible and often limits the application of CL methods in the real world where tasks are not always well defined. Here, we take inspiration from neuroscience, where sparse, non-overlapping neuronal representations have been suggested to prevent catastrophic forgetting. As in the brain, we argue that these sparse representations should be chosen on the basis of feed forward (stimulus-specific) as well as top-down (context-specific) information. To implement such selective sparsity, we use a bio-plausible form of hierarchical credit assignment known as Deep Feedback Control (DFC) and combine it with a winner-take-all sparsity mechanism. In addition to sparsity, we introduce lateral recurrent connections within each layer to further protect previously learned representations. We evaluate the new sparse-recurrent version of DFC on the split-MNIST computer vision benchmark and show that only the combination of sparsity and intra-layer recurrent connections improves CL performance with respect to standard backpropagation. Our method achieves similar performance to well-known CL methods, such as Elastic Weight Consolidation and Synaptic Intelligence, without requiring information about task boundaries. Overall, we showcase the idea of adopting computational principles from the brain to derive new, task-free learning algorithms for CL.
+
+</p>
+</details>
+
+<details><summary><b>OFASys: A Multi-Modal Multi-Task Learning System for Building Generalist Models</b>
+<a href="https://arxiv.org/abs/2212.04408">arxiv:2212.04408</a>
+&#x1F4C8; 16 <br>
+<p>Jinze Bai, Rui Men, Hao Yang, Xuancheng Ren, Kai Dang, Yichang Zhang, Xiaohuan Zhou, Peng Wang, Sinan Tan, An Yang, Zeyu Cui, Yu Han, Shuai Bai, Wenbin Ge, Jianxin Ma, Junyang Lin, Jingren Zhou, Chang Zhou</p></summary>
+<p>
+
+**Abstract:** Generalist models, which are capable of performing diverse multi-modal tasks in a task-agnostic way within a single model, have been explored recently. Being, hopefully, an alternative to approaching general-purpose AI, existing generalist models are still at an early stage, where modality and task coverage is limited. To empower multi-modal task-scaling and speed up this line of research, we release a generalist model learning system, OFASys, built on top of a declarative task interface named multi-modal instruction. At the core of OFASys is the idea of decoupling multi-modal task representations from the underlying model implementations. In OFASys, a task involving multiple modalities can be defined declaratively even with just a single line of code. The system automatically generates task plans from such instructions for training and inference. It also facilitates multi-task training for diverse multi-modal workloads. As a starting point, we provide presets of 7 different modalities and 23 highly-diverse example tasks in OFASys, with which we also develop a first-in-kind, single model, OFA+, that can handle text, image, speech, video, and motion data. The single OFA+ model achieves 95% performance in average with only 16% parameters of 15 task-finetuned models, showcasing the performance reliability of multi-modal task-scaling provided by OFASys. Available at https://github.com/OFA-Sys/OFASys
+
+</p>
+</details>
+
+<details><summary><b>BEVBert: Topo-Metric Map Pre-training for Language-guided Navigation</b>
+<a href="https://arxiv.org/abs/2212.04385">arxiv:2212.04385</a>
+&#x1F4C8; 9 <br>
+<p>Dong An, Yuankai Qi, Yangguang Li, Yan Huang, Liang Wang, Tieniu Tan, Jing Shao</p></summary>
+<p>
+
+**Abstract:** Existing approaches for vision-and-language navigation (VLN) are mainly based on cross-modal reasoning over discrete views. However, this scheme may hamper an agent's spatial and numerical reasoning because of incomplete objects within a single view and duplicate observations across views. A potential solution is mapping discrete views into a unified birds's-eye view, which can aggregate partial and duplicate observations. Existing metric maps could achieve this goal, but they suffer from less expressive semantics (e.g. usually predefined labels) and limited map size, which weakens an agent's language grounding and long-term planning ability. Inspired by the robotics community, we introduce hybrid topo-metric maps into VLN, where a topological map is used for long-term planning and a metric map for short-term reasoning. Beyond mapping with more expressive deep features, we further design a pre-training framework via the hybrid map to learn language-informed map representations, which enhances cross-modal grounding and facilitates the final language-guided navigation goal. Extensive experiments demonstrate the effectiveness of the map-based route for VLN, and the proposed method sets the new state-of-the-art on three VLN benchmarks.
+
+</p>
+</details>
+
+<details><summary><b>ConsistTL: Modeling Consistency in Transfer Learning for Low-Resource Neural Machine Translation</b>
+<a href="https://arxiv.org/abs/2212.04262">arxiv:2212.04262</a>
+&#x1F4C8; 9 <br>
+<p>Zhaocong Li, Xuebo Liu, Derek F. Wong, Lidia S. Chao, Min Zhang</p></summary>
+<p>
+
+**Abstract:** Transfer learning is a simple and powerful method that can be used to boost model performance of low-resource neural machine translation (NMT). Existing transfer learning methods for NMT are static, which simply transfer knowledge from a parent model to a child model once via parameter initialization. In this paper, we propose a novel transfer learning method for NMT, namely ConsistTL, which can continuously transfer knowledge from the parent model during the training of the child model. Specifically, for each training instance of the child model, ConsistTL constructs the semantically-equivalent instance for the parent model and encourages prediction consistency between the parent and child for this instance, which is equivalent to the child model learning each instance under the guidance of the parent model. Experimental results on five low-resource NMT tasks demonstrate that ConsistTL results in significant improvements over strong transfer learning baselines, with a gain up to 1.7 BLEU over the existing back-translation model on the widely-used WMT17 Turkish-English benchmark. Further analysis reveals that ConsistTL can improve the inference calibration of the child model. Code and scripts are freely available at https://github.com/NLP2CT/ConsistTL.
+
+</p>
+</details>
+
+<details><summary><b>Implicit causality in GPT-2: a case study</b>
+<a href="https://arxiv.org/abs/2212.04348">arxiv:2212.04348</a>
+&#x1F4C8; 8 <br>
+<p>Hien Huynh, Tomas O. Lentz, Emiel van Miltenburg</p></summary>
+<p>
+
+**Abstract:** This case study investigates the extent to which a language model (GPT-2) is able to capture native speakers' intuitions about implicit causality in a sentence completion task. We first reproduce earlier results (showing lower surprisal values for pronouns that are congruent with either the subject or object, depending on which one corresponds to the implicit causality bias of the verb), and then examine the effects of gender and verb frequency on model performance. Our second study examines the reasoning ability of GPT-2: is the model able to produce more sensible motivations for why the subject VERBed the object if the verbs have stronger causality biases? We also developed a methodology to avoid human raters being biased by obscenities and disfluencies generated by the model.
+
+</p>
+</details>
+
+<details><summary><b>A Modality-level Explainable Framework for Misinformation Checking in Social Networks</b>
+<a href="https://arxiv.org/abs/2212.04272">arxiv:2212.04272</a>
+&#x1F4C8; 8 <br>
+<p>Vítor Lourenço, Aline Paes</p></summary>
+<p>
+
+**Abstract:** The widespread of false information is a rising concern worldwide with critical social impact, inspiring the emergence of fact-checking organizations to mitigate misinformation dissemination. However, human-driven verification leads to a time-consuming task and a bottleneck to have checked trustworthy information at the same pace they emerge. Since misinformation relates not only to the content itself but also to other social features, this paper addresses automatic misinformation checking in social networks from a multimodal perspective. Moreover, as simply naming a piece of news as incorrect may not convince the citizen and, even worse, strengthen confirmation bias, the proposal is a modality-level explainable-prone misinformation classifier framework. Our framework comprises a misinformation classifier assisted by explainable methods to generate modality-oriented explainable inferences. Preliminary findings show that the misinformation classifier does benefit from multimodal information encoding and the modality-oriented explainable mechanism increases both inferences' interpretability and completeness.
+
+</p>
+</details>
+
+<details><summary><b>LLM-Planner: Few-Shot Grounded Planning for Embodied Agents with Large Language Models</b>
+<a href="https://arxiv.org/abs/2212.04088">arxiv:2212.04088</a>
+&#x1F4C8; 8 <br>
+<p>Chan Hee Song, Jiaman Wu, Clayton Washington, Brian M. Sadler, Wei-Lun Chao, Yu Su</p></summary>
+<p>
+
+**Abstract:** This study focuses on embodied agents that can follow natural language instructions to complete complex tasks in a visually-perceived environment. Existing methods rely on a large amount of (instruction, gold trajectory) pairs to learn a good policy. The high data cost and poor sample efficiency prevents the development of versatile agents that are capable of many tasks and can learn new tasks quickly. In this work, we propose a novel method, LLM-Planner, that harnesses the power of large language models (LLMs) such as GPT-3 to do few-shot planning for embodied agents. We further propose a simple but effective way to enhance LLMs with physical grounding to generate plans that are grounded in the current environment. Experiments on the ALFRED dataset show that our method can achieve very competitive few-shot performance, even outperforming several recent baselines that are trained using the full training data despite using less than 0.5% of paired training data. Existing methods can barely complete any task successfully under the same few-shot setting. Our work opens the door for developing versatile and sample-efficient embodied agents that can quickly learn many tasks.
+
+</p>
+</details>
+
+<details><summary><b>On the Robustness of Normalizing Flows for Inverse Problems in Imaging</b>
+<a href="https://arxiv.org/abs/2212.04319">arxiv:2212.04319</a>
+&#x1F4C8; 7 <br>
+<p>Seongmin Hong, Inbum Park, Se Young Chun</p></summary>
+<p>
+
+**Abstract:** Conditional normalizing flows can generate diverse image samples for solving inverse problems. Most normalizing flows for inverse problems in imaging employ the conditional affine coupling layer that can generate diverse images quickly. However, unintended severe artifacts are occasionally observed in the output of them. In this work, we address this critical issue by investigating the origins of these artifacts and proposing the conditions to avoid them. First of all, we empirically and theoretically reveal that these problems are caused by ``exploding variance'' in the conditional affine coupling layer for certain out-of-distribution (OOD) conditional inputs. Then, we further validated that the probability of causing erroneous artifacts in pixels is highly correlated with a Mahalanobis distance-based OOD score for inverse problems in imaging. Lastly, based on our investigations, we propose a remark to avoid exploding variance and then based on it, we suggest a simple remedy that substitutes the affine coupling layers with the modified rational quadratic spline coupling layers in normalizing flows, to encourage the robustness of generated image samples. Our experimental results demonstrated that our suggested methods effectively suppressed critical artifacts occurring in normalizing flows for super-resolution space generation and low-light image enhancement without compromising performance.
+
+</p>
+</details>
+
+<details><summary><b>Momentum Calibration for Text Generation</b>
+<a href="https://arxiv.org/abs/2212.04257">arxiv:2212.04257</a>
+&#x1F4C8; 7 <br>
+<p>Xingxing Zhang, Yiran Liu, Xun Wang, Pengcheng He, Yang Yu, Si-Qing Chen, Wayne Xiong, Furu Wei</p></summary>
+<p>
+
+**Abstract:** The input and output of most text generation tasks can be transformed to two sequences of tokens and they can be modeled using sequence-to-sequence learning modeling tools such as Transformers. These models are usually trained by maximizing the likelihood the output text sequence and assumes the input sequence and all gold preceding tokens are given during training, while during inference the model suffers from the exposure bias problem (i.e., it only has access to its previously predicted tokens rather gold tokens during beam search). In this paper, we propose MoCa ({\bf Mo}mentum {\bf Ca}libration) for text generation. MoCa is an online method that dynamically generates slowly evolving (but consistent) samples using a momentum moving average generator with beam search and MoCa learns to align its model scores of these samples with their actual qualities. Experiments on four text generation datasets (i.e., CNN/DailyMail, XSum, SAMSum and Gigaword) show MoCa consistently improves strong pre-trained transformers using vanilla fine-tuning and we achieve the state-of-the-art results on CNN/DailyMail and SAMSum datasets.
+
+</p>
+</details>
+
+<details><summary><b>Task Bias in Vision-Language Models</b>
+<a href="https://arxiv.org/abs/2212.04412">arxiv:2212.04412</a>
+&#x1F4C8; 6 <br>
+<p>Sachit Menon, Ishaan Preetam Chandratreya, Carl Vondrick</p></summary>
+<p>
+
+**Abstract:** Incidental supervision from language has become a popular approach for learning generic visual representations that can be prompted to perform many recognition tasks in computer vision. We conduct an in-depth exploration of the CLIP model and show that its visual representation is often strongly biased towards solving some tasks more than others. Moreover, which task the representation will be biased towards is unpredictable, with little consistency across images. To resolve this task bias, we show how to learn a visual prompt that guides the representation towards features relevant to their task of interest. Our results show that these visual prompts can be independent of the input image and still effectively provide a conditioning mechanism to steer visual representations towards the desired task.
+
+</p>
+</details>
+
+<details><summary><b>On The Relevance Of The Differences Between HRTF Measurement Setups For Machine Learning</b>
+<a href="https://arxiv.org/abs/2212.04283">arxiv:2212.04283</a>
+&#x1F4C8; 6 <br>
+<p>Johan Pauwels, Lorenzo Picinali</p></summary>
+<p>
+
+**Abstract:** As spatial audio is enjoying a surge in popularity, data-driven machine learning techniques that have been proven successful in other domains are increasingly used to process head-related transfer function measurements. However, these techniques require much data, whereas the existing datasets are ranging from tens to the low hundreds of datapoints. It therefore becomes attractive to combine multiple of these datasets, although they are measured under different conditions. In this paper, we first establish the common ground between a number of datasets, then we investigate potential pitfalls of mixing datasets. We perform a simple experiment to test the relevance of the remaining differences between datasets when applying machine learning techniques. Finally, we pinpoint the most relevant differences.
+
+</p>
+</details>
+
+<details><summary><b>Structured Vision-Language Pretraining for Computational Cooking</b>
+<a href="https://arxiv.org/abs/2212.04267">arxiv:2212.04267</a>
+&#x1F4C8; 6 <br>
+<p>Mustafa Shukor, Nicolas Thome, Matthieu Cord</p></summary>
+<p>
+
+**Abstract:** Vision-Language Pretraining (VLP) and Foundation models have been the go-to recipe for achieving SoTA performance on general benchmarks. However, leveraging these powerful techniques for more complex vision-language tasks, such as cooking applications, with more structured input data, is still little investigated. In this work, we propose to leverage these techniques for structured-text based computational cuisine tasks. Our strategy, dubbed VLPCook (Structured Vision-Language Pretraining for Computational Cooking), first transforms existing image-text pairs to image and structured-text pairs. This allows to pretrain our VLPCook model using VLP objectives adapted to the strutured data of the resulting datasets, then finetuning it on downstream computational cooking tasks. During finetuning, we also enrich the visual encoder, leveraging pretrained foundation models (e.g. CLIP) to provide local and global textual context. VLPCook outperforms current SoTA by a significant margin (+3.3 Recall@1 absolute improvement) on the task of Cross-Modal Food Retrieval on the large Recipe1M dataset. Finally, we conduct further experiments on VLP to validate their importance, especially on the Recipe1M+ dataset. The code will be made publicly available.
+
+</p>
+</details>
+
+<details><summary><b>NRTR: Neuron Reconstruction with Transformer from 3D Optical Microscopy Images</b>
+<a href="https://arxiv.org/abs/2212.04163">arxiv:2212.04163</a>
+&#x1F4C8; 6 <br>
+<p>Yijun Wang, Rui Lang, Rui Li, Junsong Zhang</p></summary>
+<p>
+
+**Abstract:** The neuron reconstruction from raw Optical Microscopy (OM) image stacks is the basis of neuroscience. Manual annotation and semi-automatic neuron tracing algorithms are time-consuming and inefficient. Existing deep learning neuron reconstruction methods, although demonstrating exemplary performance, greatly demand complex rule-based components. Therefore, a crucial challenge is designing an end-to-end neuron reconstruction method that makes the overall framework simpler and model training easier. We propose a Neuron Reconstruction Transformer (NRTR) that, discarding the complex rule-based components, views neuron reconstruction as a direct set-prediction problem. To the best of our knowledge, NRTR is the first image-to-set deep learning model for end-to-end neuron reconstruction. In experiments using the BigNeuron and VISoR-40 datasets, NRTR achieves excellent neuron reconstruction results for comprehensive benchmarks and outperforms competitive baselines. Results of extensive experiments indicate that NRTR is effective at showing that neuron reconstruction is viewed as a set-prediction problem, which makes end-to-end model training available.
+
+</p>
+</details>
+
+<details><summary><b>Deep Model Assembling</b>
+<a href="https://arxiv.org/abs/2212.04129">arxiv:2212.04129</a>
+&#x1F4C8; 6 <br>
+<p>Zanlin Ni, Yulin Wang, Jiangwei Yu, Haojun Jiang, Yue Cao, Gao Huang</p></summary>
+<p>
+
+**Abstract:** Large deep learning models have achieved remarkable success in many scenarios. However, training large models is usually challenging, e.g., due to the high computational cost, the unstable and painfully slow optimization procedure, and the vulnerability to overfitting. To alleviate these problems, this work studies a divide-and-conquer strategy, i.e., dividing a large model into smaller modules, training them independently, and reassembling the trained modules to obtain the target model. This approach is promising since it avoids directly training large models from scratch. Nevertheless, implementing this idea is non-trivial, as it is difficult to ensure the compatibility of the independently trained modules. In this paper, we present an elegant solution to address this issue, i.e., we introduce a global, shared meta model to implicitly link all the modules together. This enables us to train highly compatible modules that collaborate effectively when they are assembled together. We further propose a module incubation mechanism that enables the meta model to be designed as an extremely shallow network. As a result, the additional overhead introduced by the meta model is minimalized. Though conceptually simple, our method significantly outperforms end-to-end (E2E) training in terms of both final accuracy and training efficiency. For example, on top of ViT-Huge, it improves the accuracy by 2.7% compared to the E2E baseline on ImageNet-1K, while saving the training cost by 43% in the meantime. Code is available at https://github.com/LeapLabTHU/Model-Assembling.
+
+</p>
+</details>
+
+<details><summary><b>HERD: Continuous Human-to-Robot Evolution for Learning from Human Demonstration</b>
+<a href="https://arxiv.org/abs/2212.04359">arxiv:2212.04359</a>
+&#x1F4C8; 5 <br>
+<p>Xingyu Liu, Deepak Pathak, Kris M. Kitani</p></summary>
+<p>
+
+**Abstract:** The ability to learn from human demonstration endows robots with the ability to automate various tasks. However, directly learning from human demonstration is challenging since the structure of the human hand can be very different from the desired robot gripper. In this work, we show that manipulation skills can be transferred from a human to a robot through the use of micro-evolutionary reinforcement learning, where a five-finger human dexterous hand robot gradually evolves into a commercial robot, while repeated interacting in a physics simulator to continuously update the policy that is first learned from human demonstration. To deal with the high dimensions of robot parameters, we propose an algorithm for multi-dimensional evolution path searching that allows joint optimization of both the robot evolution path and the policy. Through experiments on human object manipulation datasets, we show that our framework can efficiently transfer the expert human agent policy trained from human demonstrations in diverse modalities to target commercial robots.
+
+</p>
+</details>
+
+<details><summary><b>A Scale-Arbitrary Image Super-Resolution Network Using Frequency-domain Information</b>
+<a href="https://arxiv.org/abs/2212.04314">arxiv:2212.04314</a>
+&#x1F4C8; 5 <br>
+<p>Jing Fang, Yinbo Yu, Zhongyuan Wang, Xin Ding, Ruimin Hu</p></summary>
+<p>
+
+**Abstract:** Image super-resolution (SR) is a technique to recover lost high-frequency information in low-resolution (LR) images. Spatial-domain information has been widely exploited to implement image SR, so a new trend is to involve frequency-domain information in SR tasks. Besides, image SR is typically application-oriented and various computer vision tasks call for image arbitrary magnification. Therefore, in this paper, we study image features in the frequency domain to design a novel scale-arbitrary image SR network. First, we statistically analyze LR-HR image pairs of several datasets under different scale factors and find that the high-frequency spectra of different images under different scale factors suffer from different degrees of degradation, but the valid low-frequency spectra tend to be retained within a certain distribution range. Then, based on this finding, we devise an adaptive scale-aware feature division mechanism using deep reinforcement learning, which can accurately and adaptively divide the frequency spectrum into the low-frequency part to be retained and the high-frequency one to be recovered. Finally, we design a scale-aware feature recovery module to capture and fuse multi-level features for reconstructing the high-frequency spectrum at arbitrary scale factors. Extensive experiments on public datasets show the superiority of our method compared with state-of-the-art methods.
+
+</p>
+</details>
+
+<details><summary><b>Model-based trajectory stitching for improved behavioural cloning and its applications</b>
+<a href="https://arxiv.org/abs/2212.04280">arxiv:2212.04280</a>
+&#x1F4C8; 5 <br>
+<p>Charles A. Hepburn, Giovanni Montana</p></summary>
+<p>
+
+**Abstract:** Behavioural cloning (BC) is a commonly used imitation learning method to infer a sequential decision-making policy from expert demonstrations. However, when the quality of the data is not optimal, the resulting behavioural policy also performs sub-optimally once deployed. Recently, there has been a surge in offline reinforcement learning methods that hold the promise to extract high-quality policies from sub-optimal historical data. A common approach is to perform regularisation during training, encouraging updates during policy evaluation and/or policy improvement to stay close to the underlying data. In this work, we investigate whether an offline approach to improving the quality of the existing data can lead to improved behavioural policies without any changes in the BC algorithm. The proposed data improvement approach - Trajectory Stitching (TS) - generates new trajectories (sequences of states and actions) by `stitching' pairs of states that were disconnected in the original data and generating their connecting new action. By construction, these new transitions are guaranteed to be highly plausible according to probabilistic models of the environment, and to improve a state-value function. We demonstrate that the iterative process of replacing old trajectories with new ones incrementally improves the underlying behavioural policy. Extensive experimental results show that significant performance gains can be achieved using TS over BC policies extracted from the original data. Furthermore, using the D4RL benchmarking suite, we demonstrate that state-of-the-art results are obtained by combining TS with two existing offline learning methodologies reliant on BC, model-based offline planning (MBOP) and policy constraint (TD3+BC).
+
+</p>
+</details>
+
+<details><summary><b>Fast Parallel Bayesian Network Structure Learning</b>
+<a href="https://arxiv.org/abs/2212.04259">arxiv:2212.04259</a>
+&#x1F4C8; 5 <br>
+<p>Jiantong Jiang, Zeyi Wen, Ajmal Mian</p></summary>
+<p>
+
+**Abstract:** Bayesian networks (BNs) are a widely used graphical model in machine learning for representing knowledge with uncertainty. The mainstream BN structure learning methods require performing a large number of conditional independence (CI) tests. The learning process is very time-consuming, especially for high-dimensional problems, which hinders the adoption of BNs to more applications. Existing works attempt to accelerate the learning process with parallelism, but face issues including load unbalancing, costly atomic operations and dominant parallel overhead. In this paper, we propose a fast solution named Fast-BNS on multi-core CPUs to enhance the efficiency of the BN structure learning. Fast-BNS is powered by a series of efficiency optimizations including (i) designing a dynamic work pool to monitor the processing of edges and to better schedule the workloads among threads, (ii) grouping the CI tests of the edges with the same endpoints to reduce the number of unnecessary CI tests, (iii) using a cache-friendly data storage to improve the memory efficiency, and (iv) generating the conditioning sets on-the-fly to avoid extra memory consumption. A comprehensive experimental study shows that the sequential version of Fast-BNS is up to 50 times faster than its counterpart, and the parallel version of Fast-BNS achieves 4.8 to 24.5 times speedup over the state-of-the-art multi-threaded solution. Moreover, Fast-BNS has a good scalability to the network size as well as sample size. Fast-BNS source code is freely available at https://github.com/jjiantong/FastBN.
+
+</p>
+</details>
+
+<details><summary><b>Evaluating Zero-cost Active Learning for Object Detection</b>
+<a href="https://arxiv.org/abs/2212.04211">arxiv:2212.04211</a>
+&#x1F4C8; 5 <br>
+<p>Dominik Probst, Hasnain Raza, Erik Rodner</p></summary>
+<p>
+
+**Abstract:** Object detection requires substantial labeling effort for learning robust models. Active learning can reduce this effort by intelligently selecting relevant examples to be annotated. However, selecting these examples properly without introducing a sampling bias with a negative impact on the generalization performance is not straightforward and most active learning techniques can not hold their promises on real-world benchmarks. In our evaluation paper, we focus on active learning techniques without a computational overhead besides inference, something we refer to as zero-cost active learning. In particular, we show that a key ingredient is not only the score on a bounding box level but also the technique used for aggregating the scores for ranking images. We outline our experimental setup and also discuss practical considerations when using active learning for object detection.
+
+</p>
+</details>
+
+<details><summary><b>evosax: JAX-based Evolution Strategies</b>
+<a href="https://arxiv.org/abs/2212.04180">arxiv:2212.04180</a>
+&#x1F4C8; 5 <br>
+<p>Robert Tjarko Lange</p></summary>
+<p>
+
+**Abstract:** The deep learning revolution has greatly been accelerated by the 'hardware lottery': Recent advances in modern hardware accelerators and compilers paved the way for large-scale batch gradient optimization. Evolutionary optimization, on the other hand, has mainly relied on CPU-parallelism, e.g. using Dask scheduling and distributed multi-host infrastructure. Here we argue that also modern evolutionary computation can significantly benefit from the massive computational throughput provided by GPUs and TPUs. In order to better harness these resources and to enable the next generation of black-box optimization algorithms, we release evosax: A JAX-based library of evolution strategies which allows researchers to leverage powerful function transformations such as just-in-time compilation, automatic vectorization and hardware parallelization. evosax implements 30 evolutionary optimization algorithms including finite-difference-based, estimation-of-distribution evolution strategies and various genetic algorithms. Every single algorithm can directly be executed on hardware accelerators and automatically vectorized or parallelized across devices using a single line of code. It is designed in a modular fashion and allows for flexible usage via a simple ask-evaluate-tell API. We thereby hope to facilitate a new wave of scalable evolutionary optimization algorithms.
+
+</p>
+</details>
+
+<details><summary><b>A Novel Hierarchical-Classification-Block Based Convolutional Neural Network for Source Camera Model Identification</b>
+<a href="https://arxiv.org/abs/2212.04161">arxiv:2212.04161</a>
+&#x1F4C8; 5 <br>
+<p>Mohammad Zunaed, Shaikh Anowarul Fattah</p></summary>
+<p>
+
+**Abstract:** Digital security has been an active area of research interest due to the rapid adaptation of internet infrastructure, the increasing popularity of social media, and digital cameras. Due to inherent differences in working principles to generate an image, different camera brands left behind different intrinsic processing noises which can be used to identify the camera brand. In the last decade, many signal processing and deep learning-based methods have been proposed to identify and isolate this noise from the scene details in an image to detect the source camera brand. One prominent solution is to utilize a hierarchical classification system rather than the traditional single-classifier approach. Different individual networks are used for brand-level and model-level source camera identification. This approach allows for better scaling and requires minimal modifications for adding a new camera brand/model to the solution. However, using different full-fledged networks for both brand and model-level classification substantially increases memory consumption and training complexity. Moreover, extracted low-level features from the different network's initial layers often coincide, resulting in redundant weights. To mitigate the training and memory complexity, we propose a classifier-block-level hierarchical system instead of a network-level one for source camera model classification. Our proposed approach not only results in significantly fewer parameters but also retains the capability to add a new camera model with minimal modification. Thorough experimentation on the publicly available Dresden dataset shows that our proposed approach can achieve the same level of state-of-the-art performance but requires fewer parameters compared to a state-of-the-art network-level hierarchical-based system.
+
+</p>
+</details>
+
+<details><summary><b>Generating and Weighting Semantically Consistent Sample Pairs for Ultrasound Contrastive Learning</b>
+<a href="https://arxiv.org/abs/2212.04097">arxiv:2212.04097</a>
+&#x1F4C8; 5 <br>
+<p>Yixiong Chen, Chunhui Zhang, Chris H. Q. Ding, Li Liu</p></summary>
+<p>
+
+**Abstract:** Well-annotated medical datasets enable deep neural networks (DNNs) to gain strong power in extracting lesion-related features. Building such large and well-designed medical datasets is costly due to the need for high-level expertise. Model pre-training based on ImageNet is a common practice to gain better generalization when the data amount is limited. However, it suffers from the domain gap between natural and medical images. In this work, we pre-train DNNs on ultrasound (US) domains instead of ImageNet to reduce the domain gap in medical US applications. To learn US image representations based on unlabeled US videos, we propose a novel meta-learning-based contrastive learning method, namely Meta Ultrasound Contrastive Learning (Meta-USCL). To tackle the key challenge of obtaining semantically consistent sample pairs for contrastive learning, we present a positive pair generation module along with an automatic sample weighting module based on meta-learning. Experimental results on multiple computer-aided diagnosis (CAD) problems, including pneumonia detection, breast cancer classification, and breast tumor segmentation, show that the proposed self-supervised method reaches state-of-the-art (SOTA). The codes are available at https://github.com/Schuture/Meta-USCL.
+
+</p>
+</details>
+
+<details><summary><b>Structure of Classifier Boundaries: Case Study for a Naive Bayes Classifier</b>
+<a href="https://arxiv.org/abs/2212.04382">arxiv:2212.04382</a>
+&#x1F4C8; 4 <br>
+<p>Alan F. Karr, Zac Bowen, Adam A. Porter</p></summary>
+<p>
+
+**Abstract:** Whether based on models, training data or a combination, classifiers place (possibly complex) input data into one of a relatively small number of output categories. In this paper, we study the structure of the boundary--those points for which a neighbor is classified differently--in the context of an input space that is a graph, so that there is a concept of neighboring inputs, The scientific setting is a model-based naive Bayes classifier for DNA reads produced by Next Generation Sequencers. We show that the boundary is both large and complicated in structure. We create a new measure of uncertainty, called Neighbor Similarity, that compares the result for a point to the distribution of results for its neighbors. This measure not only tracks two inherent uncertainty measures for the Bayes classifier, but also can be implemented, at a computational cost, for classifiers without inherent measures of uncertainty.
+
+</p>
+</details>
+
+<details><summary><b>Models Developed for Spiking Neural Networks</b>
+<a href="https://arxiv.org/abs/2212.04377">arxiv:2212.04377</a>
+&#x1F4C8; 4 <br>
+<p>Shahriar Rezghi Shirsavar, Abdol-Hossein Vahabie, Mohammad-Reza A. Dehaqani</p></summary>
+<p>
+
+**Abstract:** Emergence of deep neural networks (DNNs) has raised enormous attention towards artificial neural networks (ANNs) once again. They have become the state-of-the-art models and have won different machine learning challenges. Although these networks are inspired by the brain, they lack biological plausibility, and they have structural differences compared to the brain. Spiking neural networks (SNNs) have been around for a long time, and they have been investigated to understand the dynamics of the brain. However, their application in real-world and complicated machine learning tasks were limited. Recently, they have shown great potential in solving such tasks. Due to their energy efficiency and temporal dynamics there are many promises in their future development. In this work, we reviewed the structures and performances of SNNs on image classification tasks. The comparisons illustrate that these networks show great capabilities for more complicated problems. Furthermore, the simple learning rules developed for SNNs, such as STDP and R-STDP, can be a potential alternative to replace the backpropagation algorithm used in DNNs.
+
+</p>
+</details>
+
+<details><summary><b>Differentially-Private Bayes Consistency</b>
+<a href="https://arxiv.org/abs/2212.04216">arxiv:2212.04216</a>
+&#x1F4C8; 4 <br>
+<p>Olivier Bousquet, Haim Kaplan, Aryeh Kontorovich, Yishay Mansour, Shay Moran, Menachem Sadigurschi, Uri Stemmer</p></summary>
+<p>
+
+**Abstract:** We construct a universally Bayes consistent learning rule that satisfies differential privacy (DP). We first handle the setting of binary classification and then extend our rule to the more general setting of density estimation (with respect to the total variation metric). The existence of a universally consistent DP learner reveals a stark difference with the distribution-free PAC model. Indeed, in the latter DP learning is extremely limited: even one-dimensional linear classifiers are not privately learnable in this stringent model. Our result thus demonstrates that by allowing the learning rate to depend on the target distribution, one can circumvent the above-mentioned impossibility result and in fact, learn \emph{arbitrary} distributions by a single DP algorithm. As an application, we prove that any VC class can be privately learned in a semi-supervised setting with a near-optimal \emph{labeled} sample complexity of $\tilde{O}(d/\varepsilon)$ labeled examples (and with an unlabeled sample complexity that can depend on the target distribution).
+
+</p>
+</details>
+
+<details><summary><b>The Ordered Matrix Dirichlet for Modeling Ordinal Dynamics</b>
+<a href="https://arxiv.org/abs/2212.04130">arxiv:2212.04130</a>
+&#x1F4C8; 4 <br>
+<p>Niklas Stoehr, Benjamin J. Radford, Ryan Cotterell, Aaron Schein</p></summary>
+<p>
+
+**Abstract:** Many dynamical systems exhibit latent states with intrinsic orderings such as "ally", "neutral" and "enemy" relationships in international relations. Such latent states are evidenced through entities' cooperative versus conflictual interactions which are similarly ordered. Models of such systems often involve state-to-action emission and state-to-state transition matrices. It is common practice to assume that the rows of these stochastic matrices are independently sampled from a Dirichlet distribution. However, this assumption discards ordinal information and treats states and actions falsely as order-invariant categoricals, which hinders interpretation and evaluation. To address this problem, we propose the Ordered Matrix Dirichlet (OMD): rows are sampled conditionally dependent such that probability mass is shifted to the right of the matrix as we move down rows. This results in a well-ordered mapping between latent states and observed action types. We evaluate the OMD in two settings: a Hidden Markov Model and a novel Bayesian Dynamic Poisson Tucker Model tailored to political event data. Models built on the OMD recover interpretable latent states and show superior forecasting performance in few-shot settings. We detail the wide applicability of the OMD to other domains where models with Dirichlet-sampled matrices are popular (e.g. topic modeling) and publish user-friendly code.
+
+</p>
+</details>
+
+<details><summary><b>Re-purposing Perceptual Hashing based Client Side Scanning for Physical Surveillance</b>
+<a href="https://arxiv.org/abs/2212.04107">arxiv:2212.04107</a>
+&#x1F4C8; 4 <br>
+<p>Ashish Hooda, Andrey Labunets, Tadayoshi Kohno, Earlence Fernandes</p></summary>
+<p>
+
+**Abstract:** Content scanning systems employ perceptual hashing algorithms to scan user content for illegal material, such as child pornography or terrorist recruitment flyers. Perceptual hashing algorithms help determine whether two images are visually similar while preserving the privacy of the input images. Several efforts from industry and academia propose to conduct content scanning on client devices such as smartphones due to the impending roll out of end-to-end encryption that will make server-side content scanning difficult. However, these proposals have met with strong criticism because of the potential for the technology to be misused and re-purposed. Our work informs this conversation by experimentally characterizing the potential for one type of misuse -- attackers manipulating the content scanning system to perform physical surveillance on target locations. Our contributions are threefold: (1) we offer a definition of physical surveillance in the context of client-side image scanning systems; (2) we experimentally characterize this risk and create a surveillance algorithm that achieves physical surveillance rates of >40% by poisoning 5% of the perceptual hash database; (3) we experimentally study the trade-off between the robustness of client-side image scanning systems and surveillance, showing that more robust detection of illegal material leads to increased potential for physical surveillance.
+
+</p>
+</details>
+
+<details><summary><b>DP-RAFT: A Differentially Private Recipe for Accelerated Fine-Tuning</b>
+<a href="https://arxiv.org/abs/2212.04486">arxiv:2212.04486</a>
+&#x1F4C8; 3 <br>
+<p>Ashwinee Panda, Xinyu Tang, Vikash Sehwag, Saeed Mahloujifar, Prateek Mittal</p></summary>
+<p>
+
+**Abstract:** A major direction in differentially private machine learning is differentially private fine-tuning: pretraining a model on a source of "public data" and transferring the extracted features to downstream tasks.
+  This is an important setting because many industry deployments fine-tune publicly available feature extractors on proprietary data for downstream tasks.
+  In this paper, we use features extracted from state-of-the-art open source models to solve benchmark tasks in computer vision and natural language processing using differentially private fine-tuning. Our key insight is that by accelerating training, we can quickly drive the model parameters to regions in parameter space where the impact of noise is minimized. In doing so, we recover the same performance as non-private fine-tuning for realistic values of epsilon in [0.01, 1.0] on benchmark image classification datasets including CIFAR100.
+
+</p>
+</details>
+
+<details><summary><b>A Survey of Graph Neural Networks for Social Recommender Systems</b>
+<a href="https://arxiv.org/abs/2212.04481">arxiv:2212.04481</a>
+&#x1F4C8; 3 <br>
+<p>Kartik Sharma, Yeon-Chang Lee, Sivagami Nambi, Aditya Salian, Shlok Shah, Sang-Wook Kim, Srijan Kumar</p></summary>
+<p>
+
+**Abstract:** Social recommender systems (SocialRS) simultaneously leverage user-to-item interactions as well as user-to-user social relations for the task of generating item recommendations to users. Additionally exploiting social relations is clearly effective in understanding users' tastes due to the effects of homophily and social influence. For this reason, SocialRS has increasingly attracted attention. In particular, with the advance of Graph Neural Networks (GNN), many GNN-based SocialRS methods have been developed recently. Therefore, we conduct a comprehensive and systematic review of the literature on GNN-based SocialRS. In this survey, we first identify 80 papers on GNN-based SocialRS after annotating 2151 papers by following the PRISMA framework (Preferred Reporting Items for Systematic Reviews and Meta-Analysis). Then, we comprehensively review them in terms of their inputs and architectures to propose a novel taxonomy: (1) input taxonomy includes 5 groups of input type notations and 7 groups of input representation notations; (2) architecture taxonomy includes 8 groups of GNN encoder, 2 groups of decoder, and 12 groups of loss function notations. We classify the GNN-based SocialRS methods into several categories as per the taxonomy and describe their details. Furthermore, we summarize the benchmark datasets and metrics widely used to evaluate the GNN-based SocialRS methods. Finally, we conclude this survey by presenting some future research directions.
+
+</p>
+</details>
+
+<details><summary><b>Alleviating neighbor bias: augmenting graph self-supervise learning with structural equivalent positive samples</b>
+<a href="https://arxiv.org/abs/2212.04365">arxiv:2212.04365</a>
+&#x1F4C8; 3 <br>
+<p>Jiawei Zhu, Mei Hong, Ronghua Du, Haifeng Li</p></summary>
+<p>
+
+**Abstract:** In recent years, using a self-supervised learning framework to learn the general characteristics of graphs has been considered a promising paradigm for graph representation learning. The core of self-supervised learning strategies for graph neural networks lies in constructing suitable positive sample selection strategies. However, existing GNNs typically aggregate information from neighboring nodes to update node representations, leading to an over-reliance on neighboring positive samples, i.e., homophilous samples; while ignoring long-range positive samples, i.e., positive samples that are far apart on the graph but structurally equivalent samples, a problem we call "neighbor bias." This neighbor bias can reduce the generalization performance of GNNs. In this paper, we argue that the generalization properties of GNNs should be determined by combining homogeneous samples and structurally equivalent samples, which we call the "GC combination hypothesis." Therefore, we propose a topological signal-driven self-supervised method. It uses a topological information-guided structural equivalence sampling strategy. First, we extract multiscale topological features using persistent homology. Then we compute the structural equivalence of node pairs based on their topological features. In particular, we design a topological loss function to pull in non-neighboring node pairs with high structural equivalence in the representation space to alleviate neighbor bias. Finally, we use the joint training mechanism to adjust the effect of structural equivalence on the model to fit datasets with different characteristics. We conducted experiments on the node classification task across seven graph datasets. The results show that the model performance can be effectively improved using a strategy of topological signal enhancement.
+
+</p>
+</details>
+
+<details><summary><b>Simulation of Attacker Defender Interaction in a Noisy Security Game</b>
+<a href="https://arxiv.org/abs/2212.04281">arxiv:2212.04281</a>
+&#x1F4C8; 3 <br>
+<p>Erick Galinkin, Emmanouil Pountourakis, John Carter, Spiros Mancoridis</p></summary>
+<p>
+
+**Abstract:** In the cybersecurity setting, defenders are often at the mercy of their detection technologies and subject to the information and experiences that individual analysts have. In order to give defenders an advantage, it is important to understand an attacker's motivation and their likely next best action. As a first step in modeling this behavior, we introduce a security game framework that simulates interplay between attackers and defenders in a noisy environment, focusing on the factors that drive decision making for attackers and defenders in the variants of the game with full knowledge and observability, knowledge of the parameters but no observability of the state (``partial knowledge''), and zero knowledge or observability (``zero knowledge''). We demonstrate the importance of making the right assumptions about attackers, given significant differences in outcomes. Furthermore, there is a measurable trade-off between false-positives and true-positives in terms of attacker outcomes, suggesting that a more false-positive prone environment may be acceptable under conditions where true-positives are also higher.
+
+</p>
+</details>
+
+<details><summary><b>Customizing Number Representation and Precision</b>
+<a href="https://arxiv.org/abs/2212.04184">arxiv:2212.04184</a>
+&#x1F4C8; 3 <br>
+<p>Olivier Sentieys, Daniel Menard</p></summary>
+<p>
+
+**Abstract:** There is a growing interest in the use of reduced-precision arithmetic, exacerbated by the recent interest in artificial intelligence, especially with deep learning. Most architectures already provide reduced-precision capabilities (e.g., 8-bit integer, 16-bit floating point). In the context of FPGAs, any number format and bit-width can even be considered.In computer arithmetic, the representation of real numbers is a major issue. Fixed-point (FxP) and floating-point (FlP) are the main options to represent reals, both with their advantages and drawbacks. This chapter presents both FxP and FlP number representations, and draws a fair a comparison between their cost, performance and energy, as well as their impact on accuracy during computations.It is shown that the choice between FxP and FlP is not obvious and strongly depends on the application considered. In some cases, low-precision floating-point arithmetic can be the most effective and provides some benefits over the classical fixed-point choice for energy-constrained applications.
+
+</p>
+</details>
+
+<details><summary><b>Design and Planning of Flexible Mobile Micro-Grids Using Deep Reinforcement Learning</b>
+<a href="https://arxiv.org/abs/2212.04136">arxiv:2212.04136</a>
+&#x1F4C8; 3 <br>
+<p>Cesare Caputo, Michel-Alexandre Cardin, Pudong Ge, Fei Teng, Anna Korre, Ehecatl Antonio del Rio Chanona</p></summary>
+<p>
+
+**Abstract:** Ongoing risks from climate change have impacted the livelihood of global nomadic communities, and are likely to lead to increased migratory movements in coming years. As a result, mobility considerations are becoming increasingly important in energy systems planning, particularly to achieve energy access in developing countries. Advanced Plug and Play control strategies have been recently developed with such a decentralized framework in mind, more easily allowing for the interconnection of nomadic communities, both to each other and to the main grid. In light of the above, the design and planning strategy of a mobile multi-energy supply system for a nomadic community is investigated in this work. Motivated by the scale and dimensionality of the associated uncertainties, impacting all major design and decision variables over the 30-year planning horizon, Deep Reinforcement Learning (DRL) is implemented for the design and planning problem tackled. DRL based solutions are benchmarked against several rigid baseline design options to compare expected performance under uncertainty. The results on a case study for ger communities in Mongolia suggest that mobile nomadic energy systems can be both technically and economically feasible, particularly when considering flexibility, although the degree of spatial dispersion among households is an important limiting factor. Key economic, sustainability and resilience indicators such as Cost, Equivalent Emissions and Total Unmet Load are measured, suggesting potential improvements compared to available baselines of up to 25%, 67% and 76%, respectively. Finally, the decomposition of values of flexibility and plug and play operation is presented using a variation of real options theory, with important implications for both nomadic communities and policymakers focused on enabling their energy access.
+
+</p>
+</details>
+
+<details><summary><b>Enhanced method for reinforcement learning based dynamic obstacle avoidance by assessment of collision risk</b>
+<a href="https://arxiv.org/abs/2212.04123">arxiv:2212.04123</a>
+&#x1F4C8; 3 <br>
+<p>Fabian Hart, Ostap Okhrin</p></summary>
+<p>
+
+**Abstract:** In the field of autonomous robots, reinforcement learning (RL) is an increasingly used method to solve the task of dynamic obstacle avoidance for mobile robots, autonomous ships, and drones. A common practice to train those agents is to use a training environment with random initialization of agent and obstacles. Such approaches might suffer from a low coverage of high-risk scenarios in training, leading to impaired final performance of obstacle avoidance. This paper proposes a general training environment where we gain control over the difficulty of the obstacle avoidance task by using short training episodes and assessing the difficulty by two metrics: The number of obstacles and a collision risk metric. We found that shifting the training towards a greater task difficulty can massively increase the final performance. A baseline agent, using a traditional training environment based on random initialization of agent and obstacles and longer training episodes, leads to a significantly weaker performance. To prove the generalizability of the proposed approach, we designed two realistic use cases: A mobile robot and a maritime ship under the threat of approaching obstacles. In both applications, the previous results can be confirmed, which emphasizes the general usability of the proposed approach, detached from a specific application context and independent of the agent's dynamics. We further added Gaussian noise to the sensor signals, resulting in only a marginal degradation of performance and thus indicating solid robustness of the trained agent.
+
+</p>
+</details>
+
+<details><summary><b>Learning Quantum Processes and Hamiltonians via the Pauli Transfer Matrix</b>
+<a href="https://arxiv.org/abs/2212.04471">arxiv:2212.04471</a>
+&#x1F4C8; 2 <br>
+<p>Matthias C. Caro</p></summary>
+<p>
+
+**Abstract:** Learning about physical systems from quantum-enhanced experiments, relying on a quantum memory and quantum processing, can outperform learning from experiments in which only classical memory and processing are available. Whereas quantum advantages have been established for a variety of state learning tasks, quantum process learning allows for comparable advantages only with a careful problem formulation and is less understood. We establish an exponential quantum advantage for learning an unknown $n$-qubit quantum process $\mathcal{N}$. We show that a quantum memory allows to efficiently solve the following tasks: (a) learning the Pauli transfer matrix of an arbitrary $\mathcal{N}$, (b) predicting expectation values of bounded Pauli-sparse observables measured on the output of an arbitrary $\mathcal{N}$ upon input of a Pauli-sparse state, and (c) predicting expectation values of arbitrary bounded observables measured on the output of an unknown $\mathcal{N}$ with sparse Pauli transfer matrix upon input of an arbitrary state. With quantum memory, these tasks can be solved using linearly-in-$n$ many copies of the Choi state of $\mathcal{N}$, and even time-efficiently in the case of (b). In contrast, any learner without quantum memory requires exponentially-in-$n$ many queries, even when querying $\mathcal{N}$ on subsystems of adaptively chosen states and performing adaptively chosen measurements. In proving this separation, we extend existing shadow tomography upper and lower bounds from states to channels via the Choi-Jamiolkowski isomorphism. Moreover, we combine Pauli transfer matrix learning with polynomial interpolation techniques to develop a procedure for learning arbitrary Hamiltonians, which may have non-local all-to-all interactions, from short-time dynamics. Our results highlight the power of quantum-enhanced experiments for learning highly complex quantum dynamics.
+
+</p>
+</details>
+
+<details><summary><b>Power Consumption Modeling of 5G Multi-Carrier Base Stations: A Machine Learning Approach</b>
+<a href="https://arxiv.org/abs/2212.04318">arxiv:2212.04318</a>
+&#x1F4C8; 2 <br>
+<p>Nicola Piovesan, David Lopez-Perez, Antonio De Domenico, Xinli Geng, Harvey Bao</p></summary>
+<p>
+
+**Abstract:** The fifth generation of the Radio Access Network (RAN) has brought new services, technologies, and paradigms with the corresponding societal benefits. However, the energy consumption of 5G networks is today a concern. In recent years, the design of new methods for decreasing the RAN power consumption has attracted interest from both the research community and standardization bodies, and many energy savings solutions have been proposed. However, there is still a need to understand the power consumption behavior of state-ofthe-art base station architectures, such as multi-carrier active antenna units (AAUs), as well as the impact of different network parameters. In this paper, we present a power consumption model for 5G AAUs based on artificial neural networks. We demonstrate that this model achieves good estimation performance, and it is able to capture the benefits of energy saving when dealing with the complexity of multi-carrier base stations architectures. Importantly, multiple experiments are carried out to show the advantage of designing a general model able to capture the power consumption behaviors of different types of AAUs. Finally, we provide an analysis of the model scalability and the training data requirements.
+
+</p>
+</details>
+
+<details><summary><b>Secure Over-the-Air Computation using Zero-Forced Artificial Noise</b>
+<a href="https://arxiv.org/abs/2212.04288">arxiv:2212.04288</a>
+&#x1F4C8; 2 <br>
+<p>Luis Maßny, Antonia Wachter-Zeh</p></summary>
+<p>
+
+**Abstract:** Over-the-air computation has the potential to increase the communication-efficiency of data-dependent distributed wireless systems, but is vulnerable to eavesdropping. We consider over-the-air computation over block-fading additive white Gaussian noise channels in the presence of a passive eavesdropper. The goal is to design a secure over-the-air computation scheme. We propose a scheme that achieves MSE-security against the eavesdropper by employing zero-forced artificial noise, while keeping the distortion at the legitimate receiver small. In contrast to former approaches, the security does not depend on external helper nodes to jam the eavesdropper's receive signal. We thoroughly design the system parameters of the scheme, propose an artificial noise design that harnesses unused transmit power for security, and give an explicit construction rule. Our design approach is applicable both if the eavesdropper's channel coefficients are known and if they are unknown in the signal design. Simulations demonstrate the performance, and show that our noise design outperforms other methods.
+
+</p>
+</details>
+
+<details><summary><b>ChromaCorrect: Prescription Correction in Virtual Reality Headsets through Perceptual Guidance</b>
+<a href="https://arxiv.org/abs/2212.04264">arxiv:2212.04264</a>
+&#x1F4C8; 2 <br>
+<p>Ahmet Güzel, Jeanne Beyazian, Praneeth Chakravarthula, Kaan Akşit</p></summary>
+<p>
+
+**Abstract:** A large portion of today's world population suffer from vision impairments and wear prescription eyeglasses. However, eyeglasses causes additional bulk and discomfort when used with augmented and virtual reality headsets, thereby negatively impacting the viewer's visual experience. In this work, we remedy the usage of prescription eyeglasses in Virtual Reality (VR) headsets by shifting the optical complexity completely into software and propose a prescription-aware rendering approach for providing sharper and immersive VR imagery. To this end, we develop a differentiable display and visual perception model encapsulating display-specific parameters, color and visual acuity of human visual system and the user-specific refractive errors. Using this differentiable visual perception model, we optimize the rendered imagery in the display using stochastic gradient-descent solvers. This way, we provide prescription glasses-free sharper images for a person with vision impairments. We evaluate our approach on various displays, including desktops and VR headsets, and show significant quality and contrast improvements for users with vision impairments.
+
+</p>
+</details>
+
+<details><summary><b>GTFLAT: Game Theory Based Add-On For Empowering Federated Learning Aggregation Techniques</b>
+<a href="https://arxiv.org/abs/2212.04103">arxiv:2212.04103</a>
+&#x1F4C8; 2 <br>
+<p>Hamidreza Mahini, Hamid Mousavi, Masoud Daneshtalab</p></summary>
+<p>
+
+**Abstract:** GTFLAT, as a game theory-based add-on, addresses an important research question: How can a federated learning algorithm achieve better performance and training efficiency by setting more effective adaptive weights for averaging in the model aggregation phase? The main objectives for the ideal method of answering the question are: (1) empowering federated learning algorithms to reach better performance in fewer communication rounds, notably in the face of heterogeneous scenarios, and last but not least, (2) being easy to use alongside the state-of-the-art federated learning algorithms as a new module. To this end, GTFLAT models the averaging task as a strategic game among active users. Then it proposes a systematic solution based on the population game and evolutionary dynamics to find the equilibrium. In contrast with existing approaches that impose the weights on the participants, GTFLAT concludes a self-enforcement agreement among clients in a way that none of them is motivated to deviate from it individually. The results reveal that, on average, using GTFLAT increases the top-1 test accuracy by 1.38%, while it needs 21.06% fewer communication rounds to reach the accuracy.
+
+</p>
+</details>
+
+<details><summary><b>Fast Parallel Exact Inference on Bayesian Networks: Poster</b>
+<a href="https://arxiv.org/abs/2212.04241">arxiv:2212.04241</a>
+&#x1F4C8; 1 <br>
+<p>Jiantong Jiang, Zeyi Wen, Atif Mansoor, Ajmal Mian</p></summary>
+<p>
+
+**Abstract:** Bayesian networks (BNs) are attractive, because they are graphical and interpretable machine learning models. However, exact inference on BNs is time-consuming, especially for complex problems. To improve the efficiency, we propose a fast BN exact inference solution named Fast-BNI on multi-core CPUs. Fast-BNI enhances the efficiency of exact inference through hybrid parallelism that tightly integrates coarse- and fine-grained parallelism. We also propose techniques to further simplify the bottleneck operations of BN exact inference. Fast-BNI source code is freely available at https://github.com/jjiantong/FastBN.
+
+</p>
+</details>
+
+
+{% endraw %}
+Prev: [2022.12.07]({{ '/2022/12/07/2022.12.07.html' | relative_url }})  Next: [2022.12.09]({{ '/2022/12/09/2022.12.09.html' | relative_url }})
